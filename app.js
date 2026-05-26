@@ -7,8 +7,7 @@ const CHAPTER_ORDER = [
 
 const recordsRoot = document.querySelector("#records-root");
 const chronologyRoot = document.querySelector("#chronology-root");
-const candidatePdfRoot = document.querySelector("#candidate-pdf-root");
-const candidatePdfSummary = document.querySelector("#candidate-pdf-summary");
+const chronologySummary = document.querySelector("#chronology-summary");
 const totalRecords = document.querySelector("#total-records");
 const decisionReady = document.querySelector("#decision-ready");
 const provenanceGaps = document.querySelector("#provenance-gaps");
@@ -65,7 +64,7 @@ function byChronology(a, b) {
 }
 
 function isDeclassifiedChronologyRecord(record) {
-  if (["Source Lead", "Finding Aid"].includes(record.type)) return false;
+  if (["Finding Aid", "Audio/Visual"].includes(record.type)) return false;
 
   const statusText = [
     record.type,
@@ -80,14 +79,10 @@ function isDeclassifiedChronologyRecord(record) {
     .join(" ");
 
   return (
-    ["Memcon", "Telcon", "Release Packet", "Public Statement", "Audio/Visual"].includes(record.type) ||
-    /\b(FOIA|MDR|released|declassified|unclassified|public|audio|Presidential Daily Diary)\b/i.test(statusText)
+    hasPdf(record) ||
+    ["Memcon", "Telcon", "Release Packet", "Public Statement"].includes(record.type) ||
+    /\b(FOIA|MDR|released|declassified|unclassified|public|Presidential Daily Diary|item page with PDF)\b/i.test(statusText)
   );
-}
-
-function chronologyYear(record) {
-  const value = (record.sortDate || record.date || "").slice(0, 4);
-  return /^\d{4}$/.test(value) ? value : "pending";
 }
 
 function hasValue(value) {
@@ -117,52 +112,6 @@ function recordPdfFiles(record) {
 
 function hasPdf(record) {
   return recordPdfFiles(record).length > 0;
-}
-
-function candidateStrength(record) {
-  if (record.selectionDecision === "Include candidate") return "Strong candidate";
-  if (record.selectionDecision === "Boundary review") return "Boundary review";
-  if (record.selectionDecision === "Context candidate") return "Context";
-  return record.selectionDecision || "Source lead";
-}
-
-function isCandidatePdfRecord(record) {
-  if (!hasPdf(record)) return false;
-  if (["Finding Aid", "Audio/Visual", "Public Statement"].includes(record.type)) return false;
-
-  const releaseText = [
-    record.type,
-    record.releaseStatus,
-    record.declassificationStatus,
-    record.originalClassification,
-    record.source?.collection
-  ]
-    .filter(Boolean)
-    .join(" ");
-
-  return /\b(FOIA|MDR|Release Packet|Declassified|Previously Restricted|released packet)\b/i.test(releaseText);
-}
-
-function pdfPageLabel(record) {
-  const files = recordPdfFiles(record);
-  const pages = files.reduce((sum, file) => sum + (Number(file.pages) || 0), 0);
-  if (pages) return pages === 1 ? "1 PDF page" : `${pages.toLocaleString("en-US")} PDF pages`;
-  if (record.pageCount) return record.pageCount === 1 ? "1 PDF page" : `${record.pageCount.toLocaleString("en-US")} PDF pages`;
-  return files.length === 1 ? "1 PDF" : `${files.length} PDFs`;
-}
-
-function byCandidatePdfPriority(a, b) {
-  const priority = {
-    "Include candidate": 0,
-    "Boundary review": 1,
-    "Context candidate": 2,
-    "Source lead": 3
-  };
-  return (
-    (priority[a.selectionDecision] ?? 9) - (priority[b.selectionDecision] ?? 9) ||
-    (a.sortDate || a.date || "9999-12-31").localeCompare(b.sortDate || b.date || "9999-12-31") ||
-    (a.title || "").localeCompare(b.title || "")
-  );
 }
 
 function sourcePathParts(record) {
@@ -373,10 +322,12 @@ function createRecordRow(record) {
   date.textContent = formatDate(record.date);
 
   const body = document.createElement("div");
-  const title = document.createElement(record.catalogUrl || record.pdfUrl ? "a" : "span");
+  const pdfFiles = recordPdfFiles(record);
+  const titleUrl = record.catalogUrl || pdfFiles[0]?.url;
+  const title = document.createElement(titleUrl ? "a" : "span");
   title.className = "record-title";
-  if (record.catalogUrl || record.pdfUrl) {
-    title.href = record.catalogUrl || record.pdfUrl;
+  if (titleUrl) {
+    title.href = titleUrl;
     title.rel = "noreferrer";
   }
   title.textContent = record.documentTitle || record.title;
@@ -406,18 +357,14 @@ function createRecordRow(record) {
     const source = document.createElement("a");
     source.href = record.catalogUrl;
     source.rel = "noreferrer";
-    source.textContent = record.source?.name?.includes("Clinton") ? "Item" : "Source";
+    source.textContent = record.source?.name?.includes("Clinton") ? "Clinton item" : "Source record";
     links.append(source);
   }
 
-  const pdfFiles = recordPdfFiles(record);
   for (const [index, file] of pdfFiles.entries()) {
-    const pdf = document.createElement("a");
-    pdf.href = file.url;
-    pdf.rel = "noreferrer";
-    pdf.target = "_blank";
-    pdf.textContent = pdfFiles.length === 1 ? "Open PDF" : `PDF ${index + 1}`;
-    links.append(pdf);
+    const label = pdfFiles.length === 1 ? "PDF" : `PDF ${index + 1}`;
+    links.append(createExternalLink(`Open ${label}`, file.url, { className: "primary-record-link" }));
+    links.append(createExternalLink(`Download ${label}`, file.url, { download: true }));
   }
 
   if (record.transcriptionUrl) {
@@ -503,7 +450,7 @@ function formatIssue(issue) {
   }[issue] || issue;
 }
 
-function createPdfLink(label, url, options = {}) {
+function createExternalLink(label, url, options = {}) {
   const link = document.createElement("a");
   link.href = url;
   link.rel = "noreferrer";
@@ -512,139 +459,6 @@ function createPdfLink(label, url, options = {}) {
   if (options.download) link.setAttribute("download", "");
   if (options.className) link.className = options.className;
   return link;
-}
-
-function createPdfPreview(record, file) {
-  const details = document.createElement("details");
-  details.className = "pdf-preview";
-
-  const summary = document.createElement("summary");
-  summary.textContent = "Preview PDF";
-  details.append(summary);
-
-  details.addEventListener("toggle", () => {
-    if (!details.open || details.querySelector("iframe")) return;
-    const frame = document.createElement("iframe");
-    frame.src = file.url;
-    frame.title = `PDF preview: ${record.documentTitle || record.title}`;
-    frame.loading = "lazy";
-    details.append(frame);
-  });
-
-  return details;
-}
-
-function createCandidatePdfCard(record) {
-  const card = document.createElement("article");
-  card.className = `candidate-pdf-card ${record.selectionDecision === "Include candidate" ? "is-strong" : ""}`;
-
-  const top = document.createElement("div");
-  top.className = "candidate-pdf-top";
-
-  const headingWrap = document.createElement("div");
-  const date = document.createElement("time");
-  date.className = "candidate-pdf-date";
-  if (record.date) date.dateTime = record.date;
-  date.textContent = formatDate(record.date);
-
-  const heading = document.createElement("h3");
-  heading.textContent = record.documentTitle || record.title;
-  headingWrap.append(date, heading);
-
-  const badges = document.createElement("div");
-  badges.className = "candidate-pdf-badges";
-  for (const value of [candidateStrength(record), record.type, pdfPageLabel(record)]) {
-    const badge = document.createElement("span");
-    badge.textContent = value;
-    badges.append(badge);
-  }
-  top.append(headingWrap, badges);
-
-  const subject = createParagraph("candidate-pdf-subject", record.subjectLine || record.title);
-  const meta = createParagraph(
-    "candidate-pdf-meta",
-    [
-      record.releaseStatus,
-      record.declassificationStatus,
-      record.source?.caseNumber ? `Case ${record.source.caseNumber}` : "",
-      record.source?.documentId ? `Item ${record.source.documentId}` : ""
-    ]
-      .filter(Boolean)
-      .join(" | ")
-  );
-
-  const note = createParagraph("candidate-pdf-note", createSourceNoteDraft(record));
-
-  const files = recordPdfFiles(record);
-  const actions = document.createElement("div");
-  actions.className = "candidate-pdf-actions";
-  if (record.catalogUrl) actions.append(createPdfLink("Open Clinton item", record.catalogUrl));
-
-  const fileList = document.createElement("div");
-  fileList.className = "candidate-pdf-files";
-  for (const [index, file] of files.entries()) {
-    const item = document.createElement("div");
-    item.className = "candidate-pdf-file";
-
-    const fileHeading = document.createElement("div");
-    fileHeading.className = "candidate-pdf-file-heading";
-    const label = document.createElement("strong");
-    label.textContent = file.label || (files.length > 1 ? `PDF ${index + 1}` : "Declassified PDF");
-    const pages = document.createElement("span");
-    pages.textContent = file.pages ? `${file.pages.toLocaleString("en-US")} pages` : "PDF";
-    fileHeading.append(label, pages);
-
-    const fileActions = document.createElement("div");
-    fileActions.className = "candidate-pdf-actions";
-    fileActions.append(createPdfLink("Open PDF", file.url, { className: "primary-pdf-action" }));
-    fileActions.append(createPdfLink("Download PDF", file.url, { download: true }));
-
-    item.append(fileHeading, fileActions, createPdfPreview(record, file));
-    fileList.append(item);
-  }
-
-  card.append(top, subject, meta, note, actions, fileList);
-
-  if (record.withheldMaterial || record.sourceNoteAddendum) {
-    const details = document.createElement("details");
-    details.className = "candidate-pdf-details";
-    const summary = document.createElement("summary");
-    summary.textContent = "Selection and withholding notes";
-    const text = createParagraph(
-      "candidate-pdf-note",
-      [record.sourceNoteAddendum, typeof record.withheldMaterial === "string" ? record.withheldMaterial : record.withheldMaterial?.description]
-        .filter(Boolean)
-        .join(" ")
-    );
-    details.append(summary, text);
-    card.append(details);
-  }
-
-  return card;
-}
-
-function renderCandidatePdfs(records) {
-  if (!candidatePdfRoot) return;
-
-  const pdfRecords = records.filter(isCandidatePdfRecord).sort(byCandidatePdfPriority);
-  const strong = pdfRecords.filter((record) => record.selectionDecision === "Include candidate");
-  const directFiles = pdfRecords.reduce((sum, record) => sum + recordPdfFiles(record).length, 0);
-  const pageTotal = pdfRecords.reduce((sum, record) => {
-    const filePages = recordPdfFiles(record).reduce((fileSum, file) => fileSum + (Number(file.pages) || 0), 0);
-    return sum + (filePages || record.pageCount || 0);
-  }, 0);
-
-  if (candidatePdfSummary) {
-    candidatePdfSummary.textContent = `${strong.length} strong candidate records first; ${pdfRecords.length} declassified PDF records, ${directFiles} direct PDF links, ${pageTotal.toLocaleString("en-US")} counted or packet PDF pages.`;
-  }
-
-  candidatePdfRoot.replaceChildren();
-  if (!pdfRecords.length) {
-    candidatePdfRoot.innerHTML = '<p class="empty-state">No direct declassified PDF records are available yet.</p>';
-    return;
-  }
-
-  for (const record of pdfRecords) candidatePdfRoot.append(createCandidatePdfCard(record));
 }
 
 function renderEmptyState() {
@@ -712,6 +526,13 @@ function renderChronology(records) {
   if (!chronologyRoot) return;
 
   const sorted = records.filter(isDeclassifiedChronologyRecord).sort(byChronology);
+  const directFiles = sorted.reduce((sum, record) => sum + recordPdfFiles(record).length, 0);
+  const packetCount = sorted.filter((record) => record.type === "Release Packet").length;
+
+  if (chronologySummary) {
+    chronologySummary.textContent = `${sorted.length} released or declassified document records, including ${packetCount} release packets and ${directFiles} direct PDF links.`;
+  }
+
   chronologyRoot.replaceChildren();
 
   if (!sorted.length) {
@@ -724,32 +545,26 @@ function renderChronology(records) {
     return;
   }
 
-  const years = [...new Set(sorted.map(chronologyYear))];
+  const section = document.createElement("section");
+  section.className = "record-chapter chronology-all";
 
-  for (const year of years) {
-    const yearRecords = sorted.filter((record) => chronologyYear(record) === year);
-    const section = document.createElement("section");
-    section.className = "record-chapter chronology-year";
-    section.id = `chronology-${year}`;
+  const header = document.createElement("div");
+  header.className = "record-chapter-header";
 
-    const header = document.createElement("div");
-    header.className = "record-chapter-header";
+  const heading = document.createElement("h3");
+  heading.textContent = "All Released Document Records";
 
-    const heading = document.createElement("h3");
-    heading.textContent = year === "pending" ? "Date Pending" : year;
+  const count = document.createElement("p");
+  count.className = "record-count";
+  count.textContent = `${sorted.length} records in date order`;
+  header.append(heading, count);
 
-    const count = document.createElement("p");
-    count.className = "record-count";
-    count.textContent = `${yearRecords.length} released or public records`;
-    header.append(heading, count);
+  const list = document.createElement("div");
+  list.className = "record-list chronology-list";
+  for (const record of sorted) list.append(createRecordRow(record));
 
-    const list = document.createElement("div");
-    list.className = "record-list";
-    for (const record of yearRecords) list.append(createRecordRow(record));
-
-    section.append(header, list);
-    chronologyRoot.append(section);
-  }
+  section.append(header, list);
+  chronologyRoot.append(section);
 }
 
 function filterRecords() {
@@ -813,7 +628,6 @@ async function init() {
   try {
     allRecords = window.COMPILER_RECORDS || (await loadRecords());
     setChapterCounts(allRecords);
-    renderCandidatePdfs(allRecords);
     renderChronology(allRecords);
     renderRecords(allRecords);
     enableFilters();

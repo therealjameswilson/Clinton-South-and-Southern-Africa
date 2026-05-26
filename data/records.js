@@ -47,7 +47,9 @@ window.COMPILER_RECORDS = [
     "persons": [
       "Bill Clinton",
       "Boutros Boutros-Ghali"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/0e72cac1e38b09a246280ca0629b188f.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-002",
@@ -89,7 +91,9 @@ window.COMPILER_RECORDS = [
     ],
     "persons": [
       "Anthony Lake"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/1a5c2506a1fdf503e6c564daba5a28f4.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-003",
@@ -314,7 +318,9 @@ window.COMPILER_RECORDS = [
     ],
     "persons": [
       "Robert Boorstin"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/6aaeb1da21af20839bbc4cf8d1c708b3.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-008",
@@ -449,7 +455,9 @@ window.COMPILER_RECORDS = [
       "Bill Clinton",
       "Nelson Mandela",
       "Antony Blinken"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/8c33eeb89b620edd6594e80b2b290bd9.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-011",
@@ -534,7 +542,9 @@ window.COMPILER_RECORDS = [
     "persons": [
       "Samuel Berger",
       "Edward Widmer"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/27ec86be28e49964d2cc63849a625c8c.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-013",
@@ -665,7 +675,9 @@ window.COMPILER_RECORDS = [
       "democracy",
       "regional policy"
     ],
-    "persons": []
+    "persons": [],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-016",
@@ -709,7 +721,9 @@ window.COMPILER_RECORDS = [
     ],
     "persons": [
       "Philip J. Crowley"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/69d36ed4cb7676b00e4ae76979a161db.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-017",
@@ -1363,7 +1377,9 @@ window.COMPILER_RECORDS = [
       "Bill Clinton",
       "Robert Mugabe",
       "Ellen McCathran"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/1b2548044da1ab7f808c7c123eced2ac.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-028",
@@ -1730,7 +1746,9 @@ window.COMPILER_RECORDS = [
     ],
     "persons": [
       "Robert Boorstin"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/dec14ca9fdbd28b7d81c3e10b07b3a85.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-035",
@@ -1780,7 +1798,9 @@ window.COMPILER_RECORDS = [
     ],
     "persons": [
       "Robert Boorstin"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/a46d30222332f24687ae49c52290c48a.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-036",
@@ -1827,7 +1847,9 @@ window.COMPILER_RECORDS = [
     ],
     "persons": [
       "Robert Boorstin"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/b77a8e435896410dac9b8c57aa71ae29.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-037",
@@ -1873,7 +1895,9 @@ window.COMPILER_RECORDS = [
     ],
     "persons": [
       "Antony Blinken"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/f9de72c6f1d880690d97ae680d586635.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-038",
@@ -1981,7 +2005,9 @@ window.COMPILER_RECORDS = [
     "persons": [
       "Sam Nujoma",
       "Philip J. Crowley"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/ec27462c59221f362248a316ea88bfaa.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-040",
@@ -2084,7 +2110,9 @@ window.COMPILER_RECORDS = [
     "persons": [
       "Anthony Lake",
       "Robert Boorstin"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/97ce64a8792cca22ac4e8ece2f44ce94.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-042",
@@ -2130,7 +2158,9 @@ window.COMPILER_RECORDS = [
     "persons": [
       "Robert Boorstin",
       "Anthony Lake"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-043",
@@ -2183,7 +2213,9 @@ window.COMPILER_RECORDS = [
     "persons": [
       "Bill Clinton",
       "Kirk Hanlin"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/439dc99bed6a2bb46554be1d76f2c515.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-044",
@@ -2229,7 +2261,9 @@ window.COMPILER_RECORDS = [
       "Bill Clinton",
       "Quett Masire",
       "Antony Blinken"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/425f580fb944b53794d5f1454ab21710.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-045",
@@ -2358,7 +2392,9 @@ window.COMPILER_RECORDS = [
       "National AIDS Policy Office",
       "health diplomacy"
     ],
-    "persons": []
+    "persons": [],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/9364ec86ad4d726a134ac9f8212d1cd9.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-048",
@@ -2401,7 +2437,9 @@ window.COMPILER_RECORDS = [
       "National AIDS Policy Office",
       "health diplomacy"
     ],
-    "persons": []
+    "persons": [],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/64f7e4a8421dfcf4adf33766adf44117.pdf",
+    "pdfLabel": "Clinton Library PDF"
   },
   {
     "id": "clinton-v27-049",
@@ -2491,6 +2529,8 @@ window.COMPILER_RECORDS = [
     "persons": [
       "Robert Boorstin",
       "Robert Mugabe"
-    ]
+    ],
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/db667bda4db08fb5a78f2d73507cd8b1.pdf",
+    "pdfLabel": "Clinton Library PDF"
   }
 ];

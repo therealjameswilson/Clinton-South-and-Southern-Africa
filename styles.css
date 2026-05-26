@@ -307,178 +307,6 @@ dd {
   line-height: 1.68;
 }
 
-.pdf-section {
-  padding-top: clamp(28px, 5vw, 54px);
-}
-
-.candidate-pdf-grid {
-  display: grid;
-  gap: 14px;
-}
-
-.candidate-pdf-card {
-  display: grid;
-  gap: 14px;
-  padding: clamp(18px, 3vw, 24px);
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--line);
-  border-left: 6px solid var(--blue);
-  border-radius: 8px;
-  box-shadow: 0 12px 38px rgba(20, 32, 46, 0.08);
-}
-
-.candidate-pdf-card.is-strong {
-  border-left-color: var(--rust);
-}
-
-.candidate-pdf-top {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
-  align-items: start;
-}
-
-.candidate-pdf-date {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--rust);
-  font-size: 0.88rem;
-  font-weight: 900;
-}
-
-.candidate-pdf-card h3 {
-  margin: 0;
-  color: var(--navy);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
-}
-
-.candidate-pdf-badges,
-.candidate-pdf-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-end;
-}
-
-.candidate-pdf-badges span {
-  padding: 5px 9px;
-  color: #37444f;
-  font-size: 0.78rem;
-  font-weight: 900;
-  background: rgba(36, 52, 76, 0.08);
-  border-radius: 999px;
-}
-
-.candidate-pdf-subject,
-.candidate-pdf-meta,
-.candidate-pdf-note {
-  margin: 0;
-  color: #45515c;
-  line-height: 1.55;
-}
-
-.candidate-pdf-subject {
-  font-weight: 760;
-}
-
-.candidate-pdf-meta {
-  color: var(--muted);
-  font-size: 0.93rem;
-  font-weight: 800;
-}
-
-.candidate-pdf-note {
-  padding: 12px;
-  background: rgba(47, 106, 102, 0.08);
-  border: 1px solid rgba(47, 106, 102, 0.16);
-  border-radius: 6px;
-}
-
-.candidate-pdf-actions {
-  justify-content: flex-start;
-}
-
-.candidate-pdf-actions a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 8px 12px;
-  color: var(--navy);
-  font-size: 0.92rem;
-  font-weight: 850;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-}
-
-.candidate-pdf-actions .primary-pdf-action {
-  color: white;
-  background: var(--navy);
-  border-color: var(--navy);
-}
-
-.candidate-pdf-files {
-  display: grid;
-  gap: 10px;
-}
-
-.candidate-pdf-file {
-  display: grid;
-  gap: 10px;
-  padding: 12px;
-  background: rgba(247, 249, 250, 0.82);
-  border: 1px solid rgba(36, 52, 76, 0.12);
-  border-radius: 6px;
-}
-
-.candidate-pdf-file-heading {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  align-items: baseline;
-  justify-content: space-between;
-  color: var(--navy);
-}
-
-.candidate-pdf-file-heading strong {
-  font-size: 0.96rem;
-}
-
-.candidate-pdf-file-heading span {
-  color: var(--muted);
-  font-size: 0.86rem;
-  font-weight: 850;
-}
-
-.pdf-preview,
-.candidate-pdf-details {
-  border: 1px solid rgba(36, 52, 76, 0.14);
-  border-radius: 6px;
-}
-
-.pdf-preview summary,
-.candidate-pdf-details summary {
-  cursor: pointer;
-  padding: 10px 12px;
-  color: var(--navy);
-  font-weight: 900;
-}
-
-.pdf-preview iframe {
-  display: block;
-  width: 100%;
-  height: min(72vh, 760px);
-  border: 0;
-  border-top: 1px solid rgba(36, 52, 76, 0.14);
-  background: white;
-}
-
-.candidate-pdf-details .candidate-pdf-note {
-  margin: 0 12px 12px;
-}
-
 .report-links,
 .source-list,
 .facet-list {
@@ -532,6 +360,12 @@ dd {
 .volume-panel a,
 .source-note-guide a {
   width: fit-content;
+}
+
+.record-links .primary-record-link {
+  color: white;
+  background: var(--navy);
+  border-color: var(--navy);
 }
 
 .gap-summary {
@@ -1082,14 +916,6 @@ footer a {
 
   .record-row {
     grid-template-columns: 1fr;
-  }
-
-  .candidate-pdf-top {
-    grid-template-columns: 1fr;
-  }
-
-  .candidate-pdf-badges {
-    justify-content: flex-start;
   }
 
   .record-links {
