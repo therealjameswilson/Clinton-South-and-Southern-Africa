@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Southern Africa research map</title>
+  <desc id="desc">A stylized archival map showing South Africa, Angola, Mozambique, Rwanda, and regional research routes.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f1e6"/>
+      <stop offset="1" stop-color="#dde8e2"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#102033" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="960" height="620" fill="url(#paper)"/>
+  <path d="M89 102h782v416H89z" fill="#fffaf0" opacity=".68" stroke="#c9c0ad" stroke-width="2"/>
+  <path d="M134 156c75 18 128 8 173 25 58 22 79 71 128 92 52 22 129 3 178 32 44 25 48 79 87 109 24 19 64 20 106 14" fill="none" stroke="#a46f2b" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 18"/>
+  <path d="M340 96c24 45 28 94 14 149-11 45-6 72 21 103 29 33 54 69 53 120" fill="none" stroke="#426f76" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  <path d="M535 141c-29 52-28 98 2 136 24 30 32 65 24 103-8 40 7 75 45 105" fill="none" stroke="#7e4b57" stroke-width="5" stroke-linecap="round" opacity=".82"/>
+  <g filter="url(#shadow)">
+    <path d="M608 180l24 46-18 37 28 50-22 51 36 59-20 52-56 34-79-20-44-53 5-75-33-58 23-58-15-62 54-43z" fill="#d8e5dc" stroke="#304d54" stroke-width="4"/>
+    <path d="M430 210l-49 33-43-24-48 18-28-34 20-48 52-6 39 27 50-15z" fill="#e6d2b2" stroke="#7d5236" stroke-width="4"/>
+    <path d="M454 368l50 18 31 54-18 47-75 22-60-30-3-68z" fill="#cfdfe5" stroke="#395d71" stroke-width="4"/>
+    <path d="M594 438l69 28 45-10 34 35-29 53-81 10-58-42z" fill="#efe0c2" stroke="#815f28" stroke-width="4"/>
+    <path d="M540 262l42-12 39 23-10 42-48 12-31-28z" fill="#e6c7c2" stroke="#854b4b" stroke-width="4"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#172530">
+    <circle cx="635" cy="475" r="11" fill="#963e36"/>
+    <text x="654" y="481">South Africa</text>
+    <circle cx="351" cy="203" r="11" fill="#963e36"/>
+    <text x="238" y="198">Angola</text>
+    <circle cx="515" cy="426" r="11" fill="#963e36"/>
+    <text x="402" y="428">Mozambique</text>
+    <circle cx="576" cy="286" r="11" fill="#963e36"/>
+    <text x="628" y="292">Rwanda / Great Lakes</text>
+  </g>
+  <g fill="#26394f" font-family="Georgia, 'Times New Roman', serif">
+    <text x="118" y="84" font-size="36" font-weight="700">Volume XXVII Source Map</text>
+    <text x="119" y="118" font-size="20">South Africa; Southern Africa, 1993-2000</text>
+  </g>
+  <g transform="translate(120 462)" font-family="Inter, Arial, sans-serif">
+    <rect width="300" height="94" rx="8" fill="#ffffff" stroke="#d2c8b6"/>
+    <text x="22" y="34" fill="#963e36" font-size="14" font-weight="900">RESEARCH ROUTES</text>
+    <text x="22" y="62" fill="#223040" font-size="16">Clinton Library</text>
+    <text x="160" y="62" fill="#223040" font-size="16">State FOIA</text>
+    <text x="22" y="82" fill="#223040" font-size="16">NARA Catalog</text>
+    <text x="160" y="82" fill="#223040" font-size="16">Public Papers</text>
+  </g>
+</svg>
