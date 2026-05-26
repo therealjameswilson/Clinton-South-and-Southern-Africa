@@ -17,6 +17,7 @@
         <span>South and Southern Africa Assist</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#pdfs">PDFs</a>
         <a href="#chronology">Chronology</a>
         <a href="#volume">Volume</a>
         <a href="#gaps">Gaps</a>
@@ -31,16 +32,35 @@
     </header>
 
     <main id="top">
+      <section class="section pdf-section" id="pdfs" aria-labelledby="pdfs-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Primary PDF Shelf</p>
+            <h2 id="pdfs-title">Strong Candidate Declassified PDFs</h2>
+          </div>
+          <p class="section-note">
+            This view leads with release packets and declassified PDFs most likely to
+            matter for the volume. Each card keeps the Clinton Library item link, direct
+            PDF open/download controls, and an on-page preview so the document can be
+            inspected before the broader lane browser.
+          </p>
+        </div>
+        <p id="candidate-pdf-summary" class="result-summary" aria-live="polite">
+          Loading candidate PDFs...
+        </p>
+        <div id="candidate-pdf-root" class="candidate-pdf-grid" aria-live="polite"></div>
+      </section>
+
       <section class="section chronology-section" id="chronology" aria-labelledby="chronology-title">
         <div class="section-heading">
-          <p class="kicker">Chronology First</p>
-          <h2 id="chronology-title">Released Document Chronology</h2>
+          <p class="kicker">Chronology</p>
+          <h2 id="chronology-title">Chronology of Declassified and Public Records</h2>
         </div>
         <p class="records-intro">
-          This first view stays limited to public, released, or declassified items.
-          Finding aids, source leads, and public-statement context remain visible in
-          the later lane browser until they are promoted into document-level evidence
-          with date, repository path, release status, and source-note fields.
+          This list follows the Balkans workspace model: records are ordered by
+          document date and kept separate from the later lane browser. Strong PDF
+          candidates stay prominent above, while public statements and controls remain
+          visible here for chronology and context.
         </p>
         <div class="report-links chronology-links" aria-label="Chronology support reports">
           <a href="#records">Open full lane browser</a>
@@ -65,7 +85,8 @@
             one source-controlled research surface.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#chronology">Read Chronology</a>
+            <a class="button primary" href="#pdfs">Open Candidate PDFs</a>
+            <a class="button secondary" href="#chronology">Read Chronology</a>
             <a class="button secondary" href="#workbench">Compiler Workbench</a>
             <a class="button secondary" href="#gaps">Gap Analysis</a>
             <a class="button secondary" href="#library">Library Pull Plan</a>

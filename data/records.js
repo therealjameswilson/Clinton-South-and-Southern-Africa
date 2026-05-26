@@ -199,6 +199,8 @@ window.COMPILER_RECORDS = [
       "Bosnia"
     ],
     "digitalObjects": 1,
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/d99d763c5a60d17afe606193e3fb0a86.pdf",
+    "pageCount": 3,
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/72408",
     "source": {
       "name": "Clinton Digital Library",
@@ -772,6 +774,7 @@ window.COMPILER_RECORDS = [
     ],
     "digitalObjects": 1,
     "pageCount": 222,
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/4ac627959484159102933a3192305cae.pdf",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/57650",
     "source": {
       "name": "Clinton Digital Library",
@@ -828,6 +831,7 @@ window.COMPILER_RECORDS = [
     ],
     "digitalObjects": 1,
     "pageCount": 24,
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/ea12d7b7c94007cdaa3fad7a9839117e.pdf",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/36615",
     "source": {
       "name": "Clinton Digital Library",
@@ -886,6 +890,7 @@ window.COMPILER_RECORDS = [
     ],
     "digitalObjects": 1,
     "pageCount": 69,
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/29365aeb4d439b0bd5173f0670e30ffe.pdf",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/47967",
     "source": {
       "name": "Clinton Digital Library",
@@ -939,6 +944,44 @@ window.COMPILER_RECORDS = [
       "Zaire"
     ],
     "digitalObjects": 9,
+    "pdfFiles": [
+      {
+        "label": "MDR PDF 1",
+        "url": "https://clinton.presidentiallibraries.us/files/original/7ec9f20aea4a9c9f9e8b0c15efdac8bb.pdf"
+      },
+      {
+        "label": "MDR PDF 2",
+        "url": "https://clinton.presidentiallibraries.us/files/original/c66d57231f091d187155d7407ed0929b.pdf"
+      },
+      {
+        "label": "MDR PDF 3",
+        "url": "https://clinton.presidentiallibraries.us/files/original/44fcebeba87c94ef552fac6b91cc5ad2.pdf"
+      },
+      {
+        "label": "MDR PDF 4",
+        "url": "https://clinton.presidentiallibraries.us/files/original/5d042f83fa58b70074708f14c0127713.pdf"
+      },
+      {
+        "label": "MDR PDF 5",
+        "url": "https://clinton.presidentiallibraries.us/files/original/a1ca8fd5b12dddc6a0dd8fc771ea5f7b.pdf"
+      },
+      {
+        "label": "MDR PDF 6",
+        "url": "https://clinton.presidentiallibraries.us/files/original/6ab576aa6a1edf42a5162309930cc438.pdf"
+      },
+      {
+        "label": "MDR PDF 7",
+        "url": "https://clinton.presidentiallibraries.us/files/original/5c445cc9a557aa99f8e8515a2717a83d.pdf"
+      },
+      {
+        "label": "MDR PDF 8",
+        "url": "https://clinton.presidentiallibraries.us/files/original/89c35d26fa96f87ec734a551ad81cc96.pdf"
+      },
+      {
+        "label": "MDR PDF 9",
+        "url": "https://clinton.presidentiallibraries.us/files/original/e37a5d48dc7e1489e1571c952f4b60c9.pdf"
+      }
+    ],
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/118983",
     "source": {
       "name": "Clinton Digital Library",
@@ -991,6 +1034,7 @@ window.COMPILER_RECORDS = [
     ],
     "digitalObjects": 1,
     "pageCount": 6,
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14676",
     "source": {
       "name": "Clinton Digital Library",
@@ -1045,6 +1089,13 @@ window.COMPILER_RECORDS = [
       "Zimbabwe"
     ],
     "digitalObjects": 1,
+    "pdfFiles": [
+      {
+        "label": "FOIA packet PDF",
+        "url": "https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf",
+        "pages": 157
+      }
+    ],
     "sourcePages": "FOIA packet pages with withdrawal sheets for documents 001a-008",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
     "source": {
@@ -1106,6 +1157,13 @@ window.COMPILER_RECORDS = [
       "Zimbabwe"
     ],
     "digitalObjects": 1,
+    "pdfFiles": [
+      {
+        "label": "FOIA packet PDF",
+        "url": "https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf",
+        "pages": 157
+      }
+    ],
     "sourcePages": "FOIA 2006-0457-F packet, document 008",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
     "source": {
@@ -1158,6 +1216,13 @@ window.COMPILER_RECORDS = [
       "Zimbabwe"
     ],
     "digitalObjects": 1,
+    "pdfFiles": [
+      {
+        "label": "FOIA packet PDF",
+        "url": "https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf",
+        "pages": 157
+      }
+    ],
     "sourcePages": "FOIA 2006-0457-F packet, NSC Records Management folder 9704944",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
     "source": {
@@ -1212,6 +1277,13 @@ window.COMPILER_RECORDS = [
       "Rwanda"
     ],
     "digitalObjects": 1,
+    "pdfFiles": [
+      {
+        "label": "FOIA packet PDF",
+        "url": "https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf",
+        "pages": 157
+      }
+    ],
     "sourcePages": "FOIA 2006-0457-F packet, FLOTUS Trip briefing book, document 005",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
     "source": {
@@ -1356,6 +1428,7 @@ window.COMPILER_RECORDS = [
     ],
     "digitalObjects": 1,
     "pageCount": 70,
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/64750",
     "source": {
       "name": "Clinton Digital Library",
@@ -1413,6 +1486,7 @@ window.COMPILER_RECORDS = [
     ],
     "digitalObjects": 1,
     "pageCount": 61,
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/64751",
     "source": {
       "name": "Clinton Digital Library",
@@ -1470,6 +1544,28 @@ window.COMPILER_RECORDS = [
     ],
     "digitalObjects": 4,
     "pageCount": 557,
+    "pdfFiles": [
+      {
+        "label": "MDR PDF 1",
+        "url": "https://clinton.presidentiallibraries.us/files/original/658d3ce0236437eab569f63b04278e1f.pdf",
+        "pages": 141
+      },
+      {
+        "label": "MDR PDF 2",
+        "url": "https://clinton.presidentiallibraries.us/files/original/eb8f2b1ca9bb04768340f55897d880a4.pdf",
+        "pages": 159
+      },
+      {
+        "label": "MDR PDF 3",
+        "url": "https://clinton.presidentiallibraries.us/files/original/a45536181776d20e1400df63854d4443.pdf",
+        "pages": 149
+      },
+      {
+        "label": "MDR PDF 4",
+        "url": "https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf",
+        "pages": 108
+      }
+    ],
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/119208",
     "source": {
       "name": "Clinton Digital Library",
@@ -1804,6 +1900,7 @@ window.COMPILER_RECORDS = [
     ],
     "digitalObjects": 1,
     "pageCount": 98,
+    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/118505",
     "source": {
       "name": "Clinton Digital Library",
@@ -1905,6 +2002,13 @@ window.COMPILER_RECORDS = [
       "Namibia"
     ],
     "digitalObjects": 1,
+    "pdfFiles": [
+      {
+        "label": "Global AIDS Crisis PDF 4",
+        "url": "https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf",
+        "pages": 108
+      }
+    ],
     "sourcePages": "Global AIDS Crisis MDR packet, PDF 4",
     "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/119208",
     "source": {

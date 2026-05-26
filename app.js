@@ -7,6 +7,8 @@ const CHAPTER_ORDER = [
 
 const recordsRoot = document.querySelector("#records-root");
 const chronologyRoot = document.querySelector("#chronology-root");
+const candidatePdfRoot = document.querySelector("#candidate-pdf-root");
+const candidatePdfSummary = document.querySelector("#candidate-pdf-summary");
 const totalRecords = document.querySelector("#total-records");
 const decisionReady = document.querySelector("#decision-ready");
 const provenanceGaps = document.querySelector("#provenance-gaps");
@@ -99,6 +101,68 @@ function listValues(value) {
 
 function joinValues(value) {
   return listValues(value).join(", ");
+}
+
+function recordPdfFiles(record) {
+  const files = Array.isArray(record.pdfFiles) ? [...record.pdfFiles] : [];
+  if (record.pdfUrl && !files.some((file) => file.url === record.pdfUrl)) {
+    files.unshift({
+      label: record.pdfLabel || "PDF",
+      url: record.pdfUrl,
+      pages: record.pageCount
+    });
+  }
+  return files.filter((file) => file?.url);
+}
+
+function hasPdf(record) {
+  return recordPdfFiles(record).length > 0;
+}
+
+function candidateStrength(record) {
+  if (record.selectionDecision === "Include candidate") return "Strong candidate";
+  if (record.selectionDecision === "Boundary review") return "Boundary review";
+  if (record.selectionDecision === "Context candidate") return "Context";
+  return record.selectionDecision || "Source lead";
+}
+
+function isCandidatePdfRecord(record) {
+  if (!hasPdf(record)) return false;
+  if (["Finding Aid", "Audio/Visual", "Public Statement"].includes(record.type)) return false;
+
+  const releaseText = [
+    record.type,
+    record.releaseStatus,
+    record.declassificationStatus,
+    record.originalClassification,
+    record.source?.collection
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  return /\b(FOIA|MDR|Release Packet|Declassified|Previously Restricted|released packet)\b/i.test(releaseText);
+}
+
+function pdfPageLabel(record) {
+  const files = recordPdfFiles(record);
+  const pages = files.reduce((sum, file) => sum + (Number(file.pages) || 0), 0);
+  if (pages) return pages === 1 ? "1 PDF page" : `${pages.toLocaleString("en-US")} PDF pages`;
+  if (record.pageCount) return record.pageCount === 1 ? "1 PDF page" : `${record.pageCount.toLocaleString("en-US")} PDF pages`;
+  return files.length === 1 ? "1 PDF" : `${files.length} PDFs`;
+}
+
+function byCandidatePdfPriority(a, b) {
+  const priority = {
+    "Include candidate": 0,
+    "Boundary review": 1,
+    "Context candidate": 2,
+    "Source lead": 3
+  };
+  return (
+    (priority[a.selectionDecision] ?? 9) - (priority[b.selectionDecision] ?? 9) ||
+    (a.sortDate || a.date || "9999-12-31").localeCompare(b.sortDate || b.date || "9999-12-31") ||
+    (a.title || "").localeCompare(b.title || "")
+  );
 }
 
 function sourcePathParts(record) {
@@ -346,12 +410,13 @@ function createRecordRow(record) {
     links.append(source);
   }
 
-  if (record.pdfUrl) {
+  const pdfFiles = recordPdfFiles(record);
+  for (const [index, file] of pdfFiles.entries()) {
     const pdf = document.createElement("a");
-    pdf.href = record.pdfUrl;
+    pdf.href = file.url;
     pdf.rel = "noreferrer";
     pdf.target = "_blank";
-    pdf.textContent = "Open PDF";
+    pdf.textContent = pdfFiles.length === 1 ? "Open PDF" : `PDF ${index + 1}`;
     links.append(pdf);
   }
 
@@ -408,15 +473,19 @@ function createProductionBlock(record) {
   if (record.withheldMaterial) {
     const note = document.createElement("p");
     note.className = "record-extraction-note";
-    const omitted = [
-      record.withheldMaterial.omittedPages ? `${record.withheldMaterial.omittedPages} pages` : "",
-      record.withheldMaterial.omittedLines ? `${record.withheldMaterial.omittedLines} lines` : ""
-    ]
-      .filter(Boolean)
-      .join(" / ");
-    note.textContent = `Withheld material: ${record.withheldMaterial.status || "noted"}${omitted ? `, ${omitted}` : ""}. ${
-      record.withheldMaterial.description || ""
-    }`;
+    if (typeof record.withheldMaterial === "string") {
+      note.textContent = `Withheld material: ${record.withheldMaterial}`;
+    } else {
+      const omitted = [
+        record.withheldMaterial.omittedPages ? `${record.withheldMaterial.omittedPages} pages` : "",
+        record.withheldMaterial.omittedLines ? `${record.withheldMaterial.omittedLines} lines` : ""
+      ]
+        .filter(Boolean)
+        .join(" / ");
+      note.textContent = `Withheld material: ${record.withheldMaterial.status || "noted"}${omitted ? `, ${omitted}` : ""}. ${
+        record.withheldMaterial.description || ""
+      }`;
+    }
     block.append(note);
   }
 
@@ -432,6 +501,150 @@ function formatIssue(issue) {
     "needs-annotation": "annotation",
     "needs-index": "index terms"
   }[issue] || issue;
+}
+
+function createPdfLink(label, url, options = {}) {
+  const link = document.createElement("a");
+  link.href = url;
+  link.rel = "noreferrer";
+  link.target = "_blank";
+  link.textContent = label;
+  if (options.download) link.setAttribute("download", "");
+  if (options.className) link.className = options.className;
+  return link;
+}
+
+function createPdfPreview(record, file) {
+  const details = document.createElement("details");
+  details.className = "pdf-preview";
+
+  const summary = document.createElement("summary");
+  summary.textContent = "Preview PDF";
+  details.append(summary);
+
+  details.addEventListener("toggle", () => {
+    if (!details.open || details.querySelector("iframe")) return;
+    const frame = document.createElement("iframe");
+    frame.src = file.url;
+    frame.title = `PDF preview: ${record.documentTitle || record.title}`;
+    frame.loading = "lazy";
+    details.append(frame);
+  });
+
+  return details;
+}
+
+function createCandidatePdfCard(record) {
+  const card = document.createElement("article");
+  card.className = `candidate-pdf-card ${record.selectionDecision === "Include candidate" ? "is-strong" : ""}`;
+
+  const top = document.createElement("div");
+  top.className = "candidate-pdf-top";
+
+  const headingWrap = document.createElement("div");
+  const date = document.createElement("time");
+  date.className = "candidate-pdf-date";
+  if (record.date) date.dateTime = record.date;
+  date.textContent = formatDate(record.date);
+
+  const heading = document.createElement("h3");
+  heading.textContent = record.documentTitle || record.title;
+  headingWrap.append(date, heading);
+
+  const badges = document.createElement("div");
+  badges.className = "candidate-pdf-badges";
+  for (const value of [candidateStrength(record), record.type, pdfPageLabel(record)]) {
+    const badge = document.createElement("span");
+    badge.textContent = value;
+    badges.append(badge);
+  }
+  top.append(headingWrap, badges);
+
+  const subject = createParagraph("candidate-pdf-subject", record.subjectLine || record.title);
+  const meta = createParagraph(
+    "candidate-pdf-meta",
+    [
+      record.releaseStatus,
+      record.declassificationStatus,
+      record.source?.caseNumber ? `Case ${record.source.caseNumber}` : "",
+      record.source?.documentId ? `Item ${record.source.documentId}` : ""
+    ]
+      .filter(Boolean)
+      .join(" | ")
+  );
+
+  const note = createParagraph("candidate-pdf-note", createSourceNoteDraft(record));
+
+  const files = recordPdfFiles(record);
+  const actions = document.createElement("div");
+  actions.className = "candidate-pdf-actions";
+  if (record.catalogUrl) actions.append(createPdfLink("Open Clinton item", record.catalogUrl));
+
+  const fileList = document.createElement("div");
+  fileList.className = "candidate-pdf-files";
+  for (const [index, file] of files.entries()) {
+    const item = document.createElement("div");
+    item.className = "candidate-pdf-file";
+
+    const fileHeading = document.createElement("div");
+    fileHeading.className = "candidate-pdf-file-heading";
+    const label = document.createElement("strong");
+    label.textContent = file.label || (files.length > 1 ? `PDF ${index + 1}` : "Declassified PDF");
+    const pages = document.createElement("span");
+    pages.textContent = file.pages ? `${file.pages.toLocaleString("en-US")} pages` : "PDF";
+    fileHeading.append(label, pages);
+
+    const fileActions = document.createElement("div");
+    fileActions.className = "candidate-pdf-actions";
+    fileActions.append(createPdfLink("Open PDF", file.url, { className: "primary-pdf-action" }));
+    fileActions.append(createPdfLink("Download PDF", file.url, { download: true }));
+
+    item.append(fileHeading, fileActions, createPdfPreview(record, file));
+    fileList.append(item);
+  }
+
+  card.append(top, subject, meta, note, actions, fileList);
+
+  if (record.withheldMaterial || record.sourceNoteAddendum) {
+    const details = document.createElement("details");
+    details.className = "candidate-pdf-details";
+    const summary = document.createElement("summary");
+    summary.textContent = "Selection and withholding notes";
+    const text = createParagraph(
+      "candidate-pdf-note",
+      [record.sourceNoteAddendum, typeof record.withheldMaterial === "string" ? record.withheldMaterial : record.withheldMaterial?.description]
+        .filter(Boolean)
+        .join(" ")
+    );
+    details.append(summary, text);
+    card.append(details);
+  }
+
+  return card;
+}
+
+function renderCandidatePdfs(records) {
+  if (!candidatePdfRoot) return;
+
+  const pdfRecords = records.filter(isCandidatePdfRecord).sort(byCandidatePdfPriority);
+  const strong = pdfRecords.filter((record) => record.selectionDecision === "Include candidate");
+  const directFiles = pdfRecords.reduce((sum, record) => sum + recordPdfFiles(record).length, 0);
+  const pageTotal = pdfRecords.reduce((sum, record) => {
+    const filePages = recordPdfFiles(record).reduce((fileSum, file) => fileSum + (Number(file.pages) || 0), 0);
+    return sum + (filePages || record.pageCount || 0);
+  }, 0);
+
+  if (candidatePdfSummary) {
+    candidatePdfSummary.textContent = `${strong.length} strong candidate records first; ${pdfRecords.length} declassified PDF records, ${directFiles} direct PDF links, ${pageTotal.toLocaleString("en-US")} counted or packet PDF pages.`;
+  }
+
+  candidatePdfRoot.replaceChildren();
+  if (!pdfRecords.length) {
+    candidatePdfRoot.innerHTML = '<p class="empty-state">No direct declassified PDF records are available yet.</p>';
+    return;
+  }
+
+  for (const record of pdfRecords) candidatePdfRoot.append(createCandidatePdfCard(record));
 }
 
 function renderEmptyState() {
@@ -600,6 +813,7 @@ async function init() {
   try {
     allRecords = window.COMPILER_RECORDS || (await loadRecords());
     setChapterCounts(allRecords);
+    renderCandidatePdfs(allRecords);
     renderChronology(allRecords);
     renderRecords(allRecords);
     enableFilters();
