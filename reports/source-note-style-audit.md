@@ -11,11 +11,17 @@ The assist page uses draft source notes in FRUS order:
 
 Use `Source:` at the beginning of every source note. Do not promote a finding-aid lead as a document record until the actual source item has been inspected.
 
+## Current Seed Status
+
+- All structured records now include a `Source:` note with repository, collection or series, item title, item ID or case number, and release-status context.
+- Released packets are still seed records until page spans, internal document titles, markings, and withdrawal-sheet relationships are extracted.
+- Finding aids remain source leads when the Clinton Digital Library says scans are not available online.
+
 ## Known Draft-Level Fields
 
 - Clinton Digital Library item pages often expose a public item citation but not the full FRUS source-note trail.
 - Finding aids identify useful collection scope but usually lack item-level dates, page spans, and markings.
-- FOIA packets must be split into individual candidate records before a final chronology can be drafted.
+- FOIA packets must be split into individual candidate records before a final chronology can be drafted; the Zimbabwe packets now have first-pass splits, but exact page spans still need extraction.
 - Public statements and audio are context records unless they illuminate the public framing of a selected policy document.
 
 ## Required Promotion Fields

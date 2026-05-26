@@ -10,6 +10,10 @@ Official volume title:
 
 The Office of the Historian currently lists the volume as **Planned**, so this site treats records as compiler leads and working candidates rather than a final documentary chronology.
 
+Public site:
+
+<https://therealjameswilson.github.io/Clinton-South-and-Southern-Africa/>
+
 ## What Is Included
 
 - Date-first chronology for released or public candidate records

@@ -2,22 +2,34 @@
 
 Official target: <https://history.state.gov/historicaldocuments/frus1993-00v27>
 
-Volume XXVII is currently planned, so this assist page is a source-control surface rather than a finished documentary record. The first risk is category control: public speeches, audio, and finding aids are useful, but they cannot substitute for memcons, telcons, policy memoranda, briefing books, cables, or release packets.
+Volume XXVII is currently planned, so this assist page is a source-control surface rather than a finished documentary record. The public-source closure pass converted broad searches into document records, packet splits, and named reading-room blockers.
 
-## Current Gaps
+## Gap Closure Ledger
 
-| Risk | Priority | Working response |
+| Original gap | Status | Closure action |
 | --- | --- | --- |
-| South Africa public material overwhelms internal policy files | High | Keep Mandela visit speeches and audio as context until matching internal policy records are located. |
-| Angola records are mostly finding-aid leads | High | Pull the Angola collection for document-level Lusaka Protocol, UNITA sanctions, Dos Santos, Savimbi, and UN peacekeeping records. |
-| Rwanda/Great Lakes boundary is unstable | High | Separate Volume XXVII regional-policy records from genocide, UN, and humanitarian-policy volume candidates. |
-| Zimbabwe and smaller-state coverage is thin | Medium | Search beyond country names using democracy, land reform, SADC, ACRI, debt relief, AIDS, sanctions, and regional-security terms. |
-| Source-note fields are draft-level | High | Record repository path, collection, box/folder, document ID, original markings, release status, page span, and drafting/clearance trail before promotion. |
+| South Africa public material overwhelmed internal policy files | Partly closed; onsite blocker remains | Added MDR packets for Amy Biehl/South African political violence, Mbeki AIDS controversy files, Global AIDS Crisis/Mbeki state-visit files, and the Mbeki 1995 visit finding aid. The unscanned South Africa and Mbeki visit collections remain pull targets. |
+| Angola records were mostly finding-aid leads | Partly closed; onsite blocker remains | Added Angola background, Southern Africa background, landmines files, landmines statement, and the Victor Butt/Bout MDR packet with Angola/UNITA and South Africa enforcement strategy. The unscanned Angola finding aid remains the core blocker for policy memoranda and cables. |
+| Rwanda/Great Lakes boundary was unstable | Controlled, not fully closed | Reclassified the Rwanda gateway as a finding aid and added separate MDR packets for Jennifer Ward, Anthony Lake, and MacArthur DeShazer files. Each Rwanda packet is marked boundary review so genocide, U.N., and humanitarian records do not flood the southern Africa volume. |
+| Zimbabwe and smaller-state coverage was thin | Closed for public/digital seed stage | Split FOIA 2006-0457-F into Mugabe visit, draft letter, African-African American Summit, Rwanda/FLOTUS, and PRDR no. 5 records. Added Zimbabwe finding aid/background, Namibia, Zambia, Botswana, and Malawi records. |
+| Source-note fields were draft-level | Closed for seed data | Every record now has a `Source:` note with repository path, item ID or case number, release status, and a promotion/control note. Document packets still need page-level extraction before final FRUS selection. |
+| FOIA packets were not split | Closed for available Zimbabwe packets | Item 14571 and item 14676 are now represented as packet-level and document-family records, with withdrawal-sheet restrictions captured. |
+| Daily Diary controls were missing | Closed for public seed stage | Added the Ellen McCathran Presidential Daily Diary hardcopy item containing May 18, 1995 as a control for the Mugabe visit, and the 1998 Africa trip book as a travel/schedule control. |
 
-## First Remediation Pass
+## Remaining Blockers
 
-1. Pull South Africa, Angola, Rwanda, Susan Rice, and arms trafficking finding aids for folder-level targets.
-2. Split FOIA packets into individual records with dates, titles, page spans, and markings.
-3. Harvest Clinton Library memcons/telcons and leader-contact lists for Mandela, de Klerk, Mbeki, Dos Santos, Savimbi, Chissano, Mugabe, Nujoma, Mogae, Chiluba, and regional leaders.
-4. Use State FOIA, NARA Catalog, and Public Papers for gaps not visible in Clinton Library item search.
-5. Run a boundary review for Rwanda, Great Lakes, AIDS, trade, and debt relief so the page stays aligned with Volume XXVII.
+These are not open-ended gaps in the page; they are source-access blockers that require reading-room or document-level extraction:
+
+- South Africa - Collection Finding Aid, item 57366: no online scans.
+- Angola - Collection Finding Aid, item 57585: no online scans.
+- Arms Trafficking - Collection Finding Aid, item 36004: no online scans, but the Victor Butt/Bout MDR packet now provides a digital document path.
+- Thabo Mbeki 1995 visit finding aid, item 58580: no online scans.
+- Zimbabwe FOIA packets: available online, but several key documents are withheld in whole or in part under P1/b(1), P5, or P6/b(6).
+- Mbeki AIDS controversy packets: available online, but document-level extraction and page spans are still needed.
+
+## Promotion Rules
+
+1. Promote only document-level records with date, source path, page span, release status, and markings.
+2. Keep public speeches, audio, trip books, and Daily Diary entries as context/control unless they directly explain a selected policy record.
+3. For Rwanda and Global AIDS records, include only material that bears on southern Africa regional policy, diplomacy, or bilateral relations.
+4. Preserve finding aids as pull targets when the Clinton Digital Library states that scans are not available online.

@@ -316,8 +316,8 @@ window.COMPILER_RECORDS = [
   },
   {
     "id": "clinton-v27-008",
-    "type": "Release Packet",
-    "selectionDecision": "Boundary review",
+    "type": "Finding Aid",
+    "selectionDecision": "Source lead",
     "chapter": {
       "number": 3,
       "name": "Rwanda, Great Lakes, and Humanitarian Response"
@@ -654,9 +654,9 @@ window.COMPILER_RECORDS = [
     "documentMarkings": [
       "Markings to verify in PDF"
     ],
-    "sourceNote": "Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F. PDF available from item page; exact document titles, dates, page spans, and markings require packet review.",
-    "sourceNoteAddendum": "Split packet into document-level records before selection.",
-    "annotationStatus": "Needs packet extraction",
+    "sourceNote": "Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F. The online PDF is a 157-page packet with withdrawal sheets and released pages from NSC African Affairs, NSC email, and NSC Records Management files.",
+    "sourceNoteAddendum": "Packet split into companion records for the May 1995 Mugabe visit, the May 30, 1995 draft Clinton letter to Mugabe, the 1997 African-African American Summit files, and a Rwanda/FLOTUS cable lead.",
+    "annotationStatus": "Packet split completed; document-level review remains",
     "indexTerms": [
       "Zimbabwe",
       "FOIA",
@@ -707,6 +707,1686 @@ window.COMPILER_RECORDS = [
     ],
     "persons": [
       "Philip J. Crowley"
+    ]
+  },
+  {
+    "id": "clinton-v27-017",
+    "type": "Audio/Visual",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1993-06-16",
+    "sortDate": "1993-06-16",
+    "title": "Audio Recording of President Clinton's Remarks Following Discussions with President Sam Nujoma of Namibia",
+    "documentTitle": "Audio recording of Clinton remarks after discussions with President Sam Nujoma",
+    "dateLine": "Washington, June 16, 1993",
+    "subjectLine": "Public leader-contact control for early Clinton administration Namibia relations.",
+    "countries": [
+      "United States",
+      "Namibia"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/114478",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Audio Recordings of the White House Communications Agency",
+      "itemTitle": "Audio Recording of President Clinton's Remarks Following Discussions with President Sam Nujoma of Namibia and an Exchange with Reporters 6/16/1993",
+      "documentId": "114478",
+      "naid": "192121694"
+    },
+    "releaseStatus": "Public audio",
+    "declassificationStatus": "Public; NARA digital audio linked from item page",
+    "originalClassification": "Public",
+    "sourceNote": "Source: Clinton Digital Library, Audio Recordings of the White House Communications Agency, Audio Recording of President Clinton's Remarks Following Discussions with President Sam Nujoma of Namibia and an Exchange with Reporters 6/16/1993, item 114478, NAID 192121694.",
+    "annotationStatus": "Public context only",
+    "indexTerms": [
+      "Namibia",
+      "Sam Nujoma",
+      "leader contact",
+      "public diplomacy"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Sam Nujoma"
+    ]
+  },
+  {
+    "id": "clinton-v27-018",
+    "type": "Release Packet",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 1,
+      "name": "South Africa Transition and Bilateral Relations"
+    },
+    "date": "1993-08-25",
+    "sortDate": "1993-08-25",
+    "title": "Declassified Documents Concerning Amy Biehl",
+    "documentTitle": "Mandatory Declassification Review packet concerning Amy Biehl and South African political violence",
+    "dateLine": "South Africa, August 1993 and after",
+    "subjectLine": "State cables and NSC emails on Amy Biehl's murder, ANC-PAC tensions, South African politics, and human rights abuses.",
+    "countries": [
+      "United States",
+      "South Africa"
+    ],
+    "digitalObjects": 1,
+    "pageCount": 222,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/57650",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Mandatory Declassification Review",
+      "series": "National Security Council, NSC Cables, and NSC Emails",
+      "itemTitle": "Declassified Documents Concerning Amy Biehl",
+      "documentId": "57650",
+      "caseNumber": "2015-0638-M",
+      "naid": "24194018"
+    },
+    "releaseStatus": "MDR packet online",
+    "declassificationStatus": "Declassified item page with PDF; date available 12/14/2018",
+    "originalClassification": "Mixed declassified State cable and NSC email packet",
+    "documentMarkings": [
+      "Cable and email markings require document-level extraction"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, NSC Cables, and NSC Emails, Declassified Documents Concerning Amy Biehl, item 57650, case 2015-0638-M, NAID 24194018. The online PDF is 222 pages.",
+    "sourceNoteAddendum": "Use for South Africa transition context only; select individual cables only if they illuminate U.S. policy toward political violence, ANC-PAC dynamics, or human rights during the transition.",
+    "annotationStatus": "Document-level extraction needed",
+    "indexTerms": [
+      "Amy Biehl",
+      "South Africa",
+      "political violence",
+      "ANC",
+      "PAC",
+      "human rights"
+    ],
+    "persons": [
+      "Amy Biehl",
+      "Nelson Mandela",
+      "Allan Boesak"
+    ]
+  },
+  {
+    "id": "clinton-v27-019",
+    "type": "Release Packet",
+    "selectionDecision": "Boundary review",
+    "chapter": {
+      "number": 3,
+      "name": "Rwanda, Great Lakes, and Humanitarian Response"
+    },
+    "date": "1993-07-15",
+    "sortDate": "1993-07-15",
+    "title": "Declassified Documents concerning Rwanda - Jennifer Ward files",
+    "documentTitle": "MDR packet on 1993 Rwanda peacekeeping and regional crisis files",
+    "dateLine": "Washington, 1993",
+    "subjectLine": "Jennifer Ward emails and memoranda on Rwanda peacekeeping, Burundi refugees, and new U.N. peacekeeping operations.",
+    "countries": [
+      "United States",
+      "Rwanda",
+      "Burundi",
+      "Zaire",
+      "United Nations"
+    ],
+    "digitalObjects": 1,
+    "pageCount": 24,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/36615",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Mandatory Declassification Review",
+      "series": "National Security Council, NSC African Affairs Office, Jennifer Ward files",
+      "itemTitle": "Declassified Documents concerning Rwanda",
+      "documentId": "36615",
+      "caseNumber": "2011-0261-M",
+      "naid": "7585413"
+    },
+    "releaseStatus": "MDR packet online",
+    "declassificationStatus": "Declassified item page with PDF",
+    "originalClassification": "Mixed declassified NSC records",
+    "documentMarkings": [
+      "Markings and page spans require document-level extraction"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, NSC African Affairs Office, Jennifer Ward files, Declassified Documents concerning Rwanda, item 36615, case 2011-0261-M, NAID 7585413. The online PDF is 24 pages.",
+    "sourceNoteAddendum": "Boundary review required: keep only records tying Rwanda, Burundi, Zaire, or UN peacekeeping to the southern Africa/regional-policy frame of Volume XXVII.",
+    "annotationStatus": "Boundary note needed",
+    "indexTerms": [
+      "Rwanda",
+      "Burundi",
+      "Zaire",
+      "UN peacekeeping",
+      "UNAMIR",
+      "Jennifer Ward",
+      "Susan Rice"
+    ],
+    "persons": [
+      "Jennifer Ward",
+      "Susan Rice",
+      "Anthony Lake"
+    ]
+  },
+  {
+    "id": "clinton-v27-020",
+    "type": "Release Packet",
+    "selectionDecision": "Boundary review",
+    "chapter": {
+      "number": 3,
+      "name": "Rwanda, Great Lakes, and Humanitarian Response"
+    },
+    "date": "1994-04-07",
+    "sortDate": "1994-04-07",
+    "title": "Declassified documents concerning Rwanda - Anthony Lake files",
+    "documentTitle": "MDR packet on Rwanda crisis reports, correspondence, and talking points",
+    "dateLine": "Washington and Kigali, 1994",
+    "subjectLine": "Situation Room reports, head-of-state correspondence, talking points, UNAMIR policy, and refugee-crisis records.",
+    "countries": [
+      "United States",
+      "Rwanda",
+      "Belgium",
+      "France",
+      "Zaire",
+      "United Nations"
+    ],
+    "digitalObjects": 1,
+    "pageCount": 69,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/47967",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Mandatory Declassification Review",
+      "series": "National Security Council, National Security Advisor, Anthony Lake files",
+      "itemTitle": "Declassified documents concerning Rwanda",
+      "documentId": "47967",
+      "caseNumber": "2011-0268-M",
+      "naid": "7585694"
+    },
+    "releaseStatus": "MDR packet online",
+    "declassificationStatus": "Declassified item page with PDF; date available 9/21/2015",
+    "originalClassification": "Mixed declassified NSC and State records",
+    "documentMarkings": [
+      "Markings and exemptions require document-level extraction"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, National Security Advisor, Anthony Lake files, Declassified documents concerning Rwanda, item 47967, case 2011-0268-M, NAID 7585694. The online PDF is 69 pages.",
+    "sourceNoteAddendum": "Promote selectively; much of the packet likely belongs in Rwanda, genocide, U.N., or humanitarian-policy coverage rather than the southern Africa volume.",
+    "annotationStatus": "Boundary note needed",
+    "indexTerms": [
+      "Rwanda",
+      "UNAMIR",
+      "refugee crisis",
+      "Anthony Lake",
+      "head of state correspondence"
+    ],
+    "persons": [
+      "Anthony Lake",
+      "Boutros Boutros-Ghali"
+    ]
+  },
+  {
+    "id": "clinton-v27-021",
+    "type": "Release Packet",
+    "selectionDecision": "Boundary review",
+    "chapter": {
+      "number": 3,
+      "name": "Rwanda, Great Lakes, and Humanitarian Response"
+    },
+    "date": "1994-01-01",
+    "sortDate": "1994-01-01",
+    "title": "Declassified documents concerning Rwanda - MacArthur DeShazer files",
+    "documentTitle": "MDR packet on 1993-1994 Rwanda diplomatic initiatives in MacArthur DeShazer files",
+    "dateLine": "Washington and Africa posts, 1993-1994",
+    "subjectLine": "Department of State cables and NSC records on Rwanda diplomatic initiatives, regional actors, and meetings with Belgium, Burundi, and Zaire.",
+    "countries": [
+      "United States",
+      "Rwanda",
+      "Belgium",
+      "Burundi",
+      "Zaire"
+    ],
+    "digitalObjects": 9,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/118983",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Mandatory Declassification Review",
+      "series": "National Security Council, NSC Records Management System, MacArthur DeShazer files",
+      "itemTitle": "Declassified documents concerning Rwanda",
+      "documentId": "118983",
+      "caseNumber": "2011-0262-M",
+      "fileUnit": "FOIA case 2006-0192-F"
+    },
+    "releaseStatus": "MDR packet online",
+    "declassificationStatus": "Declassified item page with nine PDFs; date available 2/2/2024",
+    "originalClassification": "Mixed declassified State cables and NSC records",
+    "documentMarkings": [
+      "Exemption 1 closures reviewed under MDR; document markings require extraction"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, NSC Records Management System, MacArthur DeShazer files, Declassified documents concerning Rwanda, item 118983, case 2011-0262-M, FOIA case 2006-0192-F. The item page provides nine PDFs.",
+    "sourceNoteAddendum": "Boundary review required before promotion because the packet is Rwanda-centered and broader than Volume XXVII's southern Africa scope.",
+    "annotationStatus": "Boundary note needed",
+    "indexTerms": [
+      "Rwanda",
+      "MacArthur DeShazer",
+      "diplomatic initiatives",
+      "Burundi",
+      "Zaire"
+    ],
+    "persons": [
+      "MacArthur DeShazer",
+      "Richard Moose",
+      "Susan Rice"
+    ]
+  },
+  {
+    "id": "clinton-v27-022",
+    "type": "Release Packet",
+    "selectionDecision": "Include candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1994-12-05",
+    "sortDate": "1994-12-05",
+    "title": "FOIA 2006-0457-F - Zimbabwe, Previously Restricted Document Release no. 5",
+    "documentTitle": "Zimbabwe 1995 and Zimbabwe 1997 FOIA release packet",
+    "dateLine": "Washington and Harare, 1994-1997",
+    "subjectLine": "Released and withdrawn Zimbabwe records including a 1994 briefing, 1995 Mugabe letter, 1997 meeting notes, and 1997 presidential correspondence.",
+    "countries": [
+      "United States",
+      "Zimbabwe"
+    ],
+    "digitalObjects": 1,
+    "pageCount": 6,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14676",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Previously Restricted Document Release no. 5",
+      "series": "National Security Council, African Affairs",
+      "box": "872 and 1438",
+      "folder": "Zimbabwe 1995; Zimbabwe 1997 [1]",
+      "itemTitle": "FOIA 2006-0457-F - Zimbabwe",
+      "documentId": "14676",
+      "caseNumber": "2006-0457-F"
+    },
+    "releaseStatus": "Partially released FOIA packet online",
+    "declassificationStatus": "Released packet with withdrawal sheets and selected pages",
+    "originalClassification": "Mixed; multiple documents withheld under P1/b(1) and P5",
+    "documentMarkings": [
+      "P1/b(1)",
+      "P5"
+    ],
+    "withheldMaterial": "Withdrawal sheets list a December 5, 1994 Zimbabwe briefing, September 22, 1997 handwritten Clinton-Mugabe meeting notes, and several 1997 letters, cables, and reports withheld in whole or in part.",
+    "sourceNote": "Source: Clinton Digital Library, Previously Restricted Document Release no. 5, FOIA 2006-0457-F - Zimbabwe, item 14676, case 2006-0457-F. The online PDF is 6 pages and covers NSC African Affairs folders Zimbabwe 1995, OA/Box 872, and Zimbabwe 1997 [1], OA/Box 1438.",
+    "sourceNoteAddendum": "Use as a document-level pull/control record for Zimbabwe presidential correspondence and Clinton-Mugabe contact.",
+    "annotationStatus": "Withdrawal-sheet annotation needed",
+    "indexTerms": [
+      "Zimbabwe",
+      "Robert Mugabe",
+      "presidential correspondence",
+      "World Solar Commission",
+      "Harare"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Robert Mugabe",
+      "Ernest J. Wilson"
+    ]
+  },
+  {
+    "id": "clinton-v27-023",
+    "type": "Release Packet",
+    "selectionDecision": "Include candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1995-05-16",
+    "sortDate": "1995-05-16",
+    "title": "Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995",
+    "documentTitle": "Mugabe visit briefing packet and talking points",
+    "dateLine": "Washington, May 16-18, 1995",
+    "subjectLine": "Briefing papers, talking points, Acting Secretary Tarnoff memorandum, DeShazer addendum, and background papers for Clinton's meeting with Mugabe.",
+    "countries": [
+      "United States",
+      "Zimbabwe"
+    ],
+    "digitalObjects": 1,
+    "sourcePages": "FOIA packet pages with withdrawal sheets for documents 001a-008",
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Declassified Documents",
+      "series": "Clinton Presidential Records, National Security Council, African Affairs",
+      "box": "2663",
+      "folder": "Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995",
+      "itemTitle": "FOIA 2006-0457-F - Zimbabwe",
+      "documentId": "14571",
+      "caseNumber": "2006-0457-F"
+    },
+    "releaseStatus": "Partially released FOIA packet online",
+    "declassificationStatus": "Withdrawal sheets list multiple documents withheld or partially withheld under P1/b(1), P5, and P6/b(6)",
+    "originalClassification": "Mixed; national security classified and presidential-advice material withheld in part",
+    "documentMarkings": [
+      "P1/b(1)",
+      "P5",
+      "P6/b(6)"
+    ],
+    "withheldMaterial": "The withdrawal sheets list the main May 16, 1995 briefing paper, talking points, U.S. Government reports, Acting Secretary Tarnoff memorandum, DeShazer and Lake memoranda, background papers on U.S.-Zimbabwe relations, democracy, cooperation, land, AIDS, and an April 21, 1995 Harare cable.",
+    "sourceNote": "Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, African Affairs, OA/Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995. The online PDF is 157 pages.",
+    "sourceNoteAddendum": "High-value include candidate for Zimbabwe policy; final promotion requires reading the released pages against the withdrawal sheets and locating any open replacements for withheld briefing material.",
+    "annotationStatus": "Document-level extraction needed",
+    "indexTerms": [
+      "Zimbabwe",
+      "Robert Mugabe",
+      "Thomas Pickering",
+      "MacArthur DeShazer",
+      "land reform",
+      "AIDS",
+      "democracy"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Robert Mugabe",
+      "Peter Tarnoff",
+      "MacArthur DeShazer",
+      "Anthony Lake",
+      "Kenneth Brill"
+    ]
+  },
+  {
+    "id": "clinton-v27-024",
+    "type": "Release Packet",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1995-05-30",
+    "sortDate": "1995-05-30",
+    "title": "Draft letter from President Clinton to President Mugabe",
+    "documentTitle": "President Clinton to President Mugabe draft letter",
+    "dateLine": "Washington, May 30, 1995",
+    "subjectLine": "Draft follow-up letter after Mugabe's official working visit, including economic reform and private investment language.",
+    "countries": [
+      "United States",
+      "Zimbabwe"
+    ],
+    "digitalObjects": 1,
+    "sourcePages": "FOIA 2006-0457-F packet, document 008",
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Declassified Documents",
+      "series": "Clinton Presidential Records, National Security Council, African Affairs",
+      "box": "2663",
+      "folder": "Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995",
+      "itemTitle": "President Clinton to President Mugabe [draft]",
+      "documentId": "14571",
+      "caseNumber": "2006-0457-F"
+    },
+    "releaseStatus": "Released inside FOIA packet",
+    "declassificationStatus": "Document 008 listed with P5 restriction history; released page visible in packet",
+    "originalClassification": "Presidential-advice material released in part",
+    "documentMarkings": [
+      "P5"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, African Affairs, OA/Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995, document 008, President Clinton to President Mugabe [draft], May 30, 1995.",
+    "sourceNoteAddendum": "Use as context unless paired with the final signed correspondence or meeting memorandum.",
+    "annotationStatus": "Compare against final correspondence if located",
+    "indexTerms": [
+      "Zimbabwe",
+      "Robert Mugabe",
+      "economic reform",
+      "private investment",
+      "presidential correspondence"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Robert Mugabe"
+    ]
+  },
+  {
+    "id": "clinton-v27-025",
+    "type": "Source Lead",
+    "selectionDecision": "Boundary review",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1997-07-16",
+    "sortDate": "1997-07-16",
+    "title": "Update on African-African American Summit",
+    "documentTitle": "Erica Barks-Ruggles memorandum to Samuel Berger on African-African American Summit",
+    "dateLine": "Washington, July 16, 1997",
+    "subjectLine": "Zimbabwe/Harare summit lead for regional democracy and public diplomacy boundary review.",
+    "countries": [
+      "United States",
+      "Zimbabwe"
+    ],
+    "digitalObjects": 1,
+    "sourcePages": "FOIA 2006-0457-F packet, NSC Records Management folder 9704944",
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Declassified Documents",
+      "series": "Clinton Presidential Records, National Security Council, Records Management",
+      "box": "1631",
+      "folder": "[Zimb*], folder 9704944",
+      "itemTitle": "Erica Barks-Ruggles to Samuel Berger, re: Update on African-African American Summit",
+      "documentId": "14571",
+      "caseNumber": "2006-0457-F"
+    },
+    "releaseStatus": "Listed in FOIA packet withdrawal sheet",
+    "declassificationStatus": "Withheld or partially withheld under P1/b(1); released text in related email pages requires review",
+    "originalClassification": "National security classified information withheld in part",
+    "documentMarkings": [
+      "P1/b(1)"
+    ],
+    "withheldMaterial": "Withdrawal sheet lists a two-page July 16, 1997 memorandum and an eight-page aircraft mission-members chart.",
+    "sourceNote": "Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, Records Management, OA/Box 1631, [Zimb*], folder 9704944, Erica Barks-Ruggles to Samuel Berger, re: Update on African-African American Summit, July 16, 1997.",
+    "sourceNoteAddendum": "Boundary review required: include only if the summit records illuminate U.S. policy toward Zimbabwe, SADC, or regional leadership rather than public liaison logistics alone.",
+    "annotationStatus": "Boundary note needed",
+    "indexTerms": [
+      "Zimbabwe",
+      "African-African American Summit",
+      "Harare",
+      "Samuel Berger",
+      "Erica Barks-Ruggles"
+    ],
+    "persons": [
+      "Erica Barks-Ruggles",
+      "Samuel Berger",
+      "John Prendergast"
+    ]
+  },
+  {
+    "id": "clinton-v27-026",
+    "type": "Source Lead",
+    "selectionDecision": "Boundary review",
+    "chapter": {
+      "number": 3,
+      "name": "Rwanda, Great Lakes, and Humanitarian Response"
+    },
+    "date": "1997-03-06",
+    "sortDate": "1997-03-06",
+    "title": "Rwandan Women's Delegation to Meet with the First Lady",
+    "documentTitle": "U.S. Embassy Kigali cable on Rwandan women's delegation and FLOTUS trip",
+    "dateLine": "Kigali, ca. March 1997",
+    "subjectLine": "Released cable section from a FLOTUS Africa trip briefing book on Rwandan women, transitional politics, and post-genocide institutions.",
+    "countries": [
+      "United States",
+      "Rwanda"
+    ],
+    "digitalObjects": 1,
+    "sourcePages": "FOIA 2006-0457-F packet, FLOTUS Trip briefing book, document 005",
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Declassified Documents",
+      "series": "Clinton Presidential Records, National Security Council, African Affairs",
+      "box": "2580",
+      "folder": "Briefing Book: FLOTUS Trip to South Africa, Zimbabwe, Tanzania, Uganda, Eritrea [8]",
+      "itemTitle": "Rwandan Women's Delegation to Meet with the First Lady",
+      "documentId": "14571",
+      "caseNumber": "2006-0457-F"
+    },
+    "releaseStatus": "Released inside FOIA packet",
+    "declassificationStatus": "Unclassified cable section released; withdrawal sheet lists P5 material",
+    "originalClassification": "UNCLAS",
+    "documentMarkings": [
+      "UNCLAS",
+      "E.O. 12958: DECL NA"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, African Affairs, OA/Box 2580, Briefing Book: FLOTUS Trip to South Africa, Zimbabwe, Tanzania, Uganda, Eritrea [8], document 005, cable, Rwandan Women's Delegation to Meet with the First Lady, ca. 1997.",
+    "sourceNoteAddendum": "Boundary review required because the cable appears in a southern/eastern Africa trip book but concerns Rwanda post-genocide society and FLOTUS programming.",
+    "annotationStatus": "Boundary note needed",
+    "indexTerms": [
+      "Rwanda",
+      "First Lady",
+      "women",
+      "post-genocide",
+      "FLOTUS trip"
+    ],
+    "persons": [
+      "Hillary Rodham Clinton"
+    ]
+  },
+  {
+    "id": "clinton-v27-027",
+    "type": "Source Lead",
+    "selectionDecision": "Source lead",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1995-05-18",
+    "sortDate": "1995-05-18",
+    "title": "Presidential Daily Diary hardcopy including May 18, 1995",
+    "documentTitle": "Ellen McCathran Presidential Daily Diary hardcopy date set including May 18, 1995",
+    "dateLine": "Washington, May 18, 1995",
+    "subjectLine": "Diary control for the Mugabe official working visit and other May-June 1995 presidential schedule entries.",
+    "countries": [
+      "United States",
+      "Zimbabwe"
+    ],
+    "digitalObjects": 1,
+    "pageCount": 90,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/36472",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Ellen McCathran - Presidential Diarist",
+      "series": "Presidential Daily Diary hardcopy",
+      "box": "1",
+      "itemTitle": "[Ellen McCathran - Presidential Daily Diary - Hardcopy 4/4/95; 4/12/95; 4/25/95; 5/7/95; 5/18/95; 5/22/95; 5/26/95; 6/7/95; 6/8/95; 6/18/95; 6/30/95]",
+      "documentId": "36472",
+      "naid": "17368180"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public diary PDF",
+    "originalClassification": "Public schedule control",
+    "sourceNote": "Source: Clinton Digital Library, Ellen McCathran - Presidential Diarist, Presidential Daily Diary hardcopy, Box 1, [Ellen McCathran - Presidential Daily Diary - Hardcopy 4/4/95; 4/12/95; 4/25/95; 5/7/95; 5/18/95; 5/22/95; 5/26/95; 6/7/95; 6/8/95; 6/18/95; 6/30/95], item 36472, NAID 17368180. The online PDF is 90 pages.",
+    "sourceNoteAddendum": "Use only as a chronology and attendance control for the Mugabe visit; do not promote without a substantive meeting record or briefing document.",
+    "annotationStatus": "Control record",
+    "indexTerms": [
+      "Presidential Daily Diary",
+      "Robert Mugabe",
+      "schedule control",
+      "Zimbabwe"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Robert Mugabe",
+      "Ellen McCathran"
+    ]
+  },
+  {
+    "id": "clinton-v27-028",
+    "type": "Finding Aid",
+    "selectionDecision": "Source lead",
+    "chapter": {
+      "number": 1,
+      "name": "South Africa Transition and Bilateral Relations"
+    },
+    "date": "1995-02-01",
+    "sortDate": "1995-02-01",
+    "title": "Thabo Mbeki's 1995 visit to the U.S. - Collection Finding Aid",
+    "documentTitle": "Thabo Mbeki 1995 visit collection finding aid",
+    "dateLine": "Collection scope: February 1995 visit",
+    "subjectLine": "Briefing books, State Department cables, emails, and policy papers about Deputy President Mbeki's visit and the Gore-Mbeki commission.",
+    "countries": [
+      "United States",
+      "South Africa"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/58580",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Finding Aids - Collection Descriptions & Inventories",
+      "itemTitle": "Thabo Mbeki's 1995 visit to the U.S. - Collection Finding Aid",
+      "documentId": "58580"
+    },
+    "releaseStatus": "Finding aid only; no items scanned online",
+    "declassificationStatus": "Reading-room pull required",
+    "originalClassification": "Public finding aid",
+    "sourceNote": "Source: Clinton Digital Library, Finding Aids - Collection Descriptions & Inventories, Thabo Mbeki's 1995 visit to the U.S. - Collection Finding Aid, item 58580. The item page states that the collection contains briefing books, State Department cables, emails, and policy papers about the Gore-Mbeki commission and that no items have been scanned online.",
+    "sourceNoteAddendum": "Onsite blocker: pull before relying on public Mbeki visit speeches or AIDS files as substitutes for internal bilateral-policy records.",
+    "annotationStatus": "Pull queue",
+    "indexTerms": [
+      "Thabo Mbeki",
+      "Gore-Mbeki commission",
+      "South Africa",
+      "bilateral relations"
+    ],
+    "persons": [
+      "Thabo Mbeki",
+      "Al Gore"
+    ]
+  },
+  {
+    "id": "clinton-v27-029",
+    "type": "Release Packet",
+    "selectionDecision": "Include candidate",
+    "chapter": {
+      "number": 1,
+      "name": "South Africa Transition and Bilateral Relations"
+    },
+    "date": "2000-05-01",
+    "sortDate": "2000-05-01",
+    "title": "Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646]",
+    "documentTitle": "Mbeki AIDS controversy packet, part 1",
+    "dateLine": "Washington and Pretoria, April-October 2000",
+    "subjectLine": "Cables, memoranda, and draft presidential correspondence on President Mbeki's HIV/AIDS views and the May 2000 state visit.",
+    "countries": [
+      "United States",
+      "South Africa"
+    ],
+    "digitalObjects": 1,
+    "pageCount": 70,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/64750",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council",
+      "series": "NSC Legal Affairs Office",
+      "box": "50",
+      "folder": "Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646]",
+      "itemTitle": "Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646]",
+      "documentId": "64750",
+      "naid": "54977304"
+    },
+    "releaseStatus": "Partially released packet online",
+    "declassificationStatus": "Withdrawal sheets list documents withheld under P1/b(1); released pages available in PDF",
+    "originalClassification": "Mixed; national security classified material withheld in part",
+    "documentMarkings": [
+      "P1/b(1)"
+    ],
+    "withheldMaterial": "Withdrawal sheets list cables on Mbeki's alleged comments, Mandela and Mbeki, Mbeki remarks, Gore correspondence, Mbeki's HIV/AIDS theory, and Clinton-Mbeki draft correspondence.",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646], item 64750, NAID 54977304. The online PDF is 70 pages.",
+    "sourceNoteAddendum": "High-value include candidate for the intersection of South Africa bilateral relations and global AIDS policy; select document-level entries after page-span extraction.",
+    "annotationStatus": "Document-level extraction needed",
+    "indexTerms": [
+      "Thabo Mbeki",
+      "AIDS",
+      "HIV",
+      "South Africa",
+      "state visit",
+      "presidential correspondence"
+    ],
+    "persons": [
+      "Thabo Mbeki",
+      "Bill Clinton",
+      "Samuel Berger",
+      "Nora Dempsey",
+      "Al Gore"
+    ]
+  },
+  {
+    "id": "clinton-v27-030",
+    "type": "Release Packet",
+    "selectionDecision": "Include candidate",
+    "chapter": {
+      "number": 1,
+      "name": "South Africa Transition and Bilateral Relations"
+    },
+    "date": "2000-04-03",
+    "sortDate": "2000-04-03",
+    "title": "Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646]",
+    "documentTitle": "Mbeki AIDS controversy packet, part 2",
+    "dateLine": "Washington and Pretoria, April-May 2000",
+    "subjectLine": "HIV/AIDS paper, Mbeki state visit cable, presidential AIDS panel cable, and Mbeki-Clinton correspondence.",
+    "countries": [
+      "United States",
+      "South Africa"
+    ],
+    "digitalObjects": 1,
+    "pageCount": 61,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/64751",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council",
+      "series": "NSC Legal Affairs Office",
+      "box": "50",
+      "folder": "Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646]",
+      "itemTitle": "Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646]",
+      "documentId": "64751",
+      "naid": "54977305"
+    },
+    "releaseStatus": "Partially released packet online",
+    "declassificationStatus": "Withdrawal sheets list documents withheld under P1/b(1); released pages available in PDF",
+    "originalClassification": "Mixed; national security classified material withheld in part",
+    "documentMarkings": [
+      "P1/b(1)"
+    ],
+    "withheldMaterial": "Withdrawal sheets list an 11-page HIV/AIDS paper, cables on the presidential AIDS panel and Mbeki state visit, and Mbeki-Clinton letters from April 2000.",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646], item 64751, NAID 54977305. The online PDF is 61 pages.",
+    "sourceNoteAddendum": "High-value include candidate paired with item 64750; final record split should separate correspondence, state visit preparation, and AIDS-policy analysis.",
+    "annotationStatus": "Document-level extraction needed",
+    "indexTerms": [
+      "Thabo Mbeki",
+      "AIDS",
+      "HIV",
+      "South Africa",
+      "state visit",
+      "presidential AIDS panel"
+    ],
+    "persons": [
+      "Thabo Mbeki",
+      "Bill Clinton"
+    ]
+  },
+  {
+    "id": "clinton-v27-031",
+    "type": "Release Packet",
+    "selectionDecision": "Boundary review",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "2000-05-04",
+    "sortDate": "2000-05-04",
+    "title": "Declassified Documents Concerning the Global AIDS Crisis",
+    "documentTitle": "MDR packet on the global AIDS crisis, Africa, and the Mbeki state visit",
+    "dateLine": "Washington, 1998-2000",
+    "subjectLine": "Deputies Committee summaries, Mbeki state visit AIDS objectives, Africa AIDS initiative material, and Namibia HIV/AIDS agreement cables.",
+    "countries": [
+      "United States",
+      "South Africa",
+      "Namibia",
+      "Botswana",
+      "Africa"
+    ],
+    "digitalObjects": 4,
+    "pageCount": 557,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/119208",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Mandatory Declassification Review",
+      "series": "National Economic Council, National Security Council, NSC Records Management System",
+      "itemTitle": "Declassified Documents Concerning the Global AIDS Crisis",
+      "documentId": "119208",
+      "caseNumber": "2017-0739-M",
+      "fileUnit": "2007-1550-F"
+    },
+    "releaseStatus": "MDR packet online",
+    "declassificationStatus": "Declassified item page with four PDFs; date available 10/21/2024",
+    "originalClassification": "Mixed declassified NEC, NSC, and Records Management records",
+    "documentMarkings": [
+      "Markings require document-level extraction"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Economic Council, National Security Council, and NSC Records Management System, Declassified Documents Concerning the Global AIDS Crisis, item 119208, case 2017-0739-M, file unit 2007-1550-F. The item page provides four PDFs totaling 557 pages.",
+    "sourceNoteAddendum": "Boundary review required: select southern Africa material such as Mbeki state visit AIDS objectives and Namibia agreement cables; keep general global AIDS policy out of Volume XXVII unless it drives regional diplomacy.",
+    "annotationStatus": "Boundary note needed",
+    "indexTerms": [
+      "global AIDS crisis",
+      "Thabo Mbeki",
+      "South Africa",
+      "Namibia",
+      "Deputies Committee",
+      "Africa AIDS initiative"
+    ],
+    "persons": [
+      "Thabo Mbeki",
+      "Lael Brainard",
+      "Sandy Thurman",
+      "Samuel Berger"
+    ]
+  },
+  {
+    "id": "clinton-v27-032",
+    "type": "Audio/Visual",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 1,
+      "name": "South Africa Transition and Bilateral Relations"
+    },
+    "date": "2000-05-22",
+    "sortDate": "2000-05-22",
+    "title": "Audio Recording of President Clinton's Remarks at the Welcoming Ceremony for President Thabo Mbeki of South Africa",
+    "documentTitle": "Audio recording of Clinton remarks at the Mbeki welcoming ceremony",
+    "dateLine": "Washington, May 22, 2000",
+    "subjectLine": "Public audio control for Mbeki state visit.",
+    "countries": [
+      "United States",
+      "South Africa"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/118025",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Audio Recordings of the White House Communications Agency",
+      "itemTitle": "Audio Recording of President Clinton's Remarks at the Welcoming Ceremony for President Thabo Mbeki of South Africa 5/22/2000",
+      "documentId": "118025",
+      "naid": "192125241"
+    },
+    "releaseStatus": "Public audio",
+    "declassificationStatus": "Public; NARA digital audio linked from item page",
+    "originalClassification": "Public",
+    "sourceNote": "Source: Clinton Digital Library, Audio Recordings of the White House Communications Agency, Audio Recording of President Clinton's Remarks at the Welcoming Ceremony for President Thabo Mbeki of South Africa 5/22/2000, item 118025, NAID 192125241.",
+    "annotationStatus": "Public context only",
+    "indexTerms": [
+      "Thabo Mbeki",
+      "state visit",
+      "South Africa",
+      "public diplomacy"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Thabo Mbeki"
+    ]
+  },
+  {
+    "id": "clinton-v27-033",
+    "type": "Audio/Visual",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 1,
+      "name": "South Africa Transition and Bilateral Relations"
+    },
+    "date": "2000-05-22",
+    "sortDate": "2000-05-22",
+    "title": "Audio Recording of President Clinton's Remarks at the State Dinner Honoring President Thabo Mbeki",
+    "documentTitle": "Audio recording of Clinton remarks at the Mbeki state dinner",
+    "dateLine": "Washington, May 22, 2000",
+    "subjectLine": "Public audio context for Mbeki state visit and bilateral relationship.",
+    "countries": [
+      "United States",
+      "South Africa"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/118024",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Audio Recordings of the White House Communications Agency",
+      "itemTitle": "Audio Recording of President Clinton's Remarks at the State Dinner Honoring President Thabo Mbeki of South Africa 5/22/2000",
+      "documentId": "118024",
+      "naid": "192125240"
+    },
+    "releaseStatus": "Public audio",
+    "declassificationStatus": "Public; NARA digital audio linked from item page",
+    "originalClassification": "Public",
+    "sourceNote": "Source: Clinton Digital Library, Audio Recordings of the White House Communications Agency, Audio Recording of President Clinton's Remarks at the State Dinner Honoring President Thabo Mbeki of South Africa 5/22/2000, item 118024, NAID 192125240.",
+    "annotationStatus": "Public context only",
+    "indexTerms": [
+      "Thabo Mbeki",
+      "state dinner",
+      "South Africa",
+      "public diplomacy"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Thabo Mbeki"
+    ]
+  },
+  {
+    "id": "clinton-v27-034",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 2,
+      "name": "Angola, Mozambique, and Southern African Security"
+    },
+    "date": "1994-12-01",
+    "sortDate": "1994-12-01",
+    "title": "Angola - Background",
+    "documentTitle": "Angola background speechwriting file",
+    "dateLine": "Undated item page; sort date provisional",
+    "subjectLine": "Speechwriting background on Angola for regional-security and peace-process context.",
+    "countries": [
+      "United States",
+      "Angola"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/10177",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council, Speechwriting Office",
+      "series": "Robert Boorstin files",
+      "box": "6",
+      "itemTitle": "Angola - Background",
+      "documentId": "10177",
+      "naid": "7585788"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public speechwriting item page with PDF",
+    "originalClassification": "Public context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 6, Angola - Background, item 10177, NAID 7585788. Public speechwriting PDF available from the item page.",
+    "sourceNoteAddendum": "Use as context only until Angola policy memoranda, cables, or PC/DC records are extracted from the Angola finding aid.",
+    "annotationStatus": "Context annotation needed",
+    "indexTerms": [
+      "Angola",
+      "Lusaka Protocol",
+      "UNITA",
+      "speechwriting",
+      "regional security"
+    ],
+    "persons": [
+      "Robert Boorstin"
+    ]
+  },
+  {
+    "id": "clinton-v27-035",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 2,
+      "name": "Angola, Mozambique, and Southern African Security"
+    },
+    "date": "1994-12-01",
+    "sortDate": "1994-12-01",
+    "title": "Southern Africa - Background",
+    "documentTitle": "Southern Africa background speechwriting file",
+    "dateLine": "Undated item page; sort date provisional",
+    "subjectLine": "Regional background file for southern African security, democracy, and post-conflict framing.",
+    "countries": [
+      "United States",
+      "South Africa",
+      "Angola",
+      "Mozambique",
+      "Zimbabwe",
+      "Zambia"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/10263",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council, Speechwriting Office",
+      "series": "Robert Boorstin files",
+      "box": "8",
+      "itemTitle": "Southern Africa - Background",
+      "documentId": "10263",
+      "naid": "7585788"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public speechwriting item page with PDF",
+    "originalClassification": "Public context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Southern Africa - Background, item 10263, NAID 7585788. Public speechwriting PDF available from the item page.",
+    "sourceNoteAddendum": "Use as a regional frame and keyword source; do not promote as policy evidence without corresponding internal records.",
+    "annotationStatus": "Context annotation needed",
+    "indexTerms": [
+      "southern Africa",
+      "regional policy",
+      "speechwriting",
+      "SADC",
+      "democracy"
+    ],
+    "persons": [
+      "Robert Boorstin"
+    ]
+  },
+  {
+    "id": "clinton-v27-036",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 2,
+      "name": "Angola, Mozambique, and Southern African Security"
+    },
+    "date": "1994-12-01",
+    "sortDate": "1994-12-01",
+    "title": "Landmines",
+    "documentTitle": "Landmines background speechwriting file",
+    "dateLine": "Undated item page; sort date provisional",
+    "subjectLine": "Speechwriting background for landmines and demining policy relevant to Angola and Mozambique.",
+    "countries": [
+      "United States",
+      "Angola",
+      "Mozambique"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/10129",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council, Speechwriting Office",
+      "series": "Robert Boorstin files",
+      "box": "6",
+      "itemTitle": "Landmines",
+      "documentId": "10129",
+      "naid": "7585788"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public speechwriting item page with PDF",
+    "originalClassification": "Public context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 6, Landmines, item 10129, NAID 7585788. Public speechwriting PDF available from the item page.",
+    "sourceNoteAddendum": "Pair with internal demining, Angola, Mozambique, and humanitarian-assistance files before selection.",
+    "annotationStatus": "Context annotation needed",
+    "indexTerms": [
+      "landmines",
+      "demining",
+      "Angola",
+      "Mozambique",
+      "humanitarian assistance"
+    ],
+    "persons": [
+      "Robert Boorstin"
+    ]
+  },
+  {
+    "id": "clinton-v27-037",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 2,
+      "name": "Angola, Mozambique, and Southern African Security"
+    },
+    "date": "1997-09-16",
+    "sortDate": "1997-09-16",
+    "title": "Landmines Statement 9/16/97",
+    "documentTitle": "Landmines statement",
+    "dateLine": "Washington, September 16, 1997",
+    "subjectLine": "Public landmines-policy statement lead for demining and southern African security context.",
+    "countries": [
+      "United States",
+      "Angola",
+      "Mozambique"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/9715",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council, Speechwriting Office",
+      "series": "Antony Blinken files",
+      "box": "31",
+      "itemTitle": "Landmines Statement 9/16/97",
+      "documentId": "9715",
+      "naid": "7585787"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public speechwriting item page with PDF",
+    "originalClassification": "Public context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Speechwriting Office, Antony Blinken files, Box 31, Landmines Statement 9/16/97, item 9715, NAID 7585787. Public speechwriting PDF available from the item page.",
+    "annotationStatus": "Context annotation needed",
+    "indexTerms": [
+      "landmines",
+      "demining",
+      "Antony Blinken",
+      "Angola",
+      "Mozambique"
+    ],
+    "persons": [
+      "Antony Blinken"
+    ]
+  },
+  {
+    "id": "clinton-v27-038",
+    "type": "Release Packet",
+    "selectionDecision": "Include candidate",
+    "chapter": {
+      "number": 2,
+      "name": "Angola, Mozambique, and Southern African Security"
+    },
+    "date": "2000-10-01",
+    "sortDate": "2000-10-01",
+    "title": "Declassified Documents Regarding Victor Butt/Bout",
+    "documentTitle": "MDR packet on Victor Butt/Bout arms trafficking and sub-Saharan Africa",
+    "dateLine": "Washington, 2000",
+    "subjectLine": "Memoranda, strategy papers, and background papers on U.S. efforts against Victor Bout's arms trafficking in sub-Saharan Africa, including Angola/UNITA and South Africa arrest strategy.",
+    "countries": [
+      "United States",
+      "Angola",
+      "South Africa",
+      "Rwanda",
+      "Democratic Republic of the Congo",
+      "Liberia",
+      "Sierra Leone"
+    ],
+    "digitalObjects": 1,
+    "pageCount": 98,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/118505",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Mandatory Declassification Review",
+      "series": "National Security Council",
+      "itemTitle": "Declassified Documents Regarding Victor Butt/Bout",
+      "documentId": "118505",
+      "caseNumber": "2016-0165-M",
+      "fileUnit": "FOIA case 2006-0684-F"
+    },
+    "releaseStatus": "MDR packet online",
+    "declassificationStatus": "Declassified item page with PDF; date available 9/21/2022",
+    "originalClassification": "Mixed declassified NSC memoranda and reports",
+    "documentMarkings": [
+      "EO 13526 1.4(c)",
+      "Markings require document-level extraction"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, Declassified Documents Regarding Victor Butt/Bout, item 118505, case 2016-0165-M, FOIA case 2006-0684-F. The online PDF is 98 pages.",
+    "sourceNoteAddendum": "High-value regional-security candidate because the packet links UNITA sanctions, Angola, South Africa legal strategy, and wider sub-Saharan arms trafficking.",
+    "annotationStatus": "Document-level extraction needed",
+    "indexTerms": [
+      "Victor Bout",
+      "arms trafficking",
+      "UNITA",
+      "Angola",
+      "South Africa",
+      "UN sanctions",
+      "regional security"
+    ],
+    "persons": [
+      "Victor Bout",
+      "Susan Rice",
+      "Gayle Smith",
+      "Richard Clarke"
+    ]
+  },
+  {
+    "id": "clinton-v27-039",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1993-06-16",
+    "sortDate": "1993-06-16",
+    "title": "Namibia",
+    "documentTitle": "Namibia public affairs file",
+    "dateLine": "Office of Press and Communications file; date control from Nujoma visit",
+    "subjectLine": "Public-affairs context for Namibia and Clinton-Nujoma contact.",
+    "countries": [
+      "United States",
+      "Namibia"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/48570",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council",
+      "series": "Office of Press and Communications - Philip J. Crowley",
+      "box": "11",
+      "itemTitle": "Namibia",
+      "documentId": "48570",
+      "naid": "7585702"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Item page with PDF",
+    "originalClassification": "Public affairs context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Office of Press and Communications, Philip J. Crowley files, Box 11, Namibia, item 48570, NAID 7585702. PDF available from the item page.",
+    "sourceNoteAddendum": "Use as context and keyword support for Namibia; prioritize internal policy records if located.",
+    "annotationStatus": "Context review needed",
+    "indexTerms": [
+      "Namibia",
+      "Sam Nujoma",
+      "public affairs",
+      "Philip Crowley"
+    ],
+    "persons": [
+      "Sam Nujoma",
+      "Philip J. Crowley"
+    ]
+  },
+  {
+    "id": "clinton-v27-040",
+    "type": "Release Packet",
+    "selectionDecision": "Boundary review",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "2000-11-12",
+    "sortDate": "2000-11-12",
+    "title": "U.S.-Namibia Bilateral HIV/AIDS Agreement files",
+    "documentTitle": "Namibia HIV/AIDS agreement cables in Global AIDS Crisis MDR packet",
+    "dateLine": "Windhoek and Washington, 2000",
+    "subjectLine": "Cables on a U.S.-Namibia bilateral HIV/AIDS agreement, Namibian ministries, and U.S. AIDS diplomacy.",
+    "countries": [
+      "United States",
+      "Namibia"
+    ],
+    "digitalObjects": 1,
+    "sourcePages": "Global AIDS Crisis MDR packet, PDF 4",
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/119208",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Mandatory Declassification Review",
+      "series": "National Economic Council, National Security Council, NSC Records Management System",
+      "itemTitle": "Declassified Documents Concerning the Global AIDS Crisis",
+      "documentId": "119208",
+      "caseNumber": "2017-0739-M",
+      "fileUnit": "2007-1550-F"
+    },
+    "releaseStatus": "MDR packet online",
+    "declassificationStatus": "Declassified item page with PDF 4 containing Namibia agreement cables",
+    "originalClassification": "Mixed cable material",
+    "documentMarkings": [
+      "Cable markings require extraction"
+    ],
+    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Economic Council, National Security Council, and NSC Records Management System, Declassified Documents Concerning the Global AIDS Crisis, item 119208, case 2017-0739-M, file unit 2007-1550-F, PDF 4, U.S.-Namibia bilateral HIV/AIDS agreement cable sequence.",
+    "sourceNoteAddendum": "Boundary review required but likely useful for southern Africa health diplomacy if paired with Namibia bilateral-policy records.",
+    "annotationStatus": "Boundary note needed",
+    "indexTerms": [
+      "Namibia",
+      "HIV/AIDS",
+      "health diplomacy",
+      "Sandy Thurman",
+      "bilateral agreement"
+    ],
+    "persons": [
+      "Sandy Thurman",
+      "Hage Geingob"
+    ]
+  },
+  {
+    "id": "clinton-v27-041",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1994-12-19",
+    "sortDate": "1994-12-19",
+    "title": "[Anthony] Lake - Zambia Speech, 12/19/94",
+    "documentTitle": "Anthony Lake Zambia speech file",
+    "dateLine": "Zambia, December 19, 1994",
+    "subjectLine": "Public speechwriting lead from Anthony Lake's Africa trip.",
+    "countries": [
+      "United States",
+      "Zambia"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/11097",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council, Speechwriting Office",
+      "series": "Robert Boorstin files",
+      "box": "20",
+      "itemTitle": "[Anthony] Lake - Zambia Speech, 12/19/94",
+      "documentId": "11097",
+      "naid": "7585788"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public speechwriting item page with PDF",
+    "originalClassification": "Public context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 20, [Anthony] Lake - Zambia Speech, 12/19/94, item 11097, NAID 7585788. Public speechwriting PDF available from the item page.",
+    "annotationStatus": "Context annotation needed",
+    "indexTerms": [
+      "Zambia",
+      "Anthony Lake",
+      "Africa trip",
+      "speechwriting"
+    ],
+    "persons": [
+      "Anthony Lake",
+      "Robert Boorstin"
+    ]
+  },
+  {
+    "id": "clinton-v27-042",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1994-12-19",
+    "sortDate": "1994-12-19",
+    "title": "Zambia - Background",
+    "documentTitle": "Zambia background speechwriting file",
+    "dateLine": "Undated item page; sort date tied to Lake Zambia speech",
+    "subjectLine": "Speechwriting background for Zambia and southern African regional policy.",
+    "countries": [
+      "United States",
+      "Zambia"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/10278",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council, Speechwriting Office",
+      "series": "Robert Boorstin files",
+      "box": "8",
+      "itemTitle": "Zambia - Background",
+      "documentId": "10278",
+      "naid": "7585788"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public speechwriting item page with PDF",
+    "originalClassification": "Public context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Zambia - Background, item 10278, NAID 7585788. Public speechwriting PDF available from the item page.",
+    "sourceNoteAddendum": "Use as context and search vocabulary for Zambia; promote only if internal policy records remain unavailable and the public file explains selected documents.",
+    "annotationStatus": "Context annotation needed",
+    "indexTerms": [
+      "Zambia",
+      "Anthony Lake",
+      "regional policy",
+      "speechwriting"
+    ],
+    "persons": [
+      "Robert Boorstin",
+      "Anthony Lake"
+    ]
+  },
+  {
+    "id": "clinton-v27-043",
+    "type": "Source Lead",
+    "selectionDecision": "Source lead",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1998-03-22",
+    "sortDate": "1998-03-22",
+    "title": "Trip Book - President Clinton to Ghana, Uganda, Rwanda, South Africa, Botswana, and Senegal",
+    "documentTitle": "1998 Africa trip book covering South Africa and Botswana",
+    "dateLine": "March 22-April 2, 1998",
+    "subjectLine": "Schedule and logistics control for the 1998 Africa trip, including South Africa and Botswana stops.",
+    "countries": [
+      "United States",
+      "Rwanda",
+      "South Africa",
+      "Botswana",
+      "Ghana",
+      "Uganda",
+      "Senegal"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/57905",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Office of Scheduling and Advance",
+      "series": "Kirk Hanlin files",
+      "box": "5",
+      "itemTitle": "[Trip Book - Trip of President Clinton to Ghana, Uganda, Rwanda, South Africa, Botswana, and Senegal - March 22 - April 2, 1998]",
+      "documentId": "57905",
+      "naid": "52873477"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public schedule/trip-book PDF",
+    "originalClassification": "Public trip-book control",
+    "sourceNote": "Source: Clinton Digital Library, Office of Scheduling and Advance, Kirk Hanlin files, Box 5, [Trip Book - Trip of President Clinton to Ghana, Uganda, Rwanda, South Africa, Botswana, and Senegal - March 22 - April 2, 1998], item 57905, NAID 52873477. PDF available from the item page.",
+    "sourceNoteAddendum": "Use as a Daily Diary/travel control and event map; do not substitute for substantive policy records.",
+    "annotationStatus": "Control record",
+    "indexTerms": [
+      "1998 Africa trip",
+      "South Africa",
+      "Botswana",
+      "Rwanda",
+      "trip book",
+      "schedule control"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Kirk Hanlin"
+    ]
+  },
+  {
+    "id": "clinton-v27-044",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1998-03-29",
+    "sortDate": "1998-03-29",
+    "title": "Botswana - Masire Reception 3/29/98",
+    "documentTitle": "Botswana Masire reception speechwriting file",
+    "dateLine": "Gaborone, March 29, 1998",
+    "subjectLine": "Public-diplomacy context for Clinton's Botswana visit and President Masire reception.",
+    "countries": [
+      "United States",
+      "Botswana"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/9804",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council, Speechwriting Office",
+      "series": "Antony Blinken files",
+      "box": "35",
+      "itemTitle": "Botswana - Masire Reception 3/29/98",
+      "documentId": "9804",
+      "naid": "7585787"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public speechwriting item page with PDF",
+    "originalClassification": "Public context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Speechwriting Office, Antony Blinken files, Box 35, Botswana - Masire Reception 3/29/98, item 9804, NAID 7585787. Public speechwriting PDF available from the item page.",
+    "annotationStatus": "Context annotation needed",
+    "indexTerms": [
+      "Botswana",
+      "Quett Masire",
+      "1998 Africa trip",
+      "public diplomacy"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Quett Masire",
+      "Antony Blinken"
+    ]
+  },
+  {
+    "id": "clinton-v27-045",
+    "type": "Audio/Visual",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1998-03-29",
+    "sortDate": "1998-03-29",
+    "title": "Audio Recording of President Clinton's Remarks at a Reception in Gaborone, Botswana",
+    "documentTitle": "Audio recording of Clinton remarks at Gaborone reception",
+    "dateLine": "Gaborone, March 29, 1998",
+    "subjectLine": "Public audio context for Botswana stop on the 1998 Africa trip.",
+    "countries": [
+      "United States",
+      "Botswana"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/116846",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Audio Recordings of the White House Communications Agency",
+      "itemTitle": "Audio Recording of President Clinton's Remarks at a Reception on Gaborone, Botswana 3/29/1998",
+      "documentId": "116846",
+      "naid": "192124062"
+    },
+    "releaseStatus": "Public audio",
+    "declassificationStatus": "Public; NARA digital audio linked from item page",
+    "originalClassification": "Public",
+    "sourceNote": "Source: Clinton Digital Library, Audio Recordings of the White House Communications Agency, Audio Recording of President Clinton's Remarks at a Reception on Gaborone, Botswana 3/29/1998, item 116846, NAID 192124062.",
+    "annotationStatus": "Public context only",
+    "indexTerms": [
+      "Botswana",
+      "Gaborone",
+      "1998 Africa trip",
+      "public diplomacy"
+    ],
+    "persons": [
+      "Bill Clinton",
+      "Quett Masire"
+    ]
+  },
+  {
+    "id": "clinton-v27-046",
+    "type": "Audio/Visual",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1998-03-31",
+    "sortDate": "1998-03-31",
+    "title": "Audio Recording of President Clinton's Remarks to African Environmentalists in Gaborone, Botswana",
+    "documentTitle": "Audio recording of Clinton remarks to African environmentalists",
+    "dateLine": "Gaborone, March 31, 1998",
+    "subjectLine": "Public audio context for Botswana environment diplomacy during the 1998 Africa trip.",
+    "countries": [
+      "United States",
+      "Botswana"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/116847",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Audio Recordings of the White House Communications Agency",
+      "itemTitle": "Audio Recording of President Clinton's Remarks to African Environmentalists In Gaborone, Botswana 3/31/1998",
+      "documentId": "116847",
+      "naid": "192124063"
+    },
+    "releaseStatus": "Public audio",
+    "declassificationStatus": "Public; NARA digital audio linked from item page",
+    "originalClassification": "Public",
+    "sourceNote": "Source: Clinton Digital Library, Audio Recordings of the White House Communications Agency, Audio Recording of President Clinton's Remarks to African Environmentalists In Gaborone, Botswana 3/31/1998, item 116847, NAID 192124063.",
+    "annotationStatus": "Public context only",
+    "indexTerms": [
+      "Botswana",
+      "environment",
+      "Gaborone",
+      "1998 Africa trip",
+      "public diplomacy"
+    ],
+    "persons": [
+      "Bill Clinton"
+    ]
+  },
+  {
+    "id": "clinton-v27-047",
+    "type": "Source Lead",
+    "selectionDecision": "Source lead",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "2000-01-01",
+    "sortDate": "2000-01-01",
+    "title": "Botswana",
+    "documentTitle": "National AIDS Policy Office Botswana file",
+    "dateLine": "National AIDS Policy Office file; item page date pending",
+    "subjectLine": "Botswana health-policy source lead from the Global AIDS Crisis finding-aid family.",
+    "countries": [
+      "United States",
+      "Botswana"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/64163",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National AIDS Policy Office",
+      "box": "10",
+      "itemTitle": "Botswana",
+      "documentId": "64163",
+      "naid": "54976716"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Item page with PDF",
+    "originalClassification": "Health-policy source lead",
+    "sourceNote": "Source: Clinton Digital Library, National AIDS Policy Office, Box 10, Botswana, item 64163, NAID 54976716. PDF available from the item page; collection finding aid is Global AIDS Crisis, item 48956.",
+    "sourceNoteAddendum": "Use to close the Botswana health-policy search lane; select only southern Africa policy material with U.S. decision value.",
+    "annotationStatus": "Context review needed",
+    "indexTerms": [
+      "Botswana",
+      "AIDS",
+      "HIV",
+      "National AIDS Policy Office",
+      "health diplomacy"
+    ],
+    "persons": []
+  },
+  {
+    "id": "clinton-v27-048",
+    "type": "Source Lead",
+    "selectionDecision": "Source lead",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "2000-01-01",
+    "sortDate": "2000-01-01",
+    "title": "Malawi",
+    "documentTitle": "National AIDS Policy Office Malawi file",
+    "dateLine": "National AIDS Policy Office file; item page date pending",
+    "subjectLine": "Malawi health-policy source lead from the Global AIDS Crisis finding-aid family.",
+    "countries": [
+      "United States",
+      "Malawi"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/64400",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National AIDS Policy Office",
+      "box": "24",
+      "itemTitle": "Malawi",
+      "documentId": "64400",
+      "naid": "54976954"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Item page with PDF",
+    "originalClassification": "Health-policy source lead",
+    "sourceNote": "Source: Clinton Digital Library, National AIDS Policy Office, Box 24, Malawi, item 64400, NAID 54976954. PDF available from the item page; collection finding aid is Global AIDS Crisis, item 48956.",
+    "sourceNoteAddendum": "Use as a smaller-state health-policy control; likely context unless internal regional-policy records cite Malawi directly.",
+    "annotationStatus": "Context review needed",
+    "indexTerms": [
+      "Malawi",
+      "AIDS",
+      "HIV",
+      "National AIDS Policy Office",
+      "health diplomacy"
+    ],
+    "persons": []
+  },
+  {
+    "id": "clinton-v27-049",
+    "type": "Finding Aid",
+    "selectionDecision": "Source lead",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1995-01-01",
+    "sortDate": "1995-01-01",
+    "title": "Zimbabwe - Collection Finding Aid",
+    "documentTitle": "Zimbabwe collection finding aid",
+    "dateLine": "Collection scope: 1995-1997",
+    "subjectLine": "NSC records concerning Zimbabwe, high-level visits, the 1997 African-African American Summit, and mid-1990s aid.",
+    "countries": [
+      "United States",
+      "Zimbabwe"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/36431",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "Finding Aids - Collection Descriptions & Inventories",
+      "itemTitle": "Zimbabwe - Collection Finding Aid",
+      "documentId": "36431"
+    },
+    "releaseStatus": "Finding aid",
+    "declassificationStatus": "Reading-room pull required",
+    "originalClassification": "Public finding aid",
+    "sourceNote": "Source: Clinton Digital Library, Finding Aids - Collection Descriptions & Inventories, Zimbabwe - Collection Finding Aid, item 36431. The description identifies NSC records concerning Zimbabwe from 1995 through 1997, high-level visits, the 1997 African-African American Summit, and aid in the mid-1990s.",
+    "sourceNoteAddendum": "Use with FOIA 2006-0457-F splits to request any unscanned folder material not present in the online release packets.",
+    "annotationStatus": "Pull queue",
+    "indexTerms": [
+      "Zimbabwe",
+      "Robert Mugabe",
+      "African-African American Summit",
+      "aid",
+      "high-level visits"
+    ],
+    "persons": [
+      "Robert Mugabe"
+    ]
+  },
+  {
+    "id": "clinton-v27-050",
+    "type": "Public Statement",
+    "selectionDecision": "Context candidate",
+    "chapter": {
+      "number": 4,
+      "name": "Regional Democracy, Health, and Economic Policy"
+    },
+    "date": "1995-01-01",
+    "sortDate": "1995-01-01",
+    "title": "Zimbabwe - Background",
+    "documentTitle": "Zimbabwe background speechwriting file",
+    "dateLine": "Undated item page; sort date provisional",
+    "subjectLine": "Speechwriting background for Zimbabwe source review, including democracy, aid, land, and regional-policy terms.",
+    "countries": [
+      "United States",
+      "Zimbabwe"
+    ],
+    "digitalObjects": 1,
+    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/10279",
+    "source": {
+      "name": "Clinton Digital Library",
+      "collection": "National Security Council, Speechwriting Office",
+      "series": "Robert Boorstin files",
+      "box": "8",
+      "itemTitle": "Zimbabwe - Background",
+      "documentId": "10279",
+      "naid": "7585788"
+    },
+    "releaseStatus": "Released online",
+    "declassificationStatus": "Public speechwriting item page with PDF",
+    "originalClassification": "Public context",
+    "sourceNote": "Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Zimbabwe - Background, item 10279, NAID 7585788. Public speechwriting PDF available from the item page.",
+    "sourceNoteAddendum": "Use as context and keyword support for the Zimbabwe FOIA and finding-aid records.",
+    "annotationStatus": "Context annotation needed",
+    "indexTerms": [
+      "Zimbabwe",
+      "Robert Mugabe",
+      "speechwriting",
+      "democracy",
+      "land reform"
+    ],
+    "persons": [
+      "Robert Boorstin",
+      "Robert Mugabe"
     ]
   }
 ];
