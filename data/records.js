@@ -1,62 +1,10 @@
 window.COMPILER_RECORDS = [
   {
-    "id": "clinton-v27-001",
-    "type": "Memcon",
-    "selectionDecision": "Boundary review",
-    "chapter": {
-      "number": 3,
-      "name": "Rwanda, Great Lakes, and Humanitarian Response"
-    },
-    "date": "1993-02-23",
-    "sortDate": "1993-02-23",
-    "washingtonTime": "Pending",
-    "title": "Memorandum of Conversation - Secretary General Boutros Boutros-Ghali of the United Nations",
-    "documentTitle": "Memorandum of Conversation with Secretary General Boutros Boutros-Ghali of the United Nations",
-    "dateLine": "Washington, February 23, 1993",
-    "subjectLine": "UN peacekeeping and early Clinton administration multilateral crisis management; screen for southern African and Great Lakes references.",
-    "countries": [
-      "United States",
-      "United Nations",
-      "Rwanda",
-      "Angola"
-    ],
-    "digitalObjects": 1,
-    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/118497",
-    "source": {
-      "name": "Clinton Digital Library",
-      "collection": "Memcons - Memoranda of Conversation",
-      "itemTitle": "Memorandum of Conversation - Secretary General Boutros Boutros-Ghali of the United Nations",
-      "documentId": "118497"
-    },
-    "releaseStatus": "Released online",
-    "declassificationStatus": "Declassified item page with PDF",
-    "originalClassification": "Declassified",
-    "documentMarkings": [
-      "Classification and handling markings to verify in PDF"
-    ],
-    "meetingLocation": "White House",
-    "sourceNote": "Source: Clinton Digital Library, Memcons - Memoranda of Conversation, Memorandum of Conversation - Secretary General Boutros Boutros-Ghali of the United Nations, item 118497. Declassified PDF available from the item page; classification markings, attendees, and distribution require PDF review.",
-    "sourceNoteAddendum": "Promote only if the conversation includes Angola, Rwanda, Mozambique, or southern African regional policy.",
-    "annotationStatus": "Boundary note needed",
-    "indexTerms": [
-      "United Nations",
-      "peacekeeping",
-      "humanitarian response",
-      "Great Lakes boundary review"
-    ],
-    "persons": [
-      "Bill Clinton",
-      "Boutros Boutros-Ghali"
-    ],
-    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/0e72cac1e38b09a246280ca0629b188f.pdf",
-    "pdfLabel": "Clinton Library PDF"
-  },
-  {
     "id": "clinton-v27-002",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1993-05-03",
@@ -323,96 +271,6 @@ window.COMPILER_RECORDS = [
     "pdfLabel": "Clinton Library PDF"
   },
   {
-    "id": "clinton-v27-008",
-    "type": "Finding Aid",
-    "selectionDecision": "Source lead",
-    "chapter": {
-      "number": 3,
-      "name": "Rwanda, Great Lakes, and Humanitarian Response"
-    },
-    "date": "1994-04-01",
-    "sortDate": "1994-04-01",
-    "title": "Rwanda - Collection Finding Aid",
-    "documentTitle": "Rwanda collection finding aid and digitized-document gateway",
-    "dateLine": "Collection focus: Rwanda crisis, UNAMIR, and humanitarian assistance",
-    "subjectLine": "Susan Rice records, UNAMIR, congressional letters, humanitarian assistance, and genocide response.",
-    "countries": [
-      "United States",
-      "Rwanda",
-      "Burundi",
-      "Zaire"
-    ],
-    "digitalObjects": 1,
-    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/36334",
-    "source": {
-      "name": "Clinton Digital Library",
-      "collection": "Finding Aids - Collection Descriptions & Inventories",
-      "itemTitle": "Rwanda - Collection Finding Aid",
-      "documentId": "36334"
-    },
-    "releaseStatus": "Finding aid with digitized-collection gateway",
-    "declassificationStatus": "Digitized collection available for document selection",
-    "originalClassification": "Public finding aid",
-    "sourceNote": "Source: Clinton Digital Library, Finding Aids - Collection Descriptions & Inventories, Rwanda - Collection Finding Aid, item 36334. The page links to digitized documents in the collection and identifies records on Susan Rice, UNAMIR, congressional correspondence, and humanitarian assistance.",
-    "sourceNoteAddendum": "Boundary review required against genocide, UN, and humanitarian-policy volume scope.",
-    "annotationStatus": "Boundary note needed",
-    "indexTerms": [
-      "Rwanda",
-      "UNAMIR",
-      "humanitarian assistance",
-      "genocide",
-      "Susan Rice"
-    ],
-    "persons": [
-      "Susan Rice"
-    ]
-  },
-  {
-    "id": "clinton-v27-009",
-    "type": "Finding Aid",
-    "selectionDecision": "Source lead",
-    "chapter": {
-      "number": 3,
-      "name": "Rwanda, Great Lakes, and Humanitarian Response"
-    },
-    "date": "1995-01-01",
-    "sortDate": "1995-01-01",
-    "title": "Susan Rice and Rwanda - Collection Finding Aid",
-    "documentTitle": "Susan Rice and Rwanda collection finding aid",
-    "dateLine": "Collection dates 1995-1998",
-    "subjectLine": "NSC Records Management System numbered documents associated with Susan Rice and Rwanda, Zaire, and Burundi humanitarian response.",
-    "countries": [
-      "United States",
-      "Rwanda",
-      "Zaire",
-      "Burundi"
-    ],
-    "digitalObjects": 1,
-    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/36372",
-    "source": {
-      "name": "Clinton Digital Library",
-      "collection": "Finding Aids - Collection Descriptions & Inventories",
-      "itemTitle": "Susan Rice and Rwanda - Collection Finding Aid",
-      "documentId": "36372"
-    },
-    "releaseStatus": "Finding aid",
-    "declassificationStatus": "Reading-room and digitized-document review required",
-    "originalClassification": "Public finding aid",
-    "sourceNote": "Source: Clinton Digital Library, Finding Aids - Collection Descriptions & Inventories, Susan Rice and Rwanda - Collection Finding Aid, item 36372. The item page describes NSC Records Management System documents from 1995 through 1998 on Rwanda and the neighboring region of Zaire and Burundi.",
-    "sourceNoteAddendum": "Use to identify Great Lakes records that belong in Volume XXVII rather than broader Rwanda or UN volumes.",
-    "annotationStatus": "Pull queue",
-    "indexTerms": [
-      "Susan Rice",
-      "Rwanda",
-      "Zaire",
-      "Burundi",
-      "humanitarian crisis"
-    ],
-    "persons": [
-      "Susan Rice"
-    ]
-  },
-  {
     "id": "clinton-v27-010",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
@@ -506,7 +364,7 @@ window.COMPILER_RECORDS = [
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1998-04-13",
@@ -551,7 +409,7 @@ window.COMPILER_RECORDS = [
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1998-12-01",
@@ -595,7 +453,7 @@ window.COMPILER_RECORDS = [
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1999-01-01",
@@ -638,7 +496,7 @@ window.COMPILER_RECORDS = [
     "type": "Source Lead",
     "selectionDecision": "Source lead",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1999-06-01",
@@ -667,7 +525,7 @@ window.COMPILER_RECORDS = [
       "Markings to verify in PDF"
     ],
     "sourceNote": "Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F. The online PDF is a 157-page packet with withdrawal sheets and released pages from NSC African Affairs, NSC email, and NSC Records Management files.",
-    "sourceNoteAddendum": "Packet split into companion records for the May 1995 Mugabe visit, the May 30, 1995 draft Clinton letter to Mugabe, the 1997 African-African American Summit files, and a Rwanda/FLOTUS cable lead.",
+    "sourceNoteAddendum": "Packet split into companion records for the May 1995 Mugabe visit, the May 30, 1995 draft Clinton letter, the 1997 African-African American Summit files, and PRDR no. 5 records.",
     "annotationStatus": "Packet split completed; document-level review remains",
     "indexTerms": [
       "Zimbabwe",
@@ -730,7 +588,7 @@ window.COMPILER_RECORDS = [
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1993-06-16",
@@ -823,217 +681,11 @@ window.COMPILER_RECORDS = [
     ]
   },
   {
-    "id": "clinton-v27-019",
-    "type": "Release Packet",
-    "selectionDecision": "Boundary review",
-    "chapter": {
-      "number": 3,
-      "name": "Rwanda, Great Lakes, and Humanitarian Response"
-    },
-    "date": "1993-07-15",
-    "sortDate": "1993-07-15",
-    "title": "Declassified Documents concerning Rwanda - Jennifer Ward files",
-    "documentTitle": "MDR packet on 1993 Rwanda peacekeeping and regional crisis files",
-    "dateLine": "Washington, 1993",
-    "subjectLine": "Jennifer Ward emails and memoranda on Rwanda peacekeeping, Burundi refugees, and new U.N. peacekeeping operations.",
-    "countries": [
-      "United States",
-      "Rwanda",
-      "Burundi",
-      "Zaire",
-      "United Nations"
-    ],
-    "digitalObjects": 1,
-    "pageCount": 24,
-    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/ea12d7b7c94007cdaa3fad7a9839117e.pdf",
-    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/36615",
-    "source": {
-      "name": "Clinton Digital Library",
-      "collection": "Mandatory Declassification Review",
-      "series": "National Security Council, NSC African Affairs Office, Jennifer Ward files",
-      "itemTitle": "Declassified Documents concerning Rwanda",
-      "documentId": "36615",
-      "caseNumber": "2011-0261-M",
-      "naid": "7585413"
-    },
-    "releaseStatus": "MDR packet online",
-    "declassificationStatus": "Declassified item page with PDF",
-    "originalClassification": "Mixed declassified NSC records",
-    "documentMarkings": [
-      "Markings and page spans require document-level extraction"
-    ],
-    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, NSC African Affairs Office, Jennifer Ward files, Declassified Documents concerning Rwanda, item 36615, case 2011-0261-M, NAID 7585413. The online PDF is 24 pages.",
-    "sourceNoteAddendum": "Boundary review required: keep only records tying Rwanda, Burundi, Zaire, or UN peacekeeping to the southern Africa/regional-policy frame of Volume XXVII.",
-    "annotationStatus": "Boundary note needed",
-    "indexTerms": [
-      "Rwanda",
-      "Burundi",
-      "Zaire",
-      "UN peacekeeping",
-      "UNAMIR",
-      "Jennifer Ward",
-      "Susan Rice"
-    ],
-    "persons": [
-      "Jennifer Ward",
-      "Susan Rice",
-      "Anthony Lake"
-    ]
-  },
-  {
-    "id": "clinton-v27-020",
-    "type": "Release Packet",
-    "selectionDecision": "Boundary review",
-    "chapter": {
-      "number": 3,
-      "name": "Rwanda, Great Lakes, and Humanitarian Response"
-    },
-    "date": "1994-04-07",
-    "sortDate": "1994-04-07",
-    "title": "Declassified documents concerning Rwanda - Anthony Lake files",
-    "documentTitle": "MDR packet on Rwanda crisis reports, correspondence, and talking points",
-    "dateLine": "Washington and Kigali, 1994",
-    "subjectLine": "Situation Room reports, head-of-state correspondence, talking points, UNAMIR policy, and refugee-crisis records.",
-    "countries": [
-      "United States",
-      "Rwanda",
-      "Belgium",
-      "France",
-      "Zaire",
-      "United Nations"
-    ],
-    "digitalObjects": 1,
-    "pageCount": 69,
-    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/29365aeb4d439b0bd5173f0670e30ffe.pdf",
-    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/47967",
-    "source": {
-      "name": "Clinton Digital Library",
-      "collection": "Mandatory Declassification Review",
-      "series": "National Security Council, National Security Advisor, Anthony Lake files",
-      "itemTitle": "Declassified documents concerning Rwanda",
-      "documentId": "47967",
-      "caseNumber": "2011-0268-M",
-      "naid": "7585694"
-    },
-    "releaseStatus": "MDR packet online",
-    "declassificationStatus": "Declassified item page with PDF; date available 9/21/2015",
-    "originalClassification": "Mixed declassified NSC and State records",
-    "documentMarkings": [
-      "Markings and exemptions require document-level extraction"
-    ],
-    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, National Security Advisor, Anthony Lake files, Declassified documents concerning Rwanda, item 47967, case 2011-0268-M, NAID 7585694. The online PDF is 69 pages.",
-    "sourceNoteAddendum": "Promote selectively; much of the packet likely belongs in Rwanda, genocide, U.N., or humanitarian-policy coverage rather than the southern Africa volume.",
-    "annotationStatus": "Boundary note needed",
-    "indexTerms": [
-      "Rwanda",
-      "UNAMIR",
-      "refugee crisis",
-      "Anthony Lake",
-      "head of state correspondence"
-    ],
-    "persons": [
-      "Anthony Lake",
-      "Boutros Boutros-Ghali"
-    ]
-  },
-  {
-    "id": "clinton-v27-021",
-    "type": "Release Packet",
-    "selectionDecision": "Boundary review",
-    "chapter": {
-      "number": 3,
-      "name": "Rwanda, Great Lakes, and Humanitarian Response"
-    },
-    "date": "1994-01-01",
-    "sortDate": "1994-01-01",
-    "title": "Declassified documents concerning Rwanda - MacArthur DeShazer files",
-    "documentTitle": "MDR packet on 1993-1994 Rwanda diplomatic initiatives in MacArthur DeShazer files",
-    "dateLine": "Washington and Africa posts, 1993-1994",
-    "subjectLine": "Department of State cables and NSC records on Rwanda diplomatic initiatives, regional actors, and meetings with Belgium, Burundi, and Zaire.",
-    "countries": [
-      "United States",
-      "Rwanda",
-      "Belgium",
-      "Burundi",
-      "Zaire"
-    ],
-    "digitalObjects": 9,
-    "pdfFiles": [
-      {
-        "label": "MDR PDF 1",
-        "url": "https://clinton.presidentiallibraries.us/files/original/7ec9f20aea4a9c9f9e8b0c15efdac8bb.pdf"
-      },
-      {
-        "label": "MDR PDF 2",
-        "url": "https://clinton.presidentiallibraries.us/files/original/c66d57231f091d187155d7407ed0929b.pdf"
-      },
-      {
-        "label": "MDR PDF 3",
-        "url": "https://clinton.presidentiallibraries.us/files/original/44fcebeba87c94ef552fac6b91cc5ad2.pdf"
-      },
-      {
-        "label": "MDR PDF 4",
-        "url": "https://clinton.presidentiallibraries.us/files/original/5d042f83fa58b70074708f14c0127713.pdf"
-      },
-      {
-        "label": "MDR PDF 5",
-        "url": "https://clinton.presidentiallibraries.us/files/original/a1ca8fd5b12dddc6a0dd8fc771ea5f7b.pdf"
-      },
-      {
-        "label": "MDR PDF 6",
-        "url": "https://clinton.presidentiallibraries.us/files/original/6ab576aa6a1edf42a5162309930cc438.pdf"
-      },
-      {
-        "label": "MDR PDF 7",
-        "url": "https://clinton.presidentiallibraries.us/files/original/5c445cc9a557aa99f8e8515a2717a83d.pdf"
-      },
-      {
-        "label": "MDR PDF 8",
-        "url": "https://clinton.presidentiallibraries.us/files/original/89c35d26fa96f87ec734a551ad81cc96.pdf"
-      },
-      {
-        "label": "MDR PDF 9",
-        "url": "https://clinton.presidentiallibraries.us/files/original/e37a5d48dc7e1489e1571c952f4b60c9.pdf"
-      }
-    ],
-    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/118983",
-    "source": {
-      "name": "Clinton Digital Library",
-      "collection": "Mandatory Declassification Review",
-      "series": "National Security Council, NSC Records Management System, MacArthur DeShazer files",
-      "itemTitle": "Declassified documents concerning Rwanda",
-      "documentId": "118983",
-      "caseNumber": "2011-0262-M",
-      "fileUnit": "FOIA case 2006-0192-F"
-    },
-    "releaseStatus": "MDR packet online",
-    "declassificationStatus": "Declassified item page with nine PDFs; date available 2/2/2024",
-    "originalClassification": "Mixed declassified State cables and NSC records",
-    "documentMarkings": [
-      "Exemption 1 closures reviewed under MDR; document markings require extraction"
-    ],
-    "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, NSC Records Management System, MacArthur DeShazer files, Declassified documents concerning Rwanda, item 118983, case 2011-0262-M, FOIA case 2006-0192-F. The item page provides nine PDFs.",
-    "sourceNoteAddendum": "Boundary review required before promotion because the packet is Rwanda-centered and broader than Volume XXVII's southern Africa scope.",
-    "annotationStatus": "Boundary note needed",
-    "indexTerms": [
-      "Rwanda",
-      "MacArthur DeShazer",
-      "diplomatic initiatives",
-      "Burundi",
-      "Zaire"
-    ],
-    "persons": [
-      "MacArthur DeShazer",
-      "Richard Moose",
-      "Susan Rice"
-    ]
-  },
-  {
     "id": "clinton-v27-022",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1994-12-05",
@@ -1089,7 +741,7 @@ window.COMPILER_RECORDS = [
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1995-05-16",
@@ -1157,7 +809,7 @@ window.COMPILER_RECORDS = [
     "type": "Release Packet",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1995-05-30",
@@ -1216,7 +868,7 @@ window.COMPILER_RECORDS = [
     "type": "Source Lead",
     "selectionDecision": "Boundary review",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1997-07-16",
@@ -1273,70 +925,11 @@ window.COMPILER_RECORDS = [
     ]
   },
   {
-    "id": "clinton-v27-026",
-    "type": "Source Lead",
-    "selectionDecision": "Boundary review",
-    "chapter": {
-      "number": 3,
-      "name": "Rwanda, Great Lakes, and Humanitarian Response"
-    },
-    "date": "1997-03-06",
-    "sortDate": "1997-03-06",
-    "title": "Rwandan Women's Delegation to Meet with the First Lady",
-    "documentTitle": "U.S. Embassy Kigali cable on Rwandan women's delegation and FLOTUS trip",
-    "dateLine": "Kigali, ca. March 1997",
-    "subjectLine": "Released cable section from a FLOTUS Africa trip briefing book on Rwandan women, transitional politics, and post-genocide institutions.",
-    "countries": [
-      "United States",
-      "Rwanda"
-    ],
-    "digitalObjects": 1,
-    "pdfFiles": [
-      {
-        "label": "FOIA packet PDF",
-        "url": "https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf",
-        "pages": 157
-      }
-    ],
-    "sourcePages": "FOIA 2006-0457-F packet, FLOTUS Trip briefing book, document 005",
-    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/14571",
-    "source": {
-      "name": "Clinton Digital Library",
-      "collection": "Declassified Documents",
-      "series": "Clinton Presidential Records, National Security Council, African Affairs",
-      "box": "2580",
-      "folder": "Briefing Book: FLOTUS Trip to South Africa, Zimbabwe, Tanzania, Uganda, Eritrea [8]",
-      "itemTitle": "Rwandan Women's Delegation to Meet with the First Lady",
-      "documentId": "14571",
-      "caseNumber": "2006-0457-F"
-    },
-    "releaseStatus": "Released inside FOIA packet",
-    "declassificationStatus": "Unclassified cable section released; withdrawal sheet lists P5 material",
-    "originalClassification": "UNCLAS",
-    "documentMarkings": [
-      "UNCLAS",
-      "E.O. 12958: DECL NA"
-    ],
-    "sourceNote": "Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, African Affairs, OA/Box 2580, Briefing Book: FLOTUS Trip to South Africa, Zimbabwe, Tanzania, Uganda, Eritrea [8], document 005, cable, Rwandan Women's Delegation to Meet with the First Lady, ca. 1997.",
-    "sourceNoteAddendum": "Boundary review required because the cable appears in a southern/eastern Africa trip book but concerns Rwanda post-genocide society and FLOTUS programming.",
-    "annotationStatus": "Boundary note needed",
-    "indexTerms": [
-      "Rwanda",
-      "First Lady",
-      "women",
-      "post-genocide",
-      "FLOTUS trip"
-    ],
-    "persons": [
-      "Hillary Rodham Clinton"
-    ]
-  },
-  {
     "id": "clinton-v27-027",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1995-05-18",
@@ -1542,7 +1135,7 @@ window.COMPILER_RECORDS = [
     "type": "Release Packet",
     "selectionDecision": "Boundary review",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "2000-05-04",
@@ -1966,7 +1559,7 @@ window.COMPILER_RECORDS = [
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1993-06-16",
@@ -2014,7 +1607,7 @@ window.COMPILER_RECORDS = [
     "type": "Release Packet",
     "selectionDecision": "Boundary review",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "2000-11-12",
@@ -2072,7 +1665,7 @@ window.COMPILER_RECORDS = [
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1994-12-19",
@@ -2119,7 +1712,7 @@ window.COMPILER_RECORDS = [
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1994-12-19",
@@ -2167,7 +1760,7 @@ window.COMPILER_RECORDS = [
     "type": "Source Lead",
     "selectionDecision": "Source lead",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1998-03-22",
@@ -2222,7 +1815,7 @@ window.COMPILER_RECORDS = [
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1998-03-29",
@@ -2270,7 +1863,7 @@ window.COMPILER_RECORDS = [
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1998-03-29",
@@ -2313,7 +1906,7 @@ window.COMPILER_RECORDS = [
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1998-03-31",
@@ -2356,7 +1949,7 @@ window.COMPILER_RECORDS = [
     "type": "Source Lead",
     "selectionDecision": "Source lead",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "2000-01-01",
@@ -2401,7 +1994,7 @@ window.COMPILER_RECORDS = [
     "type": "Source Lead",
     "selectionDecision": "Source lead",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "2000-01-01",
@@ -2446,7 +2039,7 @@ window.COMPILER_RECORDS = [
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1995-01-01",
@@ -2489,7 +2082,7 @@ window.COMPILER_RECORDS = [
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
     "chapter": {
-      "number": 4,
+      "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
     "date": "1995-01-01",

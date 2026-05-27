@@ -1,7 +1,6 @@
 const CHAPTER_ORDER = [
   "South Africa Transition and Bilateral Relations",
   "Angola, Mozambique, and Southern African Security",
-  "Rwanda, Great Lakes, and Humanitarian Response",
   "Regional Democracy, Health, and Economic Policy"
 ];
 

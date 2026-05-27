@@ -10,8 +10,7 @@ Volume XXVII is currently planned, so this assist page is a source-control surfa
 | --- | --- | --- |
 | South Africa public material overwhelmed internal policy files | Partly closed; onsite blocker remains | Added MDR packets for Amy Biehl/South African political violence, Mbeki AIDS controversy files, Global AIDS Crisis/Mbeki state-visit files, and the Mbeki 1995 visit finding aid. The unscanned South Africa and Mbeki visit collections remain pull targets. |
 | Angola records were mostly finding-aid leads | Partly closed; onsite blocker remains | Added Angola background, Southern Africa background, landmines files, landmines statement, and the Victor Butt/Bout MDR packet with Angola/UNITA and South Africa enforcement strategy. The unscanned Angola finding aid remains the core blocker for policy memoranda and cables. |
-| Rwanda/Great Lakes boundary was unstable | Controlled, not fully closed | Reclassified the Rwanda gateway as a finding aid and added separate MDR packets for Jennifer Ward, Anthony Lake, and MacArthur DeShazer files. Each Rwanda packet is marked boundary review so genocide, U.N., and humanitarian records do not flood the southern Africa volume. |
-| Zimbabwe and smaller-state coverage was thin | Closed for public/digital seed stage | Split FOIA 2006-0457-F into Mugabe visit, draft letter, African-African American Summit, Rwanda/FLOTUS, and PRDR no. 5 records. Added Zimbabwe finding aid/background, Namibia, Zambia, Botswana, and Malawi records. |
+| Zimbabwe and smaller-state coverage was thin | Closed for public/digital seed stage | Split FOIA 2006-0457-F into Mugabe visit, draft letter, African-African American Summit, and PRDR no. 5 records. Added Zimbabwe finding aid/background, Namibia, Zambia, Botswana, and Malawi records. |
 | Source-note fields were draft-level | Closed for seed data | Every record now has a `Source:` note with repository path, item ID or case number, release status, and a promotion/control note. Document packets still need page-level extraction before final FRUS selection. |
 | FOIA packets were not split | Closed for available Zimbabwe packets | Item 14571 and item 14676 are now represented as packet-level and document-family records, with withdrawal-sheet restrictions captured. |
 | Daily Diary controls were missing | Closed for public seed stage | Added the Ellen McCathran Presidential Daily Diary hardcopy item containing May 18, 1995 as a control for the Mugabe visit, and the 1998 Africa trip book as a travel/schedule control. |
@@ -31,5 +30,5 @@ These are not open-ended gaps in the page; they are source-access blockers that 
 
 1. Promote only document-level records with date, source path, page span, release status, and markings.
 2. Keep public speeches, audio, trip books, and Daily Diary entries as context/control unless they directly explain a selected policy record.
-3. For Rwanda and Global AIDS records, include only material that bears on southern Africa regional policy, diplomacy, or bilateral relations.
+3. For Global AIDS records, include only material that bears on southern Africa regional policy, diplomacy, or bilateral relations.
 4. Preserve finding aids as pull targets when the Clinton Digital Library states that scans are not available online.
