@@ -66,7 +66,8 @@
 
       .actions,
       .candidate-actions,
-      .reader-actions {
+      .reader-actions,
+      .note-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
@@ -74,21 +75,26 @@
 
       .button,
       .reader-actions a,
-      .candidate-actions a {
+      .candidate-actions a,
+      .note-actions button {
         display: inline-flex;
         align-items: center;
         min-height: 38px;
         padding: 8px 12px;
         color: var(--navy);
+        font: inherit;
+        font-weight: 850;
         text-decoration: none;
         background: rgba(255, 255, 255, 0.84);
         border: 1px solid var(--line);
         border-radius: 6px;
+        cursor: pointer;
       }
 
       .button.primary,
       .reader-actions .primary,
-      .candidate-actions .primary {
+      .candidate-actions .primary,
+      .note-actions .primary {
         color: white;
         background: var(--navy);
         border-color: var(--navy);
@@ -245,6 +251,40 @@
         border-top: 1px solid var(--line);
       }
 
+      .scratchpad {
+        display: grid;
+        gap: 10px;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+      }
+
+      .scratchpad h3 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .scratchpad textarea {
+        width: 100%;
+        min-height: 320px;
+        resize: vertical;
+        padding: 12px;
+        color: var(--ink);
+        font:
+          0.92rem/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          monospace;
+        background: #fffdf8;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+      }
+
+      .note-status {
+        min-height: 1.2em;
+        margin: 0;
+        color: var(--teal);
+        font-size: 0.84rem;
+        font-weight: 850;
+      }
+
       .pdf-frame {
         width: 100%;
         height: min(76vh, 820px);
@@ -283,6 +323,7 @@
       <nav class="actions" aria-label="PDF desk navigation">
         <a class="button primary" href="../docket/">Docket</a>
         <a class="button" href="../reports/extraction-worksheet.md">Worksheet</a>
+        <button id="export-notes" class="button" type="button">Export Notes</button>
         <a class="button" href="../">Main site</a>
       </nav>
     </header>
@@ -294,7 +335,7 @@
         <p class="lede">
           The six strongest public PDF candidates for Volume XXVII in one working
           surface. Open the packet, download it, check the catalog item, and capture
-          page spans and source-note details in the extraction worksheet.
+          page spans and source-note details in a local extraction scratchpad.
         </p>
         <p id="summary" class="summary" aria-live="polite">Loading PDF candidates...</p>
       </section>
@@ -336,9 +377,11 @@
       const candidateCount = document.querySelector("#candidate-count");
       const pageCount = document.querySelector("#page-count");
       const topicCount = document.querySelector("#topic-count");
+      const exportNotesButton = document.querySelector("#export-notes");
 
       let candidates = [];
       let selectedId = "";
+      const notePrefix = "frus-v27-pdf-note-v1:";
 
       function formatDate(value) {
         if (!value) return "Date pending";
@@ -405,6 +448,127 @@
         anchor.rel = "noreferrer";
         if (className) anchor.className = className;
         return anchor;
+      }
+
+      function noteKey(record) {
+        return `${notePrefix}${record.id}`;
+      }
+
+      function pdfList(record) {
+        return recordPdfFiles(record)
+          .map((file, index) => `${index + 1}. ${file.label || "PDF"}: ${file.url}${file.pages ? ` (${file.pages} pages)` : ""}`)
+          .join("\n");
+      }
+
+      function noteTemplate(record) {
+        return [
+          `# ${record.id} - ${record.documentTitle || record.title}`,
+          "",
+          `Date: ${record.date || record.sortDate || "Date pending"}`,
+          `Topic: ${record.topic?.name || "Topic pending"}`,
+          `Catalog item: ${record.catalogUrl || "Pending"}`,
+          "PDF files:",
+          pdfList(record) || "- Pending",
+          "",
+          `Extraction target: ${extractionTarget(record)}`,
+          "",
+          "## Page Map",
+          "",
+          "| PDF pages | Document boundary / title | Markings | Omitted material | Disposition |",
+          "| --- | --- | --- | --- | --- |",
+          "|  |  |  |  |  |",
+          "",
+          "## Candidate Documents",
+          "",
+          "- ",
+          "",
+          "## Markings And Declassification",
+          "",
+          "- Original classification / handling:",
+          "- Declassification stamps / exemptions:",
+          "- Withdrawal sheets or excisions:",
+          "",
+          "## FRUS Selection Rationale",
+          "",
+          "- Policy significance:",
+          "- Relationship to surrounding chronology:",
+          "- Include / Context / Drop / Replacement search:",
+          "",
+          "## Draft Source Note",
+          "",
+          record.sourceNote || "Source note pending.",
+          "",
+          "## Annotation Hooks",
+          "",
+          "- People:",
+          "- Organizations:",
+          "- Related records:",
+          "- Terms for index:"
+        ].join("\n");
+      }
+
+      function currentNote(record) {
+        try {
+          return localStorage.getItem(noteKey(record)) || noteTemplate(record);
+        } catch (error) {
+          return noteTemplate(record);
+        }
+      }
+
+      function saveNote(record, value) {
+        try {
+          localStorage.setItem(noteKey(record), value);
+          return true;
+        } catch (error) {
+          return false;
+        }
+      }
+
+      async function copyText(text) {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+          return;
+        }
+        const copyArea = document.createElement("textarea");
+        copyArea.value = text;
+        copyArea.style.position = "fixed";
+        copyArea.style.left = "-9999px";
+        document.body.append(copyArea);
+        copyArea.select();
+        document.execCommand("copy");
+        copyArea.remove();
+      }
+
+      function downloadText(filename, text) {
+        const blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const anchor = document.createElement("a");
+        anchor.href = url;
+        anchor.download = filename;
+        anchor.click();
+        URL.revokeObjectURL(url);
+      }
+
+      function slug(value) {
+        return String(value || "record")
+          .toLowerCase()
+          .replace(/&/g, "and")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "");
+      }
+
+      function savedNotesMarkdown() {
+        return candidates
+          .map((record) => currentNote(record))
+          .join("\n\n---\n\n");
+      }
+
+      function setStatus(node, text) {
+        node.textContent = text;
+        window.clearTimeout(Number(node.dataset.timeoutId || 0));
+        node.dataset.timeoutId = window.setTimeout(() => {
+          node.textContent = "Notes save automatically in this browser.";
+        }, 1800);
       }
 
       function renderList() {
@@ -480,7 +644,49 @@
         source.className = "source-note";
         source.textContent = record.sourceNote || "Source note pending.";
 
-        readerPanel.append(heading, meta, target, actions, source);
+        const scratchpad = document.createElement("section");
+        scratchpad.className = "scratchpad";
+        const scratchHeading = document.createElement("h3");
+        scratchHeading.textContent = "Extraction Scratchpad";
+        const noteStatus = document.createElement("p");
+        noteStatus.className = "note-status";
+        noteStatus.textContent = "Notes save automatically in this browser.";
+        const noteArea = document.createElement("textarea");
+        noteArea.value = currentNote(record);
+        noteArea.setAttribute("aria-label", `Extraction notes for ${record.id}`);
+        noteArea.addEventListener("input", () => {
+          setStatus(noteStatus, saveNote(record, noteArea.value) ? "Saved." : "Could not save locally.");
+        });
+
+        const noteActions = document.createElement("div");
+        noteActions.className = "note-actions";
+        const copyButton = document.createElement("button");
+        copyButton.type = "button";
+        copyButton.className = "primary";
+        copyButton.textContent = "Copy Note";
+        copyButton.addEventListener("click", async () => {
+          await copyText(noteArea.value);
+          setStatus(noteStatus, "Copied note.");
+        });
+        const resetButton = document.createElement("button");
+        resetButton.type = "button";
+        resetButton.textContent = "Reset Template";
+        resetButton.addEventListener("click", () => {
+          noteArea.value = noteTemplate(record);
+          saveNote(record, noteArea.value);
+          setStatus(noteStatus, "Template reset.");
+        });
+        const downloadButton = document.createElement("button");
+        downloadButton.type = "button";
+        downloadButton.textContent = "Download Note";
+        downloadButton.addEventListener("click", () => {
+          downloadText(`frus-v27-${record.id}-${slug(record.documentTitle || record.title)}-extraction.md`, noteArea.value);
+          setStatus(noteStatus, "Downloaded note.");
+        });
+        noteActions.append(copyButton, resetButton, downloadButton);
+        scratchpad.append(scratchHeading, noteStatus, noteArea, noteActions);
+
+        readerPanel.append(heading, meta, target, actions, source, scratchpad);
         pdfFrame.src = primaryPdf?.url || "about:blank";
       }
 
@@ -513,6 +719,11 @@
         renderList();
         renderReader(candidates[0]);
       }
+
+      exportNotesButton.addEventListener("click", () => {
+        if (!candidates.length) return;
+        downloadText("frus-v27-selection-candidate-extraction-notes.md", savedNotesMarkdown());
+      });
 
       fetch("../data/records.json", { cache: "no-store" })
         .then((response) => {

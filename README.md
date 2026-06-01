@@ -17,6 +17,7 @@ Public site:
 ## What Is Included
 
 - Date-first chronology for released or public candidate records
+- PDF review desk with local extraction scratchpad and Markdown note exports
 - Searchable source records with type, topic, and production-gap filters
 - FRUS-style source-note and declassification quality gates
 - Compiler gap analysis for planned-volume risks
