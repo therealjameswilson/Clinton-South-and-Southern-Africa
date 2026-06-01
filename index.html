@@ -18,6 +18,7 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#chronology">Chronology</a>
+        <a href="#docket">Docket</a>
         <a href="#volume">Volume</a>
         <a href="#gaps">Gaps</a>
         <a href="#library">Library</a>
@@ -54,6 +55,29 @@
         </div>
         <div id="chronology-root" class="records-root chronology-root" aria-live="polite">
           <p class="loading">Loading released document chronology...</p>
+        </div>
+      </section>
+
+      <section class="section docket-section" id="docket" aria-labelledby="docket-title">
+        <div class="section-heading">
+          <p class="kicker">Next Review Pass</p>
+          <h2 id="docket-title">Compiler Docket</h2>
+        </div>
+        <p class="records-intro">
+          A short queue for the next working session: selection candidates first,
+          scope decisions second, and pull or extraction blockers third. The docket is
+          generated from the structured records so it stays tied to the chronology.
+        </p>
+        <p id="docket-summary" class="result-summary" aria-live="polite">
+          Loading compiler docket...
+        </p>
+        <div class="report-links docket-links" aria-label="Compiler docket exports">
+          <a href="data/compiler-docket.csv" rel="noreferrer">Download docket CSV</a>
+          <a href="#records">Open full record browser</a>
+          <a href="reports/clinton-library-research-plan.md" rel="noreferrer">Pull plan</a>
+        </div>
+        <div id="docket-root" class="docket-grid" aria-live="polite">
+          <p class="loading">Loading compiler docket...</p>
         </div>
       </section>
 

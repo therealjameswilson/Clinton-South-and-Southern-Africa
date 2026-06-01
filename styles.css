@@ -323,6 +323,7 @@ dd {
 .source-list a,
 .facet-list a,
 .record-links a,
+.docket-item a,
 .standard-panel a,
 .source-note-guide a,
 .research-card a,
@@ -376,6 +377,7 @@ dd {
 
 .gap-summary div,
 .risk-ledger div,
+.docket-item,
 .standard-panel,
 .gate-grid div,
 .chapter-card,
@@ -436,11 +438,68 @@ dd {
 }
 
 .library-grid,
+.docket-grid,
 .workbench-layout,
 .chapter-grid,
 .feature-grid {
   display: grid;
   gap: 14px;
+}
+
+.docket-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 20px;
+}
+
+.docket-panel {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.docket-panel h3 {
+  margin: 0;
+}
+
+.docket-description,
+.docket-action {
+  margin: 0;
+  color: #46525e;
+  line-height: 1.54;
+}
+
+.docket-list {
+  display: grid;
+  gap: 10px;
+}
+
+.docket-item {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border-left: 5px solid var(--rust);
+}
+
+.docket-date {
+  color: var(--rust);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.docket-item h3 {
+  margin: 0;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+}
+
+.docket-item .record-meta {
+  margin: 0;
+}
+
+.docket-item-links {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .library-grid {
@@ -876,6 +935,7 @@ footer a {
   .gap-summary,
   .risk-ledger,
   .library-grid,
+  .docket-grid,
   .workbench-layout,
   .feature-grid,
   .source-list {
@@ -906,6 +966,7 @@ footer a {
   .gap-summary,
   .risk-ledger,
   .library-grid,
+  .docket-grid,
   .workbench-layout,
   .chapter-grid,
   .feature-grid,

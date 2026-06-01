@@ -7,6 +7,8 @@ const CHAPTER_ORDER = [
 const recordsRoot = document.querySelector("#records-root");
 const chronologyRoot = document.querySelector("#chronology-root");
 const chronologySummary = document.querySelector("#chronology-summary");
+const docketRoot = document.querySelector("#docket-root");
+const docketSummary = document.querySelector("#docket-summary");
 const totalRecords = document.querySelector("#total-records");
 const decisionReady = document.querySelector("#decision-ready");
 const provenanceGaps = document.querySelector("#provenance-gaps");
@@ -460,6 +462,139 @@ function createExternalLink(label, url, options = {}) {
   return link;
 }
 
+function isExtractionBlocker(record) {
+  const withheldText =
+    typeof record.withheldMaterial === "string"
+      ? record.withheldMaterial
+      : Object.values(record.withheldMaterial || {}).join(" ");
+  const status = [record.releaseStatus, record.declassificationStatus, record.sourceNoteAddendum, withheldText]
+    .filter(Boolean)
+    .join(" ");
+  return record.type === "Finding Aid" || /not scanned|finding aid only|partial|withheld|withdrawal|pull required/i.test(status);
+}
+
+function docketAction(record) {
+  if (record.selectionDecision === "Include candidate") {
+    return hasPdf(record)
+      ? "Extract text, page spans, markings, and omitted-material notes for final selection review."
+      : "Open the source item, verify the scan path, then extract text and source-note details.";
+  }
+  if (record.selectionDecision === "Boundary review") {
+    return "Make an include/context/exclude decision and record the volume-scope rationale.";
+  }
+  if (record.type === "Finding Aid") {
+    return "Pre-pull the collection or request scans, then create document-level records from useful folders.";
+  }
+  if (isExtractionBlocker(record)) {
+    return "Map packet pages, withdrawal sheets, and replacement-search targets before promotion.";
+  }
+  return "Review as context or control after the policy records are settled.";
+}
+
+function docketGroups(records) {
+  const selection = records
+    .filter((record) => record.selectionDecision === "Include candidate")
+    .sort(byChronology);
+  const boundary = records
+    .filter((record) => record.selectionDecision === "Boundary review")
+    .sort(byChronology);
+  const seen = new Set([...selection, ...boundary].map((record) => record.id));
+  const blockers = records
+    .filter((record) => !seen.has(record.id) && isExtractionBlocker(record))
+    .sort(byChapterThenDate);
+
+  return [
+    {
+      title: "Selection Candidates",
+      description: "Records closest to FRUS inclusion after extraction and source-note verification.",
+      records: selection
+    },
+    {
+      title: "Scope Decisions",
+      description: "Records that need a clear include, context, or exclude call.",
+      records: boundary
+    },
+    {
+      title: "Pull and Extraction Blockers",
+      description: "Unscanned collections, partial packets, and source-access work that unlocks later selection.",
+      records: blockers
+    }
+  ];
+}
+
+function createDocketItem(record) {
+  const item = document.createElement("article");
+  item.className = "docket-item";
+
+  const date = document.createElement("time");
+  date.className = "docket-date";
+  if (record.date) date.dateTime = record.date;
+  date.textContent = formatDate(record.date);
+
+  const heading = document.createElement("h3");
+  heading.textContent = record.documentTitle || record.title;
+
+  const meta = document.createElement("div");
+  meta.className = "record-meta";
+  for (const value of [record.selectionDecision, record.type, record.chapter?.name]) {
+    if (!value) continue;
+    const badge = document.createElement("span");
+    badge.textContent = value;
+    meta.append(badge);
+  }
+
+  const action = createParagraph("docket-action", docketAction(record));
+
+  const links = document.createElement("div");
+  links.className = "record-links docket-item-links";
+  if (record.catalogUrl) {
+    links.append(createExternalLink("Open item", record.catalogUrl));
+  }
+  const pdfFiles = recordPdfFiles(record);
+  for (const [index, file] of pdfFiles.entries()) {
+    const label = pdfFiles.length === 1 ? "PDF" : `PDF ${index + 1}`;
+    links.append(createExternalLink(`Open ${label}`, file.url, { className: "primary-record-link" }));
+    links.append(createExternalLink(`Download ${label}`, file.url, { download: true }));
+  }
+
+  item.append(date, heading, meta, action);
+  if (links.children.length) item.append(links);
+  return item;
+}
+
+function renderDocket(records) {
+  if (!docketRoot) return;
+
+  const groups = docketGroups(records);
+  const docketCount = groups.reduce((sum, group) => sum + group.records.length, 0);
+  if (docketSummary) {
+    docketSummary.textContent = `${docketCount} docket records: ${groups
+      .map((group) => `${group.records.length} ${group.title.toLowerCase()}`)
+      .join(", ")}.`;
+  }
+
+  docketRoot.replaceChildren();
+  for (const group of groups) {
+    const section = document.createElement("section");
+    section.className = "docket-panel";
+
+    const heading = document.createElement("h3");
+    heading.textContent = group.title;
+    const description = createParagraph("docket-description", group.description);
+    const list = document.createElement("div");
+    list.className = "docket-list";
+
+    if (group.records.length) {
+      for (const record of group.records) list.append(createDocketItem(record));
+    } else {
+      list.append(createParagraph("empty-state", "No records in this queue."));
+    }
+
+    section.append(heading, description, list);
+    docketRoot.append(section);
+  }
+}
+
 function renderEmptyState() {
   recordsRoot.innerHTML = `
     <div class="empty-state">
@@ -628,6 +763,7 @@ async function init() {
     allRecords = window.COMPILER_RECORDS || (await loadRecords());
     setChapterCounts(allRecords);
     renderChronology(allRecords);
+    renderDocket(allRecords);
     renderRecords(allRecords);
     enableFilters();
     enableChapterCards();
