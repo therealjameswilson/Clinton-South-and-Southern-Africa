@@ -4,6 +4,8 @@ Public docket for the FRUS 1993-2000, Volume XXVII, South Africa; Southern Afric
 
 This is the shortest useful next-actions list for a compiler working from the current public seed records. It mirrors the live docket page at `docket/` and should be regenerated after any meaningful record-data update.
 
+Use the companion extraction worksheet for the selection-candidate reading pass: [`reports/extraction-worksheet.md`](extraction-worksheet.md).
+
 ## Selection Candidates
 
 These records are closest to possible FRUS inclusion. Next action: extract document text, page spans, markings, omitted-material notes, and final source-note details.
