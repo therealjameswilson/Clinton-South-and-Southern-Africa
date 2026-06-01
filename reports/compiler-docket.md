@@ -6,6 +6,8 @@ This is the shortest useful next-actions list for a compiler working from the cu
 
 Use the companion extraction worksheet for the selection-candidate reading pass: [`reports/extraction-worksheet.md`](extraction-worksheet.md).
 
+Use the PDF review desk to open or download the strongest declassified candidates: [`pdfs/`](../pdfs/).
+
 ## Selection Candidates
 
 These records are closest to possible FRUS inclusion. Next action: extract document text, page spans, markings, omitted-material notes, and final source-note details.

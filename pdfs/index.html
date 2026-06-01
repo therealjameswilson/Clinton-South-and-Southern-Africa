@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Review Desk - FRUS Volume XXVII South Africa; Southern Africa</title>
+    <style>
+      :root {
+        --ink: #172331;
+        --muted: #5f6b76;
+        --navy: #24344c;
+        --teal: #2f6a66;
+        --rust: #9d4b32;
+        --line: #d8dedc;
+        --paper: #f7f4ee;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--paper);
+      }
+
+      a {
+        color: var(--navy);
+        font-weight: 850;
+      }
+
+      header,
+      main {
+        width: min(1320px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0 18px;
+      }
+
+      .brand {
+        text-decoration: none;
+      }
+
+      .brand span:first-child {
+        display: inline-grid;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        place-items: center;
+        color: white;
+        font-weight: 900;
+        background: var(--navy);
+        border-radius: 6px;
+      }
+
+      .actions,
+      .candidate-actions,
+      .reader-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .button,
+      .reader-actions a,
+      .candidate-actions a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 8px 12px;
+        color: var(--navy);
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+      }
+
+      .button.primary,
+      .reader-actions .primary,
+      .candidate-actions .primary {
+        color: white;
+        background: var(--navy);
+        border-color: var(--navy);
+      }
+
+      .hero {
+        display: grid;
+        gap: 12px;
+        padding: 26px 0 20px;
+      }
+
+      .kicker {
+        margin: 0;
+        color: var(--rust);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      h1 {
+        max-width: 900px;
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 4rem);
+        line-height: 1.04;
+      }
+
+      .lede,
+      .summary,
+      .meta,
+      .target,
+      .source-note,
+      .empty {
+        color: #46525e;
+        line-height: 1.6;
+      }
+
+      .lede {
+        max-width: 980px;
+        margin: 0;
+        font-size: 1.06rem;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 12px 0 18px;
+      }
+
+      .stat {
+        min-height: 92px;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .stat strong {
+        display: block;
+        color: var(--rust);
+        font-size: 1.55rem;
+      }
+
+      .review-layout {
+        display: grid;
+        grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.6fr);
+        gap: 16px;
+        padding-bottom: 48px;
+      }
+
+      .candidate-list,
+      .reader {
+        min-width: 0;
+      }
+
+      .candidate-list {
+        display: grid;
+        gap: 10px;
+        align-content: start;
+      }
+
+      .candidate {
+        display: grid;
+        gap: 8px;
+        width: 100%;
+        padding: 14px;
+        text-align: left;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--line);
+        border-left: 5px solid var(--teal);
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .candidate[aria-current="true"] {
+        border-left-color: var(--rust);
+        box-shadow: 0 0 0 3px rgba(157, 75, 50, 0.13);
+      }
+
+      .candidate h2 {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin: 0;
+        font-size: 0.82rem;
+      }
+
+      .meta span {
+        padding: 3px 7px;
+        background: rgba(36, 52, 76, 0.08);
+        border-radius: 999px;
+      }
+
+      .target {
+        margin: 0;
+      }
+
+      .reader {
+        display: grid;
+        gap: 12px;
+        align-content: start;
+      }
+
+      .reader-panel {
+        display: grid;
+        gap: 12px;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .reader-panel h2 {
+        margin: 0;
+      }
+
+      .source-note {
+        margin: 0;
+        padding-top: 10px;
+        border-top: 1px solid var(--line);
+      }
+
+      .pdf-frame {
+        width: 100%;
+        height: min(76vh, 820px);
+        min-height: 560px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .empty {
+        padding: 18px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      @media (max-width: 980px) {
+        .stats,
+        .review-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .pdf-frame {
+          height: 640px;
+          min-height: 480px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../">
+        <span>XXVII</span>
+        South and Southern Africa Assist
+      </a>
+      <nav class="actions" aria-label="PDF desk navigation">
+        <a class="button primary" href="../docket/">Docket</a>
+        <a class="button" href="../reports/extraction-worksheet.md">Worksheet</a>
+        <a class="button" href="../">Main site</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <p class="kicker">Declassified PDF Review</p>
+        <h1 id="title">Selection Candidate PDF Desk</h1>
+        <p class="lede">
+          The six strongest public PDF candidates for Volume XXVII in one working
+          surface. Open the packet, download it, check the catalog item, and capture
+          page spans and source-note details in the extraction worksheet.
+        </p>
+        <p id="summary" class="summary" aria-live="polite">Loading PDF candidates...</p>
+      </section>
+
+      <section class="stats" aria-label="PDF candidate summary">
+        <div class="stat">
+          <strong id="candidate-count">0</strong>
+          <span>candidate packets</span>
+        </div>
+        <div class="stat">
+          <strong id="page-count">0</strong>
+          <span>public PDF pages</span>
+        </div>
+        <div class="stat">
+          <strong id="lane-count">0</strong>
+          <span>compiler lanes represented</span>
+        </div>
+      </section>
+
+      <section class="review-layout" aria-label="PDF review desk">
+        <div>
+          <p class="kicker">Read Queue</p>
+          <div id="candidate-list" class="candidate-list" aria-live="polite"></div>
+        </div>
+        <div class="reader" aria-live="polite">
+          <div id="reader-panel" class="reader-panel">
+            <p class="empty">Select a candidate to load its PDF preview.</p>
+          </div>
+          <iframe id="pdf-frame" class="pdf-frame" title="Selected candidate PDF preview"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const listRoot = document.querySelector("#candidate-list");
+      const readerPanel = document.querySelector("#reader-panel");
+      const pdfFrame = document.querySelector("#pdf-frame");
+      const summary = document.querySelector("#summary");
+      const candidateCount = document.querySelector("#candidate-count");
+      const pageCount = document.querySelector("#page-count");
+      const laneCount = document.querySelector("#lane-count");
+
+      let candidates = [];
+      let selectedId = "";
+
+      function formatDate(value) {
+        if (!value) return "Date pending";
+        const date = new Date(`${value}T00:00:00Z`);
+        if (Number.isNaN(date.getTime())) return value;
+        return new Intl.DateTimeFormat("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+          timeZone: "UTC"
+        }).format(date);
+      }
+
+      function recordPdfFiles(record) {
+        const files = Array.isArray(record.pdfFiles) ? [...record.pdfFiles] : [];
+        if (record.pdfUrl && !files.some((file) => file.url === record.pdfUrl)) {
+          files.unshift({
+            label: record.pdfLabel || "PDF",
+            url: record.pdfUrl,
+            pages: record.pageCount
+          });
+        }
+        return files.filter((file) => file?.url);
+      }
+
+      function pageTotal(record) {
+        return recordPdfFiles(record).reduce((sum, file) => sum + (Number(file.pages) || 0), 0);
+      }
+
+      function extractionTarget(record) {
+        const note = record.sourceNoteAddendum || record.subjectLine || "";
+        if (/Soderberg/i.test(record.documentTitle || record.title)) {
+          return "Verify whether the PCC notes contain decision-grade Angola content.";
+        }
+        if (/Zimbabwe 1995 and Zimbabwe 1997/i.test(record.documentTitle || "")) {
+          return "Map released pages and withdrawal sheets against the broader Zimbabwe FOIA file.";
+        }
+        if (/Mugabe visit/i.test(record.documentTitle || "")) {
+          return "Separate meeting briefing, talking points, background papers, and withdrawal sheets.";
+        }
+        if (/part 2/i.test(record.documentTitle || "") && /Mbeki/i.test(record.documentTitle || "")) {
+          return "Extract state-visit, presidential AIDS panel, and Mbeki-Clinton correspondence material.";
+        }
+        if (/part 1/i.test(record.documentTitle || "") && /Mbeki/i.test(record.documentTitle || "")) {
+          return "Extract Mbeki HIV/AIDS cables, memoranda, and draft presidential correspondence.";
+        }
+        if (/Bout|Butt/i.test(record.documentTitle || record.title)) {
+          return "Extract Angola/UNITA sanctions, South Africa enforcement strategy, and arms-trafficking policy material.";
+        }
+        return note || "Extract page spans, markings, omitted-material notes, and selection rationale.";
+      }
+
+      function sortChronology(a, b) {
+        return (
+          (a.sortDate || a.date || "9999-12-31").localeCompare(b.sortDate || b.date || "9999-12-31") ||
+          (a.title || "").localeCompare(b.title || "")
+        );
+      }
+
+      function link(href, text, className = "") {
+        const anchor = document.createElement("a");
+        anchor.href = href;
+        anchor.textContent = text;
+        anchor.rel = "noreferrer";
+        if (className) anchor.className = className;
+        return anchor;
+      }
+
+      function renderList() {
+        listRoot.replaceChildren();
+
+        for (const [index, record] of candidates.entries()) {
+          const button = document.createElement("button");
+          button.className = "candidate";
+          button.type = "button";
+          button.dataset.id = record.id;
+          button.setAttribute("aria-current", record.id === selectedId ? "true" : "false");
+
+          const heading = document.createElement("h2");
+          heading.textContent = `${index + 1}. ${record.documentTitle || record.title}`;
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          for (const value of [
+            record.id,
+            formatDate(record.date),
+            `${pageTotal(record)} pages`,
+            record.chapter?.name || ""
+          ].filter(Boolean)) {
+            const span = document.createElement("span");
+            span.textContent = value;
+            meta.append(span);
+          }
+          const target = document.createElement("p");
+          target.className = "target";
+          target.textContent = extractionTarget(record);
+
+          button.append(heading, meta, target);
+          button.addEventListener("click", () => selectRecord(record.id));
+          listRoot.append(button);
+        }
+      }
+
+      function renderReader(record) {
+        const files = recordPdfFiles(record);
+        const primaryPdf = files[0];
+        readerPanel.replaceChildren();
+
+        const heading = document.createElement("h2");
+        heading.textContent = record.documentTitle || record.title;
+        const meta = document.createElement("p");
+        meta.className = "meta";
+        for (const value of [
+          record.id,
+          formatDate(record.date),
+          `${pageTotal(record)} PDF pages`,
+          record.releaseStatus,
+          record.declassificationStatus
+        ].filter(Boolean)) {
+          const span = document.createElement("span");
+          span.textContent = value;
+          meta.append(span);
+        }
+        const target = document.createElement("p");
+        target.className = "target";
+        target.textContent = extractionTarget(record);
+
+        const actions = document.createElement("div");
+        actions.className = "reader-actions";
+        if (primaryPdf) {
+          actions.append(link(primaryPdf.url, "Open PDF", "primary"));
+          const download = link(primaryPdf.url, "Download PDF");
+          download.setAttribute("download", "");
+          actions.append(download);
+        }
+        if (record.catalogUrl) actions.append(link(record.catalogUrl, "Catalog item"));
+        actions.append(link("../reports/extraction-worksheet.md", "Worksheet row"));
+
+        const source = document.createElement("p");
+        source.className = "source-note";
+        source.textContent = record.sourceNote || "Source note pending.";
+
+        readerPanel.append(heading, meta, target, actions, source);
+        pdfFrame.src = primaryPdf?.url || "about:blank";
+      }
+
+      function selectRecord(id) {
+        selectedId = id;
+        renderList();
+        const record = candidates.find((candidate) => candidate.id === id);
+        if (record) renderReader(record);
+      }
+
+      function render(records) {
+        candidates = records
+          .filter((record) => record.selectionDecision === "Include candidate" && recordPdfFiles(record).length)
+          .sort(sortChronology);
+
+        const totalPages = candidates.reduce((sum, record) => sum + pageTotal(record), 0);
+        const lanes = new Set(candidates.map((record) => record.chapter?.name).filter(Boolean));
+
+        candidateCount.textContent = candidates.length.toString();
+        pageCount.textContent = totalPages.toString();
+        laneCount.textContent = lanes.size.toString();
+        summary.textContent = `${candidates.length} direct PDF candidates, ${totalPages} public pages, ${lanes.size} lanes.`;
+
+        if (!candidates.length) {
+          listRoot.innerHTML = '<p class="empty">No include candidates with PDFs found.</p>';
+          return;
+        }
+
+        selectedId = candidates[0].id;
+        renderList();
+        renderReader(candidates[0]);
+      }
+
+      fetch("../data/records.json")
+        .then((response) => {
+          if (!response.ok) throw new Error(`Could not load records: ${response.status}`);
+          return response.json();
+        })
+        .then(render)
+        .catch((error) => {
+          summary.textContent = "";
+          listRoot.innerHTML = `<p class="empty">${error.message}</p>`;
+        });
+    </script>
+  </body>
+</html>

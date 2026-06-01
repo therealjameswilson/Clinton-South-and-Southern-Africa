@@ -4,6 +4,8 @@ Working worksheet for FRUS 1993-2000, Volume XXVII, South Africa; Southern Afric
 
 Generated from 6 include-candidate records in `data/records.json`.
 
+Public PDF review desk: [`pdfs/`](../pdfs/).
+
 ## Fast Path
 
 | Step | Action | Output |
