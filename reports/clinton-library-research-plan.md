@@ -12,7 +12,7 @@ This plan is scoped to the planned FRUS 1993-2000, Volume XXVII, South Africa; S
 | 2 | Zimbabwe finding aid and FOIA 2006-0457-F items 14571 and 14676 | Online packets now split; pull remaining unscanned folders and locate replacements for P1/b(1), P5, and P6/b(6) withdrawals. |
 | 2 | Mbeki AIDS controversy items 64750 and 64751 plus Global AIDS Crisis item 119208 | Extract page spans and separate South Africa/Namibia/Botswana/Malawi diplomacy from general global health policy. |
 | 3 | Victor Butt/Bout item 118505 and arms trafficking finding aid, item 36004 | Verify regional-security relevance, especially Angola/UNITA sanctions and South Africa enforcement strategy. |
-| 3 | 1998 Africa trip book, public audio, speechwriting, and Daily Diary controls | Use for chronology, itinerary, and public-framing controls after substantive records are selected. |
+| 3 | Public audio, speechwriting, and Daily Diary controls | Use for chronology, itinerary, and public-framing controls after substantive records are selected. |
 
 ## Digital Packet Extraction Queue
 
@@ -20,7 +20,7 @@ This plan is scoped to the planned FRUS 1993-2000, Volume XXVII, South Africa; S
 - FOIA 2006-0457-F - Zimbabwe, item 14676: page-map the 1994 briefing, 1995 Mugabe thank-you letter, September 22, 1997 meeting notes withdrawal, and 1997 Clinton-Mugabe correspondence.
 - Mbeki AIDS controversy items 64750 and 64751: split presidential correspondence, state-visit preparation, presidential AIDS panel cables, and HIV/AIDS analysis.
 - Global AIDS Crisis item 119208: extract Mbeki state-visit objectives, Deputies Committee summaries, Africa AIDS initiative records, and Namibia HIV/AIDS agreement cables.
-- Victor Butt/Bout item 118505: extract strategy memoranda, South Africa warrant/extradition discussion, UNITA sanctions material, and Angola/DROC/Sierra Leone regional-security analysis.
+- Victor Butt/Bout item 118505: extract strategy memoranda, South Africa warrant/extradition discussion, UNITA sanctions material, and Angola/Sierra Leone regional-security analysis.
 
 ## Reading-Room Log Fields
 

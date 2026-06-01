@@ -753,14 +753,19 @@ function enableChapterCards() {
 }
 
 async function loadRecords() {
-  const response = await fetch("data/records.json");
+  const response = await fetch("data/records.json", { cache: "no-store" });
   if (!response.ok) throw new Error(`Could not load records: ${response.status}`);
   return response.json();
 }
 
 async function init() {
   try {
-    allRecords = window.COMPILER_RECORDS || (await loadRecords());
+    try {
+      allRecords = await loadRecords();
+    } catch (error) {
+      allRecords = window.COMPILER_RECORDS || [];
+      if (!allRecords.length) throw error;
+    }
     setChapterCounts(allRecords);
     renderChronology(allRecords);
     renderDocket(allRecords);

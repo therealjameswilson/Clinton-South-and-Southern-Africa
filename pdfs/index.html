@@ -514,7 +514,7 @@
         renderReader(candidates[0]);
       }
 
-      fetch("../data/records.json")
+      fetch("../data/records.json", { cache: "no-store" })
         .then((response) => {
           if (!response.ok) throw new Error(`Could not load records: ${response.status}`);
           return response.json();

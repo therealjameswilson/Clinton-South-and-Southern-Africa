@@ -13,7 +13,7 @@ Volume XXVII is currently planned, so this assist page is a source-control surfa
 | Zimbabwe and smaller-state coverage was thin | Closed for public/digital seed stage | Split FOIA 2006-0457-F into Mugabe visit, draft letter, African-African American Summit, and PRDR no. 5 records. Added Zimbabwe finding aid/background, Namibia, Zambia, Botswana, and Malawi records. |
 | Source-note fields were draft-level | Closed for seed data | Every record now has a `Source:` note with repository path, item ID or case number, release status, and a promotion/control note. Document packets still need page-level extraction before final FRUS selection. |
 | FOIA packets were not split | Closed for available Zimbabwe packets | Item 14571 and item 14676 are now represented as packet-level and document-family records, with withdrawal-sheet restrictions captured. |
-| Daily Diary controls were missing | Closed for public seed stage | Added the Ellen McCathran Presidential Daily Diary hardcopy item containing May 18, 1995 as a control for the Mugabe visit, and the 1998 Africa trip book as a travel/schedule control. |
+| Daily Diary controls were missing | Closed for public seed stage | Added the Ellen McCathran Presidential Daily Diary hardcopy item containing May 18, 1995 as a control for the Mugabe visit, with travel/schedule controls kept secondary to substantive policy records. |
 
 ## Remaining Blockers
 

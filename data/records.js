@@ -1510,8 +1510,6 @@ window.COMPILER_RECORDS = [
       "United States",
       "Angola",
       "South Africa",
-      "Rwanda",
-      "Democratic Republic of the Congo",
       "Liberia",
       "Sierra Leone"
     ],
@@ -1536,7 +1534,7 @@ window.COMPILER_RECORDS = [
       "Markings require document-level extraction"
     ],
     "sourceNote": "Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, Declassified Documents Regarding Victor Butt/Bout, item 118505, case 2016-0165-M, FOIA case 2006-0684-F. The online PDF is 98 pages.",
-    "sourceNoteAddendum": "High-value regional-security candidate because the packet links UNITA sanctions, Angola, South Africa legal strategy, and wider sub-Saharan arms trafficking.",
+    "sourceNoteAddendum": "High-value regional-security candidate because the packet links UNITA sanctions, Angola, South Africa legal strategy, and arms-trafficking enforcement.",
     "annotationStatus": "Document-level extraction needed",
     "indexTerms": [
       "Victor Bout",
@@ -1753,61 +1751,6 @@ window.COMPILER_RECORDS = [
       "Anthony Lake"
     ],
     "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf",
-    "pdfLabel": "Clinton Library PDF"
-  },
-  {
-    "id": "clinton-v27-043",
-    "type": "Source Lead",
-    "selectionDecision": "Source lead",
-    "chapter": {
-      "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
-    },
-    "date": "1998-03-22",
-    "sortDate": "1998-03-22",
-    "title": "Trip Book - President Clinton to Ghana, Uganda, Rwanda, South Africa, Botswana, and Senegal",
-    "documentTitle": "1998 Africa trip book covering South Africa and Botswana",
-    "dateLine": "March 22-April 2, 1998",
-    "subjectLine": "Schedule and logistics control for the 1998 Africa trip, including South Africa and Botswana stops.",
-    "countries": [
-      "United States",
-      "Rwanda",
-      "South Africa",
-      "Botswana",
-      "Ghana",
-      "Uganda",
-      "Senegal"
-    ],
-    "digitalObjects": 1,
-    "catalogUrl": "https://clinton.presidentiallibraries.us/items/show/57905",
-    "source": {
-      "name": "Clinton Digital Library",
-      "collection": "Office of Scheduling and Advance",
-      "series": "Kirk Hanlin files",
-      "box": "5",
-      "itemTitle": "[Trip Book - Trip of President Clinton to Ghana, Uganda, Rwanda, South Africa, Botswana, and Senegal - March 22 - April 2, 1998]",
-      "documentId": "57905",
-      "naid": "52873477"
-    },
-    "releaseStatus": "Released online",
-    "declassificationStatus": "Public schedule/trip-book PDF",
-    "originalClassification": "Public trip-book control",
-    "sourceNote": "Source: Clinton Digital Library, Office of Scheduling and Advance, Kirk Hanlin files, Box 5, [Trip Book - Trip of President Clinton to Ghana, Uganda, Rwanda, South Africa, Botswana, and Senegal - March 22 - April 2, 1998], item 57905, NAID 52873477. PDF available from the item page.",
-    "sourceNoteAddendum": "Use as a Daily Diary/travel control and event map; do not substitute for substantive policy records.",
-    "annotationStatus": "Control record",
-    "indexTerms": [
-      "1998 Africa trip",
-      "South Africa",
-      "Botswana",
-      "Rwanda",
-      "trip book",
-      "schedule control"
-    ],
-    "persons": [
-      "Bill Clinton",
-      "Kirk Hanlin"
-    ],
-    "pdfUrl": "https://clinton.presidentiallibraries.us/files/original/439dc99bed6a2bb46554be1d76f2c515.pdf",
     "pdfLabel": "Clinton Library PDF"
   },
   {
