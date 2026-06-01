@@ -380,7 +380,6 @@ dd {
 .docket-item,
 .standard-panel,
 .gate-grid div,
-.chapter-card,
 .feature-grid article,
 .research-card,
 .browse-note,
@@ -406,7 +405,6 @@ dd {
 .gap-summary p,
 .risk-ledger span,
 .standard-panel p,
-.chapter-card p,
 .feature-grid p,
 .research-card p,
 .browse-note p {
@@ -440,7 +438,6 @@ dd {
 .library-grid,
 .docket-grid,
 .workbench-layout,
-.chapter-grid,
 .feature-grid {
   display: grid;
   gap: 14px;
@@ -511,19 +508,13 @@ dd {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.chapter-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .research-card,
 .standard-panel,
-.chapter-card,
 .feature-grid article {
   padding: 22px;
 }
 
-.pull-priority,
-.chapter-number {
+.pull-priority {
   margin-bottom: 10px;
   color: var(--rust);
   font-size: 0.78rem;
@@ -533,9 +524,7 @@ dd {
 }
 
 .research-card span,
-.standard-panel span,
-.chapter-action,
-.chapter-count {
+.standard-panel span {
   color: var(--teal);
   font-size: 0.9rem;
   font-weight: 850;
@@ -591,22 +580,6 @@ dd {
   padding-left: 22px;
   color: #44515b;
   line-height: 1.8;
-}
-
-.chapter-card {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  transition:
-    transform 160ms ease,
-    box-shadow 160ms ease;
-}
-
-.chapter-card:hover,
-.chapter-card:focus-visible {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-  outline: none;
 }
 
 .browse-layout {
@@ -675,12 +648,12 @@ input[type="search"] {
   gap: 22px;
 }
 
-.record-chapter {
+.record-group {
   display: grid;
   gap: 12px;
 }
 
-.record-chapter-header {
+.record-group-header {
   display: flex;
   align-items: end;
   justify-content: space-between;
@@ -689,7 +662,7 @@ input[type="search"] {
   border-bottom: 2px solid rgba(36, 52, 76, 0.14);
 }
 
-.record-chapter-header h3 {
+.record-group-header h3 {
   margin: 0;
 }
 
@@ -968,7 +941,6 @@ footer a {
   .library-grid,
   .docket-grid,
   .workbench-layout,
-  .chapter-grid,
   .feature-grid,
   .source-list,
   .production-list {
@@ -984,7 +956,7 @@ footer a {
     flex-wrap: wrap;
   }
 
-  .record-chapter-header {
+  .record-group-header {
     align-items: flex-start;
     flex-direction: column;
   }

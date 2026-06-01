@@ -93,7 +93,6 @@
         <a href="#gaps">Gaps</a>
         <a href="#library">Library</a>
         <a href="#workbench">Workbench</a>
-        <a href="#chapters">Lanes</a>
         <a href="#browse">Browse</a>
         <a href="#records">Records</a>
         <a href="#sources">Sources</a>
@@ -118,7 +117,7 @@
           Loading released document chronology...
         </p>
         <div class="report-links chronology-links" aria-label="Chronology support reports">
-          <a href="#records">Open full lane browser</a>
+          <a href="#records">Open full record browser</a>
           <a href="data/records.json" rel="noreferrer">Structured records</a>
           <a href="reports/compiler-gap-analysis.md" rel="noreferrer">Compiler gap report</a>
           <a href="reports/source-note-style-audit.md" rel="noreferrer">Source-note style audit</a>
@@ -189,7 +188,7 @@
             </div>
             <div>
               <dt>Arrangement</dt>
-              <dd>Provisional compiler lanes</dd>
+              <dd>Single chronology with source docket</dd>
             </div>
           </dl>
         </aside>
@@ -261,7 +260,7 @@
           </div>
           <div>
             <span>42 records</span>
-            <p>South Africa, Angola/Mozambique, and regional-policy lanes now have coverage for public seed review.</p>
+            <p>South Africa, Angola/Mozambique, and regional-policy topics now have coverage for public seed review.</p>
           </div>
           <div>
             <span>0 source gaps</span>
@@ -461,54 +460,6 @@
         </div>
       </section>
 
-      <section class="section" id="chapters" aria-labelledby="chapters-title">
-        <div class="section-heading">
-          <p class="kicker">Provisional Arrangement</p>
-          <h2 id="chapters-title">Compiler Lanes</h2>
-        </div>
-        <div class="chapter-grid">
-          <a class="chapter-card" href="#chapter-south-africa-transition-and-bilateral-relations">
-            <p class="chapter-number">Lane 1</p>
-            <h3>South Africa Transition and Bilateral Relations</h3>
-            <p class="chapter-count">
-              <span data-chapter-count="South Africa Transition and Bilateral Relations">0</span> records /
-              <span data-chapter-pages="South Africa Transition and Bilateral Relations">source</span>
-            </p>
-            <p>
-              Mandela, de Klerk, Mbeki, democratic transition, trade, investment,
-              security cooperation, state visits, and post-apartheid bilateral policy.
-            </p>
-            <span class="chapter-action">View South Africa files</span>
-          </a>
-          <a class="chapter-card" href="#chapter-angola-mozambique-and-southern-african-security">
-            <p class="chapter-number">Lane 2</p>
-            <h3>Angola, Mozambique, and Southern African Security</h3>
-            <p class="chapter-count">
-              <span data-chapter-count="Angola, Mozambique, and Southern African Security">0</span> records /
-              <span data-chapter-pages="Angola, Mozambique, and Southern African Security">source</span>
-            </p>
-            <p>
-              Angola peace implementation, UNITA sanctions, Mozambique reconstruction,
-              landmines, demining, UN missions, and regional security.
-            </p>
-            <span class="chapter-action">View security files</span>
-          </a>
-          <a class="chapter-card" href="#chapter-regional-democracy-health-and-economic-policy">
-            <p class="chapter-number">Lane 3</p>
-            <h3>Regional Democracy, Health, and Economic Policy</h3>
-            <p class="chapter-count">
-              <span data-chapter-count="Regional Democracy, Health, and Economic Policy">0</span> records /
-              <span data-chapter-pages="Regional Democracy, Health, and Economic Policy">source</span>
-            </p>
-            <p>
-              SADC, Zimbabwe, Namibia, Zambia, Botswana, AIDS policy, debt relief,
-              democracy, trade, and presidential Africa initiatives.
-            </p>
-            <span class="chapter-action">View regional files</span>
-          </a>
-        </div>
-      </section>
-
       <section class="section" id="collection" aria-labelledby="collection-title">
         <div class="section-heading">
           <p class="kicker">Collection Design</p>
@@ -539,7 +490,7 @@
           <article>
             <h3>Compiler Filters</h3>
             <p>
-              Search, lane filters, record-type filters, and production-gap filters
+              Search, record-type filters, topic metadata, and production-gap filters
               are built in so the list can grow into a full candidate base.
             </p>
           </article>
@@ -554,7 +505,7 @@
         <div class="browse-layout">
           <div class="facet-list" aria-label="Browse facets">
             <a href="#workbench">By production gap</a>
-            <a href="#records">By lane</a>
+            <a href="#records">By topic</a>
             <a href="#records">By document type</a>
             <a href="#records">By leader contact</a>
             <a href="#records">By country</a>
@@ -567,8 +518,8 @@
           <div class="browse-note">
             <h3>Chronology first, source trail intact</h3>
             <p>
-              Records are grouped by compiler lane and sorted by date inside each lane.
-              Every entry preserves the source trail beside the public link so later
+              Records are sorted by date, with topic metadata preserved on each row.
+              Every entry keeps the source trail beside the public link so later
               FRUS review can retrace the research path.
             </p>
           </div>
@@ -578,7 +529,7 @@
       <section class="section records-section" id="records" aria-labelledby="records-title">
         <div class="section-heading">
           <p class="kicker">Compiler Files</p>
-          <h2 id="records-title">Lane Records</h2>
+          <h2 id="records-title">All Source Records</h2>
         </div>
         <p class="records-intro">
           Add verified records to <code>data/records.json</code> and refresh
@@ -699,7 +650,7 @@
           </li>
           <li>
             <span class="step-number">05</span>
-            <span>Normalize dates, participants, countries, source-note fields, release status, and lane assignment.</span>
+            <span>Normalize dates, participants, countries, source-note fields, release status, and topic assignment.</span>
           </li>
           <li>
             <span class="step-number">06</span>

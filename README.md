@@ -17,7 +17,7 @@ Public site:
 ## What Is Included
 
 - Date-first chronology for released or public candidate records
-- Searchable lane records with type and production-gap filters
+- Searchable source records with type, topic, and production-gap filters
 - FRUS-style source-note and declassification quality gates
 - Compiler gap analysis for planned-volume risks
 - Clinton Library pull strategy and reading-room priorities

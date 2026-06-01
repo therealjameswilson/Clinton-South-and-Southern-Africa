@@ -309,8 +309,8 @@
           <span>public PDF pages</span>
         </div>
         <div class="stat">
-          <strong id="lane-count">0</strong>
-          <span>compiler lanes represented</span>
+          <strong id="topic-count">0</strong>
+          <span>volume topics represented</span>
         </div>
       </section>
 
@@ -335,7 +335,7 @@
       const summary = document.querySelector("#summary");
       const candidateCount = document.querySelector("#candidate-count");
       const pageCount = document.querySelector("#page-count");
-      const laneCount = document.querySelector("#lane-count");
+      const topicCount = document.querySelector("#topic-count");
 
       let candidates = [];
       let selectedId = "";
@@ -425,7 +425,7 @@
             record.id,
             formatDate(record.date),
             `${pageTotal(record)} pages`,
-            record.chapter?.name || ""
+            record.topic?.name ? `Topic: ${record.topic.name}` : ""
           ].filter(Boolean)) {
             const span = document.createElement("span");
             span.textContent = value;
@@ -497,12 +497,12 @@
           .sort(sortChronology);
 
         const totalPages = candidates.reduce((sum, record) => sum + pageTotal(record), 0);
-        const lanes = new Set(candidates.map((record) => record.chapter?.name).filter(Boolean));
+        const topics = new Set(candidates.map((record) => record.topic?.name).filter(Boolean));
 
         candidateCount.textContent = candidates.length.toString();
         pageCount.textContent = totalPages.toString();
-        laneCount.textContent = lanes.size.toString();
-        summary.textContent = `${candidates.length} direct PDF candidates, ${totalPages} public pages, ${lanes.size} lanes.`;
+        topicCount.textContent = topics.size.toString();
+        summary.textContent = `${candidates.length} direct PDF candidates, ${totalPages} public pages, ${topics.size} topics.`;
 
         if (!candidates.length) {
           listRoot.innerHTML = '<p class="empty">No include candidates with PDFs found.</p>';

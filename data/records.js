@@ -3,7 +3,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-002",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -47,7 +47,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-003",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -93,7 +93,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-004",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -135,7 +135,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-005",
     "type": "Source Lead",
     "selectionDecision": "Include candidate",
-    "chapter": {
+    "topic": {
       "number": 2,
       "name": "Angola, Mozambique, and Southern African Security"
     },
@@ -184,7 +184,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-006",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 2,
       "name": "Angola, Mozambique, and Southern African Security"
     },
@@ -229,7 +229,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-007",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 2,
       "name": "Angola, Mozambique, and Southern African Security"
     },
@@ -274,7 +274,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-010",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -321,7 +321,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-011",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -363,7 +363,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-012",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -408,7 +408,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-013",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -452,7 +452,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-014",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -495,7 +495,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-015",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -541,7 +541,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-016",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -587,7 +587,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-017",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -630,7 +630,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-018",
     "type": "Release Packet",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -684,7 +684,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-022",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -740,7 +740,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-023",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -808,7 +808,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-024",
     "type": "Release Packet",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -867,7 +867,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-025",
     "type": "Source Lead",
     "selectionDecision": "Boundary review",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -928,7 +928,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-027",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -978,7 +978,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-028",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -1021,7 +1021,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-029",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -1079,7 +1079,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-030",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -1134,7 +1134,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-031",
     "type": "Release Packet",
     "selectionDecision": "Boundary review",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1213,7 +1213,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-032",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -1256,7 +1256,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-033",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 1,
       "name": "South Africa Transition and Bilateral Relations"
     },
@@ -1299,7 +1299,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-034",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 2,
       "name": "Angola, Mozambique, and Southern African Security"
     },
@@ -1347,7 +1347,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-035",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 2,
       "name": "Angola, Mozambique, and Southern African Security"
     },
@@ -1399,7 +1399,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-036",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 2,
       "name": "Angola, Mozambique, and Southern African Security"
     },
@@ -1448,7 +1448,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-037",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 2,
       "name": "Angola, Mozambique, and Southern African Security"
     },
@@ -1496,7 +1496,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-038",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "chapter": {
+    "topic": {
       "number": 2,
       "name": "Angola, Mozambique, and Southern African Security"
     },
@@ -1556,7 +1556,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-039",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1604,7 +1604,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-040",
     "type": "Release Packet",
     "selectionDecision": "Boundary review",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1662,7 +1662,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-041",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1709,7 +1709,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-042",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1757,7 +1757,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-044",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1805,7 +1805,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-045",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1848,7 +1848,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-046",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1891,7 +1891,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-047",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1919,7 +1919,7 @@ window.COMPILER_RECORDS = [
     "declassificationStatus": "Item page with PDF",
     "originalClassification": "Health-policy source lead",
     "sourceNote": "Source: Clinton Digital Library, National AIDS Policy Office, Box 10, Botswana, item 64163, NAID 54976716. PDF available from the item page; collection finding aid is Global AIDS Crisis, item 48956.",
-    "sourceNoteAddendum": "Use to close the Botswana health-policy search lane; select only southern Africa policy material with U.S. decision value.",
+    "sourceNoteAddendum": "Use to close the Botswana health-policy search path; select only southern Africa policy material with U.S. decision value.",
     "annotationStatus": "Context review needed",
     "indexTerms": [
       "Botswana",
@@ -1936,7 +1936,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-048",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -1981,7 +1981,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-049",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },
@@ -2024,7 +2024,7 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-050",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "chapter": {
+    "topic": {
       "number": 3,
       "name": "Regional Democracy, Health, and Economic Policy"
     },

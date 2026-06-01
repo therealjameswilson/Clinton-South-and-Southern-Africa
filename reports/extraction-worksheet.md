@@ -48,7 +48,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 
 - Record ID: `clinton-v27-005`
 - Date: 1994-11-07
-- Lane: Angola, Mozambique, and Southern African Security
+- Topic: Angola, Mozambique, and Southern African Security
 - Type: Source Lead
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/72408
 - PDF links: [PDF, 3 pages](https://clinton.presidentiallibraries.us/files/original/d99d763c5a60d17afe606193e3fb0a86.pdf)
@@ -72,7 +72,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 
 - Record ID: `clinton-v27-022`
 - Date: 1994-12-05
-- Lane: Regional Democracy, Health, and Economic Policy
+- Topic: Regional Democracy, Health, and Economic Policy
 - Type: Release Packet
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14676
 - PDF links: [PDF, 6 pages](https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf)
@@ -98,7 +98,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 
 - Record ID: `clinton-v27-023`
 - Date: 1995-05-16
-- Lane: Regional Democracy, Health, and Economic Policy
+- Topic: Regional Democracy, Health, and Economic Policy
 - Type: Release Packet
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14571
 - PDF links: [PDF, 157 pages](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
@@ -124,7 +124,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 
 - Record ID: `clinton-v27-030`
 - Date: 2000-04-03
-- Lane: South Africa Transition and Bilateral Relations
+- Topic: South Africa Transition and Bilateral Relations
 - Type: Release Packet
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64751
 - PDF links: [PDF, 61 pages](https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf)
@@ -150,7 +150,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 
 - Record ID: `clinton-v27-029`
 - Date: 2000-05-01
-- Lane: South Africa Transition and Bilateral Relations
+- Topic: South Africa Transition and Bilateral Relations
 - Type: Release Packet
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64750
 - PDF links: [PDF, 70 pages](https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf)
@@ -176,7 +176,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 
 - Record ID: `clinton-v27-038`
 - Date: 2000-10-01
-- Lane: Angola, Mozambique, and Southern African Security
+- Topic: Angola, Mozambique, and Southern African Security
 - Type: Release Packet
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/118505
 - PDF links: [PDF, 98 pages](https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf)

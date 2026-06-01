@@ -284,10 +284,6 @@
         );
       }
 
-      function byChapterThenDate(a, b) {
-        return (a.chapter?.number || 99) - (b.chapter?.number || 99) || byChronology(a, b);
-      }
-
       function isExtractionBlocker(record) {
         const withheld =
           typeof record.withheldMaterial === "string"
@@ -323,7 +319,7 @@
         const seen = new Set([...selection, ...boundary].map((record) => record.id));
         const blockers = records
           .filter((record) => !seen.has(record.id) && isExtractionBlocker(record))
-          .sort(byChapterThenDate);
+          .sort(byChronology);
         return [selection, boundary, blockers];
       }
 
@@ -332,7 +328,7 @@
       }
 
       function buildCsv(rows) {
-        const header = ["queue", "id", "date", "decision", "type", "chapter", "title", "action", "catalog_url", "pdf_urls", "source_note"];
+        const header = ["queue", "id", "date", "decision", "type", "topic", "title", "action", "catalog_url", "pdf_urls", "source_note"];
         return [header, ...rows]
           .map((row) => row.map(csv).join(","))
           .join("\n") + "\n";
@@ -365,7 +361,11 @@
             title.textContent = record.documentTitle || record.title;
             const badges = document.createElement("div");
             badges.className = "badges";
-            for (const value of [record.selectionDecision, record.type, record.chapter?.name].filter(Boolean)) {
+            for (const value of [
+              record.selectionDecision,
+              record.type,
+              record.topic?.name ? `Topic: ${record.topic.name}` : ""
+            ].filter(Boolean)) {
               const badge = document.createElement("span");
               badge.textContent = value;
               badges.append(badge);
@@ -402,7 +402,7 @@
               record.date || record.sortDate || "",
               record.selectionDecision || "",
               record.type || "",
-              record.chapter?.name || "",
+              record.topic?.name || "",
               record.documentTitle || record.title || "",
               action(record),
               record.catalogUrl || "",

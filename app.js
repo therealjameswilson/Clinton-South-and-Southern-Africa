@@ -1,9 +1,3 @@
-const CHAPTER_ORDER = [
-  "South Africa Transition and Bilateral Relations",
-  "Angola, Mozambique, and Southern African Security",
-  "Regional Democracy, Health, and Economic Policy"
-];
-
 const recordsRoot = document.querySelector("#records-root");
 const chronologyRoot = document.querySelector("#chronology-root");
 const chronologySummary = document.querySelector("#chronology-summary");
@@ -21,18 +15,6 @@ let allRecords = [];
 let activeFilter = "all";
 let activeIssueFilter = "all";
 
-function slug(value) {
-  return String(value || "")
-    .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
-function chapterId(chapterName) {
-  return `chapter-${slug(chapterName)}`;
-}
-
 function formatDate(dateString) {
   if (!dateString) return "Date pending";
   if (/^\d{4}$/.test(dateString)) return dateString;
@@ -44,16 +26,6 @@ function formatDate(dateString) {
     year: "numeric",
     timeZone: "UTC"
   }).format(date);
-}
-
-function byChapterThenDate(a, b) {
-  const aChapter = a.chapter?.number || 99;
-  const bChapter = b.chapter?.number || 99;
-  return (
-    aChapter - bChapter ||
-    (a.sortDate || a.date || "9999-12-31").localeCompare(b.sortDate || b.date || "9999-12-31") ||
-    (a.title || "").localeCompare(b.title || "")
-  );
 }
 
 function byChronology(a, b) {
@@ -251,7 +223,7 @@ function isReadyForSelection(record) {
   );
 }
 
-function setChapterCounts(records) {
+function setDashboardCounts(records) {
   totalRecords.textContent = records.length.toString();
   decisionReady.textContent = records.filter(isReadyForSelection).length.toString();
   provenanceGaps.textContent = records.filter((record) => getProductionIssues(record).includes("needs-source")).length.toString();
@@ -261,16 +233,6 @@ function setChapterCounts(records) {
       return getProductionIssues(record).includes("needs-declass") || /pending|excised|withheld|partial|mixed|missing|not scanned/i.test(status);
     })
     .length.toString();
-
-  for (const chapterName of CHAPTER_ORDER) {
-    const chapterRecords = records.filter((record) => record.chapter?.name === chapterName);
-    const countNode = document.querySelector(`[data-chapter-count="${chapterName}"]`);
-    const pagesNode = document.querySelector(`[data-chapter-pages="${chapterName}"]`);
-    const pageTotal = chapterRecords.reduce((sum, record) => sum + (record.pageCount || 0), 0);
-
-    if (countNode) countNode.textContent = chapterRecords.length.toString();
-    if (pagesNode) pagesNode.textContent = pageTotal ? pageTotal.toString() : "source";
-  }
 }
 
 function createMeta(record) {
@@ -292,6 +254,7 @@ function createMeta(record) {
   for (const value of [
     record.type,
     record.selectionDecision,
+    record.topic?.name ? `Topic: ${record.topic.name}` : "",
     countries,
     extent,
     sourceId,
@@ -501,7 +464,7 @@ function docketGroups(records) {
   const seen = new Set([...selection, ...boundary].map((record) => record.id));
   const blockers = records
     .filter((record) => !seen.has(record.id) && isExtractionBlocker(record))
-    .sort(byChapterThenDate);
+    .sort(byChronology);
 
   return [
     {
@@ -536,7 +499,7 @@ function createDocketItem(record) {
 
   const meta = document.createElement("div");
   meta.className = "record-meta";
-  for (const value of [record.selectionDecision, record.type, record.chapter?.name]) {
+  for (const value of [record.selectionDecision, record.type, record.topic?.name ? `Topic: ${record.topic.name}` : ""]) {
     if (!value) continue;
     const badge = document.createElement("span");
     badge.textContent = value;
@@ -617,7 +580,7 @@ function renderEmptyState() {
 }
 
 function renderRecords(records) {
-  const sorted = [...records].sort(byChapterThenDate);
+  const sorted = [...records].sort(byChronology);
   recordsRoot.replaceChildren();
 
   if (!sorted.length) {
@@ -625,35 +588,27 @@ function renderRecords(records) {
     return;
   }
 
-  for (const chapterName of CHAPTER_ORDER) {
-    const chapterRecords = sorted.filter((record) => record.chapter?.name === chapterName);
-    if (!chapterRecords.length) continue;
+  const section = document.createElement("section");
+  section.className = "record-group source-records";
 
-    const section = document.createElement("section");
-    section.className = "record-chapter";
-    section.id = chapterId(chapterName);
+  const header = document.createElement("div");
+  header.className = "record-group-header";
 
-    const header = document.createElement("div");
-    header.className = "record-chapter-header";
+  const heading = document.createElement("h3");
+  heading.textContent = "All Source Records";
 
-    const heading = document.createElement("h3");
-    heading.textContent = `Lane ${CHAPTER_ORDER.indexOf(chapterName) + 1}: ${chapterName}`;
+  const count = document.createElement("p");
+  count.className = "record-count";
+  const pdfLinks = sorted.reduce((sum, record) => sum + recordPdfFiles(record).length, 0);
+  count.textContent = `${sorted.length} records in date order / ${pdfLinks} direct PDF links`;
+  header.append(heading, count);
 
-    const count = document.createElement("p");
-    count.className = "record-count";
-    const pageTotal = chapterRecords.reduce((sum, record) => sum + (record.pageCount || 0), 0);
-    count.textContent = pageTotal
-      ? `${chapterRecords.length} records / ${pageTotal} pages or digital objects`
-      : `${chapterRecords.length} records`;
-    header.append(heading, count);
+  const list = document.createElement("div");
+  list.className = "record-list";
+  for (const record of sorted) list.append(createRecordRow(record));
 
-    const list = document.createElement("div");
-    list.className = "record-list";
-    for (const record of chapterRecords) list.append(createRecordRow(record));
-
-    section.append(header, list);
-    recordsRoot.append(section);
-  }
+  section.append(header, list);
+  recordsRoot.append(section);
 }
 
 function renderChronology(records) {
@@ -680,10 +635,10 @@ function renderChronology(records) {
   }
 
   const section = document.createElement("section");
-  section.className = "record-chapter chronology-all";
+  section.className = "record-group chronology-all";
 
   const header = document.createElement("div");
-  header.className = "record-chapter-header";
+  header.className = "record-group-header";
 
   const heading = document.createElement("h3");
   heading.textContent = "All Released Document Records";
@@ -736,22 +691,6 @@ function enableFilters() {
   }
 }
 
-function enableChapterCards() {
-  for (const card of document.querySelectorAll(".chapter-card")) {
-    card.addEventListener("click", (event) => {
-      const targetId = card.getAttribute("href");
-      if (!targetId?.startsWith("#")) return;
-
-      const target = document.querySelector(targetId);
-      if (!target) return;
-
-      event.preventDefault();
-      history.pushState(null, "", targetId);
-      target.scrollIntoView({ block: "start" });
-    });
-  }
-}
-
 async function loadRecords() {
   const response = await fetch("data/records.json", { cache: "no-store" });
   if (!response.ok) throw new Error(`Could not load records: ${response.status}`);
@@ -766,12 +705,11 @@ async function init() {
       allRecords = window.COMPILER_RECORDS || [];
       if (!allRecords.length) throw error;
     }
-    setChapterCounts(allRecords);
+    setDashboardCounts(allRecords);
     renderChronology(allRecords);
     renderDocket(allRecords);
     renderRecords(allRecords);
     enableFilters();
-    enableChapterCards();
     if (window.location.hash) document.querySelector(window.location.hash)?.scrollIntoView();
   } catch (error) {
     recordsRoot.innerHTML =
