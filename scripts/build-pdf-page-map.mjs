@@ -9,7 +9,9 @@ const DATA_DIR = path.join(ROOT, "data");
 const REPORTS_DIR = path.join(ROOT, "reports");
 const RECORDS_PATH = path.join(DATA_DIR, "records.json");
 const CSV_PATH = path.join(DATA_DIR, "pdf-page-map.csv");
+const RANGE_CSV_PATH = path.join(DATA_DIR, "pdf-range-review.csv");
 const REPORT_PATH = path.join(REPORTS_DIR, "pdf-page-map.md");
+const RANGE_REPORT_PATH = path.join(REPORTS_DIR, "pdf-range-review.md");
 
 function sh(command, args, options = {}) {
   try {
@@ -105,6 +107,45 @@ function roleRanges(rows) {
   }));
 }
 
+function roleLabel(role) {
+  return (
+    {
+      administrative_marker: "Administrative marker",
+      withdrawal_sheet: "Withdrawal sheet",
+      withdrawal_marker: "Withdrawal marker",
+      released_document_text: "Released document text",
+      released_or_context_text: "Released/context text",
+      blank_or_image_only: "Blank or image-only"
+    }[role] || String(role || "").replaceAll("_", " ")
+  );
+}
+
+function priorityForRole(role) {
+  return (
+    {
+      released_document_text: 1,
+      released_or_context_text: 2,
+      withdrawal_sheet: 3,
+      withdrawal_marker: 3,
+      blank_or_image_only: 4,
+      administrative_marker: 5
+    }[role] || 5
+  );
+}
+
+function actionForRole(role) {
+  return (
+    {
+      released_document_text: "Read closely for possible document extraction; capture boundary, markings, page span, and selection rationale.",
+      released_or_context_text: "Skim for document boundary, attachment, duplicate, or context; promote only if it carries decision-grade evidence.",
+      withdrawal_sheet: "Record withheld-document metadata, exemptions, and dates; queue replacement search or onsite review if volume-relevant.",
+      withdrawal_marker: "Record marker page and exemption context; pair with nearby withdrawal sheet or released surrounding pages.",
+      blank_or_image_only: "Open the PDF image directly and verify whether the page is blank, a divider, or a scan without useful text.",
+      administrative_marker: "Use for case/control metadata only; do not treat as a selectable FRUS document."
+    }[role] || "Review manually and assign extraction disposition."
+  );
+}
+
 function downloadPdf(url, pdfPath) {
   if (fs.existsSync(pdfPath) && fs.statSync(pdfPath).size > 1000) return;
   execFileSync("curl", ["-L", "--fail", "--silent", "--show-error", url, "-o", pdfPath], { stdio: "inherit" });
@@ -175,6 +216,50 @@ function build() {
   ];
   fs.writeFileSync(CSV_PATH, [header, ...rows.map((row) => header.map((key) => csv(row[key])).join(","))].join("\n") + "\n");
 
+  const rangeRows = summaries.flatMap(({ record, file, ranges }) =>
+    ranges.map((range) => ({
+      record_id: record.id,
+      record_date: record.date || record.sortDate || "",
+      record_title: record.documentTitle || record.title || "",
+      topic: record.topic?.name || "",
+      catalog_url: record.catalogUrl || "",
+      pdf_url: file.url,
+      page_range: range.pages,
+      first_page: range.start,
+      last_page: range.end,
+      page_count: range.end - range.start + 1,
+      page_url: range.pageUrl,
+      page_role: range.role,
+      page_role_label: roleLabel(range.role),
+      review_priority: priorityForRole(range.role),
+      first_page_signal: range.signal,
+      suggested_action: actionForRole(range.role)
+    }))
+  );
+
+  const rangeHeader = [
+    "record_id",
+    "record_date",
+    "record_title",
+    "topic",
+    "catalog_url",
+    "pdf_url",
+    "page_range",
+    "first_page",
+    "last_page",
+    "page_count",
+    "page_url",
+    "page_role",
+    "page_role_label",
+    "review_priority",
+    "first_page_signal",
+    "suggested_action"
+  ];
+  fs.writeFileSync(
+    RANGE_CSV_PATH,
+    [rangeHeader, ...rangeRows.map((row) => rangeHeader.map((key) => csv(row[key])).join(","))].join("\n") + "\n"
+  );
+
   const report = [
     "# Selection Candidate PDF Page Map",
     "",
@@ -185,6 +270,8 @@ function build() {
     `Generated from ${summaries.length} candidate PDFs and ${rows.length} PDF pages.`,
     "",
     "Machine-readable page map: [`data/pdf-page-map.csv`](../data/pdf-page-map.csv).",
+    "",
+    "Range-level review queue: [`reports/pdf-range-review.md`](pdf-range-review.md) and [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).",
     "",
     "Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.md`](extraction-worksheet.md).",
     "",
@@ -229,15 +316,59 @@ function build() {
       "",
       "| PDF pages | Open | First-pass role | First page signal |",
       "| --- | --- | --- | --- |",
-      ...ranges.map((range) => `| ${range.pages} | [Open](${range.pageUrl}) | ${range.role} | ${range.signal || "No text signal"} |`),
+      ...ranges.map((range) => `| ${range.pages} | [Open](${range.pageUrl}) | ${roleLabel(range.role)} | ${range.signal || "No text signal"} |`),
       ""
     ])
   ].join("\n");
 
   fs.writeFileSync(REPORT_PATH, report);
 
+  const readFirstRows = rangeRows.filter((row) => row.review_priority <= 2);
+  const controlRows = rangeRows.filter((row) => row.review_priority > 2);
+  const rangeReport = [
+    "# Selection Candidate PDF Range Review Queue",
+    "",
+    "A shorter, range-level queue generated from the page map for the six include-candidate PDFs.",
+    "",
+    "Use this when the compiler needs to decide what PDF span to read next. It does not replace the page-level map or final human document boundary work.",
+    "",
+    `Generated from ${summaries.length} candidate PDFs, ${rows.length} PDF pages, and ${rangeRows.length} consecutive page-role ranges.`,
+    "",
+    "Detailed page map: [`reports/pdf-page-map.md`](pdf-page-map.md). Machine-readable range queue: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).",
+    "",
+    "## Read First",
+    "",
+    "Released/context ranges are the highest-yield places to extract possible FRUS documents.",
+    "",
+    "| Record | Pages | Open | Role | First page signal | Suggested action |",
+    "| --- | --- | --- | --- | --- | --- |",
+    ...readFirstRows.map(
+      (row) =>
+        `| ${row.record_id} | ${row.page_range} | [Open](${row.page_url}) | ${row.page_role_label} | ${
+          row.first_page_signal || "No text signal"
+        } | ${row.suggested_action} |`
+    ),
+    "",
+    "## Control, Withheld, And Image Ranges",
+    "",
+    "Use these ranges for declassification accounting, replacement searches, and source-note caveats.",
+    "",
+    "| Record | Pages | Open | Role | First page signal | Suggested action |",
+    "| --- | --- | --- | --- | --- | --- |",
+    ...controlRows.map(
+      (row) =>
+        `| ${row.record_id} | ${row.page_range} | [Open](${row.page_url}) | ${row.page_role_label} | ${
+          row.first_page_signal || "No text signal"
+        } | ${row.suggested_action} |`
+    )
+  ].join("\n");
+
+  fs.writeFileSync(RANGE_REPORT_PATH, rangeReport);
+
   console.log(`Wrote ${rows.length} page rows to ${path.relative(ROOT, CSV_PATH)}`);
+  console.log(`Wrote ${rangeRows.length} range rows to ${path.relative(ROOT, RANGE_CSV_PATH)}`);
   console.log(`Wrote report to ${path.relative(ROOT, REPORT_PATH)}`);
+  console.log(`Wrote range report to ${path.relative(ROOT, RANGE_REPORT_PATH)}`);
 }
 
 build();

@@ -386,7 +386,9 @@
       <nav class="actions" aria-label="PDF desk navigation">
         <a class="button primary" href="../docket/">Docket</a>
         <a class="button" href="../reports/pdf-page-map.md">Page Map</a>
+        <a class="button" href="../reports/pdf-range-review.md">Range Queue</a>
         <a class="button" href="../data/pdf-page-map.csv">Page CSV</a>
+        <a class="button" href="../data/pdf-range-review.csv">Range CSV</a>
         <a class="button" href="../reports/extraction-worksheet.md">Worksheet</a>
         <button id="export-notes" class="button" type="button">Export Notes</button>
         <a class="button" href="../">Main site</a>
@@ -806,6 +808,7 @@
         actions.className = "page-map-actions";
         actions.append(link("../reports/pdf-page-map.md", "Full page map"));
         actions.append(link("../data/pdf-page-map.csv", "Download CSV"));
+        actions.append(link("../reports/pdf-range-review.md", "Range queue"));
 
         const ranges = pageMapRanges(record);
         if (!ranges.length) {

@@ -8,6 +8,8 @@ Public PDF review desk: [`pdfs/`](../pdfs/).
 
 First-pass PDF page map: [`reports/pdf-page-map.md`](pdf-page-map.md). Machine-readable page rows: [`data/pdf-page-map.csv`](../data/pdf-page-map.csv).
 
+Shorter range review queue: [`reports/pdf-range-review.md`](pdf-range-review.md). Machine-readable range rows: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).
+
 ## Fast Path
 
 | Step | Action | Output |

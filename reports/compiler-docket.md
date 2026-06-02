@@ -10,6 +10,8 @@ Use the PDF review desk to open or download the strongest declassified candidate
 
 Use the first-pass page map before close reading a packet: [`reports/pdf-page-map.md`](pdf-page-map.md). The CSV version has one row per PDF page: [`data/pdf-page-map.csv`](../data/pdf-page-map.csv).
 
+For the shorter "what span should I read next?" view, use the range review queue: [`reports/pdf-range-review.md`](pdf-range-review.md). The CSV version has one row per consecutive page-role span: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).
+
 ## Selection Candidates
 
 These records are closest to possible FRUS inclusion. Next action: extract document text, page spans, markings, omitted-material notes, and final source-note details.
