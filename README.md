@@ -20,6 +20,7 @@ Public site:
 - First-hour compiler workflow with live counts and direct actions
 - Chronology CSV and Markdown worksheet exports
 - PDF review desk with local extraction scratchpad and Markdown note exports
+- First-pass page map for the 6 strongest candidate PDFs, with 395 page-level triage rows
 - Source-note finalization queue with CSV export
 - Searchable source records with type, topic, and production-gap filters
 - FRUS-style source-note and declassification quality gates
@@ -27,6 +28,7 @@ Public site:
 - Clinton Library pull strategy and reading-room priorities
 - Primary source anchor list and ingest checklist
 - Seed data in `data/records.json` and direct-file fallback data in `data/records.js`
+- Reproducible PDF page-map generator in `scripts/build-pdf-page-map.mjs`
 
 ## Local Preview
 
@@ -41,6 +43,20 @@ Then open:
 ```text
 http://127.0.0.1:4174
 ```
+
+## PDF Page Map
+
+The page map is generated from the include-candidate PDFs listed in `data/records.json`.
+It requires the Poppler command-line tools `pdfinfo` and `pdftotext`.
+
+```bash
+node scripts/build-pdf-page-map.mjs
+```
+
+Outputs:
+
+- `reports/pdf-page-map.md`
+- `data/pdf-page-map.csv`
 
 ## Source Base
 

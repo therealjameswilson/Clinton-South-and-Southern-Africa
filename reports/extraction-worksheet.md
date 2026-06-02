@@ -6,6 +6,8 @@ Generated from 6 include-candidate records in `data/records.json`.
 
 Public PDF review desk: [`pdfs/`](../pdfs/).
 
+First-pass PDF page map: [`reports/pdf-page-map.md`](pdf-page-map.md). Machine-readable page rows: [`data/pdf-page-map.csv`](../data/pdf-page-map.csv).
+
 ## Fast Path
 
 | Step | Action | Output |
