@@ -67,7 +67,8 @@
       .actions,
       .candidate-actions,
       .reader-actions,
-      .note-actions {
+      .note-actions,
+      .page-map-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
@@ -76,7 +77,9 @@
       .button,
       .reader-actions a,
       .candidate-actions a,
-      .note-actions button {
+      .note-actions button,
+      .page-map-actions a,
+      .page-map-row button {
         display: inline-flex;
         align-items: center;
         min-height: 38px;
@@ -94,7 +97,8 @@
       .button.primary,
       .reader-actions .primary,
       .candidate-actions .primary,
-      .note-actions .primary {
+      .note-actions .primary,
+      .page-map-row .primary {
         color: white;
         background: var(--navy);
         border-color: var(--navy);
@@ -251,6 +255,61 @@
         border-top: 1px solid var(--line);
       }
 
+      .page-map-panel {
+        display: grid;
+        gap: 10px;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+      }
+
+      .page-map-panel h3 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .page-map-summary {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .page-map-rows {
+        display: grid;
+        gap: 7px;
+      }
+
+      .page-map-row {
+        display: grid;
+        grid-template-columns: minmax(82px, 0.35fr) minmax(150px, 0.65fr) minmax(0, 1.4fr);
+        gap: 8px;
+        align-items: start;
+        padding: 9px;
+        background: #fffdf8;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+      }
+
+      .page-map-row button {
+        justify-content: center;
+        min-height: 32px;
+        padding: 6px 8px;
+        font-size: 0.82rem;
+      }
+
+      .page-map-role {
+        color: var(--navy);
+        font-size: 0.82rem;
+        font-weight: 850;
+      }
+
+      .page-map-signal {
+        margin: 0;
+        color: #46525e;
+        font-size: 0.84rem;
+        line-height: 1.45;
+      }
+
       .scratchpad {
         display: grid;
         gap: 10px;
@@ -310,6 +369,10 @@
         .pdf-frame {
           height: 640px;
           min-height: 480px;
+        }
+
+        .page-map-row {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -385,6 +448,7 @@
 
       let candidates = [];
       let selectedId = "";
+      let pageMapRows = [];
       const notePrefix = "frus-v27-pdf-note-v1:";
 
       function formatDate(value) {
@@ -454,6 +518,125 @@
         return anchor;
       }
 
+      function parseCsvRows(text) {
+        const rows = [];
+        let row = [];
+        let value = "";
+        let inQuotes = false;
+
+        for (let index = 0; index < text.length; index += 1) {
+          const char = text[index];
+          const next = text[index + 1];
+
+          if (inQuotes) {
+            if (char === '"' && next === '"') {
+              value += '"';
+              index += 1;
+            } else if (char === '"') {
+              inQuotes = false;
+            } else {
+              value += char;
+            }
+          } else if (char === '"') {
+            inQuotes = true;
+          } else if (char === ",") {
+            row.push(value);
+            value = "";
+          } else if (char === "\n") {
+            row.push(value);
+            if (row.some((item) => item.length)) rows.push(row);
+            row = [];
+            value = "";
+          } else if (char !== "\r") {
+            value += char;
+          }
+        }
+
+        row.push(value);
+        if (row.some((item) => item.length)) rows.push(row);
+        return rows;
+      }
+
+      function parsePageMap(text) {
+        if (!text.trim()) return [];
+        const rows = parseCsvRows(text);
+        const header = rows.shift() || [];
+        return rows.map((row) => {
+          const entry = Object.fromEntries(header.map((key, index) => [key, row[index] || ""]));
+          entry.pdf_page = Number(entry.pdf_page) || 0;
+          entry.extracted_text_chars = Number(entry.extracted_text_chars) || 0;
+          return entry;
+        });
+      }
+
+      function pageMapFor(record) {
+        return pageMapRows.filter((row) => row.record_id === record.id).sort((a, b) => a.pdf_page - b.pdf_page);
+      }
+
+      function pageMapRanges(record) {
+        const rows = pageMapFor(record);
+        const ranges = [];
+        let current = null;
+
+        for (const row of rows) {
+          if (!current || current.role !== row.page_role) {
+            current = {
+              role: row.page_role,
+              start: row.pdf_page,
+              end: row.pdf_page,
+              signal: row.page_signal,
+              count: 1
+            };
+            ranges.push(current);
+          } else {
+            current.end = row.pdf_page;
+            current.count += 1;
+          }
+        }
+
+        return ranges.map((range) => ({
+          ...range,
+          pages: range.start === range.end ? `${range.start}` : `${range.start}-${range.end}`
+        }));
+      }
+
+      function pageRoleLabel(role) {
+        return (
+          {
+            administrative_marker: "Administrative marker",
+            withdrawal_sheet: "Withdrawal sheet",
+            withdrawal_marker: "Withdrawal marker",
+            released_document_text: "Released document text",
+            released_or_context_text: "Released/context text",
+            blank_or_image_only: "Blank or image-only"
+          }[role] || role.replaceAll("_", " ")
+        );
+      }
+
+      function pageMapSummary(record) {
+        const rows = pageMapFor(record);
+        const counts = rows.reduce((memo, row) => {
+          memo[row.page_role] = (memo[row.page_role] || 0) + 1;
+          return memo;
+        }, {});
+        const released = (counts.released_document_text || 0) + (counts.released_or_context_text || 0);
+        return [
+          `${rows.length} mapped pages`,
+          `${released} released/context pages`,
+          `${counts.withdrawal_sheet || 0} withdrawal sheets`,
+          `${counts.withdrawal_marker || 0} withdrawal markers`,
+          `${counts.administrative_marker || 0} administrative markers`
+        ].join(" · ");
+      }
+
+      function pageMapMarkdown(record) {
+        const ranges = pageMapRanges(record);
+        if (!ranges.length) return "|  |  |  |  |  |";
+        return ranges
+          .map((range) => `| ${range.pages} | ${pageRoleLabel(range.role)} | ${range.signal || "No text signal"} |  |  |`)
+          .join("\n");
+      }
+
       function noteKey(record) {
         return `${notePrefix}${record.id}`;
       }
@@ -480,7 +663,7 @@
           "",
           "| PDF pages | Document boundary / title | Markings | Omitted material | Disposition |",
           "| --- | --- | --- | --- | --- |",
-          "|  |  |  |  |  |",
+          pageMapMarkdown(record),
           "",
           "## Candidate Documents",
           "",
@@ -609,6 +792,60 @@
         }
       }
 
+      function renderPageMap(record, primaryPdf) {
+        const panel = document.createElement("section");
+        panel.className = "page-map-panel";
+
+        const heading = document.createElement("h3");
+        heading.textContent = "First-Pass Page Map";
+
+        const summaryText = document.createElement("p");
+        summaryText.className = "page-map-summary";
+
+        const actions = document.createElement("div");
+        actions.className = "page-map-actions";
+        actions.append(link("../reports/pdf-page-map.md", "Full page map"));
+        actions.append(link("../data/pdf-page-map.csv", "Download CSV"));
+
+        const ranges = pageMapRanges(record);
+        if (!ranges.length) {
+          summaryText.textContent = "No page-map rows were found for this record.";
+          panel.append(heading, summaryText, actions);
+          return panel;
+        }
+
+        summaryText.textContent = pageMapSummary(record);
+
+        const rows = document.createElement("div");
+        rows.className = "page-map-rows";
+        for (const range of ranges) {
+          const row = document.createElement("div");
+          row.className = "page-map-row";
+
+          const pageButton = document.createElement("button");
+          pageButton.type = "button";
+          pageButton.className = "primary";
+          pageButton.textContent = `pp. ${range.pages}`;
+          pageButton.addEventListener("click", () => {
+            pdfFrame.src = primaryPdf?.url ? `${primaryPdf.url}#page=${range.start}` : "about:blank";
+          });
+
+          const role = document.createElement("span");
+          role.className = "page-map-role";
+          role.textContent = pageRoleLabel(range.role);
+
+          const signal = document.createElement("p");
+          signal.className = "page-map-signal";
+          signal.textContent = range.signal || "No text signal";
+
+          row.append(pageButton, role, signal);
+          rows.append(row);
+        }
+
+        panel.append(heading, summaryText, actions, rows);
+        return panel;
+      }
+
       function renderReader(record) {
         const files = recordPdfFiles(record);
         const primaryPdf = files[0];
@@ -647,6 +884,8 @@
         const source = document.createElement("p");
         source.className = "source-note";
         source.textContent = record.sourceNote || "Source note pending.";
+
+        const pageMap = renderPageMap(record, primaryPdf);
 
         const scratchpad = document.createElement("section");
         scratchpad.className = "scratchpad";
@@ -690,7 +929,7 @@
         noteActions.append(copyButton, resetButton, downloadButton);
         scratchpad.append(scratchHeading, noteStatus, noteArea, noteActions);
 
-        readerPanel.append(heading, meta, target, actions, source, scratchpad);
+        readerPanel.append(heading, meta, target, actions, source, pageMap, scratchpad);
         pdfFrame.src = primaryPdf?.url || "about:blank";
       }
 
@@ -729,12 +968,19 @@
         downloadText("frus-v27-selection-candidate-extraction-notes.md", savedNotesMarkdown());
       });
 
-      fetch("../data/records.json", { cache: "no-store" })
-        .then((response) => {
+      Promise.all([
+        fetch("../data/records.json", { cache: "no-store" }).then((response) => {
           if (!response.ok) throw new Error(`Could not load records: ${response.status}`);
           return response.json();
+        }),
+        fetch("../data/pdf-page-map.csv", { cache: "no-store" })
+          .then((response) => (response.ok ? response.text() : ""))
+          .catch(() => "")
+      ])
+        .then(([records, pageMapText]) => {
+          pageMapRows = parsePageMap(pageMapText);
+          render(records);
         })
-        .then(render)
         .catch((error) => {
           summary.textContent = "";
           listRoot.innerHTML = `<p class="empty">${error.message}</p>`;
