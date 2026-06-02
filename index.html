@@ -8,7 +8,7 @@
       name="description"
       content="A public chronology of released and declassified records related to FRUS 1993-2000, Volume XXVII, South Africa; Southern Africa."
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2026-06-02b" />
     <style id="compiler-network-style">
       .compiler-network {
         border-bottom: 1px solid rgba(31, 41, 51, 0.14);
@@ -115,6 +115,7 @@
       <nav aria-label="Primary navigation">
         <a href="#chronology">Chronology</a>
         <a href="#docket">Docket</a>
+        <a href="#finalization">Finalization</a>
         <a href="pdfs/">PDF Desk</a>
         <a href="#volume">Volume</a>
         <a href="#gaps">Gaps</a>
@@ -176,6 +177,29 @@
         </div>
         <div id="docket-root" class="docket-grid" aria-live="polite">
           <p class="loading">Loading compiler docket...</p>
+        </div>
+      </section>
+
+      <section class="section finalization-section" id="finalization" aria-labelledby="finalization-title">
+        <div class="section-heading">
+          <p class="kicker">Source-Note Clearance</p>
+          <h2 id="finalization-title">Finalization Queue</h2>
+        </div>
+        <p class="records-intro">
+          A compact queue for records that should not move toward FRUS selection until
+          page spans, markings, declassification accounting, source-note details, and
+          disposition calls are checked.
+        </p>
+        <p id="finalization-summary" class="result-summary" aria-live="polite">
+          Loading finalization queue...
+        </p>
+        <div class="report-links finalization-links" aria-label="Finalization queue exports">
+          <button id="download-finalization-csv" type="button" disabled>Download finalization CSV</button>
+          <a href="pdfs/">Open PDF desk</a>
+          <a href="reports/source-note-style-audit.md" rel="noreferrer">Source-note audit</a>
+        </div>
+        <div id="finalization-root" class="finalization-grid" aria-live="polite">
+          <p class="loading">Loading finalization queue...</p>
         </div>
       </section>
 
@@ -698,7 +722,7 @@
       <a href="https://github.com/therealjameswilson/Clinton-South-and-Southern-Africa">Repository</a>
     </footer>
     <script src="data/records.js?v=2026-06-02"></script>
-    <script src="app.js?v=2026-06-02"></script>
+    <script src="app.js?v=2026-06-02b"></script>
     <script id="compiler-network-script">
       (() => {
         const button = document.querySelector("[data-compiler-handoff]");

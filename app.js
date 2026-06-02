@@ -3,8 +3,11 @@ const chronologyRoot = document.querySelector("#chronology-root");
 const chronologySummary = document.querySelector("#chronology-summary");
 const docketRoot = document.querySelector("#docket-root");
 const docketSummary = document.querySelector("#docket-summary");
+const finalizationRoot = document.querySelector("#finalization-root");
+const finalizationSummary = document.querySelector("#finalization-summary");
 const chronologyCsvButton = document.querySelector("#download-chronology-csv");
 const chronologyWorksheetButton = document.querySelector("#download-chronology-worksheet");
+const finalizationCsvButton = document.querySelector("#download-finalization-csv");
 const totalRecords = document.querySelector("#total-records");
 const decisionReady = document.querySelector("#decision-ready");
 const provenanceGaps = document.querySelector("#provenance-gaps");
@@ -400,6 +403,97 @@ function buildChronologyWorksheet(records = chronologyRecords()) {
   ].join("\n");
 }
 
+function needsDocumentPageMap(record) {
+  return (
+    record.selectionDecision === "Include candidate" ||
+    record.selectionDecision === "Boundary review" ||
+    record.type === "Release Packet"
+  );
+}
+
+function finalizationIssues(record) {
+  const issues = [];
+  if (!record.sourceNote) issues.push("Draft source note");
+  if (!record.date || /^\d{4}$/.test(record.date)) issues.push("Exact date");
+  if (needsDocumentPageMap(record)) issues.push("Document page spans");
+  if (!sourceMarkings(record) && !/public|unclassified/i.test([record.originalClassification, record.declassificationStatus, record.releaseStatus].filter(Boolean).join(" "))) {
+    issues.push("Markings");
+  }
+  if (!record.declassificationStatus && !record.releaseStatus) issues.push("Declassification status");
+  if (record.withheldMaterial || /withheld|withdrawal|excised|partial|mixed/i.test([record.declassificationStatus, record.releaseStatus, record.sourceNoteAddendum].filter(Boolean).join(" "))) {
+    issues.push("Omitted-material accounting");
+  }
+  if (!record.selectionDecision) issues.push("Disposition");
+  if (!record.annotationStatus) issues.push("Annotation status");
+  if (!record.indexTerms?.length) issues.push("Index terms");
+  if (record.type === "Source Lead" && hasPdf(record)) issues.push("Promote or keep as source lead");
+  return [...new Set(issues)];
+}
+
+function finalizationPriority(record) {
+  if (record.selectionDecision === "Include candidate") return 1;
+  if (record.selectionDecision === "Boundary review") return 2;
+  if (record.type === "Release Packet") return 3;
+  if (record.type === "Source Lead" && hasPdf(record)) return 4;
+  return 9;
+}
+
+function isFinalizationRecord(record) {
+  return finalizationPriority(record) < 9;
+}
+
+function finalizationRecords(records = allRecords) {
+  return records.filter(isFinalizationRecord).sort((a, b) => finalizationPriority(a) - finalizationPriority(b) || byChronology(a, b));
+}
+
+function finalizationAction(record) {
+  if (record.selectionDecision === "Include candidate") {
+    return "Finish page-map, markings, omitted-material accounting, and final source note before any selection call.";
+  }
+  if (record.selectionDecision === "Boundary review") {
+    return "Make the include/context/drop decision and record the volume-scope rationale.";
+  }
+  if (record.type === "Release Packet") {
+    return "Split the packet into document-level entries or keep it as contextual release evidence.";
+  }
+  if (record.type === "Source Lead" && hasPdf(record)) {
+    return "Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.";
+  }
+  return "Review source-note and declassification fields.";
+}
+
+function finalizationCsv(records = finalizationRecords()) {
+  const header = [
+    "priority",
+    "id",
+    "date",
+    "decision",
+    "type",
+    "topic",
+    "title",
+    "finalization_items",
+    "next_action",
+    "pdf_urls",
+    "catalog_url",
+    "source_note"
+  ];
+  const rows = records.map((record) => [
+    finalizationPriority(record),
+    record.id,
+    record.date || record.sortDate || "",
+    record.selectionDecision || "",
+    record.type || "",
+    record.topic?.name || "",
+    record.documentTitle || record.title || "",
+    finalizationIssues(record).join("; "),
+    finalizationAction(record),
+    recordPdfUrls(record).join(" "),
+    record.catalogUrl || "",
+    record.sourceNote || ""
+  ]);
+  return [header, ...rows].map((row) => row.map(csv).join(",")).join("\n") + "\n";
+}
+
 function createRecordRow(record) {
   const row = document.createElement("article");
   row.className = "record-row";
@@ -682,6 +776,75 @@ function renderDocket(records) {
   }
 }
 
+function createFinalizationItem(record) {
+  const item = document.createElement("article");
+  item.className = finalizationPriority(record) <= 2 ? "finalization-item high-priority" : "finalization-item";
+
+  const date = document.createElement("time");
+  date.className = "docket-date";
+  if (record.date) date.dateTime = record.date;
+  date.textContent = formatDate(record.date);
+
+  const heading = document.createElement("h3");
+  heading.textContent = record.documentTitle || record.title;
+
+  const meta = document.createElement("div");
+  meta.className = "record-meta";
+  for (const value of [
+    `Priority ${finalizationPriority(record)}`,
+    record.selectionDecision,
+    record.type,
+    record.topic?.name ? `Topic: ${record.topic.name}` : ""
+  ].filter(Boolean)) {
+    const badge = document.createElement("span");
+    badge.textContent = value;
+    meta.append(badge);
+  }
+
+  const issues = document.createElement("ul");
+  issues.className = "finalization-issues";
+  for (const issue of finalizationIssues(record)) {
+    const entry = document.createElement("li");
+    entry.textContent = issue;
+    issues.append(entry);
+  }
+
+  const action = createParagraph("finalization-action", finalizationAction(record));
+
+  const links = document.createElement("div");
+  links.className = "record-links docket-item-links";
+  if (record.catalogUrl) links.append(createExternalLink("Open item", record.catalogUrl));
+  for (const [index, file] of recordPdfFiles(record).entries()) {
+    const label = recordPdfFiles(record).length === 1 ? "PDF" : `PDF ${index + 1}`;
+    links.append(createExternalLink(`Open ${label}`, file.url, { className: "primary-record-link" }));
+  }
+
+  item.append(date, heading, meta, issues, action);
+  if (links.children.length) item.append(links);
+  return item;
+}
+
+function renderFinalizationQueue(records) {
+  if (!finalizationRoot) return;
+
+  const queue = finalizationRecords(records);
+  const includeCount = queue.filter((record) => record.selectionDecision === "Include candidate").length;
+  const boundaryCount = queue.filter((record) => record.selectionDecision === "Boundary review").length;
+  const pageMapCount = queue.filter(needsDocumentPageMap).length;
+
+  if (finalizationSummary) {
+    finalizationSummary.textContent = `${queue.length} records in the finalization queue: ${includeCount} include candidates, ${boundaryCount} boundary decisions, ${pageMapCount} page-map checks.`;
+  }
+
+  finalizationRoot.replaceChildren();
+  if (!queue.length) {
+    finalizationRoot.innerHTML = '<p class="empty-state">No finalization records found.</p>';
+    return;
+  }
+
+  for (const record of queue) finalizationRoot.append(createFinalizationItem(record));
+}
+
 function renderEmptyState() {
   recordsRoot.innerHTML = `
     <div class="empty-state">
@@ -800,6 +963,15 @@ function enableChronologyExports() {
   }
 }
 
+function enableFinalizationExport() {
+  const records = finalizationRecords();
+  if (!finalizationCsvButton) return;
+  finalizationCsvButton.disabled = !records.length;
+  finalizationCsvButton.addEventListener("click", () => {
+    downloadTextFile("frus-v27-source-note-finalization-queue.csv", finalizationCsv(), "text/csv;charset=utf-8");
+  });
+}
+
 function filterRecords() {
   const query = searchInput?.value.trim().toLowerCase() || "";
   const records = allRecords.filter((record) => {
@@ -852,9 +1024,11 @@ async function init() {
     setDashboardCounts(allRecords);
     renderChronology(allRecords);
     renderDocket(allRecords);
+    renderFinalizationQueue(allRecords);
     renderRecords(allRecords);
     enableFilters();
     enableChronologyExports();
+    enableFinalizationExport();
     if (window.location.hash) document.querySelector(window.location.hash)?.scrollIntoView();
   } catch (error) {
     recordsRoot.innerHTML =

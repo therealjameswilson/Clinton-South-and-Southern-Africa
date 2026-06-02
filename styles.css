@@ -449,6 +449,7 @@ dd {
 
 .library-grid,
 .docket-grid,
+.finalization-grid,
 .workbench-layout,
 .feature-grid {
   display: grid;
@@ -457,6 +458,11 @@ dd {
 
 .docket-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 20px;
+}
+
+.finalization-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 20px;
 }
 
@@ -487,6 +493,51 @@ dd {
   gap: 10px;
   padding: 16px;
   border-left: 5px solid var(--rust);
+}
+
+.finalization-item {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--teal);
+  border-radius: 8px;
+}
+
+.finalization-item.high-priority {
+  border-left-color: var(--rust);
+}
+
+.finalization-item h3 {
+  margin: 0;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.12rem;
+}
+
+.finalization-action {
+  margin: 0;
+  color: #46525e;
+  line-height: 1.54;
+}
+
+.finalization-issues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.finalization-issues li {
+  padding: 4px 8px;
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 850;
+  background: rgba(36, 52, 76, 0.08);
+  border-radius: 999px;
 }
 
 .docket-date {
@@ -921,6 +972,7 @@ footer a {
   .risk-ledger,
   .library-grid,
   .docket-grid,
+  .finalization-grid,
   .workbench-layout,
   .feature-grid,
   .source-list {

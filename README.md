@@ -19,6 +19,7 @@ Public site:
 - Date-first chronology for released or public candidate records
 - Chronology CSV and Markdown worksheet exports
 - PDF review desk with local extraction scratchpad and Markdown note exports
+- Source-note finalization queue with CSV export
 - Searchable source records with type, topic, and production-gap filters
 - FRUS-style source-note and declassification quality gates
 - Compiler gap analysis for planned-volume risks
