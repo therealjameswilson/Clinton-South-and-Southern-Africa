@@ -18,7 +18,8 @@ Public site:
 
 - Date-first chronology for released or public candidate records
 - First-hour compiler workflow with live counts and direct actions
-- Chronology CSV and Markdown worksheet exports
+- Static declassified chronology report and CSV with 29 records and 32 direct PDF links
+- Browser-generated chronology CSV and Markdown worksheet exports
 - PDF review desk with local extraction scratchpad and Markdown note exports
 - First-pass page map for the 6 strongest candidate PDFs, with 395 page-level triage rows and direct page links
 - Range-level PDF review queue with 166 consecutive page-role spans and suggested actions
@@ -30,6 +31,7 @@ Public site:
 - Clinton Library pull strategy and reading-room priorities
 - Primary source anchor list and ingest checklist
 - Seed data in `data/records.json` and direct-file fallback data in `data/records.js`
+- Reproducible declassified chronology generator in `scripts/build-declassified-chronology.mjs`
 - Reproducible PDF page-map generator in `scripts/build-pdf-page-map.mjs`
 
 ## Local Preview
@@ -45,6 +47,19 @@ Then open:
 ```text
 http://127.0.0.1:4174
 ```
+
+## Declassified Chronology
+
+The static chronology is generated from `data/records.json` and includes released, declassified, and public document records. It excludes finding aids and audio-only controls.
+
+```bash
+node scripts/build-declassified-chronology.mjs
+```
+
+Outputs:
+
+- `reports/declassified-chronology.md`
+- `data/declassified-chronology.csv`
 
 ## PDF Page Map
 
