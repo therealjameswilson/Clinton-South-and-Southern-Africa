@@ -320,6 +320,7 @@ dd {
 }
 
 .report-links a,
+.report-links button,
 .source-list a,
 .facet-list a,
 .record-links a,
@@ -339,6 +340,17 @@ dd {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid var(--line);
   border-radius: 6px;
+}
+
+.report-links button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.report-links button:disabled {
+  color: #83909b;
+  cursor: wait;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .volume-panel,

@@ -3,6 +3,8 @@ const chronologyRoot = document.querySelector("#chronology-root");
 const chronologySummary = document.querySelector("#chronology-summary");
 const docketRoot = document.querySelector("#docket-root");
 const docketSummary = document.querySelector("#docket-summary");
+const chronologyCsvButton = document.querySelector("#download-chronology-csv");
+const chronologyWorksheetButton = document.querySelector("#download-chronology-worksheet");
 const totalRecords = document.querySelector("#total-records");
 const decisionReady = document.querySelector("#decision-ready");
 const provenanceGaps = document.querySelector("#provenance-gaps");
@@ -34,6 +36,10 @@ function byChronology(a, b) {
     (a.washingtonTime || "").localeCompare(b.washingtonTime || "") ||
     (a.title || "").localeCompare(b.title || "")
   );
+}
+
+function chronologyRecords(records = allRecords) {
+  return records.filter(isDeclassifiedChronologyRecord).sort(byChronology);
 }
 
 function isDeclassifiedChronologyRecord(record) {
@@ -81,6 +87,10 @@ function recordPdfFiles(record) {
     });
   }
   return files.filter((file) => file?.url);
+}
+
+function recordPdfUrls(record) {
+  return recordPdfFiles(record).map((file) => file.url);
 }
 
 function hasPdf(record) {
@@ -274,6 +284,120 @@ function createParagraph(className, text) {
   paragraph.className = className;
   paragraph.textContent = text || "";
   return paragraph;
+}
+
+function csv(value) {
+  return `"${String(value ?? "").replaceAll('"', '""').replace(/\s+/g, " ").trim()}"`;
+}
+
+function downloadTextFile(filename, contents, type) {
+  const blob = new Blob([contents], { type });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+function chronologyExportRows(records = chronologyRecords()) {
+  return records.map((record, index) => [
+    index + 1,
+    record.id,
+    record.date || record.sortDate || "",
+    record.washingtonTime || "",
+    record.type || "",
+    record.selectionDecision || "",
+    record.topic?.name || "",
+    record.documentTitle || record.title || "",
+    record.dateLine || "",
+    record.subjectLine || "",
+    record.countries?.join("; ") || "",
+    record.pageCount || record.sourcePages || "",
+    recordPdfUrls(record).join(" "),
+    record.catalogUrl || "",
+    record.releaseStatus || "",
+    record.declassificationStatus || "",
+    sourceMarkings(record),
+    record.sourceNote || "",
+    record.sourceNoteAddendum || "",
+    record.annotationStatus || ""
+  ]);
+}
+
+function buildChronologyCsv(records = chronologyRecords()) {
+  const header = [
+    "order",
+    "id",
+    "date",
+    "washington_time",
+    "type",
+    "decision",
+    "topic",
+    "title",
+    "date_line",
+    "subject",
+    "countries",
+    "pages_or_source_pages",
+    "pdf_urls",
+    "catalog_url",
+    "release_status",
+    "declassification_status",
+    "markings",
+    "source_note",
+    "source_note_addendum",
+    "annotation_status"
+  ];
+  return [header, ...chronologyExportRows(records)].map((row) => row.map(csv).join(",")).join("\n") + "\n";
+}
+
+function markdownList(items) {
+  return items.length ? items.map((item) => `- ${item}`).join("\n") : "- Pending";
+}
+
+function chronologyWorksheetSection(record, index) {
+  const pdfUrls = recordPdfUrls(record);
+  return [
+    `## ${index + 1}. ${formatDate(record.date)} - ${record.documentTitle || record.title}`,
+    "",
+    `- Record ID: \`${record.id}\``,
+    `- Type: ${record.type || "Pending"}`,
+    `- Decision: ${record.selectionDecision || "Pending"}`,
+    `- Topic: ${record.topic?.name || "Pending"}`,
+    `- Catalog item: ${record.catalogUrl || "Pending"}`,
+    "- PDF links:",
+    markdownList(pdfUrls),
+    `- Current source note: ${record.sourceNote || "Pending"}`,
+    record.sourceNoteAddendum ? `- Source-note addendum: ${record.sourceNoteAddendum}` : "",
+    record.declassificationStatus ? `- Declassification: ${record.declassificationStatus}` : "",
+    "",
+    "| Field | Compiler notes |",
+    "| --- | --- |",
+    "| Document boundary and page span |  |",
+    "| Final heading/date line |  |",
+    "| Participants, sender/recipient, distribution |  |",
+    "| Original markings and declassification status |  |",
+    "| Core policy substance |  |",
+    "| Selection decision and rationale |  |",
+    "| Omitted material/exemptions |  |",
+    "| Annotation/index hooks |  |",
+    "| Final source note text |  |",
+    "| Disposition |  |"
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function buildChronologyWorksheet(records = chronologyRecords()) {
+  return [
+    "# Chronology Extraction Worksheet",
+    "",
+    "FRUS 1993-2000, Volume XXVII, South Africa; Southern Africa.",
+    "",
+    `Generated from ${records.length} released or declassified chronology records in \`data/records.json\`.`,
+    "",
+    records.map(chronologyWorksheetSection).join("\n\n")
+  ].join("\n");
 }
 
 function createRecordRow(record) {
@@ -614,7 +738,7 @@ function renderRecords(records) {
 function renderChronology(records) {
   if (!chronologyRoot) return;
 
-  const sorted = records.filter(isDeclassifiedChronologyRecord).sort(byChronology);
+  const sorted = chronologyRecords(records);
   const directFiles = sorted.reduce((sum, record) => sum + recordPdfFiles(record).length, 0);
   const packetCount = sorted.filter((record) => record.type === "Release Packet").length;
 
@@ -654,6 +778,26 @@ function renderChronology(records) {
 
   section.append(header, list);
   chronologyRoot.append(section);
+}
+
+function enableChronologyExports() {
+  const records = chronologyRecords();
+  if (chronologyCsvButton) {
+    chronologyCsvButton.disabled = !records.length;
+    chronologyCsvButton.addEventListener("click", () => {
+      downloadTextFile("frus-v27-released-document-chronology.csv", buildChronologyCsv(), "text/csv;charset=utf-8");
+    });
+  }
+  if (chronologyWorksheetButton) {
+    chronologyWorksheetButton.disabled = !records.length;
+    chronologyWorksheetButton.addEventListener("click", () => {
+      downloadTextFile(
+        "frus-v27-released-document-chronology-worksheet.md",
+        buildChronologyWorksheet(),
+        "text/markdown;charset=utf-8"
+      );
+    });
+  }
 }
 
 function filterRecords() {
@@ -710,6 +854,7 @@ async function init() {
     renderDocket(allRecords);
     renderRecords(allRecords);
     enableFilters();
+    enableChronologyExports();
     if (window.location.hash) document.querySelector(window.location.hash)?.scrollIntoView();
   } catch (error) {
     recordsRoot.innerHTML =
