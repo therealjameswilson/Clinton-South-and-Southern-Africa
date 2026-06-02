@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FRUS Volume XXVII Declassified Chronology</title>
+    <meta
+      name="description"
+      content="Open, search, and download released and declassified document records for FRUS 1993-2000, Volume XXVII, South Africa; Southern Africa."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #172331;
+        --muted: #63707b;
+        --paper: #f5f7f2;
+        --panel: #ffffff;
+        --line: #d8ded3;
+        --navy: #24344c;
+        --rust: #8f3f34;
+        --teal: #2f6a66;
+        --gold: #b58c39;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: linear-gradient(180deg, #eef3ee 0%, var(--paper) 52%, #e5ece9 100%);
+      }
+      a { color: inherit; }
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 14px clamp(18px, 4vw, 48px);
+        background: rgba(245, 247, 242, 0.96);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(14px);
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--ink);
+        font-weight: 900;
+        text-decoration: none;
+      }
+      .brand-mark {
+        display: grid;
+        min-width: 56px;
+        min-height: 38px;
+        place-items: center;
+        color: white;
+        background: var(--navy);
+        border-radius: 6px;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+      nav a,
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        border: 1px solid #c6d2cb;
+        border-radius: 6px;
+        padding: 0 10px;
+        color: var(--navy);
+        background: #fff;
+        font-size: 0.86rem;
+        font-weight: 850;
+        text-decoration: none;
+      }
+      .button.primary {
+        color: white;
+        border-color: var(--navy);
+        background: var(--navy);
+      }
+      .button.muted {
+        color: var(--muted);
+        background: #f7f8f5;
+      }
+      main {
+        width: min(1220px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 34px 0 52px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 24px;
+        align-items: end;
+        margin-bottom: 24px;
+      }
+      .kicker {
+        margin: 0 0 10px;
+        color: var(--rust);
+        font-size: 0.78rem;
+        font-weight: 950;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.4rem, 6vw, 5rem);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+      .lede {
+        max-width: 860px;
+        margin: 0;
+        color: #384550;
+        font-size: 1.08rem;
+        line-height: 1.6;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 10px;
+      }
+      .stat {
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+      .stat strong {
+        display: block;
+        color: var(--navy);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 2rem;
+        line-height: 1;
+      }
+      .stat span {
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 850;
+      }
+      .toolbar {
+        display: grid;
+        grid-template-columns: minmax(220px, 1fr) repeat(2, minmax(160px, 220px));
+        gap: 10px;
+        margin: 24px 0 18px;
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+      label {
+        display: grid;
+        gap: 6px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      input,
+      select {
+        min-height: 40px;
+        width: 100%;
+        border: 1px solid #c6d2cb;
+        border-radius: 6px;
+        padding: 0 10px;
+        color: var(--ink);
+        background: #fff;
+        font: inherit;
+        font-size: 0.96rem;
+      }
+      .utility-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+      .result-summary {
+        color: var(--muted);
+        font-weight: 850;
+      }
+      .chronology-list {
+        display: grid;
+        gap: 14px;
+      }
+      .chronology-card {
+        display: grid;
+        grid-template-columns: 132px minmax(0, 1fr);
+        gap: 16px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-left: 5px solid var(--teal);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+      .card-date span {
+        display: block;
+        color: var(--gold);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 2.1rem;
+        font-weight: 900;
+        line-height: 1;
+      }
+      .card-date time {
+        color: var(--muted);
+        font-size: 0.86rem;
+        font-weight: 900;
+      }
+      .card-heading {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.35rem, 2.5vw, 2rem);
+        letter-spacing: 0;
+      }
+      .badges,
+      .card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .badges span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 26px;
+        border: 1px solid #dce4dd;
+        border-radius: 6px;
+        padding: 0 8px;
+        color: var(--muted);
+        background: #f8faf7;
+        font-size: 0.78rem;
+        font-weight: 850;
+      }
+      .subject {
+        margin: 0 0 12px;
+        color: #384550;
+        line-height: 1.5;
+      }
+      .record-facts {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin: 0 0 12px;
+      }
+      .record-facts div {
+        padding: 10px;
+        border: 1px solid #e2e8e1;
+        border-radius: 6px;
+        background: #fbfcfa;
+      }
+      dt {
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      dd {
+        margin: 4px 0 0;
+        line-height: 1.42;
+      }
+      .action-note {
+        margin: 0 0 12px;
+        color: var(--navy);
+        font-weight: 850;
+        line-height: 1.5;
+      }
+      details {
+        margin-bottom: 12px;
+        border: 1px solid #e2e8e1;
+        border-radius: 6px;
+        padding: 10px 12px;
+        background: #fbfcfa;
+      }
+      summary {
+        color: var(--navy);
+        font-weight: 900;
+        cursor: pointer;
+      }
+      details p {
+        margin: 10px 0 0;
+        color: #3f4a52;
+        line-height: 1.52;
+      }
+      .empty {
+        display: none;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        color: var(--muted);
+        font-weight: 850;
+      }
+      footer {
+        width: min(1220px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 0 0 32px;
+        color: var(--muted);
+      }
+      @media (max-width: 820px) {
+        .hero,
+        .toolbar,
+        .chronology-card,
+        .record-facts {
+          grid-template-columns: 1fr;
+        }
+        .stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .site-header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        nav {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Back to South and Southern Africa Assist">
+        <span class="brand-mark">XXVII</span>
+        <span>Declassified Chronology</span>
+      </a>
+      <nav aria-label="Chronology navigation">
+        <a href="../">Home</a>
+        <a href="../pdfs/">PDF Desk</a>
+        <a href="../reports/declassified-chronology.md">Markdown</a>
+        <a href="../data/declassified-chronology.csv">CSV</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div>
+          <p class="kicker">FRUS 1993-2000, Volume XXVII</p>
+          <h1 id="title">Declassified Document Chronology</h1>
+          <p class="lede">
+            One date-ordered working chronology for released, declassified, and public document records pertaining to South Africa and Southern Africa. Each record keeps the catalog item, direct PDF actions, source note, and compiler next step together.
+          </p>
+        </div>
+        <div class="stats" aria-label="Chronology counts">
+          <div class="stat"><strong>29</strong><span>chronology records</span></div>
+          <div class="stat"><strong>32</strong><span>direct PDF links</span></div>
+          <div class="stat"><strong>6</strong><span>include candidates</span></div>
+          <div class="stat"><strong>3</strong><span>boundary reviews</span></div>
+        </div>
+      </section>
+      <section class="toolbar" aria-label="Chronology filters">
+        <label>
+          Search
+          <input id="search" type="search" placeholder="Mbeki, Angola, landmines, item ID, AIDS" />
+        </label>
+        <label>
+          Decision
+          <select id="decision-filter">
+            <option value="">All decisions</option>
+            <option value="Boundary review">Boundary review</option><option value="Context candidate">Context candidate</option><option value="Include candidate">Include candidate</option><option value="Source lead">Source lead</option>
+          </select>
+        </label>
+        <label>
+          Type
+          <select id="type-filter">
+            <option value="">All types</option>
+            <option value="Public Statement">Public Statement</option><option value="Release Packet">Release Packet</option><option value="Source Lead">Source Lead</option>
+          </select>
+        </label>
+      </section>
+      <div class="utility-row" aria-label="Chronology downloads">
+        <a class="button primary" href="../data/declassified-chronology.csv">Download chronology CSV</a>
+        <a class="button" href="../reports/declassified-chronology.md">Open Markdown report</a>
+        <a class="button" href="../data/records.json">Structured records JSON</a>
+        <a class="button" href="../reports/pdf-candidate-status.md">PDF status dashboard</a>
+      </div>
+      <p id="result-summary" class="result-summary">29 records shown.</p>
+      <section class="chronology-list" aria-label="Declassified chronology records">
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-002 1993-05-03 anthony lake africa speech background at brookings lake - africa, brookings - 5/3/93 early clinton administration africa policy framing. context candidate public statement southern african democracy, health, and economic policy united states africa anthony lake africa policy anthony lake democracy regional policy source: clinton digital library, national security council, speechwriting office, antony blinken files, lake - africa, brookings - 5/3/93, item 9010. public speechwriting pdf available from the item page."
+        >
+          <div class="card-date">
+            <span>01</span>
+            <time datetime="1993-05-03">May 3, 1993</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Anthony Lake Africa speech background at Brookings</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-002</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Early Clinton administration Africa policy framing.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Africa</dd></div>
+              <div><dt>People</dt><dd>Anthony Lake</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Antony Blinken files, Lake - Africa, Brookings - 5/3/93, item 9010. Public speechwriting PDF available from the item page.</p>
+
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/9010" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/1a5c2506a1fdf503e6c564daba5a28f4.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/1a5c2506a1fdf503e6c564daba5a28f4.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/1a5c2506a1fdf503e6c564daba5a28f4.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-039 1993-06-16 namibia public affairs file namibia public-affairs context for namibia and clinton-nujoma contact. context candidate public statement southern african democracy, health, and economic policy united states namibia sam nujoma philip j. crowley namibia sam nujoma public affairs philip crowley source: clinton digital library, national security council, office of press and communications, philip j. crowley files, box 11, namibia, item 48570, naid 7585702. pdf available from the item page. use as context and keyword support for namibia; prioritize internal policy records if located."
+        >
+          <div class="card-date">
+            <span>02</span>
+            <time datetime="1993-06-16">Jun 16, 1993</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Namibia public affairs file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-039</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Public-affairs context for Namibia and Clinton-Nujoma contact.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Namibia</dd></div>
+              <div><dt>People</dt><dd>Sam Nujoma, Philip J. Crowley</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Office of Press and Communications, Philip J. Crowley files, Box 11, Namibia, item 48570, NAID 7585702. PDF available from the item page.</p>
+              <p>Use as context and keyword support for Namibia; prioritize internal policy records if located.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/48570" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/ec27462c59221f362248a316ea88bfaa.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/ec27462c59221f362248a316ea88bfaa.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/ec27462c59221f362248a316ea88bfaa.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Release Packet"
+          data-search="clinton-v27-018 1993-08-25 mandatory declassification review packet concerning amy biehl and south african political violence declassified documents concerning amy biehl state cables and nsc emails on amy biehl&#39;s murder, anc-pac tensions, south african politics, and human rights abuses. context candidate release packet south africa transition and bilateral relations united states south africa amy biehl nelson mandela allan boesak amy biehl south africa political violence anc pac human rights source: clinton digital library, mandatory declassification review, national security council, nsc cables, and nsc emails, declassified documents concerning amy biehl, item 57650, case 2015-0638-m, naid 24194018. the online pdf is 222 pages. use for south africa transition context only; select individual cables only if they illuminate u.s. policy toward political violence, anc-pac dynamics, or human rights during the transition."
+        >
+          <div class="card-date">
+            <span>03</span>
+            <time datetime="1993-08-25">Aug 25, 1993</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Mandatory Declassification Review packet concerning Amy Biehl and South African political violence</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-018</span>
+                <span>Context candidate</span>
+                <span>Release Packet</span>
+                <span>South Africa Transition and Bilateral Relations</span>
+
+              </div>
+            </div>
+            <p class="subject">State cables and NSC emails on Amy Biehl's murder, ANC-PAC tensions, South African politics, and human rights abuses.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, South Africa</dd></div>
+              <div><dt>People</dt><dd>Amy Biehl, Nelson Mandela, Allan Boesak</dd></div>
+              <div><dt>Release</dt><dd>MDR packet online</dd></div>
+            </dl>
+            <p class="action-note">Use as released evidence, then split any document-grade pages into final candidate records.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, NSC Cables, and NSC Emails, Declassified Documents Concerning Amy Biehl, item 57650, case 2015-0638-M, NAID 24194018. The online PDF is 222 pages.</p>
+              <p>Use for South Africa transition context only; select individual cables only if they illuminate U.S. policy toward political violence, ANC-PAC dynamics, or human rights during the transition.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/57650" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/4ac627959484159102933a3192305cae.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/4ac627959484159102933a3192305cae.pdf" rel="noreferrer">Open PDF(222 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/4ac627959484159102933a3192305cae.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Include candidate"
+          data-type="Source Lead"
+          data-search="clinton-v27-005 1994-11-07 soderberg notes from bosnia and angola pc meeting [soderberg notes from bosnia and angola pc meeting, november 7, 1994] policy coordination committee-level notes touching angola and bosnia. include candidate source lead angola, mozambique, and southern african security united states angola bosnia nancy soderberg angola policy coordination committee nancy soderberg peace implementation source: clinton digital library, national security council, nancy soderberg files, box 10, [soderberg notes from bosnia and angola pc meeting, november 7, 1994], item 72408. pdf available from item page; full source markings and page span require pdf review."
+        >
+          <div class="card-date">
+            <span>04</span>
+            <time datetime="1994-11-07">Nov 7, 1994</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Soderberg notes from Bosnia and Angola PC meeting</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-005</span>
+                <span>Include candidate</span>
+                <span>Source Lead</span>
+                <span>Angola, Mozambique, and Southern African Security</span>
+                <span>Withheld/control only</span>
+              </div>
+            </div>
+            <p class="subject">Policy Coordination Committee-level notes touching Angola and Bosnia.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Angola, Bosnia</dd></div>
+              <div><dt>People</dt><dd>Nancy Soderberg</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Log the administrative and withdrawal pages, then queue replacement search or onsite review before promotion.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Nancy Soderberg files, Box 10, [Soderberg Notes from Bosnia and Angola PC Meeting, November 7, 1994], item 72408. PDF available from item page; full source markings and page span require PDF review.</p>
+
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/72408" rel="noreferrer">Catalog item</a>
+              <span class="button muted">Replacement/onsite review</span>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/d99d763c5a60d17afe606193e3fb0a86.pdf" rel="noreferrer">Open PDF(3 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/d99d763c5a60d17afe606193e3fb0a86.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-034 1994-12-01 angola background speechwriting file angola - background speechwriting background on angola for regional-security and peace-process context. context candidate public statement angola, mozambique, and southern african security united states angola robert boorstin angola lusaka protocol unita speechwriting regional security source: clinton digital library, national security council, speechwriting office, robert boorstin files, box 6, angola - background, item 10177, naid 7585788. public speechwriting pdf available from the item page. use as context only until angola policy memoranda, cables, or pc/dc records are extracted from the angola finding aid."
+        >
+          <div class="card-date">
+            <span>05</span>
+            <time datetime="1994-12-01">Dec 1, 1994</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Angola background speechwriting file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-034</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Angola, Mozambique, and Southern African Security</span>
+
+              </div>
+            </div>
+            <p class="subject">Speechwriting background on Angola for regional-security and peace-process context.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Angola</dd></div>
+              <div><dt>People</dt><dd>Robert Boorstin</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 6, Angola - Background, item 10177, NAID 7585788. Public speechwriting PDF available from the item page.</p>
+              <p>Use as context only until Angola policy memoranda, cables, or PC/DC records are extracted from the Angola finding aid.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/10177" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/dec14ca9fdbd28b7d81c3e10b07b3a85.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/dec14ca9fdbd28b7d81c3e10b07b3a85.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/dec14ca9fdbd28b7d81c3e10b07b3a85.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-036 1994-12-01 landmines background speechwriting file landmines speechwriting background for landmines and demining policy relevant to angola and mozambique. context candidate public statement angola, mozambique, and southern african security united states angola mozambique robert boorstin landmines demining angola mozambique humanitarian assistance source: clinton digital library, national security council, speechwriting office, robert boorstin files, box 6, landmines, item 10129, naid 7585788. public speechwriting pdf available from the item page. pair with internal demining, angola, mozambique, and humanitarian-assistance files before selection."
+        >
+          <div class="card-date">
+            <span>06</span>
+            <time datetime="1994-12-01">Dec 1, 1994</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Landmines background speechwriting file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-036</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Angola, Mozambique, and Southern African Security</span>
+
+              </div>
+            </div>
+            <p class="subject">Speechwriting background for landmines and demining policy relevant to Angola and Mozambique.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Angola, Mozambique</dd></div>
+              <div><dt>People</dt><dd>Robert Boorstin</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 6, Landmines, item 10129, NAID 7585788. Public speechwriting PDF available from the item page.</p>
+              <p>Pair with internal demining, Angola, Mozambique, and humanitarian-assistance files before selection.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/10129" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/b77a8e435896410dac9b8c57aa71ae29.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/b77a8e435896410dac9b8c57aa71ae29.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/b77a8e435896410dac9b8c57aa71ae29.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-007 1994-12-01 mozambique background packet mozambique - background speechwriting background for mozambique and post-conflict regional policy. context candidate public statement angola, mozambique, and southern african security united states mozambique robert boorstin mozambique post-conflict reconstruction southern africa speechwriting source: clinton digital library, national security council, speechwriting office, robert boorstin files, mozambique - background, item 10239. public speechwriting pdf available from the item page. use as context until an internal policy memorandum, briefing book, or diplomatic communication is located."
+        >
+          <div class="card-date">
+            <span>07</span>
+            <time datetime="1994-12-01">Dec 1, 1994</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Mozambique background packet</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-007</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Angola, Mozambique, and Southern African Security</span>
+
+              </div>
+            </div>
+            <p class="subject">Speechwriting background for Mozambique and post-conflict regional policy.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Mozambique</dd></div>
+              <div><dt>People</dt><dd>Robert Boorstin</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Mozambique - Background, item 10239. Public speechwriting PDF available from the item page.</p>
+              <p>Use as context until an internal policy memorandum, briefing book, or diplomatic communication is located.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/10239" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/6aaeb1da21af20839bbc4cf8d1c708b3.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/6aaeb1da21af20839bbc4cf8d1c708b3.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/6aaeb1da21af20839bbc4cf8d1c708b3.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-035 1994-12-01 southern africa background speechwriting file southern africa - background regional background file for southern african security, democracy, and post-conflict framing. context candidate public statement angola, mozambique, and southern african security united states south africa angola mozambique zimbabwe zambia robert boorstin southern africa regional policy speechwriting sadc democracy source: clinton digital library, national security council, speechwriting office, robert boorstin files, box 8, southern africa - background, item 10263, naid 7585788. public speechwriting pdf available from the item page. use as a regional frame and keyword source; do not promote as policy evidence without corresponding internal records."
+        >
+          <div class="card-date">
+            <span>08</span>
+            <time datetime="1994-12-01">Dec 1, 1994</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Southern Africa background speechwriting file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-035</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Angola, Mozambique, and Southern African Security</span>
+
+              </div>
+            </div>
+            <p class="subject">Regional background file for southern African security, democracy, and post-conflict framing.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, South Africa, Angola, Mozambique, Zimbabwe, Zambia</dd></div>
+              <div><dt>People</dt><dd>Robert Boorstin</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Southern Africa - Background, item 10263, NAID 7585788. Public speechwriting PDF available from the item page.</p>
+              <p>Use as a regional frame and keyword source; do not promote as policy evidence without corresponding internal records.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/10263" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/a46d30222332f24687ae49c52290c48a.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/a46d30222332f24687ae49c52290c48a.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/a46d30222332f24687ae49c52290c48a.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Include candidate"
+          data-type="Release Packet"
+          data-search="clinton-v27-022 1994-12-05 zimbabwe 1995 and zimbabwe 1997 foia release packet foia 2006-0457-f - zimbabwe, previously restricted document release no. 5 released and withdrawn zimbabwe records including a 1994 briefing, 1995 mugabe letter, 1997 meeting notes, and 1997 presidential correspondence. include candidate release packet southern african democracy, health, and economic policy united states zimbabwe bill clinton robert mugabe ernest j. wilson zimbabwe robert mugabe presidential correspondence world solar commission harare source: clinton digital library, previously restricted document release no. 5, foia 2006-0457-f - zimbabwe, item 14676, case 2006-0457-f. the online pdf is 6 pages and covers nsc african affairs folders zimbabwe 1995, oa/box 872, and zimbabwe 1997 [1], oa/box 1438. use as a document-level pull/control record for zimbabwe presidential correspondence and clinton-mugabe contact."
+        >
+          <div class="card-date">
+            <span>09</span>
+            <time datetime="1994-12-05">Dec 5, 1994</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Zimbabwe 1995 and Zimbabwe 1997 FOIA release packet</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-022</span>
+                <span>Include candidate</span>
+                <span>Release Packet</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+                <span>Mixed released/withheld</span>
+              </div>
+            </div>
+            <p class="subject">Released and withdrawn Zimbabwe records including a 1994 briefing, 1995 Mugabe letter, 1997 meeting notes, and 1997 presidential correspondence.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zimbabwe</dd></div>
+              <div><dt>People</dt><dd>Bill Clinton, Robert Mugabe, Ernest J. Wilson</dd></div>
+              <div><dt>Release</dt><dd>Partially released FOIA packet online</dd></div>
+            </dl>
+            <p class="action-note">Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Previously Restricted Document Release no. 5, FOIA 2006-0457-F - Zimbabwe, item 14676, case 2006-0457-F. The online PDF is 6 pages and covers NSC African Affairs folders Zimbabwe 1995, OA/Box 872, and Zimbabwe 1997 [1], OA/Box 1438.</p>
+              <p>Use as a document-level pull/control record for Zimbabwe presidential correspondence and Clinton-Mugabe contact.</p>
+              <p><strong>Withheld material:</strong> Withdrawal sheets list a December 5, 1994 Zimbabwe briefing, September 22, 1997 handwritten Clinton-Mugabe meeting notes, and several 1997 letters, cables, and reports withheld in whole or in part.</p>
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/14676" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf#page=2" rel="noreferrer">Open first-read pages 2</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf" rel="noreferrer">Open PDF(6 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-041 1994-12-19 anthony lake zambia speech file [anthony] lake - zambia speech, 12/19/94 public speechwriting lead from anthony lake&#39;s africa trip. context candidate public statement southern african democracy, health, and economic policy united states zambia anthony lake robert boorstin zambia anthony lake africa trip speechwriting source: clinton digital library, national security council, speechwriting office, robert boorstin files, box 20, [anthony] lake - zambia speech, 12/19/94, item 11097, naid 7585788. public speechwriting pdf available from the item page."
+        >
+          <div class="card-date">
+            <span>10</span>
+            <time datetime="1994-12-19">Dec 19, 1994</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Anthony Lake Zambia speech file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-041</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Public speechwriting lead from Anthony Lake's Africa trip.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zambia</dd></div>
+              <div><dt>People</dt><dd>Anthony Lake, Robert Boorstin</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 20, [Anthony] Lake - Zambia Speech, 12/19/94, item 11097, NAID 7585788. Public speechwriting PDF available from the item page.</p>
+
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/11097" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/97ce64a8792cca22ac4e8ece2f44ce94.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/97ce64a8792cca22ac4e8ece2f44ce94.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/97ce64a8792cca22ac4e8ece2f44ce94.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-042 1994-12-19 zambia background speechwriting file zambia - background speechwriting background for zambia and southern african regional policy. context candidate public statement southern african democracy, health, and economic policy united states zambia robert boorstin anthony lake zambia anthony lake regional policy speechwriting source: clinton digital library, national security council, speechwriting office, robert boorstin files, box 8, zambia - background, item 10278, naid 7585788. public speechwriting pdf available from the item page. use as context and search vocabulary for zambia; promote only if internal policy records remain unavailable and the public file explains selected documents."
+        >
+          <div class="card-date">
+            <span>11</span>
+            <time datetime="1994-12-19">Dec 19, 1994</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Zambia background speechwriting file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-042</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Speechwriting background for Zambia and southern African regional policy.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zambia</dd></div>
+              <div><dt>People</dt><dd>Robert Boorstin, Anthony Lake</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Zambia - Background, item 10278, NAID 7585788. Public speechwriting PDF available from the item page.</p>
+              <p>Use as context and search vocabulary for Zambia; promote only if internal policy records remain unavailable and the public file explains selected documents.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/10278" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-050 1995-01-01 zimbabwe background speechwriting file zimbabwe - background speechwriting background for zimbabwe source review, including democracy, aid, land, and regional-policy terms. context candidate public statement southern african democracy, health, and economic policy united states zimbabwe robert boorstin robert mugabe zimbabwe robert mugabe speechwriting democracy land reform source: clinton digital library, national security council, speechwriting office, robert boorstin files, box 8, zimbabwe - background, item 10279, naid 7585788. public speechwriting pdf available from the item page. use as context and keyword support for the zimbabwe foia and finding-aid records."
+        >
+          <div class="card-date">
+            <span>12</span>
+            <time datetime="1995-01-01">Jan 1, 1995</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Zimbabwe background speechwriting file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-050</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Speechwriting background for Zimbabwe source review, including democracy, aid, land, and regional-policy terms.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zimbabwe</dd></div>
+              <div><dt>People</dt><dd>Robert Boorstin, Robert Mugabe</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Zimbabwe - Background, item 10279, NAID 7585788. Public speechwriting PDF available from the item page.</p>
+              <p>Use as context and keyword support for the Zimbabwe FOIA and finding-aid records.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/10279" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/db667bda4db08fb5a78f2d73507cd8b1.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/db667bda4db08fb5a78f2d73507cd8b1.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/db667bda4db08fb5a78f2d73507cd8b1.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Include candidate"
+          data-type="Release Packet"
+          data-search="clinton-v27-023 1995-05-16 mugabe visit briefing packet and talking points official working visit of president mugabe of zimbabwe, may 18, 1995 briefing papers, talking points, acting secretary tarnoff memorandum, deshazer addendum, and background papers for clinton&#39;s meeting with mugabe. include candidate release packet southern african democracy, health, and economic policy united states zimbabwe bill clinton robert mugabe peter tarnoff macarthur deshazer anthony lake kenneth brill zimbabwe robert mugabe thomas pickering macarthur deshazer land reform aids democracy source: clinton digital library, declassified documents, foia 2006-0457-f - zimbabwe, item 14571, case 2006-0457-f, clinton presidential records, national security council, african affairs, oa/box 2663, official working visit of president mugabe of zimbabwe, may 18, 1995. the online pdf is 157 pages. high-value include candidate for zimbabwe policy; final promotion requires reading the released pages against the withdrawal sheets and locating any open replacements for withheld briefing material."
+        >
+          <div class="card-date">
+            <span>13</span>
+            <time datetime="1995-05-16">May 16, 1995</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Mugabe visit briefing packet and talking points</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-023</span>
+                <span>Include candidate</span>
+                <span>Release Packet</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+                <span>Mixed released/withheld</span>
+              </div>
+            </div>
+            <p class="subject">Briefing papers, talking points, Acting Secretary Tarnoff memorandum, DeShazer addendum, and background papers for Clinton's meeting with Mugabe.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zimbabwe</dd></div>
+              <div><dt>People</dt><dd>Bill Clinton, Robert Mugabe, Peter Tarnoff, MacArthur DeShazer, Anthony Lake, Kenneth Brill</dd></div>
+              <div><dt>Release</dt><dd>Partially released FOIA packet online</dd></div>
+            </dl>
+            <p class="action-note">Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, African Affairs, OA/Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995. The online PDF is 157 pages.</p>
+              <p>High-value include candidate for Zimbabwe policy; final promotion requires reading the released pages against the withdrawal sheets and locating any open replacements for withheld briefing material.</p>
+              <p><strong>Withheld material:</strong> The withdrawal sheets list the main May 16, 1995 briefing paper, talking points, U.S. Government reports, Acting Secretary Tarnoff memorandum, DeShazer and Lake memoranda, background papers on U.S.-Zimbabwe relations, democracy, cooperation, land, AIDS, and an April 21, 1995 Harare cable.</p>
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/14571" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf#page=3" rel="noreferrer">Open first-read pages 3</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" rel="noreferrer">Open PDF(157 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Source lead"
+          data-type="Source Lead"
+          data-search="clinton-v27-027 1995-05-18 ellen mccathran presidential daily diary hardcopy date set including may 18, 1995 presidential daily diary hardcopy including may 18, 1995 diary control for the mugabe official working visit and other may-june 1995 presidential schedule entries. source lead source lead southern african democracy, health, and economic policy united states zimbabwe bill clinton robert mugabe ellen mccathran presidential daily diary robert mugabe schedule control zimbabwe source: clinton digital library, ellen mccathran - presidential diarist, presidential daily diary hardcopy, box 1, [ellen mccathran - presidential daily diary - hardcopy 4/4/95; 4/12/95; 4/25/95; 5/7/95; 5/18/95; 5/22/95; 5/26/95; 6/7/95; 6/8/95; 6/18/95; 6/30/95], item 36472, naid 17368180. the online pdf is 90 pages. use only as a chronology and attendance control for the mugabe visit; do not promote without a substantive meeting record or briefing document."
+        >
+          <div class="card-date">
+            <span>14</span>
+            <time datetime="1995-05-18">May 18, 1995</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Ellen McCathran Presidential Daily Diary hardcopy date set including May 18, 1995</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-027</span>
+                <span>Source lead</span>
+                <span>Source Lead</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Diary control for the Mugabe official working visit and other May-June 1995 presidential schedule entries.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zimbabwe</dd></div>
+              <div><dt>People</dt><dd>Bill Clinton, Robert Mugabe, Ellen McCathran</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Ellen McCathran - Presidential Diarist, Presidential Daily Diary hardcopy, Box 1, [Ellen McCathran - Presidential Daily Diary - Hardcopy 4/4/95; 4/12/95; 4/25/95; 5/7/95; 5/18/95; 5/22/95; 5/26/95; 6/7/95; 6/8/95; 6/18/95; 6/30/95], item 36472, NAID 17368180. The online PDF is 90 pages.</p>
+              <p>Use only as a chronology and attendance control for the Mugabe visit; do not promote without a substantive meeting record or briefing document.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/36472" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/1b2548044da1ab7f808c7c123eced2ac.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/1b2548044da1ab7f808c7c123eced2ac.pdf" rel="noreferrer">Open PDF(90 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/1b2548044da1ab7f808c7c123eced2ac.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Release Packet"
+          data-search="clinton-v27-024 1995-05-30 president clinton to president mugabe draft letter draft letter from president clinton to president mugabe draft follow-up letter after mugabe&#39;s official working visit, including economic reform and private investment language. context candidate release packet southern african democracy, health, and economic policy united states zimbabwe bill clinton robert mugabe zimbabwe robert mugabe economic reform private investment presidential correspondence source: clinton digital library, declassified documents, foia 2006-0457-f - zimbabwe, item 14571, case 2006-0457-f, clinton presidential records, national security council, african affairs, oa/box 2663, official working visit of president mugabe of zimbabwe, may 18, 1995, document 008, president clinton to president mugabe [draft], may 30, 1995. use as context unless paired with the final signed correspondence or meeting memorandum."
+        >
+          <div class="card-date">
+            <span>15</span>
+            <time datetime="1995-05-30">May 30, 1995</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>President Clinton to President Mugabe draft letter</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-024</span>
+                <span>Context candidate</span>
+                <span>Release Packet</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Draft follow-up letter after Mugabe's official working visit, including economic reform and private investment language.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zimbabwe</dd></div>
+              <div><dt>People</dt><dd>Bill Clinton, Robert Mugabe</dd></div>
+              <div><dt>Release</dt><dd>Released inside FOIA packet</dd></div>
+            </dl>
+            <p class="action-note">Use as released evidence, then split any document-grade pages into final candidate records.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, African Affairs, OA/Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995, document 008, President Clinton to President Mugabe [draft], May 30, 1995.</p>
+              <p>Use as context unless paired with the final signed correspondence or meeting memorandum.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/14571" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" rel="noreferrer">Open PDF(157 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Boundary review"
+          data-type="Source Lead"
+          data-search="clinton-v27-025 1997-07-16 erica barks-ruggles memorandum to samuel berger on african-african american summit update on african-african american summit zimbabwe/harare summit lead for zimbabwe/sadc democracy and public diplomacy boundary review. boundary review source lead southern african democracy, health, and economic policy united states zimbabwe erica barks-ruggles samuel berger john prendergast zimbabwe african-african american summit harare samuel berger erica barks-ruggles source: clinton digital library, declassified documents, foia 2006-0457-f - zimbabwe, item 14571, case 2006-0457-f, clinton presidential records, national security council, records management, oa/box 1631, [zimb*], folder 9704944, erica barks-ruggles to samuel berger, re: update on african-african american summit, july 16, 1997. boundary review required: include only if the summit records illuminate u.s. policy toward zimbabwe, sadc, or regional leadership rather than public liaison logistics alone."
+        >
+          <div class="card-date">
+            <span>16</span>
+            <time datetime="1997-07-16">Jul 16, 1997</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Erica Barks-Ruggles memorandum to Samuel Berger on African-African American Summit</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-025</span>
+                <span>Boundary review</span>
+                <span>Source Lead</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Zimbabwe/Harare summit lead for Zimbabwe/SADC democracy and public diplomacy boundary review.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zimbabwe</dd></div>
+              <div><dt>People</dt><dd>Erica Barks-Ruggles, Samuel Berger, John Prendergast</dd></div>
+              <div><dt>Release</dt><dd>Listed in FOIA packet withdrawal sheet</dd></div>
+            </dl>
+            <p class="action-note">Make the include/context/drop decision and record the volume-scope rationale before promotion.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, Records Management, OA/Box 1631, [Zimb*], folder 9704944, Erica Barks-Ruggles to Samuel Berger, re: Update on African-African American Summit, July 16, 1997.</p>
+              <p>Boundary review required: include only if the summit records illuminate U.S. policy toward Zimbabwe, SADC, or regional leadership rather than public liaison logistics alone.</p>
+              <p><strong>Withheld material:</strong> Withdrawal sheet lists a two-page July 16, 1997 memorandum and an eight-page aircraft mission-members chart.</p>
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/14571" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" rel="noreferrer">Open PDF(157 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-037 1997-09-16 landmines statement landmines statement 9/16/97 public landmines-policy statement lead for demining and southern african security context. context candidate public statement angola, mozambique, and southern african security united states angola mozambique antony blinken landmines demining antony blinken angola mozambique source: clinton digital library, national security council, speechwriting office, antony blinken files, box 31, landmines statement 9/16/97, item 9715, naid 7585787. public speechwriting pdf available from the item page."
+        >
+          <div class="card-date">
+            <span>17</span>
+            <time datetime="1997-09-16">Sep 16, 1997</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Landmines statement</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-037</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Angola, Mozambique, and Southern African Security</span>
+
+              </div>
+            </div>
+            <p class="subject">Public landmines-policy statement lead for demining and southern African security context.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Angola, Mozambique</dd></div>
+              <div><dt>People</dt><dd>Antony Blinken</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Antony Blinken files, Box 31, Landmines Statement 9/16/97, item 9715, NAID 7585787. Public speechwriting PDF available from the item page.</p>
+
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/9715" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/f9de72c6f1d880690d97ae680d586635.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/f9de72c6f1d880690d97ae680d586635.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/f9de72c6f1d880690d97ae680d586635.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-010 1998-03-26 south africa - mandela press conference south africa - mandela press conference 3/26/98 press conference briefing draft/context from the march 1998 africa trip. context candidate public statement south africa transition and bilateral relations united states south africa bill clinton nelson mandela antony blinken nelson mandela south africa africa trip press conference source: clinton digital library, national security council, speechwriting office, antony blinken files, box 34, south africa - mandela press conference 3/26/98, item 9798. public speechwriting pdf available from the item page."
+        >
+          <div class="card-date">
+            <span>18</span>
+            <time datetime="1998-03-26">Mar 26, 1998</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>South Africa - Mandela Press Conference</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-010</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>South Africa Transition and Bilateral Relations</span>
+
+              </div>
+            </div>
+            <p class="subject">Press conference briefing draft/context from the March 1998 Africa trip.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, South Africa</dd></div>
+              <div><dt>People</dt><dd>Bill Clinton, Nelson Mandela, Antony Blinken</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Antony Blinken files, Box 34, South Africa - Mandela Press Conference 3/26/98, item 9798. Public speechwriting PDF available from the item page.</p>
+
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/9798" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/8c33eeb89b620edd6594e80b2b290bd9.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/8c33eeb89b620edd6594e80b2b290bd9.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/8c33eeb89b620edd6594e80b2b290bd9.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-044 1998-03-29 botswana masire reception speechwriting file botswana - masire reception 3/29/98 public-diplomacy context for clinton&#39;s botswana visit and president masire reception. context candidate public statement southern african democracy, health, and economic policy united states botswana bill clinton quett masire antony blinken botswana quett masire 1998 africa trip public diplomacy source: clinton digital library, national security council, speechwriting office, antony blinken files, box 35, botswana - masire reception 3/29/98, item 9804, naid 7585787. public speechwriting pdf available from the item page."
+        >
+          <div class="card-date">
+            <span>19</span>
+            <time datetime="1998-03-29">Mar 29, 1998</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Botswana Masire reception speechwriting file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-044</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Public-diplomacy context for Clinton's Botswana visit and President Masire reception.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Botswana</dd></div>
+              <div><dt>People</dt><dd>Bill Clinton, Quett Masire, Antony Blinken</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Antony Blinken files, Box 35, Botswana - Masire Reception 3/29/98, item 9804, NAID 7585787. Public speechwriting PDF available from the item page.</p>
+
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/9804" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/425f580fb944b53794d5f1454ab21710.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/425f580fb944b53794d5f1454ab21710.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/425f580fb944b53794d5f1454ab21710.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Context candidate"
+          data-type="Public Statement"
+          data-search="clinton-v27-012 1998-04-13 samuel berger talking points for remarks on africa africa - srb [(samuel r. berger&#39;s) talking points for remarks on africa, april 13, 1998] post-africa trip policy framing, regional initiatives, and public diplomacy. context candidate public statement southern african democracy, health, and economic policy united states africa samuel berger edward widmer samuel berger africa policy regional initiatives public diplomacy source: clinton digital library, national security council, speechwriting office, edward widmer files, africa - srb [(samuel r. berger&#39;s) talking points for remarks on africa, april 13, 1998], item 11370. public speechwriting pdf available from the item page."
+        >
+          <div class="card-date">
+            <span>20</span>
+            <time datetime="1998-04-13">Apr 13, 1998</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Samuel Berger talking points for remarks on Africa</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-012</span>
+                <span>Context candidate</span>
+                <span>Public Statement</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Post-Africa trip policy framing, regional initiatives, and public diplomacy.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Africa</dd></div>
+              <div><dt>People</dt><dd>Samuel Berger, Edward Widmer</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Use for public context and annotation support unless it directly explains a selected policy document.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Speechwriting Office, Edward Widmer files, Africa - SRB [(Samuel R. Berger's) Talking Points for Remarks on Africa, April 13, 1998], item 11370. Public speechwriting PDF available from the item page.</p>
+
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/11370" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/27ec86be28e49964d2cc63849a625c8c.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/27ec86be28e49964d2cc63849a625c8c.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/27ec86be28e49964d2cc63849a625c8c.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Source lead"
+          data-type="Source Lead"
+          data-search="clinton-v27-015 1999-06-01 foia 2006-0457-f - zimbabwe foia 2006-0457-f - zimbabwe zimbabwe source lead for democracy, sanctions, land, and regional policy review. source lead source lead southern african democracy, health, and economic policy united states zimbabwe zimbabwe foia democracy regional policy source: clinton digital library, declassified documents, foia 2006-0457-f - zimbabwe, item 14571, case 2006-0457-f. the online pdf is a 157-page packet with withdrawal sheets and released pages from nsc african affairs, nsc email, and nsc records management files. packet split into companion records for the may 1995 mugabe visit, the may 30, 1995 draft clinton letter, the 1997 african-african american summit files, and prdr no. 5 records."
+        >
+          <div class="card-date">
+            <span>21</span>
+            <time datetime="1999-06-01">Jun 1, 1999</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>FOIA 2006-0457-F - Zimbabwe</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-015</span>
+                <span>Source lead</span>
+                <span>Source Lead</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Zimbabwe source lead for democracy, sanctions, land, and regional policy review.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Zimbabwe</dd></div>
+              <div><dt>People</dt><dd>Pending</dd></div>
+              <div><dt>Release</dt><dd>FOIA packet online</dd></div>
+            </dl>
+            <p class="action-note">Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F. The online PDF is a 157-page packet with withdrawal sheets and released pages from NSC African Affairs, NSC email, and NSC Records Management files.</p>
+              <p>Packet split into companion records for the May 1995 Mugabe visit, the May 30, 1995 draft Clinton letter, the 1997 African-African American Summit files, and PRDR no. 5 records.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/14571" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Source lead"
+          data-type="Source Lead"
+          data-search="clinton-v27-047 2000-01-01 national aids policy office botswana file botswana botswana health-policy source lead from the global aids crisis finding-aid family. source lead source lead southern african democracy, health, and economic policy united states botswana botswana aids hiv national aids policy office health diplomacy source: clinton digital library, national aids policy office, box 10, botswana, item 64163, naid 54976716. pdf available from the item page; collection finding aid is global aids crisis, item 48956. use to close the botswana health-policy search path; select only southern africa policy material with u.s. decision value."
+        >
+          <div class="card-date">
+            <span>22</span>
+            <time datetime="2000-01-01">Jan 1, 2000</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>National AIDS Policy Office Botswana file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-047</span>
+                <span>Source lead</span>
+                <span>Source Lead</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Botswana health-policy source lead from the Global AIDS Crisis finding-aid family.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Botswana</dd></div>
+              <div><dt>People</dt><dd>Pending</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National AIDS Policy Office, Box 10, Botswana, item 64163, NAID 54976716. PDF available from the item page; collection finding aid is Global AIDS Crisis, item 48956.</p>
+              <p>Use to close the Botswana health-policy search path; select only southern Africa policy material with U.S. decision value.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/64163" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/9364ec86ad4d726a134ac9f8212d1cd9.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/9364ec86ad4d726a134ac9f8212d1cd9.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/9364ec86ad4d726a134ac9f8212d1cd9.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Source lead"
+          data-type="Source Lead"
+          data-search="clinton-v27-048 2000-01-01 national aids policy office malawi file malawi malawi health-policy source lead from the global aids crisis finding-aid family. source lead source lead southern african democracy, health, and economic policy united states malawi malawi aids hiv national aids policy office health diplomacy source: clinton digital library, national aids policy office, box 24, malawi, item 64400, naid 54976954. pdf available from the item page; collection finding aid is global aids crisis, item 48956. use as a smaller-state health-policy control; likely context unless internal regional-policy records cite malawi directly."
+        >
+          <div class="card-date">
+            <span>23</span>
+            <time datetime="2000-01-01">Jan 1, 2000</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>National AIDS Policy Office Malawi file</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-048</span>
+                <span>Source lead</span>
+                <span>Source Lead</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Malawi health-policy source lead from the Global AIDS Crisis finding-aid family.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Malawi</dd></div>
+              <div><dt>People</dt><dd>Pending</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National AIDS Policy Office, Box 24, Malawi, item 64400, NAID 54976954. PDF available from the item page; collection finding aid is Global AIDS Crisis, item 48956.</p>
+              <p>Use as a smaller-state health-policy control; likely context unless internal regional-policy records cite Malawi directly.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/64400" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/64f7e4a8421dfcf4adf33766adf44117.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/64f7e4a8421dfcf4adf33766adf44117.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/64f7e4a8421dfcf4adf33766adf44117.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Source lead"
+          data-type="Source Lead"
+          data-search="clinton-v27-016 2000-01-01 south africa [3] south africa [3] public affairs and press material for south africa; use only as context unless it includes substantive policy memoranda. source lead source lead south africa transition and bilateral relations united states south africa philip j. crowley south africa public affairs philip crowley press guidance source: clinton digital library, national security council, office of press and communications, philip j. crowley files, box 13, south africa [3], item 48608. pdf available from item page; review for item-level dates, policy substance, and exact markings. likely public-affairs context rather than final frus documentary evidence."
+        >
+          <div class="card-date">
+            <span>24</span>
+            <time datetime="2000-01-01">Jan 1, 2000</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>South Africa [3]</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-016</span>
+                <span>Source lead</span>
+                <span>Source Lead</span>
+                <span>South Africa Transition and Bilateral Relations</span>
+
+              </div>
+            </div>
+            <p class="subject">Public affairs and press material for South Africa; use only as context unless it includes substantive policy memoranda.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, South Africa</dd></div>
+              <div><dt>People</dt><dd>Philip J. Crowley</dd></div>
+              <div><dt>Release</dt><dd>Released online</dd></div>
+            </dl>
+            <p class="action-note">Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, Office of Press and Communications, Philip J. Crowley files, Box 13, South Africa [3], item 48608. PDF available from item page; review for item-level dates, policy substance, and exact markings.</p>
+              <p>Likely public-affairs context rather than final FRUS documentary evidence.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/48608" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/69d36ed4cb7676b00e4ae76979a161db.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/69d36ed4cb7676b00e4ae76979a161db.pdf" rel="noreferrer">Open PDF</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/69d36ed4cb7676b00e4ae76979a161db.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Include candidate"
+          data-type="Release Packet"
+          data-search="clinton-v27-030 2000-04-03 mbeki aids controversy packet, part 2 mbeki [of south africa] - aids controversy [2] [oa/id 3646] hiv/aids paper, mbeki state visit cable, presidential aids panel cable, and mbeki-clinton correspondence. include candidate release packet south africa transition and bilateral relations united states south africa thabo mbeki bill clinton thabo mbeki aids hiv south africa state visit presidential aids panel source: clinton digital library, national security council, nsc legal affairs office, box 50, mbeki [of south africa] - aids controversy [2] [oa/id 3646], item 64751, naid 54977305. the online pdf is 61 pages. high-value include candidate paired with item 64750; final record split should separate correspondence, state visit preparation, and aids-policy analysis."
+        >
+          <div class="card-date">
+            <span>25</span>
+            <time datetime="2000-04-03">Apr 3, 2000</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Mbeki AIDS controversy packet, part 2</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-030</span>
+                <span>Include candidate</span>
+                <span>Release Packet</span>
+                <span>South Africa Transition and Bilateral Relations</span>
+                <span>Mixed released/withheld</span>
+              </div>
+            </div>
+            <p class="subject">HIV/AIDS paper, Mbeki state visit cable, presidential AIDS panel cable, and Mbeki-Clinton correspondence.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, South Africa</dd></div>
+              <div><dt>People</dt><dd>Thabo Mbeki, Bill Clinton</dd></div>
+              <div><dt>Release</dt><dd>Partially released packet online</dd></div>
+            </dl>
+            <p class="action-note">Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646], item 64751, NAID 54977305. The online PDF is 61 pages.</p>
+              <p>High-value include candidate paired with item 64750; final record split should separate correspondence, state visit preparation, and AIDS-policy analysis.</p>
+              <p><strong>Withheld material:</strong> Withdrawal sheets list an 11-page HIV/AIDS paper, cables on the presidential AIDS panel and Mbeki state visit, and Mbeki-Clinton letters from April 2000.</p>
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/64751" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf#page=16" rel="noreferrer">Open first-read pages 16-17</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf" rel="noreferrer">Open PDF(61 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Include candidate"
+          data-type="Release Packet"
+          data-search="clinton-v27-029 2000-05-01 mbeki aids controversy packet, part 1 mbeki [of south africa] - aids controversy [1] [oa/id 3646] cables, memoranda, and draft presidential correspondence on president mbeki&#39;s hiv/aids views and the may 2000 state visit. include candidate release packet south africa transition and bilateral relations united states south africa thabo mbeki bill clinton samuel berger nora dempsey al gore thabo mbeki aids hiv south africa state visit presidential correspondence source: clinton digital library, national security council, nsc legal affairs office, box 50, mbeki [of south africa] - aids controversy [1] [oa/id 3646], item 64750, naid 54977304. the online pdf is 70 pages. high-value include candidate for the intersection of south africa bilateral relations and global aids policy; select document-level entries after page-span extraction."
+        >
+          <div class="card-date">
+            <span>26</span>
+            <time datetime="2000-05-01">May 1, 2000</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Mbeki AIDS controversy packet, part 1</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-029</span>
+                <span>Include candidate</span>
+                <span>Release Packet</span>
+                <span>South Africa Transition and Bilateral Relations</span>
+                <span>Mixed released/withheld</span>
+              </div>
+            </div>
+            <p class="subject">Cables, memoranda, and draft presidential correspondence on President Mbeki's HIV/AIDS views and the May 2000 state visit.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, South Africa</dd></div>
+              <div><dt>People</dt><dd>Thabo Mbeki, Bill Clinton, Samuel Berger, Nora Dempsey, Al Gore</dd></div>
+              <div><dt>Release</dt><dd>Partially released packet online</dd></div>
+            </dl>
+            <p class="action-note">Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646], item 64750, NAID 54977304. The online PDF is 70 pages.</p>
+              <p>High-value include candidate for the intersection of South Africa bilateral relations and global AIDS policy; select document-level entries after page-span extraction.</p>
+              <p><strong>Withheld material:</strong> Withdrawal sheets list cables on Mbeki's alleged comments, Mandela and Mbeki, Mbeki remarks, Gore correspondence, Mbeki's HIV/AIDS theory, and Clinton-Mbeki draft correspondence.</p>
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/64750" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf#page=7" rel="noreferrer">Open first-read pages 7-8</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf" rel="noreferrer">Open PDF(70 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Boundary review"
+          data-type="Release Packet"
+          data-search="clinton-v27-031 2000-05-04 mdr packet on the global aids crisis, africa, and the mbeki state visit declassified documents concerning the global aids crisis deputies committee summaries, mbeki state visit aids objectives, africa aids initiative material, and namibia hiv/aids agreement cables. boundary review release packet southern african democracy, health, and economic policy united states south africa namibia botswana africa thabo mbeki lael brainard sandy thurman samuel berger global aids crisis thabo mbeki south africa namibia deputies committee africa aids initiative source: clinton digital library, mandatory declassification review, national economic council, national security council, and nsc records management system, declassified documents concerning the global aids crisis, item 119208, case 2017-0739-m, file unit 2007-1550-f. the item page provides four pdfs totaling 557 pages. boundary review required: select southern africa material such as mbeki state visit aids objectives and namibia agreement cables; keep general global aids policy out of volume xxvii unless it drives regional diplomacy."
+        >
+          <div class="card-date">
+            <span>27</span>
+            <time datetime="2000-05-04">May 4, 2000</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>MDR packet on the global AIDS crisis, Africa, and the Mbeki state visit</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-031</span>
+                <span>Boundary review</span>
+                <span>Release Packet</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Deputies Committee summaries, Mbeki state visit AIDS objectives, Africa AIDS initiative material, and Namibia HIV/AIDS agreement cables.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, South Africa, Namibia, Botswana, Africa</dd></div>
+              <div><dt>People</dt><dd>Thabo Mbeki, Lael Brainard, Sandy Thurman, Samuel Berger</dd></div>
+              <div><dt>Release</dt><dd>MDR packet online</dd></div>
+            </dl>
+            <p class="action-note">Make the include/context/drop decision and record the volume-scope rationale before promotion.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Mandatory Declassification Review, National Economic Council, National Security Council, and NSC Records Management System, Declassified Documents Concerning the Global AIDS Crisis, item 119208, case 2017-0739-M, file unit 2007-1550-F. The item page provides four PDFs totaling 557 pages.</p>
+              <p>Boundary review required: select southern Africa material such as Mbeki state visit AIDS objectives and Namibia agreement cables; keep general global AIDS policy out of Volume XXVII unless it drives regional diplomacy.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/119208" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/658d3ce0236437eab569f63b04278e1f.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/658d3ce0236437eab569f63b04278e1f.pdf" rel="noreferrer">Open PDF 1(141 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/658d3ce0236437eab569f63b04278e1f.pdf" download>Download PDF 1</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/eb8f2b1ca9bb04768340f55897d880a4.pdf" rel="noreferrer">Open PDF 2(159 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/eb8f2b1ca9bb04768340f55897d880a4.pdf" download>Download PDF 2</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/a45536181776d20e1400df63854d4443.pdf" rel="noreferrer">Open PDF 3(149 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/a45536181776d20e1400df63854d4443.pdf" download>Download PDF 3</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf" rel="noreferrer">Open PDF 4(108 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf" download>Download PDF 4</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Include candidate"
+          data-type="Release Packet"
+          data-search="clinton-v27-038 2000-10-01 mdr packet on victor butt/bout arms trafficking and sub-saharan africa declassified documents regarding victor butt/bout memoranda, strategy papers, and background papers on u.s. efforts against victor bout&#39;s arms trafficking in sub-saharan africa, including angola/unita and south africa arrest strategy. include candidate release packet angola, mozambique, and southern african security united states angola south africa liberia sierra leone victor bout susan rice gayle smith richard clarke victor bout arms trafficking unita angola south africa un sanctions regional security source: clinton digital library, mandatory declassification review, national security council, declassified documents regarding victor butt/bout, item 118505, case 2016-0165-m, foia case 2006-0684-f. the online pdf is 98 pages. high-value regional-security candidate because the packet links unita sanctions, angola, south africa legal strategy, and arms-trafficking enforcement."
+        >
+          <div class="card-date">
+            <span>28</span>
+            <time datetime="2000-10-01">Oct 1, 2000</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>MDR packet on Victor Butt/Bout arms trafficking and sub-Saharan Africa</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-038</span>
+                <span>Include candidate</span>
+                <span>Release Packet</span>
+                <span>Angola, Mozambique, and Southern African Security</span>
+                <span>Released text dominant</span>
+              </div>
+            </div>
+            <p class="subject">Memoranda, strategy papers, and background papers on U.S. efforts against Victor Bout's arms trafficking in sub-Saharan Africa, including Angola/UNITA and South Africa arrest strategy.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Angola, South Africa, Liberia, Sierra Leone</dd></div>
+              <div><dt>People</dt><dd>Victor Bout, Susan Rice, Gayle Smith, Richard Clarke</dd></div>
+              <div><dt>Release</dt><dd>MDR packet online</dd></div>
+            </dl>
+            <p class="action-note">Start with released-document ranges and extract Angola/UNITA sanctions plus South Africa enforcement strategy spans.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, Declassified Documents Regarding Victor Butt/Bout, item 118505, case 2016-0165-M, FOIA case 2006-0684-F. The online PDF is 98 pages.</p>
+              <p>High-value regional-security candidate because the packet links UNITA sanctions, Angola, South Africa legal strategy, and arms-trafficking enforcement.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/118505" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf#page=1" rel="noreferrer">Open first-read pages 1</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf" rel="noreferrer">Open PDF(98 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="chronology-card"
+          data-record-card
+          data-decision="Boundary review"
+          data-type="Release Packet"
+          data-search="clinton-v27-040 2000-11-12 namibia hiv/aids agreement cables in global aids crisis mdr packet u.s.-namibia bilateral hiv/aids agreement files cables on a u.s.-namibia bilateral hiv/aids agreement, namibian ministries, and u.s. aids diplomacy. boundary review release packet southern african democracy, health, and economic policy united states namibia sandy thurman hage geingob namibia hiv/aids health diplomacy sandy thurman bilateral agreement source: clinton digital library, mandatory declassification review, national economic council, national security council, and nsc records management system, declassified documents concerning the global aids crisis, item 119208, case 2017-0739-m, file unit 2007-1550-f, pdf 4, u.s.-namibia bilateral hiv/aids agreement cable sequence. boundary review required but likely useful for southern africa health diplomacy if paired with namibia bilateral-policy records."
+        >
+          <div class="card-date">
+            <span>29</span>
+            <time datetime="2000-11-12">Nov 12, 2000</time>
+          </div>
+          <div class="card-main">
+            <div class="card-heading">
+              <h2>Namibia HIV/AIDS agreement cables in Global AIDS Crisis MDR packet</h2>
+              <div class="badges" aria-label="Record metadata">
+                <span>clinton-v27-040</span>
+                <span>Boundary review</span>
+                <span>Release Packet</span>
+                <span>Southern African Democracy, Health, and Economic Policy</span>
+
+              </div>
+            </div>
+            <p class="subject">Cables on a U.S.-Namibia bilateral HIV/AIDS agreement, Namibian ministries, and U.S. AIDS diplomacy.</p>
+            <dl class="record-facts">
+              <div><dt>Countries</dt><dd>United States, Namibia</dd></div>
+              <div><dt>People</dt><dd>Sandy Thurman, Hage Geingob</dd></div>
+              <div><dt>Release</dt><dd>MDR packet online</dd></div>
+            </dl>
+            <p class="action-note">Make the include/context/drop decision and record the volume-scope rationale before promotion.</p>
+            <details>
+              <summary>Source note</summary>
+              <p>Source: Clinton Digital Library, Mandatory Declassification Review, National Economic Council, National Security Council, and NSC Records Management System, Declassified Documents Concerning the Global AIDS Crisis, item 119208, case 2017-0739-M, file unit 2007-1550-F, PDF 4, U.S.-Namibia bilateral HIV/AIDS agreement cable sequence.</p>
+              <p>Boundary review required but likely useful for southern Africa health diplomacy if paired with Namibia bilateral-policy records.</p>
+
+            </details>
+            <div class="card-actions">
+              <a class="button" href="https://clinton.presidentiallibraries.us/items/show/119208" rel="noreferrer">Catalog item</a>
+              <a class="button primary" href="https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf" rel="noreferrer">Open PDF</a>
+              <a class="button" href="https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf" rel="noreferrer">Open PDF(108 pages)</a><a class="button" href="https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf" download>Download PDF</a>
+            </div>
+          </div>
+        </article>
+      </section>
+      <p id="empty-state" class="empty">No chronology records match these filters.</p>
+    </main>
+    <footer>
+      <p>Generated from <code>data/records.json</code>, <code>data/pdf-candidate-status.csv</code>, and <code>scripts/build-declassified-chronology.mjs</code>.</p>
+    </footer>
+    <script>
+      (() => {
+        const cards = [...document.querySelectorAll("[data-record-card]")];
+        const search = document.querySelector("#search");
+        const decision = document.querySelector("#decision-filter");
+        const type = document.querySelector("#type-filter");
+        const summary = document.querySelector("#result-summary");
+        const empty = document.querySelector("#empty-state");
+
+        function applyFilters() {
+          const query = search.value.trim().toLowerCase();
+          const decisionValue = decision.value;
+          const typeValue = type.value;
+          let shown = 0;
+
+          for (const card of cards) {
+            const matchesQuery = !query || card.dataset.search.includes(query);
+            const matchesDecision = !decisionValue || card.dataset.decision === decisionValue;
+            const matchesType = !typeValue || card.dataset.type === typeValue;
+            const visible = matchesQuery && matchesDecision && matchesType;
+            card.hidden = !visible;
+            if (visible) shown += 1;
+          }
+
+          summary.textContent = shown === 1 ? "1 record shown." : shown + " records shown.";
+          empty.style.display = shown ? "none" : "block";
+        }
+
+        search.addEventListener("input", applyFilters);
+        decision.addEventListener("change", applyFilters);
+        type.addEventListener("change", applyFilters);
+      })();
+    </script>
+  </body>
+</html>

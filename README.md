@@ -19,6 +19,7 @@ Public site:
 - Date-first chronology for released or public candidate records
 - First-hour compiler workflow with live counts and direct actions
 - Static declassified chronology report and CSV with 29 records and 32 direct PDF links
+- Searchable chronology desk at `chronology/` with open/download PDF actions
 - Browser-generated chronology CSV and Markdown worksheet exports
 - PDF review desk with local extraction scratchpad and Markdown note exports
 - First-pass page map for the 6 strongest candidate PDFs, with 395 page-level triage rows and direct page links
@@ -58,6 +59,7 @@ node scripts/build-declassified-chronology.mjs
 
 Outputs:
 
+- `chronology/index.html`
 - `reports/declassified-chronology.md`
 - `data/declassified-chronology.csv`
 
