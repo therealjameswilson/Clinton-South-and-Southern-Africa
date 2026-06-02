@@ -6,6 +6,8 @@ Generated from 6 include-candidate records in `data/records.json`.
 
 Public PDF review desk: [`pdfs/`](../pdfs/).
 
+Candidate extraction status dashboard: [`reports/pdf-candidate-status.md`](pdf-candidate-status.md). Machine-readable status rows: [`data/pdf-candidate-status.csv`](../data/pdf-candidate-status.csv).
+
 First-pass PDF page map: [`reports/pdf-page-map.md`](pdf-page-map.md). Machine-readable page rows: [`data/pdf-page-map.csv`](../data/pdf-page-map.csv).
 
 Shorter range review queue: [`reports/pdf-range-review.md`](pdf-range-review.md). Machine-readable range rows: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).

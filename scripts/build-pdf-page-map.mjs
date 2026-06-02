@@ -10,8 +10,10 @@ const REPORTS_DIR = path.join(ROOT, "reports");
 const RECORDS_PATH = path.join(DATA_DIR, "records.json");
 const CSV_PATH = path.join(DATA_DIR, "pdf-page-map.csv");
 const RANGE_CSV_PATH = path.join(DATA_DIR, "pdf-range-review.csv");
+const STATUS_CSV_PATH = path.join(DATA_DIR, "pdf-candidate-status.csv");
 const REPORT_PATH = path.join(REPORTS_DIR, "pdf-page-map.md");
 const RANGE_REPORT_PATH = path.join(REPORTS_DIR, "pdf-range-review.md");
+const STATUS_REPORT_PATH = path.join(REPORTS_DIR, "pdf-candidate-status.md");
 
 function sh(command, args, options = {}) {
   try {
@@ -27,7 +29,7 @@ function sh(command, args, options = {}) {
 }
 
 function compact(value) {
-  return String(value || "").replace(/\s+/g, " ").trim();
+  return String(value ?? "").replace(/\s+/g, " ").trim();
 }
 
 function csv(value) {
@@ -146,6 +148,31 @@ function actionForRole(role) {
   );
 }
 
+function candidateStatus(counts) {
+  const released = (counts.released_document_text || 0) + (counts.released_or_context_text || 0);
+  const withheld = (counts.withdrawal_sheet || 0) + (counts.withdrawal_marker || 0);
+  if (!released) return "Withheld/control only";
+  if (withheld) return "Mixed released/withheld";
+  return "Released text dominant";
+}
+
+function candidateNextAction(record, counts) {
+  const released = (counts.released_document_text || 0) + (counts.released_or_context_text || 0);
+  const withheld = (counts.withdrawal_sheet || 0) + (counts.withdrawal_marker || 0);
+  if (!released) return "Log the administrative and withdrawal pages, then queue replacement search or onsite review before promotion.";
+  if (/Bout|Butt/i.test(record.documentTitle || record.title || "")) {
+    return "Start with released-document ranges and extract Angola/UNITA sanctions plus South Africa enforcement strategy spans.";
+  }
+  if (/Mbeki/i.test(record.documentTitle || record.title || "")) {
+    return "Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note.";
+  }
+  if (/Mugabe|Zimbabwe/i.test(record.documentTitle || record.title || "")) {
+    return "Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches.";
+  }
+  if (withheld) return "Read released ranges first, then record withheld-material metadata and replacement-search targets.";
+  return "Read all released ranges and draft document-level extraction notes.";
+}
+
 function downloadPdf(url, pdfPath) {
   if (fs.existsSync(pdfPath) && fs.statSync(pdfPath).size > 1000) return;
   execFileSync("curl", ["-L", "--fail", "--silent", "--show-error", url, "-o", pdfPath], { stdio: "inherit" });
@@ -260,6 +287,61 @@ function build() {
     [rangeHeader, ...rangeRows.map((row) => rangeHeader.map((key) => csv(row[key])).join(","))].join("\n") + "\n"
   );
 
+  const statusRows = summaries.map(({ record, file, pages, counts, ranges }) => {
+    const releasedPages = (counts.released_document_text || 0) + (counts.released_or_context_text || 0);
+    const withheldPages = (counts.withdrawal_sheet || 0) + (counts.withdrawal_marker || 0);
+    const readFirstRanges = ranges.filter((range) => priorityForRole(range.role) <= 2);
+    const controlRanges = ranges.filter((range) => priorityForRole(range.role) > 2);
+    const firstRead = readFirstRanges[0];
+    return {
+      record_id: record.id,
+      record_date: record.date || record.sortDate || "",
+      record_title: record.documentTitle || record.title || "",
+      topic: record.topic?.name || "",
+      type: record.type || "",
+      catalog_url: record.catalogUrl || "",
+      pdf_url: file.url,
+      pdf_pages: pages,
+      released_context_pages: releasedPages,
+      withdrawal_sheet_pages: counts.withdrawal_sheet || 0,
+      withdrawal_marker_pages: counts.withdrawal_marker || 0,
+      administrative_marker_pages: counts.administrative_marker || 0,
+      blank_or_image_pages: counts.blank_or_image_only || 0,
+      read_first_ranges: readFirstRanges.length,
+      control_or_withheld_ranges: controlRanges.length,
+      first_read_range: firstRead?.pages || "",
+      first_read_url: firstRead?.pageUrl || "",
+      status: candidateStatus(counts),
+      next_action: candidateNextAction(record, counts)
+    };
+  });
+
+  const statusHeader = [
+    "record_id",
+    "record_date",
+    "record_title",
+    "topic",
+    "type",
+    "catalog_url",
+    "pdf_url",
+    "pdf_pages",
+    "released_context_pages",
+    "withdrawal_sheet_pages",
+    "withdrawal_marker_pages",
+    "administrative_marker_pages",
+    "blank_or_image_pages",
+    "read_first_ranges",
+    "control_or_withheld_ranges",
+    "first_read_range",
+    "first_read_url",
+    "status",
+    "next_action"
+  ];
+  fs.writeFileSync(
+    STATUS_CSV_PATH,
+    [statusHeader, ...statusRows.map((row) => statusHeader.map((key) => csv(row[key])).join(","))].join("\n") + "\n"
+  );
+
   const report = [
     "# Selection Candidate PDF Page Map",
     "",
@@ -272,6 +354,8 @@ function build() {
     "Machine-readable page map: [`data/pdf-page-map.csv`](../data/pdf-page-map.csv).",
     "",
     "Range-level review queue: [`reports/pdf-range-review.md`](pdf-range-review.md) and [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).",
+    "",
+    "Candidate extraction status: [`reports/pdf-candidate-status.md`](pdf-candidate-status.md) and [`data/pdf-candidate-status.csv`](../data/pdf-candidate-status.csv).",
     "",
     "Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.md`](extraction-worksheet.md).",
     "",
@@ -334,7 +418,7 @@ function build() {
     "",
     `Generated from ${summaries.length} candidate PDFs, ${rows.length} PDF pages, and ${rangeRows.length} consecutive page-role ranges.`,
     "",
-    "Detailed page map: [`reports/pdf-page-map.md`](pdf-page-map.md). Machine-readable range queue: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).",
+    "Detailed page map: [`reports/pdf-page-map.md`](pdf-page-map.md). Candidate extraction status: [`reports/pdf-candidate-status.md`](pdf-candidate-status.md). Machine-readable range queue: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).",
     "",
     "## Read First",
     "",
@@ -365,10 +449,47 @@ function build() {
 
   fs.writeFileSync(RANGE_REPORT_PATH, rangeReport);
 
+  const statusReport = [
+    "# Selection Candidate PDF Extraction Status",
+    "",
+    "Six-record dashboard for deciding where the compiler should spend close-reading time first.",
+    "",
+    "This status layer is generated from the page map and range review queue. It summarizes released/context pages, withdrawal/control pages, first readable range, and the next extraction action for each include-candidate PDF.",
+    "",
+    `Generated from ${summaries.length} candidate PDFs, ${rows.length} PDF pages, ${rangeRows.length} page-role ranges, and ${statusRows.length} candidate status rows.`,
+    "",
+    "Companion files: [`reports/pdf-page-map.md`](pdf-page-map.md), [`reports/pdf-range-review.md`](pdf-range-review.md), and [`data/pdf-candidate-status.csv`](../data/pdf-candidate-status.csv).",
+    "",
+    "## Status Dashboard",
+    "",
+    "| Record | PDF pages | Released/context pages | Withheld/control pages | Read-first ranges | First read | Status | Next action |",
+    "| --- | ---: | ---: | ---: | ---: | --- | --- | --- |",
+    ...statusRows.map((row) => {
+      const withheld =
+        Number(row.withdrawal_sheet_pages) +
+        Number(row.withdrawal_marker_pages) +
+        Number(row.administrative_marker_pages) +
+        Number(row.blank_or_image_pages);
+      const firstRead = row.first_read_url ? `[${row.first_read_range}](${row.first_read_url})` : "Replacement/onsite review";
+      return `| ${row.record_id} | ${row.pdf_pages} | ${row.released_context_pages} | ${withheld} | ${row.read_first_ranges} | ${firstRead} | ${row.status} | ${row.next_action} |`;
+    }),
+    "",
+    "## Working Notes",
+    "",
+    "- `Withheld/control only` means no released/context text layer was detected; the item may still matter as a withdrawal or replacement-search lead.",
+    "- `Mixed released/withheld` means extraction can begin from released pages, but the source note needs explicit withdrawal/exemption accounting.",
+    "- `Released text dominant` means the public PDF has no detected withdrawal/control pages in this first-pass map.",
+    "- Treat these counts as triage signals. Final FRUS selection still requires human document-boundary review, markings, page spans, and declassification verification."
+  ].join("\n");
+
+  fs.writeFileSync(STATUS_REPORT_PATH, statusReport);
+
   console.log(`Wrote ${rows.length} page rows to ${path.relative(ROOT, CSV_PATH)}`);
   console.log(`Wrote ${rangeRows.length} range rows to ${path.relative(ROOT, RANGE_CSV_PATH)}`);
+  console.log(`Wrote ${statusRows.length} status rows to ${path.relative(ROOT, STATUS_CSV_PATH)}`);
   console.log(`Wrote report to ${path.relative(ROOT, REPORT_PATH)}`);
   console.log(`Wrote range report to ${path.relative(ROOT, RANGE_REPORT_PATH)}`);
+  console.log(`Wrote status report to ${path.relative(ROOT, STATUS_REPORT_PATH)}`);
 }
 
 build();

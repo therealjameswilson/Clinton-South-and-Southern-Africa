@@ -8,6 +8,8 @@ Use the companion extraction worksheet for the selection-candidate reading pass:
 
 Use the PDF review desk to open or download the strongest declassified candidates: [`pdfs/`](../pdfs/).
 
+Start with the six-row candidate status dashboard when deciding which packet to read first: [`reports/pdf-candidate-status.md`](pdf-candidate-status.md). The CSV version tracks released/withheld page counts and next actions: [`data/pdf-candidate-status.csv`](../data/pdf-candidate-status.csv).
+
 Use the first-pass page map before close reading a packet: [`reports/pdf-page-map.md`](pdf-page-map.md). The CSV version has one row per PDF page: [`data/pdf-page-map.csv`](../data/pdf-page-map.csv).
 
 For the shorter "what span should I read next?" view, use the range review queue: [`reports/pdf-range-review.md`](pdf-range-review.md). The CSV version has one row per consecutive page-role span: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).

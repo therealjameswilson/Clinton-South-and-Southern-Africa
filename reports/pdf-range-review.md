@@ -6,7 +6,7 @@ Use this when the compiler needs to decide what PDF span to read next. It does n
 
 Generated from 6 candidate PDFs, 395 PDF pages, and 166 consecutive page-role ranges.
 
-Detailed page map: [`reports/pdf-page-map.md`](pdf-page-map.md). Machine-readable range queue: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).
+Detailed page map: [`reports/pdf-page-map.md`](pdf-page-map.md). Candidate extraction status: [`reports/pdf-candidate-status.md`](pdf-candidate-status.md). Machine-readable range queue: [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).
 
 ## Read First
 

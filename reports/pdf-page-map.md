@@ -10,6 +10,8 @@ Machine-readable page map: [`data/pdf-page-map.csv`](../data/pdf-page-map.csv).
 
 Range-level review queue: [`reports/pdf-range-review.md`](pdf-range-review.md) and [`data/pdf-range-review.csv`](../data/pdf-range-review.csv).
 
+Candidate extraction status: [`reports/pdf-candidate-status.md`](pdf-candidate-status.md) and [`data/pdf-candidate-status.csv`](../data/pdf-candidate-status.csv).
+
 Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.md`](extraction-worksheet.md).
 
 ## Summary

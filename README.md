@@ -22,6 +22,7 @@ Public site:
 - PDF review desk with local extraction scratchpad and Markdown note exports
 - First-pass page map for the 6 strongest candidate PDFs, with 395 page-level triage rows and direct page links
 - Range-level PDF review queue with 166 consecutive page-role spans and suggested actions
+- Candidate extraction status dashboard with released/withheld page counts and next actions
 - Source-note finalization queue with CSV export
 - Searchable source records with type, topic, and production-gap filters
 - FRUS-style source-note and declassification quality gates
@@ -60,6 +61,8 @@ Outputs:
 - `data/pdf-page-map.csv`
 - `reports/pdf-range-review.md`
 - `data/pdf-range-review.csv`
+- `reports/pdf-candidate-status.md`
+- `data/pdf-candidate-status.csv`
 
 ## Source Base
 
