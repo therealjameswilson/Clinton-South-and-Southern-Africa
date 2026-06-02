@@ -20,7 +20,7 @@ Public site:
 - First-hour compiler workflow with live counts and direct actions
 - Chronology CSV and Markdown worksheet exports
 - PDF review desk with local extraction scratchpad and Markdown note exports
-- First-pass page map for the 6 strongest candidate PDFs, with 395 page-level triage rows
+- First-pass page map for the 6 strongest candidate PDFs, with 395 page-level triage rows and direct page links
 - Source-note finalization queue with CSV export
 - Searchable source records with type, topic, and production-gap filters
 - FRUS-style source-note and declassification quality gates

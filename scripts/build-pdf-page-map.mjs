@@ -93,7 +93,7 @@ function roleRanges(rows) {
   let current = null;
   for (const row of rows) {
     if (!current || current.role !== row.page_role) {
-      current = { role: row.page_role, start: row.pdf_page, end: row.pdf_page, signal: row.page_signal };
+      current = { role: row.page_role, start: row.pdf_page, end: row.pdf_page, signal: row.page_signal, pageUrl: row.page_url };
       ranges.push(current);
     } else {
       current.end = row.pdf_page;
@@ -140,6 +140,7 @@ function build() {
         catalog_url: record.catalogUrl || "",
         pdf_url: file.url,
         pdf_page: page,
+        page_url: `${file.url}#page=${page}`,
         page_role: pageRole(text),
         date_signal: dateSignal(text),
         page_signal: firstSignal(text),
@@ -166,6 +167,7 @@ function build() {
     "catalog_url",
     "pdf_url",
     "pdf_page",
+    "page_url",
     "page_role",
     "date_signal",
     "page_signal",
@@ -225,9 +227,9 @@ function build() {
       `- Direct PDF: ${file.url}`,
       `- PDF pages: ${pages}`,
       "",
-      "| PDF pages | First-pass role | First page signal |",
-      "| --- | --- | --- |",
-      ...ranges.map((range) => `| ${range.pages} | ${range.role} | ${range.signal || "No text signal"} |`),
+      "| PDF pages | Open | First-pass role | First page signal |",
+      "| --- | --- | --- | --- |",
+      ...ranges.map((range) => `| ${range.pages} | [Open](${range.pageUrl}) | ${range.role} | ${range.signal || "No text signal"} |`),
       ""
     ])
   ].join("\n");
