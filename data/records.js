@@ -5,7 +5,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1993-05-03",
     "sortDate": "1993-05-03",
@@ -365,7 +365,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1998-04-13",
     "sortDate": "1998-04-13",
@@ -410,7 +410,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Source lead",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1998-12-01",
     "sortDate": "1998-12-01",
@@ -454,7 +454,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Source lead",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1999-01-01",
     "sortDate": "1999-01-01",
@@ -497,7 +497,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Source lead",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1999-06-01",
     "sortDate": "1999-06-01",
@@ -589,7 +589,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1993-06-16",
     "sortDate": "1993-06-16",
@@ -686,7 +686,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Include candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1994-12-05",
     "sortDate": "1994-12-05",
@@ -742,7 +742,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Include candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1995-05-16",
     "sortDate": "1995-05-16",
@@ -810,7 +810,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1995-05-30",
     "sortDate": "1995-05-30",
@@ -869,14 +869,14 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Boundary review",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1997-07-16",
     "sortDate": "1997-07-16",
     "title": "Update on African-African American Summit",
     "documentTitle": "Erica Barks-Ruggles memorandum to Samuel Berger on African-African American Summit",
     "dateLine": "Washington, July 16, 1997",
-    "subjectLine": "Zimbabwe/Harare summit lead for regional democracy and public diplomacy boundary review.",
+    "subjectLine": "Zimbabwe/Harare summit lead for Zimbabwe/SADC democracy and public diplomacy boundary review.",
     "countries": [
       "United States",
       "Zimbabwe"
@@ -930,7 +930,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Source lead",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1995-05-18",
     "sortDate": "1995-05-18",
@@ -1136,7 +1136,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Boundary review",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "2000-05-04",
     "sortDate": "2000-05-04",
@@ -1558,7 +1558,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1993-06-16",
     "sortDate": "1993-06-16",
@@ -1606,7 +1606,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Boundary review",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "2000-11-12",
     "sortDate": "2000-11-12",
@@ -1664,7 +1664,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1994-12-19",
     "sortDate": "1994-12-19",
@@ -1711,7 +1711,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1994-12-19",
     "sortDate": "1994-12-19",
@@ -1759,7 +1759,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1998-03-29",
     "sortDate": "1998-03-29",
@@ -1807,7 +1807,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1998-03-29",
     "sortDate": "1998-03-29",
@@ -1850,7 +1850,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1998-03-31",
     "sortDate": "1998-03-31",
@@ -1893,7 +1893,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Source lead",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "2000-01-01",
     "sortDate": "2000-01-01",
@@ -1938,7 +1938,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Source lead",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "2000-01-01",
     "sortDate": "2000-01-01",
@@ -1983,7 +1983,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Source lead",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1995-01-01",
     "sortDate": "1995-01-01",
@@ -2026,7 +2026,7 @@ window.COMPILER_RECORDS = [
     "selectionDecision": "Context candidate",
     "topic": {
       "number": 3,
-      "name": "Regional Democracy, Health, and Economic Policy"
+      "name": "Southern African Democracy, Health, and Economic Policy"
     },
     "date": "1995-01-01",
     "sortDate": "1995-01-01",

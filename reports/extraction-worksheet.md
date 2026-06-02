@@ -72,7 +72,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 
 - Record ID: `clinton-v27-022`
 - Date: 1994-12-05
-- Topic: Regional Democracy, Health, and Economic Policy
+- Topic: Southern African Democracy, Health, and Economic Policy
 - Type: Release Packet
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14676
 - PDF links: [PDF, 6 pages](https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf)
@@ -98,7 +98,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 
 - Record ID: `clinton-v27-023`
 - Date: 1995-05-16
-- Topic: Regional Democracy, Health, and Economic Policy
+- Topic: Southern African Democracy, Health, and Economic Policy
 - Type: Release Packet
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14571
 - PDF links: [PDF, 157 pages](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
