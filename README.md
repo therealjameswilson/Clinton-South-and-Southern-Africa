@@ -20,6 +20,7 @@ Public site:
 - First-hour compiler workflow with live counts and direct actions
 - Static declassified chronology report and CSV with 29 records and 32 direct PDF links
 - Searchable chronology desk at `chronology/` with open/download PDF actions
+- Reading-room pull queue at `pulls/` with request actions, replacement searches, report, and CSV
 - Browser-generated chronology CSV and Markdown worksheet exports
 - PDF review desk with local extraction scratchpad and Markdown note exports
 - First-pass page map for the 6 strongest candidate PDFs, with 395 page-level triage rows and direct page links
@@ -33,6 +34,7 @@ Public site:
 - Primary source anchor list and ingest checklist
 - Seed data in `data/records.json` and direct-file fallback data in `data/records.js`
 - Reproducible declassified chronology generator in `scripts/build-declassified-chronology.mjs`
+- Reproducible pull-queue generator in `scripts/build-pull-queue.mjs`
 - Reproducible PDF page-map generator in `scripts/build-pdf-page-map.mjs`
 
 ## Local Preview
@@ -62,6 +64,20 @@ Outputs:
 - `chronology/index.html`
 - `reports/declassified-chronology.md`
 - `data/declassified-chronology.csv`
+
+## Reading-Room Pull Queue
+
+The pull queue is generated from `data/records.json` and captures unscanned collection leads, replacement searches, boundary decisions, and digital-extraction blockers.
+
+```bash
+node scripts/build-pull-queue.mjs
+```
+
+Outputs:
+
+- `pulls/index.html`
+- `reports/reading-room-pull-queue.md`
+- `data/reading-room-pull-queue.csv`
 
 ## PDF Page Map
 
