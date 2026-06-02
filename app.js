@@ -291,7 +291,7 @@ function createMeta(record) {
   for (const value of [
     record.type,
     record.selectionDecision,
-    record.topic?.name ? `Topic: ${record.topic.name}` : "",
+    record.topic?.name ? `Scope: ${record.topic.name}` : "",
     countries,
     extent,
     sourceId,
@@ -360,7 +360,7 @@ function buildChronologyCsv(records = chronologyRecords()) {
     "washington_time",
     "type",
     "decision",
-    "topic",
+    "scope_area",
     "title",
     "date_line",
     "subject",
@@ -390,7 +390,7 @@ function chronologyWorksheetSection(record, index) {
     `- Record ID: \`${record.id}\``,
     `- Type: ${record.type || "Pending"}`,
     `- Decision: ${record.selectionDecision || "Pending"}`,
-    `- Topic: ${record.topic?.name || "Pending"}`,
+    `- Scope area: ${record.topic?.name || "Pending"}`,
     `- Catalog item: ${record.catalogUrl || "Pending"}`,
     "- PDF links:",
     markdownList(pdfUrls),
@@ -493,7 +493,7 @@ function finalizationCsv(records = finalizationRecords()) {
     "date",
     "decision",
     "type",
-    "topic",
+    "scope_area",
     "title",
     "finalization_items",
     "next_action",
@@ -741,7 +741,7 @@ function createDocketItem(record) {
 
   const meta = document.createElement("div");
   meta.className = "record-meta";
-  for (const value of [record.selectionDecision, record.type, record.topic?.name ? `Topic: ${record.topic.name}` : ""]) {
+  for (const value of [record.selectionDecision, record.type, record.topic?.name ? `Scope: ${record.topic.name}` : ""]) {
     if (!value) continue;
     const badge = document.createElement("span");
     badge.textContent = value;
@@ -818,7 +818,7 @@ function createFinalizationItem(record) {
     `Priority ${finalizationPriority(record)}`,
     record.selectionDecision,
     record.type,
-    record.topic?.name ? `Topic: ${record.topic.name}` : ""
+    record.topic?.name ? `Scope: ${record.topic.name}` : ""
   ].filter(Boolean)) {
     const badge = document.createElement("span");
     badge.textContent = value;

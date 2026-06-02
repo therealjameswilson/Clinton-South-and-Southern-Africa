@@ -39,7 +39,7 @@ Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.
 ### clinton-v27-005 - Soderberg notes from Bosnia and Angola PC meeting
 
 - Date: 1994-11-07
-- Topic: Angola, Mozambique, and Southern African Security
+- Scope area: Angola, Mozambique, and Southern African Security
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/72408
 - Direct PDF: https://clinton.presidentiallibraries.us/files/original/d99d763c5a60d17afe606193e3fb0a86.pdf
 - PDF pages: 3
@@ -53,7 +53,7 @@ Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.
 ### clinton-v27-022 - Zimbabwe 1995 and Zimbabwe 1997 FOIA release packet
 
 - Date: 1994-12-05
-- Topic: Southern African Democracy, Health, and Economic Policy
+- Scope area: Southern African Democracy, Health, and Economic Policy
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14676
 - Direct PDF: https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf
 - PDF pages: 6
@@ -69,7 +69,7 @@ Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.
 ### clinton-v27-023 - Mugabe visit briefing packet and talking points
 
 - Date: 1995-05-16
-- Topic: Southern African Democracy, Health, and Economic Policy
+- Scope area: Southern African Democracy, Health, and Economic Policy
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14571
 - Direct PDF: https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf
 - PDF pages: 157
@@ -129,7 +129,7 @@ Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.
 ### clinton-v27-030 - Mbeki AIDS controversy packet, part 2
 
 - Date: 2000-04-03
-- Topic: South Africa Transition and Bilateral Relations
+- Scope area: South Africa Transition and Bilateral Relations
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64751
 - Direct PDF: https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf
 - PDF pages: 61
@@ -174,7 +174,7 @@ Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.
 ### clinton-v27-029 - Mbeki AIDS controversy packet, part 1
 
 - Date: 2000-05-01
-- Topic: South Africa Transition and Bilateral Relations
+- Scope area: South Africa Transition and Bilateral Relations
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64750
 - Direct PDF: https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf
 - PDF pages: 70
@@ -229,7 +229,7 @@ Companion work surfaces: [`pdfs/`](../pdfs/) and [`reports/extraction-worksheet.
 ### clinton-v27-038 - MDR packet on Victor Butt/Bout arms trafficking and sub-Saharan Africa
 
 - Date: 2000-10-01
-- Topic: Angola, Mozambique, and Southern African Security
+- Scope area: Angola, Mozambique, and Southern African Security
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/118505
 - Direct PDF: https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf
 - PDF pages: 98

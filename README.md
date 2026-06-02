@@ -24,7 +24,7 @@ Public site:
 - Range-level PDF review queue with 166 consecutive page-role spans and suggested actions
 - Candidate extraction status dashboard with released/withheld page counts and next actions
 - Source-note finalization queue with CSV export
-- Searchable source records with type, topic, and production-gap filters
+- Searchable source records with type, scope area, and production-gap filters
 - FRUS-style source-note and declassification quality gates
 - Compiler gap analysis for planned-volume risks
 - Clinton Library pull strategy and reading-room priorities

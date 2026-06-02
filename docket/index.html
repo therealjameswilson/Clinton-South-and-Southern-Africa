@@ -328,7 +328,7 @@
       }
 
       function buildCsv(rows) {
-        const header = ["queue", "id", "date", "decision", "type", "topic", "title", "action", "catalog_url", "pdf_urls", "source_note"];
+        const header = ["queue", "id", "date", "decision", "type", "scope_area", "title", "action", "catalog_url", "pdf_urls", "source_note"];
         return [header, ...rows]
           .map((row) => row.map(csv).join(","))
           .join("\n") + "\n";
@@ -364,7 +364,7 @@
             for (const value of [
               record.selectionDecision,
               record.type,
-              record.topic?.name ? `Topic: ${record.topic.name}` : ""
+              record.topic?.name ? `Scope: ${record.topic.name}` : ""
             ].filter(Boolean)) {
               const badge = document.createElement("span");
               badge.textContent = value;

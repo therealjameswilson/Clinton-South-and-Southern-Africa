@@ -422,7 +422,7 @@
         </div>
         <div class="stat">
           <strong id="topic-count">0</strong>
-          <span>volume topics represented</span>
+          <span>scope areas represented</span>
         </div>
       </section>
 
@@ -656,7 +656,7 @@
           `# ${record.id} - ${record.documentTitle || record.title}`,
           "",
           `Date: ${record.date || record.sortDate || "Date pending"}`,
-          `Topic: ${record.topic?.name || "Topic pending"}`,
+          `Scope: ${record.topic?.name || "Scope area pending"}`,
           `Catalog item: ${record.catalogUrl || "Pending"}`,
           "PDF files:",
           pdfList(record) || "- Pending",
@@ -780,7 +780,7 @@
             record.id,
             formatDate(record.date),
             `${pageTotal(record)} pages`,
-            record.topic?.name ? `Topic: ${record.topic.name}` : ""
+            record.topic?.name ? `Scope: ${record.topic.name}` : ""
           ].filter(Boolean)) {
             const span = document.createElement("span");
             span.textContent = value;
@@ -952,12 +952,12 @@
           .sort(sortChronology);
 
         const totalPages = candidates.reduce((sum, record) => sum + pageTotal(record), 0);
-        const topics = new Set(candidates.map((record) => record.topic?.name).filter(Boolean));
+        const scopeAreas = new Set(candidates.map((record) => record.topic?.name).filter(Boolean));
 
         candidateCount.textContent = candidates.length.toString();
         pageCount.textContent = totalPages.toString();
-        topicCount.textContent = topics.size.toString();
-        summary.textContent = `${candidates.length} direct PDF candidates, ${totalPages} public pages, ${topics.size} topics.`;
+        topicCount.textContent = scopeAreas.size.toString();
+        summary.textContent = `${candidates.length} direct PDF candidates, ${totalPages} public pages, ${scopeAreas.size} scope areas.`;
 
         if (!candidates.length) {
           listRoot.innerHTML = '<p class="empty">No include candidates with PDFs found.</p>';
