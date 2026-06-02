@@ -17,6 +17,7 @@ Public site:
 ## What Is Included
 
 - Date-first chronology for released or public candidate records
+- First-hour compiler workflow with live counts and direct actions
 - Chronology CSV and Markdown worksheet exports
 - PDF review desk with local extraction scratchpad and Markdown note exports
 - Source-note finalization queue with CSV export

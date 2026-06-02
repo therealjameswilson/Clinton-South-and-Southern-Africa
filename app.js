@@ -8,6 +8,12 @@ const finalizationSummary = document.querySelector("#finalization-summary");
 const chronologyCsvButton = document.querySelector("#download-chronology-csv");
 const chronologyWorksheetButton = document.querySelector("#download-chronology-worksheet");
 const finalizationCsvButton = document.querySelector("#download-finalization-csv");
+const startFinalizationCount = document.querySelector("#start-finalization-count");
+const startPdfCandidates = document.querySelector("#start-pdf-candidates");
+const startPdfPages = document.querySelector("#start-pdf-pages");
+const startChronologyCount = document.querySelector("#start-chronology-count");
+const startPdfLinks = document.querySelector("#start-pdf-links");
+const startPullCount = document.querySelector("#start-pull-count");
 const totalRecords = document.querySelector("#total-records");
 const decisionReady = document.querySelector("#decision-ready");
 const provenanceGaps = document.querySelector("#provenance-gaps");
@@ -246,6 +252,24 @@ function setDashboardCounts(records) {
       return getProductionIssues(record).includes("needs-declass") || /pending|excised|withheld|partial|mixed|missing|not scanned/i.test(status);
     })
     .length.toString();
+}
+
+function setStartHereCounts(records) {
+  const includePdfCandidates = records.filter((record) => record.selectionDecision === "Include candidate" && hasPdf(record));
+  const includePages = includePdfCandidates.reduce(
+    (sum, record) => sum + recordPdfFiles(record).reduce((fileSum, file) => fileSum + (Number(file.pages) || 0), 0),
+    0
+  );
+  const chronology = chronologyRecords(records);
+  const directPdfLinks = chronology.reduce((sum, record) => sum + recordPdfFiles(record).length, 0);
+  const pullBlockers = records.filter(isExtractionBlocker);
+
+  if (startFinalizationCount) startFinalizationCount.textContent = finalizationRecords(records).length.toString();
+  if (startPdfCandidates) startPdfCandidates.textContent = includePdfCandidates.length.toString();
+  if (startPdfPages) startPdfPages.textContent = includePages.toString();
+  if (startChronologyCount) startChronologyCount.textContent = chronology.length.toString();
+  if (startPdfLinks) startPdfLinks.textContent = directPdfLinks.toString();
+  if (startPullCount) startPullCount.textContent = pullBlockers.length.toString();
 }
 
 function createMeta(record) {
@@ -1021,6 +1045,7 @@ async function init() {
       allRecords = window.COMPILER_RECORDS || [];
       if (!allRecords.length) throw error;
     }
+    setStartHereCounts(allRecords);
     setDashboardCounts(allRecords);
     renderChronology(allRecords);
     renderDocket(allRecords);

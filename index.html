@@ -8,7 +8,7 @@
       name="description"
       content="A public chronology of released and declassified records related to FRUS 1993-2000, Volume XXVII, South Africa; Southern Africa."
     />
-    <link rel="stylesheet" href="styles.css?v=2026-06-02b" />
+    <link rel="stylesheet" href="styles.css?v=2026-06-02c" />
     <style id="compiler-network-style">
       .compiler-network {
         border-bottom: 1px solid rgba(31, 41, 51, 0.14);
@@ -113,6 +113,7 @@
         <span>South and Southern Africa Assist</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#start">Start</a>
         <a href="#chronology">Chronology</a>
         <a href="#docket">Docket</a>
         <a href="#finalization">Finalization</a>
@@ -129,6 +130,58 @@
     </header>
 
     <main id="top">
+      <section class="section start-section" id="start" aria-labelledby="start-title">
+        <div class="section-heading">
+          <p class="kicker">Start Here</p>
+          <h2 id="start-title">First-Hour Compiler Workflow</h2>
+        </div>
+        <p class="records-intro">
+          Use this as the opening route for a work session: finish the high-value
+          source-note queue, read the direct PDFs, export the chronology, then line up
+          the onsite pulls that can replace weak public leads.
+        </p>
+        <div class="start-grid" aria-label="First-hour compiler workflow">
+          <article class="start-card">
+            <p class="start-step">01</p>
+            <h3>Clear the finalization queue</h3>
+            <p>
+              <strong id="start-finalization-count">0</strong> records need page spans,
+              markings, declassification accounting, or disposition checks.
+            </p>
+            <a href="#finalization">Open finalization queue</a>
+          </article>
+          <article class="start-card">
+            <p class="start-step">02</p>
+            <h3>Read the strongest PDFs</h3>
+            <p>
+              <strong id="start-pdf-candidates">0</strong> candidates cover
+              <span id="start-pdf-pages">0</span> public pages with local extraction
+              scratchpads.
+            </p>
+            <a href="pdfs/">Open PDF desk</a>
+          </article>
+          <article class="start-card">
+            <p class="start-step">03</p>
+            <h3>Export the chronology</h3>
+            <p>
+              <strong id="start-chronology-count">0</strong> released records and
+              <span id="start-pdf-links">0</span> direct PDF links are ready for CSV or
+              Markdown worksheet export.
+            </p>
+            <a href="#chronology">Open chronology exports</a>
+          </article>
+          <article class="start-card">
+            <p class="start-step">04</p>
+            <h3>Queue replacement pulls</h3>
+            <p>
+              <strong id="start-pull-count">0</strong> pull or extraction blockers
+              still need reading-room requests, page mapping, or replacement searches.
+            </p>
+            <a href="#library">Open pull strategy</a>
+          </article>
+        </div>
+      </section>
+
       <section class="section chronology-section" id="chronology" aria-labelledby="chronology-title">
         <div class="section-heading">
           <p class="kicker">Chronology</p>
@@ -722,7 +775,7 @@
       <a href="https://github.com/therealjameswilson/Clinton-South-and-Southern-Africa">Repository</a>
     </footer>
     <script src="data/records.js?v=2026-06-02"></script>
-    <script src="app.js?v=2026-06-02b"></script>
+    <script src="app.js?v=2026-06-02c"></script>
     <script id="compiler-network-script">
       (() => {
         const button = document.querySelector("[data-compiler-handoff]");

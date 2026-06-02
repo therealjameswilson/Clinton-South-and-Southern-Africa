@@ -307,6 +307,66 @@ dd {
   line-height: 1.68;
 }
 
+.start-section {
+  padding-top: clamp(28px, 5vw, 54px);
+  border-top: 0;
+}
+
+.start-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.start-card {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-height: 245px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--teal);
+  border-radius: 8px;
+}
+
+.start-card:first-child {
+  border-left-color: var(--rust);
+}
+
+.start-step {
+  margin: 0;
+  color: var(--rust);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.start-card h3 {
+  margin: 0;
+}
+
+.start-card p {
+  margin: 0;
+  color: #46525e;
+  line-height: 1.58;
+}
+
+.start-card strong {
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+}
+
+.start-card a {
+  width: fit-content;
+  margin-top: auto;
+  color: var(--navy);
+  font-weight: 850;
+}
+
 .report-links,
 .source-list,
 .facet-list {
@@ -323,6 +383,7 @@ dd {
 .report-links button,
 .source-list a,
 .facet-list a,
+.start-card a,
 .record-links a,
 .docket-item a,
 .standard-panel a,
@@ -968,6 +1029,7 @@ footer a {
   }
 
   .stats,
+  .start-grid,
   .gap-summary,
   .risk-ledger,
   .library-grid,
@@ -1000,6 +1062,7 @@ footer a {
   }
 
   .stats,
+  .start-grid,
   .gap-summary,
   .risk-ledger,
   .library-grid,
