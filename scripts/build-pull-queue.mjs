@@ -99,6 +99,15 @@ function sourcePath(record) {
     .join(", ");
 }
 
+function publishedSourceNote(record) {
+  return record.frusSourceNote || record.sourceNote || "Source note pending.";
+}
+
+function workingSourceNote(record) {
+  const published = publishedSourceNote(record);
+  return record.sourceNote && record.sourceNote !== published ? record.sourceNote : "";
+}
+
 function isPullQueueRecord(record) {
   const text = [
     record.type,
@@ -107,6 +116,7 @@ function isPullQueueRecord(record) {
     record.declassificationStatus,
     record.annotationStatus,
     record.withheldMaterial,
+    record.frusSourceNote,
     record.sourceNote,
     record.sourceNoteAddendum
   ]
@@ -198,7 +208,8 @@ function buildRows(records) {
       request_text: requestText(record),
       catalog_url: record.catalogUrl || "",
       pdf_urls: pdfLinks(record).join(" "),
-      source_note: record.sourceNote || "",
+      source_note: publishedSourceNote(record),
+      working_source_note: workingSourceNote(record),
       source_note_addendum: record.sourceNoteAddendum || ""
     }));
 }
@@ -235,7 +246,8 @@ function buildReport(rows) {
     ]),
     "## Request Log Fields",
     "",
-    "- Collection, series, box/OA, folder, item ID, case number, or NAID",
+    "- Collection, series, box/OA, folder, and file title for the FRUS source note",
+    "- Item ID, case number, and NAID in the working locator",
     "- Document title/date, sender/recipient/participants, and country scope",
     "- Original classification, handling markings, and declassification status",
     "- Page span, withdrawal/exemption note, scan status, and replacement-search terms",
@@ -290,9 +302,9 @@ function buildHtml(rows) {
             <p class="blocker">${html(row.blocker)}</p>
             <p class="request">${html(row.request_text)}</p>
             <details>
-              <summary>Source note</summary>
+              <summary>FRUS source note</summary>
               <p>${html(row.source_note || "Source note pending.")}</p>
-              ${row.source_note_addendum ? `<p>${html(row.source_note_addendum)}</p>` : ""}
+              ${row.source_note_addendum ? `<p><strong>Compiler note:</strong> ${html(row.source_note_addendum)}</p>` : ""}
             </details>
             <div class="actions">
               ${row.catalog_url ? `<a class="button primary" href="${attr(row.catalog_url)}" rel="noreferrer">Catalog item</a>` : ""}
@@ -511,6 +523,7 @@ function build() {
     "catalog_url",
     "pdf_urls",
     "source_note",
+    "working_source_note",
     "source_note_addendum"
   ];
 

@@ -130,6 +130,7 @@ function isDeclassifiedChronologyRecord(record) {
     record.originalClassification,
     record.source?.name,
     record.source?.collection,
+    record.frusSourceNote,
     record.sourceNote
   ]
     .filter(Boolean)
@@ -188,6 +189,15 @@ function firstReadHtml(record, pdfStatus) {
   return file?.url ? `<a class="button primary" href="${attr(file.url)}" rel="noreferrer">Open PDF</a>` : `<span class="button muted">No direct PDF</span>`;
 }
 
+function publishedSourceNote(record) {
+  return record.frusSourceNote || record.sourceNote || "Source note pending.";
+}
+
+function workingSourceNote(record) {
+  const published = publishedSourceNote(record);
+  return record.sourceNote && record.sourceNote !== published ? record.sourceNote : "";
+}
+
 function pdfActionsHtml(record) {
   const files = recordPdfFiles(record);
   if (!files.length) return "";
@@ -221,6 +231,7 @@ function buildChronologyHtml(chronology, pdfStatuses, counts) {
         listValues(record.countries).join(" "),
         listValues(record.persons).join(" "),
         listValues(record.indexTerms).join(" "),
+        record.frusSourceNote,
         record.sourceNote,
         record.sourceNoteAddendum
       ]
@@ -258,9 +269,9 @@ function buildChronologyHtml(chronology, pdfStatuses, counts) {
             </dl>
             <p class="action-note">${html(chronologyAction(record, pdfStatus))}</p>
             <details>
-              <summary>Source note</summary>
-              <p>${html(record.sourceNote || "Source note pending.")}</p>
-              ${record.sourceNoteAddendum ? `<p>${html(record.sourceNoteAddendum)}</p>` : ""}
+              <summary>FRUS source note</summary>
+              <p>${html(publishedSourceNote(record))}</p>
+              ${record.sourceNoteAddendum ? `<p><strong>Compiler note:</strong> ${html(record.sourceNoteAddendum)}</p>` : ""}
               ${record.withheldMaterial ? `<p><strong>Withheld material:</strong> ${html(record.withheldMaterial)}</p>` : ""}
             </details>
             <div class="card-actions">
@@ -758,7 +769,8 @@ function build() {
       first_read_url: pdfStatus?.first_read_url || files[0]?.url || "",
       next_action: chronologyAction(record, pdfStatus),
       withheld_material: record.withheldMaterial || "",
-      source_note: record.sourceNote || "",
+      source_note: publishedSourceNote(record),
+      working_source_note: workingSourceNote(record),
       source_note_addendum: record.sourceNoteAddendum || "",
       index_terms: listValues(record.indexTerms).join("; ")
     };
@@ -789,6 +801,7 @@ function build() {
     "next_action",
     "withheld_material",
     "source_note",
+    "working_source_note",
     "source_note_addendum",
     "index_terms"
   ];
@@ -842,8 +855,8 @@ function build() {
         record.declassificationStatus ? `- Declassification: ${record.declassificationStatus}` : null,
         record.withheldMaterial ? `- Withheld material: ${record.withheldMaterial}` : null,
         `- Compiler action: ${chronologyAction(record, pdfStatus)}`,
-        `- Source note: ${record.sourceNote || "Pending."}`,
-        record.sourceNoteAddendum ? `- Source-note addendum: ${record.sourceNoteAddendum}` : null,
+        `- FRUS source note: ${publishedSourceNote(record)}`,
+        record.sourceNoteAddendum ? `- Compiler source-note comment: ${record.sourceNoteAddendum}` : null,
         ""
       ].filter((line) => line !== null);
     }),

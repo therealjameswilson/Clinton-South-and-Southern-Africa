@@ -49,7 +49,8 @@ Use this with the [declassified chronology desk](../chronology/) and [PDF desk](
 
 ## Request Log Fields
 
-- Collection, series, box/OA, folder, item ID, case number, or NAID
+- Collection, series, box/OA, folder, and file title for the FRUS source note
+- Item ID, case number, and NAID in the working locator
 - Document title/date, sender/recipient/participants, and country scope
 - Original classification, handling markings, and declassification status
 - Page span, withdrawal/exemption note, scan status, and replacement-search terms

@@ -484,6 +484,10 @@
         return recordPdfFiles(record).reduce((sum, file) => sum + (Number(file.pages) || 0), 0);
       }
 
+      function publishedSourceNote(record) {
+        return record.frusSourceNote || record.sourceNote || "Source note pending.";
+      }
+
       function extractionTarget(record) {
         const note = record.sourceNoteAddendum || record.subjectLine || "";
         if (/Soderberg/i.test(record.documentTitle || record.title)) {
@@ -686,9 +690,9 @@
           "- Relationship to surrounding chronology:",
           "- Include / Context / Drop / Replacement search:",
           "",
-          "## Draft Source Note",
+          "## FRUS Source Note",
           "",
-          record.sourceNote || "Source note pending.",
+          publishedSourceNote(record),
           "",
           "## Annotation Hooks",
           "",
@@ -889,7 +893,7 @@
 
         const source = document.createElement("p");
         source.className = "source-note";
-        source.textContent = record.sourceNote || "Source note pending.";
+        source.textContent = publishedSourceNote(record);
 
         const pageMap = renderPageMap(record, primaryPdf);
 

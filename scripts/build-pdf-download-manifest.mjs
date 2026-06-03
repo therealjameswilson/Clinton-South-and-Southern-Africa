@@ -107,6 +107,7 @@ function isChronologyRecord(record) {
     record.originalClassification,
     record.source?.name,
     record.source?.collection,
+    record.frusSourceNote,
     record.sourceNote
   ]
     .filter(Boolean)

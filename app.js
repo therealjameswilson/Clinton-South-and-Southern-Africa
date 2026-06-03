@@ -61,6 +61,7 @@ function isDeclassifiedChronologyRecord(record) {
     record.originalClassification,
     record.source?.name,
     record.source?.collection,
+    record.frusSourceNote,
     record.sourceNote
   ]
     .filter(Boolean)
@@ -174,6 +175,7 @@ function sourceClearance(record) {
 }
 
 function createSourceNoteDraft(record) {
+  if (record.frusSourceNote) return record.frusSourceNote;
   if (record.sourceNote) return record.sourceNote;
 
   const path = sourcePathParts(record);
@@ -192,7 +194,7 @@ function createSourceNoteDraft(record) {
 }
 
 function hasSourceCitation(record) {
-  const note = [record.sourceNote, record.sourceNoteAddendum].filter(Boolean).join(" ");
+  const note = [record.frusSourceNote, record.sourceNote, record.sourceNoteAddendum].filter(Boolean).join(" ");
   const noteLooksComplete = /^Source:\s+\S/i.test(note) && !/pending|sample only|replace|\[[^\]]+\]/i.test(note);
   const pathLooksComplete = sourcePathParts(record).length >= 2;
   const hasMarkings = Boolean(noteLooksComplete || sourceMarkings(record));
@@ -344,7 +346,8 @@ function chronologyExportRows(records = chronologyRecords()) {
     record.releaseStatus || "",
     record.declassificationStatus || "",
     sourceMarkings(record),
-    record.sourceNote || "",
+    createSourceNoteDraft(record),
+    record.sourceNote && record.sourceNote !== createSourceNoteDraft(record) ? record.sourceNote : "",
     record.sourceNoteAddendum || "",
     record.annotationStatus || ""
   ]);
@@ -369,6 +372,7 @@ function buildChronologyCsv(records = chronologyRecords()) {
     "declassification_status",
     "markings",
     "source_note",
+    "working_source_note",
     "source_note_addendum",
     "annotation_status"
   ];
@@ -391,7 +395,8 @@ function chronologyWorksheetSection(record, index) {
     `- Catalog item: ${record.catalogUrl || "Pending"}`,
     "- PDF links:",
     markdownList(pdfUrls),
-    `- Current source note: ${record.sourceNote || "Pending"}`,
+    `- FRUS-style source note: ${createSourceNoteDraft(record) || "Pending"}`,
+    record.sourceNote && record.sourceNote !== createSourceNoteDraft(record) ? `- Working source locator: ${record.sourceNote}` : "",
     record.sourceNoteAddendum ? `- Source-note addendum: ${record.sourceNoteAddendum}` : "",
     record.declassificationStatus ? `- Declassification: ${record.declassificationStatus}` : "",
     "",
@@ -434,7 +439,7 @@ function needsDocumentPageMap(record) {
 
 function finalizationIssues(record) {
   const issues = [];
-  if (!record.sourceNote) issues.push("Draft source note");
+  if (!record.frusSourceNote && !record.sourceNote) issues.push("FRUS-style source note");
   if (!record.date || /^\d{4}$/.test(record.date)) issues.push("Exact date");
   if (needsDocumentPageMap(record)) issues.push("Document page spans");
   if (!sourceMarkings(record) && !/public|unclassified/i.test([record.originalClassification, record.declassificationStatus, record.releaseStatus].filter(Boolean).join(" "))) {
@@ -508,7 +513,7 @@ function finalizationCsv(records = finalizationRecords()) {
     finalizationAction(record),
     recordPdfUrls(record).join(" "),
     record.catalogUrl || "",
-    record.sourceNote || ""
+    createSourceNoteDraft(record)
   ]);
   return [header, ...rows].map((row) => row.map(csv).join(",")).join("\n") + "\n";
 }
@@ -871,7 +876,7 @@ function renderEmptyState() {
       <div class="empty-grid" aria-label="Recommended first fields">
         <span>selectionDecision</span>
         <span>washingtonTime</span>
-        <span>sourceNote</span>
+        <span>frusSourceNote</span>
         <span>source.path</span>
         <span>documentMarkings</span>
         <span>handlingMarkings</span>

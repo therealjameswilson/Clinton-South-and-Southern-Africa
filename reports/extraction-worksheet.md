@@ -19,7 +19,7 @@ Shorter range review queue: [`reports/pdf-range-review.md`](pdf-range-review.md)
 | 1 | Open the candidate PDF directly from the table below. | Confirm the PDF loads and identify whether it is a single document, packet, or packet plus withdrawal sheets. |
 | 2 | Page-map the PDF before reading closely. | Record page ranges for each document, withdrawal sheet, routing memo, attachment, and duplicate. |
 | 3 | Extract only volume-relevant document candidates. | Keep South Africa, Angola, Mozambique, Zimbabwe/SADC, AIDS diplomacy, UNITA sanctions, landmines, and arms-trafficking material in view. |
-| 4 | Draft a FRUS-style source note for each selected document. | Include repository, collection path, folder/item title, item/case/NAID number, page span, markings, and release/excision status. |
+| 4 | Draft a FRUS-style source note for each selected document. | Include repository, collection path, folder or item title, page span, markings, and release/excision status. |
 | 5 | Make the disposition call. | Mark `Include`, `Context`, `Drop`, or `Replacement search` with a one-sentence rationale. |
 
 ## Direct PDF Queue
@@ -43,7 +43,7 @@ Shorter range review queue: [`reports/pdf-range-review.md`](pdf-range-review.md)
 - Omitted material: withheld pages, excisions, withdrawal sheets, and cited exemptions.
 - Selection rationale: why the document shows a major policy decision, significant diplomatic activity, or essential context.
 - Annotation hooks: people, organizations, events, related records, and explanatory footnotes needed.
-- Source note: final FRUS-style repository path, item ID/case number/NAID, file title, markings, and page span.
+- Source note: final FRUS-style repository path, folder or file title, markings, and page span.
 - Disposition: `Include`, `Context`, `Drop`, or `Replacement search`.
 
 ## Packet-Splitting Rule
@@ -59,7 +59,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/72408
 - PDF links: [PDF, 3 pages](https://clinton.presidentiallibraries.us/files/original/d99d763c5a60d17afe606193e3fb0a86.pdf)
 - Extraction target: Policy Coordination Committee-level Angola material; confirm whether the Bosnia/Angola meeting notes contain decision-grade Angola content.
-- Current source note: Source: Clinton Digital Library, National Security Council, Nancy Soderberg files, Box 10, [Soderberg Notes from Bosnia and Angola PC Meeting, November 7, 1994], item 72408. PDF available from item page; full source markings and page span require PDF review.
+- FRUS-style source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Nancy Soderberg files, Box 10, [Soderberg Notes from Bosnia and Angola PC Meeting, November 7, 1994].
 
 | Field | Extraction notes |
 | --- | --- |
@@ -83,7 +83,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14676
 - PDF links: [PDF, 6 pages](https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf)
 - Extraction target: Released/withdrawn Zimbabwe presidential correspondence, Clinton-Mugabe contact, and control dates for replacement searches.
-- Current source note: Source: Clinton Digital Library, Previously Restricted Document Release no. 5, FOIA 2006-0457-F - Zimbabwe, item 14676, case 2006-0457-F. The online PDF is 6 pages and covers NSC African Affairs folders Zimbabwe 1995, OA/Box 872, and Zimbabwe 1997 [1], OA/Box 1438.
+- FRUS-style source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, African Affairs, Box 872 and 1438, Zimbabwe 1995; Zimbabwe 1997 [1], FOIA 2006-0457-F - Zimbabwe.
 - Promotion note: Use as a document-level pull/control record for Zimbabwe presidential correspondence and Clinton-Mugabe contact.
 - Withholding note: Withdrawal sheets list a December 5, 1994 Zimbabwe briefing, September 22, 1997 handwritten Clinton-Mugabe meeting notes, and several 1997 letters, cables, and reports withheld in whole or in part.
 
@@ -109,7 +109,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14571
 - PDF links: [PDF, 157 pages](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
 - Extraction target: Clinton-Mugabe meeting preparation, talking points, land/democracy/AIDS background papers, and withheld briefing-paper control data.
-- Current source note: Source: Clinton Digital Library, Declassified Documents, FOIA 2006-0457-F - Zimbabwe, item 14571, case 2006-0457-F, Clinton Presidential Records, National Security Council, African Affairs, OA/Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995. The online PDF is 157 pages.
+- FRUS-style source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, African Affairs, Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995, FOIA 2006-0457-F - Zimbabwe.
 - Promotion note: High-value include candidate for Zimbabwe policy; final promotion requires reading the released pages against the withdrawal sheets and locating any open replacements for withheld briefing material.
 - Withholding note: The withdrawal sheets list the main May 16, 1995 briefing paper, talking points, U.S. Government reports, Acting Secretary Tarnoff memorandum, DeShazer and Lake memoranda, background papers on U.S.-Zimbabwe relations, democracy, cooperation, land, AIDS, and an April 21, 1995 Harare cable.
 
@@ -135,7 +135,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64751
 - PDF links: [PDF, 61 pages](https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf)
 - Extraction target: Mbeki state-visit AIDS diplomacy, presidential AIDS panel cables, and April 2000 Mbeki-Clinton correspondence.
-- Current source note: Source: Clinton Digital Library, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646], item 64751, NAID 54977305. The online PDF is 61 pages.
+- FRUS-style source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646].
 - Promotion note: High-value include candidate paired with item 64750; final record split should separate correspondence, state visit preparation, and AIDS-policy analysis.
 - Withholding note: Withdrawal sheets list an 11-page HIV/AIDS paper, cables on the presidential AIDS panel and Mbeki state visit, and Mbeki-Clinton letters from April 2000.
 
@@ -161,7 +161,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64750
 - PDF links: [PDF, 70 pages](https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf)
 - Extraction target: Cables, memoranda, and draft presidential correspondence on Mbeki's HIV/AIDS views and the May 2000 state visit.
-- Current source note: Source: Clinton Digital Library, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646], item 64750, NAID 54977304. The online PDF is 70 pages.
+- FRUS-style source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646].
 - Promotion note: High-value include candidate for the intersection of South Africa bilateral relations and global AIDS policy; select document-level entries after page-span extraction.
 - Withholding note: Withdrawal sheets list cables on Mbeki's alleged comments, Mandela and Mbeki, Mbeki remarks, Gore correspondence, Mbeki's HIV/AIDS theory, and Clinton-Mbeki draft correspondence.
 
@@ -187,7 +187,7 @@ Do not cite a multi-document PDF packet as a single final FRUS document unless t
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/118505
 - PDF links: [PDF, 98 pages](https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf)
 - Extraction target: UNITA sanctions, Angola policy, South Africa arrest/extradition strategy, and regional arms-trafficking analysis.
-- Current source note: Source: Clinton Digital Library, Mandatory Declassification Review, National Security Council, Declassified Documents Regarding Victor Butt/Bout, item 118505, case 2016-0165-M, FOIA case 2006-0684-F. The online PDF is 98 pages.
+- FRUS-style source note: Source: Clinton Library, Clinton Presidential Records, Mandatory Declassification Review, National Security Council, FOIA case 2006-0684-F, Declassified Documents Regarding Victor Butt/Bout.
 - Promotion note: High-value regional-security candidate because the packet links UNITA sanctions, Angola, South Africa legal strategy, and wider sub-Saharan arms trafficking.
 
 | Field | Extraction notes |
