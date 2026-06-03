@@ -7,23 +7,25 @@ The assist page now separates the public citation from the verification locator:
 
 The public source note uses FRUS order:
 
-1. Repository or public source
+1. Formal repository name
 2. Collection, series, box, folder, and item title
 3. Original classification, release status, handling markings, and page span
 4. Transmission, meeting location, drafting, clearance, approval, marginalia, and withheld-material details
 
 ## Current Standard
 
-Use `Source:` at the beginning of every public source note. Do not include Clinton Digital Library item IDs, NAIDs, "PDF available" language, or review caveats in `frusSourceNote`; put those in `sourceNote` or `sourceNoteAddendum`.
+Use `Source:` at the beginning of every public source note. For this volume, the repository lead is `William J. Clinton Presidential Library, Clinton Presidential Records`. Do not include Clinton Digital Library item IDs, NAIDs, "PDF available" language, or review caveats in `frusSourceNote`; put those in `sourceNote` or `sourceNoteAddendum`.
 
 Do not promote a finding-aid lead as a document record until the actual source item has been inspected.
 
 ## Current Seed Status
 
-- All structured records now include a `frusSourceNote` with repository, collection or series, box/folder/item title when available, and a FRUS-style `Source:` lead.
+- All structured records now include a `frusSourceNote` with the formal repository and records lead, collection or series, box/folder/item title when available, and a FRUS-style `Source:` lead.
 - The older `sourceNote` field still carries item ID, case number, NAID, PDF availability, and review-status context for auditability.
 - Released packets are still seed records until page spans, internal document titles, markings, and withdrawal-sheet relationships are extracted.
 - Finding aids remain source leads when the Clinton Digital Library says scans are not available online.
+
+Detailed provenance check: [`reports/source-note-provenance-audit.md`](source-note-provenance-audit.md). Repeatable machine audit: [`reports/frus-source-note-provenance-audit.json`](frus-source-note-provenance-audit.json).
 
 ## Known Draft-Level Fields
 

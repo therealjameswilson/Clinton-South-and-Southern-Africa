@@ -59,7 +59,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Antony Blinken files, Lake - Africa, Brookings - 5/3/93.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Antony Blinken files, Lake - Africa, Brookings - 5/3/93.
 
 ### 2. Namibia public affairs file
 
@@ -74,7 +74,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Office of Press and Communications - Philip J. Crowley, Box 11, Namibia.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Office of Press and Communications - Philip J. Crowley, Box 11, Namibia.
 - Compiler source-note comment: Use as context and keyword support for Namibia; prioritize internal policy records if located.
 
 ### 3. Mandatory Declassification Review packet concerning Amy Biehl and South African political violence
@@ -90,7 +90,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: MDR packet online
 - Declassification: Declassified item page with PDF; date available 12/14/2018
 - Compiler action: Use as released evidence, then split any document-grade pages into final candidate records.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, Mandatory Declassification Review, National Security Council, NSC Cables, and NSC Emails, Declassified Documents Concerning Amy Biehl.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, Mandatory Declassification Review, National Security Council, NSC Cables, and NSC Emails, Declassified Documents Concerning Amy Biehl.
 - Compiler source-note comment: Use for South Africa transition context only; select individual cables only if they illuminate U.S. policy toward political violence, ANC-PAC dynamics, or human rights during the transition.
 
 ### 4. Soderberg notes from Bosnia and Angola PC meeting
@@ -107,7 +107,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Declassified item page with PDF
 - Compiler action: Log the administrative and withdrawal pages, then queue replacement search or onsite review before promotion.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Nancy Soderberg files, Box 10, [Soderberg Notes from Bosnia and Angola PC Meeting, November 7, 1994].
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Nancy Soderberg files, Box 10, [Soderberg Notes from Bosnia and Angola PC Meeting, November 7, 1994].
 
 ### 5. Angola background speechwriting file
 
@@ -122,7 +122,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 6, Angola - Background.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 6, Angola - Background.
 - Compiler source-note comment: Use as context only until Angola policy memoranda, cables, or PC/DC records are extracted from the Angola finding aid.
 
 ### 6. Landmines background speechwriting file
@@ -138,7 +138,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 6, Landmines.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 6, Landmines.
 - Compiler source-note comment: Pair with internal demining, Angola, Mozambique, and humanitarian-assistance files before selection.
 
 ### 7. Mozambique background packet
@@ -154,7 +154,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Mozambique - Background.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Mozambique - Background.
 - Compiler source-note comment: Use as context until an internal policy memorandum, briefing book, or diplomatic communication is located.
 
 ### 8. Southern Africa background speechwriting file
@@ -170,7 +170,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Southern Africa - Background.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Southern Africa - Background.
 - Compiler source-note comment: Use as a regional frame and keyword source; do not promote as policy evidence without corresponding internal records.
 
 ### 9. Zimbabwe 1995 and Zimbabwe 1997 FOIA release packet
@@ -188,7 +188,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Declassification: Released packet with withdrawal sheets and selected pages
 - Withheld material: Withdrawal sheets list a December 5, 1994 Zimbabwe briefing, September 22, 1997 handwritten Clinton-Mugabe meeting notes, and several 1997 letters, cables, and reports withheld in whole or in part.
 - Compiler action: Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, African Affairs, Box 872 and 1438, Zimbabwe 1995; Zimbabwe 1997 [1], FOIA 2006-0457-F - Zimbabwe.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, African Affairs, Box 872 and 1438, Zimbabwe 1995; Zimbabwe 1997 [1], FOIA 2006-0457-F - Zimbabwe.
 - Compiler source-note comment: Use as a document-level pull/control record for Zimbabwe presidential correspondence and Clinton-Mugabe contact.
 
 ### 10. Anthony Lake Zambia speech file
@@ -204,7 +204,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 20, [Anthony] Lake - Zambia Speech, 12/19/94.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 20, [Anthony] Lake - Zambia Speech, 12/19/94.
 
 ### 11. Zambia background speechwriting file
 
@@ -219,7 +219,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Zambia - Background.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Zambia - Background.
 - Compiler source-note comment: Use as context and search vocabulary for Zambia; promote only if internal policy records remain unavailable and the public file explains selected documents.
 
 ### 12. Zimbabwe background speechwriting file
@@ -235,7 +235,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Zimbabwe - Background.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Robert Boorstin files, Box 8, Zimbabwe - Background.
 - Compiler source-note comment: Use as context and keyword support for the Zimbabwe FOIA and finding-aid records.
 
 ### 13. Mugabe visit briefing packet and talking points
@@ -253,7 +253,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Declassification: Withdrawal sheets list multiple documents withheld or partially withheld under P1/b(1), P5, and P6/b(6)
 - Withheld material: The withdrawal sheets list the main May 16, 1995 briefing paper, talking points, U.S. Government reports, Acting Secretary Tarnoff memorandum, DeShazer and Lake memoranda, background papers on U.S.-Zimbabwe relations, democracy, cooperation, land, AIDS, and an April 21, 1995 Harare cable.
 - Compiler action: Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, African Affairs, Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995, FOIA 2006-0457-F - Zimbabwe.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, African Affairs, Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995, FOIA 2006-0457-F - Zimbabwe.
 - Compiler source-note comment: High-value include candidate for Zimbabwe policy; final promotion requires reading the released pages against the withdrawal sheets and locating any open replacements for withheld briefing material.
 
 ### 14. Ellen McCathran Presidential Daily Diary hardcopy date set including May 18, 1995
@@ -269,7 +269,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public diary PDF
 - Compiler action: Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, Presidential Daily Diary, Ellen McCathran - Presidential Diarist, Presidential Daily Diary hardcopy, Box 1, [Ellen McCathran - Presidential Daily Diary - Hardcopy 4/4/95; 4/12/95; 4/25/95; 5/7/95; 5/18/95; 5/22/95; 5/26/95; 6/7/95; 6/8/95; 6/18/95; 6/30/95].
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, Presidential Daily Diary, Ellen McCathran - Presidential Diarist, Presidential Daily Diary hardcopy, Box 1, [Ellen McCathran - Presidential Daily Diary - Hardcopy 4/4/95; 4/12/95; 4/25/95; 5/7/95; 5/18/95; 5/22/95; 5/26/95; 6/7/95; 6/8/95; 6/18/95; 6/30/95].
 - Compiler source-note comment: Use only as a chronology and attendance control for the Mugabe visit; do not promote without a substantive meeting record or briefing document.
 
 ### 15. President Clinton to President Mugabe draft letter
@@ -285,7 +285,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released inside FOIA packet
 - Declassification: Document 008 listed with P5 restriction history; released page visible in packet
 - Compiler action: Use as released evidence, then split any document-grade pages into final candidate records.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, African Affairs, Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995, President Clinton to President Mugabe [draft].
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, African Affairs, Box 2663, Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995, President Clinton to President Mugabe [draft].
 - Compiler source-note comment: Use as context unless paired with the final signed correspondence or meeting memorandum.
 
 ### 16. Erica Barks-Ruggles memorandum to Samuel Berger on African-African American Summit
@@ -302,7 +302,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Declassification: Withheld or partially withheld under P1/b(1); released text in related email pages requires review
 - Withheld material: Withdrawal sheet lists a two-page July 16, 1997 memorandum and an eight-page aircraft mission-members chart.
 - Compiler action: Make the include/context/drop decision and record the volume-scope rationale before promotion.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Records Management, Box 1631, [Zimb*], folder 9704944, Erica Barks-Ruggles to Samuel Berger, re: Update on African-African American Summit.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Records Management, Box 1631, [Zimb*], folder 9704944, Erica Barks-Ruggles to Samuel Berger, re: Update on African-African American Summit.
 - Compiler source-note comment: Boundary review required: include only if the summit records illuminate U.S. policy toward Zimbabwe, SADC, or regional leadership rather than public liaison logistics alone.
 
 ### 17. Landmines statement
@@ -318,7 +318,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Antony Blinken files, Box 31, Landmines Statement 9/16/97.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Antony Blinken files, Box 31, Landmines Statement 9/16/97.
 
 ### 18. South Africa - Mandela Press Conference
 
@@ -333,7 +333,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Antony Blinken files, Box 34, South Africa - Mandela Press Conference 3/26/98.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Antony Blinken files, Box 34, South Africa - Mandela Press Conference 3/26/98.
 
 ### 19. Botswana Masire reception speechwriting file
 
@@ -348,7 +348,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Antony Blinken files, Box 35, Botswana - Masire Reception 3/29/98.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Antony Blinken files, Box 35, Botswana - Masire Reception 3/29/98.
 
 ### 20. Samuel Berger talking points for remarks on Africa
 
@@ -363,7 +363,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Public speechwriting item page with PDF
 - Compiler action: Use for public context and annotation support unless it directly explains a selected policy document.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Edward Widmer files, Africa - SRB [(Samuel R. Berger's) Talking Points for Remarks on Africa, April 13, 1998].
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Speechwriting Office, Edward Widmer files, Africa - SRB [(Samuel R. Berger's) Talking Points for Remarks on Africa, April 13, 1998].
 
 ### 21. FOIA 2006-0457-F - Zimbabwe
 
@@ -378,7 +378,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: FOIA packet online
 - Declassification: Declassified item page with PDF
 - Compiler action: Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, FOIA 2006-0457-F - Zimbabwe.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, FOIA 2006-0457-F - Zimbabwe.
 - Compiler source-note comment: Packet split into companion records for the May 1995 Mugabe visit, the May 30, 1995 draft Clinton letter, the 1997 African-African American Summit files, and PRDR no. 5 records.
 
 ### 22. National AIDS Policy Office Botswana file
@@ -394,7 +394,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Item page with PDF
 - Compiler action: Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National AIDS Policy Office, Box 10, Botswana.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National AIDS Policy Office, Box 10, Botswana.
 - Compiler source-note comment: Use to close the Botswana health-policy search path; select only southern Africa policy material with U.S. decision value.
 
 ### 23. National AIDS Policy Office Malawi file
@@ -410,7 +410,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Item page with PDF
 - Compiler action: Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National AIDS Policy Office, Box 24, Malawi.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National AIDS Policy Office, Box 24, Malawi.
 - Compiler source-note comment: Use as a smaller-state health-policy control; likely context unless internal regional-policy records cite Malawi directly.
 
 ### 24. South Africa [3]
@@ -426,7 +426,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: Released online
 - Declassification: Item page with PDF
 - Compiler action: Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, Office of Press and Communications - Philip J. Crowley, Box 13, South Africa [3].
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, Office of Press and Communications - Philip J. Crowley, Box 13, South Africa [3].
 - Compiler source-note comment: Likely public-affairs context rather than final FRUS documentary evidence.
 
 ### 25. Mbeki AIDS controversy packet, part 2
@@ -444,7 +444,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Declassification: Withdrawal sheets list documents withheld under P1/b(1); released pages available in PDF
 - Withheld material: Withdrawal sheets list an 11-page HIV/AIDS paper, cables on the presidential AIDS panel and Mbeki state visit, and Mbeki-Clinton letters from April 2000.
 - Compiler action: Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646].
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646].
 - Compiler source-note comment: High-value include candidate paired with item 64750; final record split should separate correspondence, state visit preparation, and AIDS-policy analysis.
 
 ### 26. Mbeki AIDS controversy packet, part 1
@@ -462,7 +462,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Declassification: Withdrawal sheets list documents withheld under P1/b(1); released pages available in PDF
 - Withheld material: Withdrawal sheets list cables on Mbeki's alleged comments, Mandela and Mbeki, Mbeki remarks, Gore correspondence, Mbeki's HIV/AIDS theory, and Clinton-Mbeki draft correspondence.
 - Compiler action: Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646].
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, National Security Council, NSC Legal Affairs Office, Box 50, Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646].
 - Compiler source-note comment: High-value include candidate for the intersection of South Africa bilateral relations and global AIDS policy; select document-level entries after page-span extraction.
 
 ### 27. MDR packet on the global AIDS crisis, Africa, and the Mbeki state visit
@@ -478,7 +478,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: MDR packet online
 - Declassification: Declassified item page with four PDFs; date available 10/21/2024
 - Compiler action: Make the include/context/drop decision and record the volume-scope rationale before promotion.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, Mandatory Declassification Review, National Economic Council, National Security Council, NSC Records Management System, 2007-1550-F, Declassified Documents Concerning the Global AIDS Crisis.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, Mandatory Declassification Review, National Economic Council, National Security Council, NSC Records Management System, 2007-1550-F, Declassified Documents Concerning the Global AIDS Crisis.
 - Compiler source-note comment: Boundary review required: select southern Africa material such as Mbeki state visit AIDS objectives and Namibia agreement cables; keep general global AIDS policy out of Volume XXVII unless it drives regional diplomacy.
 
 ### 28. MDR packet on Victor Butt/Bout arms trafficking and sub-Saharan Africa
@@ -495,7 +495,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: MDR packet online
 - Declassification: Declassified item page with PDF; date available 9/21/2022
 - Compiler action: Start with released-document ranges and extract Angola/UNITA sanctions plus South Africa enforcement strategy spans.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, Mandatory Declassification Review, National Security Council, FOIA case 2006-0684-F, Declassified Documents Regarding Victor Butt/Bout.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, Mandatory Declassification Review, National Security Council, FOIA case 2006-0684-F, Declassified Documents Regarding Victor Butt/Bout.
 - Compiler source-note comment: High-value regional-security candidate because the packet links UNITA sanctions, Angola, South Africa legal strategy, and arms-trafficking enforcement.
 
 ### 29. Namibia HIV/AIDS agreement cables in Global AIDS Crisis MDR packet
@@ -511,7 +511,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Release status: MDR packet online
 - Declassification: Declassified item page with PDF 4 containing Namibia agreement cables
 - Compiler action: Make the include/context/drop decision and record the volume-scope rationale before promotion.
-- FRUS source note: Source: Clinton Library, Clinton Presidential Records, Mandatory Declassification Review, National Economic Council, National Security Council, NSC Records Management System, 2007-1550-F, Declassified Documents Concerning the Global AIDS Crisis.
+- FRUS source note: Source: William J. Clinton Presidential Library, Clinton Presidential Records, Mandatory Declassification Review, National Economic Council, National Security Council, NSC Records Management System, 2007-1550-F, Declassified Documents Concerning the Global AIDS Crisis.
 - Compiler source-note comment: Boundary review required but likely useful for southern Africa health diplomacy if paired with Namibia bilateral-policy records.
 
 ## Method
