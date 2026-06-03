@@ -12,37 +12,37 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 
 ## Chronology
 
-| Date | Record | Decision | Type | Scope area | PDF / first read | Compiler action |
-| --- | --- | --- | --- | --- | --- | --- |
-| May 3, 1993 | [Anthony Lake Africa speech background at Brookings](https://clinton.presidentiallibraries.us/items/show/9010)<br><code>clinton-v27-002</code> | Context candidate | Public Statement | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/1a5c2506a1fdf503e6c564daba5a28f4.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Jun 16, 1993 | [Namibia public affairs file](https://clinton.presidentiallibraries.us/items/show/48570)<br><code>clinton-v27-039</code> | Context candidate | Public Statement | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/ec27462c59221f362248a316ea88bfaa.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Aug 25, 1993 | [Mandatory Declassification Review packet concerning Amy Biehl and South African political violence](https://clinton.presidentiallibraries.us/items/show/57650)<br><code>clinton-v27-018</code> | Context candidate | Release Packet | South Africa Transition and Bilateral Relations | [Open PDF](https://clinton.presidentiallibraries.us/files/original/4ac627959484159102933a3192305cae.pdf) | Use as released evidence, then split any document-grade pages into final candidate records. |
-| Nov 7, 1994 | [Soderberg notes from Bosnia and Angola PC meeting](https://clinton.presidentiallibraries.us/items/show/72408)<br><code>clinton-v27-005</code> | Include candidate | Source Lead | Angola, Mozambique, and Southern African Security | Replacement/onsite review | Log the administrative and withdrawal pages, then queue replacement search or onsite review before promotion. |
-| Dec 1, 1994 | [Angola background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10177)<br><code>clinton-v27-034</code> | Context candidate | Public Statement | Angola, Mozambique, and Southern African Security | [Open PDF](https://clinton.presidentiallibraries.us/files/original/dec14ca9fdbd28b7d81c3e10b07b3a85.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Dec 1, 1994 | [Landmines background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10129)<br><code>clinton-v27-036</code> | Context candidate | Public Statement | Angola, Mozambique, and Southern African Security | [Open PDF](https://clinton.presidentiallibraries.us/files/original/b77a8e435896410dac9b8c57aa71ae29.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Dec 1, 1994 | [Mozambique background packet](https://clinton.presidentiallibraries.us/items/show/10239)<br><code>clinton-v27-007</code> | Context candidate | Public Statement | Angola, Mozambique, and Southern African Security | [Open PDF](https://clinton.presidentiallibraries.us/files/original/6aaeb1da21af20839bbc4cf8d1c708b3.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Dec 1, 1994 | [Southern Africa background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10263)<br><code>clinton-v27-035</code> | Context candidate | Public Statement | Angola, Mozambique, and Southern African Security | [Open PDF](https://clinton.presidentiallibraries.us/files/original/a46d30222332f24687ae49c52290c48a.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Dec 5, 1994 | [Zimbabwe 1995 and Zimbabwe 1997 FOIA release packet](https://clinton.presidentiallibraries.us/items/show/14676)<br><code>clinton-v27-022</code> | Include candidate | Release Packet | Southern African Democracy, Health, and Economic Policy | [2](https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf#page=2) | Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches. |
-| Dec 19, 1994 | [Anthony Lake Zambia speech file](https://clinton.presidentiallibraries.us/items/show/11097)<br><code>clinton-v27-041</code> | Context candidate | Public Statement | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/97ce64a8792cca22ac4e8ece2f44ce94.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Dec 19, 1994 | [Zambia background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10278)<br><code>clinton-v27-042</code> | Context candidate | Public Statement | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Jan 1, 1995 | [Zimbabwe background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10279)<br><code>clinton-v27-050</code> | Context candidate | Public Statement | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/db667bda4db08fb5a78f2d73507cd8b1.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| May 16, 1995 | [Mugabe visit briefing packet and talking points](https://clinton.presidentiallibraries.us/items/show/14571)<br><code>clinton-v27-023</code> | Include candidate | Release Packet | Southern African Democracy, Health, and Economic Policy | [3](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf#page=3) | Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches. |
-| May 18, 1995 | [Ellen McCathran Presidential Daily Diary hardcopy date set including May 18, 1995](https://clinton.presidentiallibraries.us/items/show/36472)<br><code>clinton-v27-027</code> | Source lead | Source Lead | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/1b2548044da1ab7f808c7c123eced2ac.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
-| May 30, 1995 | [President Clinton to President Mugabe draft letter](https://clinton.presidentiallibraries.us/items/show/14571)<br><code>clinton-v27-024</code> | Context candidate | Release Packet | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf) | Use as released evidence, then split any document-grade pages into final candidate records. |
-| Jul 16, 1997 | [Erica Barks-Ruggles memorandum to Samuel Berger on African-African American Summit](https://clinton.presidentiallibraries.us/items/show/14571)<br><code>clinton-v27-025</code> | Boundary review | Source Lead | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf) | Make the include/context/drop decision and record the volume-scope rationale before promotion. |
-| Sep 16, 1997 | [Landmines statement](https://clinton.presidentiallibraries.us/items/show/9715)<br><code>clinton-v27-037</code> | Context candidate | Public Statement | Angola, Mozambique, and Southern African Security | [Open PDF](https://clinton.presidentiallibraries.us/files/original/f9de72c6f1d880690d97ae680d586635.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Mar 26, 1998 | [South Africa - Mandela Press Conference](https://clinton.presidentiallibraries.us/items/show/9798)<br><code>clinton-v27-010</code> | Context candidate | Public Statement | South Africa Transition and Bilateral Relations | [Open PDF](https://clinton.presidentiallibraries.us/files/original/8c33eeb89b620edd6594e80b2b290bd9.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Mar 29, 1998 | [Botswana Masire reception speechwriting file](https://clinton.presidentiallibraries.us/items/show/9804)<br><code>clinton-v27-044</code> | Context candidate | Public Statement | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/425f580fb944b53794d5f1454ab21710.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Apr 13, 1998 | [Samuel Berger talking points for remarks on Africa](https://clinton.presidentiallibraries.us/items/show/11370)<br><code>clinton-v27-012</code> | Context candidate | Public Statement | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/27ec86be28e49964d2cc63849a625c8c.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
-| Jun 1, 1999 | [FOIA 2006-0457-F - Zimbabwe](https://clinton.presidentiallibraries.us/items/show/14571)<br><code>clinton-v27-015</code> | Source lead | Source Lead | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
-| Jan 1, 2000 | [National AIDS Policy Office Botswana file](https://clinton.presidentiallibraries.us/items/show/64163)<br><code>clinton-v27-047</code> | Source lead | Source Lead | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/9364ec86ad4d726a134ac9f8212d1cd9.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
-| Jan 1, 2000 | [National AIDS Policy Office Malawi file](https://clinton.presidentiallibraries.us/items/show/64400)<br><code>clinton-v27-048</code> | Source lead | Source Lead | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/64f7e4a8421dfcf4adf33766adf44117.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
-| Jan 1, 2000 | [South Africa [3]](https://clinton.presidentiallibraries.us/items/show/48608)<br><code>clinton-v27-016</code> | Source lead | Source Lead | South Africa Transition and Bilateral Relations | [Open PDF](https://clinton.presidentiallibraries.us/files/original/69d36ed4cb7676b00e4ae76979a161db.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
-| Apr 3, 2000 | [Mbeki AIDS controversy packet, part 2](https://clinton.presidentiallibraries.us/items/show/64751)<br><code>clinton-v27-030</code> | Include candidate | Release Packet | South Africa Transition and Bilateral Relations | [16-17](https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf#page=16) | Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note. |
-| May 1, 2000 | [Mbeki AIDS controversy packet, part 1](https://clinton.presidentiallibraries.us/items/show/64750)<br><code>clinton-v27-029</code> | Include candidate | Release Packet | South Africa Transition and Bilateral Relations | [7-8](https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf#page=7) | Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note. |
-| May 4, 2000 | [MDR packet on the global AIDS crisis, Africa, and the Mbeki state visit](https://clinton.presidentiallibraries.us/items/show/119208)<br><code>clinton-v27-031</code> | Boundary review | Release Packet | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/658d3ce0236437eab569f63b04278e1f.pdf) | Make the include/context/drop decision and record the volume-scope rationale before promotion. |
-| Oct 1, 2000 | [MDR packet on Victor Butt/Bout arms trafficking and sub-Saharan Africa](https://clinton.presidentiallibraries.us/items/show/118505)<br><code>clinton-v27-038</code> | Include candidate | Release Packet | Angola, Mozambique, and Southern African Security | [1](https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf#page=1) | Start with released-document ranges and extract Angola/UNITA sanctions plus South Africa enforcement strategy spans. |
-| Nov 12, 2000 | [Namibia HIV/AIDS agreement cables in Global AIDS Crisis MDR packet](https://clinton.presidentiallibraries.us/items/show/119208)<br><code>clinton-v27-040</code> | Boundary review | Release Packet | Southern African Democracy, Health, and Economic Policy | [Open PDF](https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf) | Make the include/context/drop decision and record the volume-scope rationale before promotion. |
+| Date | Record | Decision | Type | PDF / first read | Compiler action |
+| --- | --- | --- | --- | --- | --- |
+| May 3, 1993 | [Anthony Lake Africa speech background at Brookings](https://clinton.presidentiallibraries.us/items/show/9010)<br><code>clinton-v27-002</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/1a5c2506a1fdf503e6c564daba5a28f4.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Jun 16, 1993 | [Namibia public affairs file](https://clinton.presidentiallibraries.us/items/show/48570)<br><code>clinton-v27-039</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/ec27462c59221f362248a316ea88bfaa.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Aug 25, 1993 | [Mandatory Declassification Review packet concerning Amy Biehl and South African political violence](https://clinton.presidentiallibraries.us/items/show/57650)<br><code>clinton-v27-018</code> | Context candidate | Release Packet | [Open PDF](https://clinton.presidentiallibraries.us/files/original/4ac627959484159102933a3192305cae.pdf) | Use as released evidence, then split any document-grade pages into final candidate records. |
+| Nov 7, 1994 | [Soderberg notes from Bosnia and Angola PC meeting](https://clinton.presidentiallibraries.us/items/show/72408)<br><code>clinton-v27-005</code> | Include candidate | Source Lead | Replacement/onsite review | Log the administrative and withdrawal pages, then queue replacement search or onsite review before promotion. |
+| Dec 1, 1994 | [Angola background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10177)<br><code>clinton-v27-034</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/dec14ca9fdbd28b7d81c3e10b07b3a85.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Dec 1, 1994 | [Landmines background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10129)<br><code>clinton-v27-036</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/b77a8e435896410dac9b8c57aa71ae29.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Dec 1, 1994 | [Mozambique background packet](https://clinton.presidentiallibraries.us/items/show/10239)<br><code>clinton-v27-007</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/6aaeb1da21af20839bbc4cf8d1c708b3.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Dec 1, 1994 | [Southern Africa background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10263)<br><code>clinton-v27-035</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/a46d30222332f24687ae49c52290c48a.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Dec 5, 1994 | [Zimbabwe 1995 and Zimbabwe 1997 FOIA release packet](https://clinton.presidentiallibraries.us/items/show/14676)<br><code>clinton-v27-022</code> | Include candidate | Release Packet | [2](https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf#page=2) | Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches. |
+| Dec 19, 1994 | [Anthony Lake Zambia speech file](https://clinton.presidentiallibraries.us/items/show/11097)<br><code>clinton-v27-041</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/97ce64a8792cca22ac4e8ece2f44ce94.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Dec 19, 1994 | [Zambia background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10278)<br><code>clinton-v27-042</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Jan 1, 1995 | [Zimbabwe background speechwriting file](https://clinton.presidentiallibraries.us/items/show/10279)<br><code>clinton-v27-050</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/db667bda4db08fb5a78f2d73507cd8b1.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| May 16, 1995 | [Mugabe visit briefing packet and talking points](https://clinton.presidentiallibraries.us/items/show/14571)<br><code>clinton-v27-023</code> | Include candidate | Release Packet | [3](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf#page=3) | Read released Zimbabwe ranges first, then log withheld briefing/correspondence controls for replacement searches. |
+| May 18, 1995 | [Ellen McCathran Presidential Daily Diary hardcopy date set including May 18, 1995](https://clinton.presidentiallibraries.us/items/show/36472)<br><code>clinton-v27-027</code> | Source lead | Source Lead | [Open PDF](https://clinton.presidentiallibraries.us/files/original/1b2548044da1ab7f808c7c123eced2ac.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
+| May 30, 1995 | [President Clinton to President Mugabe draft letter](https://clinton.presidentiallibraries.us/items/show/14571)<br><code>clinton-v27-024</code> | Context candidate | Release Packet | [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf) | Use as released evidence, then split any document-grade pages into final candidate records. |
+| Jul 16, 1997 | [Erica Barks-Ruggles memorandum to Samuel Berger on African-African American Summit](https://clinton.presidentiallibraries.us/items/show/14571)<br><code>clinton-v27-025</code> | Boundary review | Source Lead | [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf) | Make the include/context/drop decision and record the volume-scope rationale before promotion. |
+| Sep 16, 1997 | [Landmines statement](https://clinton.presidentiallibraries.us/items/show/9715)<br><code>clinton-v27-037</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/f9de72c6f1d880690d97ae680d586635.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Mar 26, 1998 | [South Africa - Mandela Press Conference](https://clinton.presidentiallibraries.us/items/show/9798)<br><code>clinton-v27-010</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/8c33eeb89b620edd6594e80b2b290bd9.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Mar 29, 1998 | [Botswana Masire reception speechwriting file](https://clinton.presidentiallibraries.us/items/show/9804)<br><code>clinton-v27-044</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/425f580fb944b53794d5f1454ab21710.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Apr 13, 1998 | [Samuel Berger talking points for remarks on Africa](https://clinton.presidentiallibraries.us/items/show/11370)<br><code>clinton-v27-012</code> | Context candidate | Public Statement | [Open PDF](https://clinton.presidentiallibraries.us/files/original/27ec86be28e49964d2cc63849a625c8c.pdf) | Use for public context and annotation support unless it directly explains a selected policy document. |
+| Jun 1, 1999 | [FOIA 2006-0457-F - Zimbabwe](https://clinton.presidentiallibraries.us/items/show/14571)<br><code>clinton-v27-015</code> | Source lead | Source Lead | [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
+| Jan 1, 2000 | [National AIDS Policy Office Botswana file](https://clinton.presidentiallibraries.us/items/show/64163)<br><code>clinton-v27-047</code> | Source lead | Source Lead | [Open PDF](https://clinton.presidentiallibraries.us/files/original/9364ec86ad4d726a134ac9f8212d1cd9.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
+| Jan 1, 2000 | [National AIDS Policy Office Malawi file](https://clinton.presidentiallibraries.us/items/show/64400)<br><code>clinton-v27-048</code> | Source lead | Source Lead | [Open PDF](https://clinton.presidentiallibraries.us/files/original/64f7e4a8421dfcf4adf33766adf44117.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
+| Jan 1, 2000 | [South Africa [3]](https://clinton.presidentiallibraries.us/items/show/48608)<br><code>clinton-v27-016</code> | Source lead | Source Lead | [Open PDF](https://clinton.presidentiallibraries.us/files/original/69d36ed4cb7676b00e4ae76979a161db.pdf) | Inspect the PDF and decide whether it becomes a document record, context control, or replacement-search lead. |
+| Apr 3, 2000 | [Mbeki AIDS controversy packet, part 2](https://clinton.presidentiallibraries.us/items/show/64751)<br><code>clinton-v27-030</code> | Include candidate | Release Packet | [16-17](https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf#page=16) | Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note. |
+| May 1, 2000 | [Mbeki AIDS controversy packet, part 1](https://clinton.presidentiallibraries.us/items/show/64750)<br><code>clinton-v27-029</code> | Include candidate | Release Packet | [7-8](https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf#page=7) | Read released AIDS-diplomacy ranges first, then attach withdrawal accounting to any candidate source note. |
+| May 4, 2000 | [MDR packet on the global AIDS crisis, Africa, and the Mbeki state visit](https://clinton.presidentiallibraries.us/items/show/119208)<br><code>clinton-v27-031</code> | Boundary review | Release Packet | [Open PDF](https://clinton.presidentiallibraries.us/files/original/658d3ce0236437eab569f63b04278e1f.pdf) | Make the include/context/drop decision and record the volume-scope rationale before promotion. |
+| Oct 1, 2000 | [MDR packet on Victor Butt/Bout arms trafficking and sub-Saharan Africa](https://clinton.presidentiallibraries.us/items/show/118505)<br><code>clinton-v27-038</code> | Include candidate | Release Packet | [1](https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf#page=1) | Start with released-document ranges and extract Angola/UNITA sanctions plus South Africa enforcement strategy spans. |
+| Nov 12, 2000 | [Namibia HIV/AIDS agreement cables in Global AIDS Crisis MDR packet](https://clinton.presidentiallibraries.us/items/show/119208)<br><code>clinton-v27-040</code> | Boundary review | Release Packet | [Open PDF](https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf) | Make the include/context/drop decision and record the volume-scope rationale before promotion. |
 
 ## Record Details
 
@@ -52,7 +52,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: May 3, 1993
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Africa
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/9010
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/1a5c2506a1fdf503e6c564daba5a28f4.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/1a5c2506a1fdf503e6c564daba5a28f4.pdf)
@@ -67,7 +67,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Jun 16, 1993
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Namibia
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/48570
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/ec27462c59221f362248a316ea88bfaa.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/ec27462c59221f362248a316ea88bfaa.pdf)
@@ -83,7 +83,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Aug 25, 1993
 - Decision: Context candidate
 - Type: Release Packet
-- Scope area: South Africa Transition and Bilateral Relations
+- Countries: United States, South Africa
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/57650
 - PDF links: [PDF](https://clinton.presidentiallibraries.us/files/original/4ac627959484159102933a3192305cae.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/4ac627959484159102933a3192305cae.pdf)
@@ -99,7 +99,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Nov 7, 1994
 - Decision: Include candidate
 - Type: Source Lead
-- Scope area: Angola, Mozambique, and Southern African Security
+- Countries: United States, Angola, Bosnia
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/72408
 - PDF links: [PDF](https://clinton.presidentiallibraries.us/files/original/d99d763c5a60d17afe606193e3fb0a86.pdf)
 - First read: Replacement/onsite review
@@ -115,7 +115,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Dec 1, 1994
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Angola, Mozambique, and Southern African Security
+- Countries: United States, Angola
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/10177
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/dec14ca9fdbd28b7d81c3e10b07b3a85.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/dec14ca9fdbd28b7d81c3e10b07b3a85.pdf)
@@ -131,7 +131,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Dec 1, 1994
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Angola, Mozambique, and Southern African Security
+- Countries: United States, Angola, Mozambique
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/10129
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/b77a8e435896410dac9b8c57aa71ae29.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/b77a8e435896410dac9b8c57aa71ae29.pdf)
@@ -147,7 +147,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Dec 1, 1994
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Angola, Mozambique, and Southern African Security
+- Countries: United States, Mozambique
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/10239
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/6aaeb1da21af20839bbc4cf8d1c708b3.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/6aaeb1da21af20839bbc4cf8d1c708b3.pdf)
@@ -163,7 +163,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Dec 1, 1994
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Angola, Mozambique, and Southern African Security
+- Countries: United States, South Africa, Angola, Mozambique, Zimbabwe, Zambia
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/10263
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/a46d30222332f24687ae49c52290c48a.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/a46d30222332f24687ae49c52290c48a.pdf)
@@ -179,7 +179,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Dec 5, 1994
 - Decision: Include candidate
 - Type: Release Packet
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zimbabwe
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14676
 - PDF links: [PDF](https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf)
 - First read: [2](https://clinton.presidentiallibraries.us/files/original/df4bb9956a0cbbcb0c924a11c321abd7.pdf#page=2)
@@ -197,7 +197,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Dec 19, 1994
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zambia
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/11097
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/97ce64a8792cca22ac4e8ece2f44ce94.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/97ce64a8792cca22ac4e8ece2f44ce94.pdf)
@@ -212,7 +212,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Dec 19, 1994
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zambia
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/10278
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/1bf312634d144d010e33243bf9af64eb.pdf)
@@ -228,7 +228,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Jan 1, 1995
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zimbabwe
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/10279
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/db667bda4db08fb5a78f2d73507cd8b1.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/db667bda4db08fb5a78f2d73507cd8b1.pdf)
@@ -244,7 +244,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: May 16, 1995
 - Decision: Include candidate
 - Type: Release Packet
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zimbabwe
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14571
 - PDF links: [FOIA packet PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
 - First read: [3](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf#page=3)
@@ -262,7 +262,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: May 18, 1995
 - Decision: Source lead
 - Type: Source Lead
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zimbabwe
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/36472
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/1b2548044da1ab7f808c7c123eced2ac.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/1b2548044da1ab7f808c7c123eced2ac.pdf)
@@ -278,7 +278,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: May 30, 1995
 - Decision: Context candidate
 - Type: Release Packet
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zimbabwe
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14571
 - PDF links: [FOIA packet PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
@@ -294,7 +294,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Jul 16, 1997
 - Decision: Boundary review
 - Type: Source Lead
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zimbabwe
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14571
 - PDF links: [FOIA packet PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
@@ -311,7 +311,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Sep 16, 1997
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Angola, Mozambique, and Southern African Security
+- Countries: United States, Angola, Mozambique
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/9715
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/f9de72c6f1d880690d97ae680d586635.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/f9de72c6f1d880690d97ae680d586635.pdf)
@@ -326,7 +326,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Mar 26, 1998
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: South Africa Transition and Bilateral Relations
+- Countries: United States, South Africa
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/9798
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/8c33eeb89b620edd6594e80b2b290bd9.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/8c33eeb89b620edd6594e80b2b290bd9.pdf)
@@ -341,7 +341,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Mar 29, 1998
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Botswana
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/9804
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/425f580fb944b53794d5f1454ab21710.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/425f580fb944b53794d5f1454ab21710.pdf)
@@ -356,7 +356,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Apr 13, 1998
 - Decision: Context candidate
 - Type: Public Statement
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Africa
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/11370
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/27ec86be28e49964d2cc63849a625c8c.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/27ec86be28e49964d2cc63849a625c8c.pdf)
@@ -371,7 +371,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Jun 1, 1999
 - Decision: Source lead
 - Type: Source Lead
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Zimbabwe
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/14571
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/01e7249f204413bb4b0238dad64c408e.pdf)
@@ -387,7 +387,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Jan 1, 2000
 - Decision: Source lead
 - Type: Source Lead
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Botswana
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64163
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/9364ec86ad4d726a134ac9f8212d1cd9.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/9364ec86ad4d726a134ac9f8212d1cd9.pdf)
@@ -403,7 +403,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Jan 1, 2000
 - Decision: Source lead
 - Type: Source Lead
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Malawi
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64400
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/64f7e4a8421dfcf4adf33766adf44117.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/64f7e4a8421dfcf4adf33766adf44117.pdf)
@@ -419,7 +419,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Jan 1, 2000
 - Decision: Source lead
 - Type: Source Lead
-- Scope area: South Africa Transition and Bilateral Relations
+- Countries: United States, South Africa
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/48608
 - PDF links: [Clinton Library PDF](https://clinton.presidentiallibraries.us/files/original/69d36ed4cb7676b00e4ae76979a161db.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/69d36ed4cb7676b00e4ae76979a161db.pdf)
@@ -435,7 +435,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Apr 3, 2000
 - Decision: Include candidate
 - Type: Release Packet
-- Scope area: South Africa Transition and Bilateral Relations
+- Countries: United States, South Africa
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64751
 - PDF links: [PDF](https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf)
 - First read: [16-17](https://clinton.presidentiallibraries.us/files/original/26093367de952b94c544f7abc15c6c62.pdf#page=16)
@@ -453,7 +453,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: May 1, 2000
 - Decision: Include candidate
 - Type: Release Packet
-- Scope area: South Africa Transition and Bilateral Relations
+- Countries: United States, South Africa
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/64750
 - PDF links: [PDF](https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf)
 - First read: [7-8](https://clinton.presidentiallibraries.us/files/original/21a9567fcf0c1490aa2ebcf893468b16.pdf#page=7)
@@ -471,7 +471,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: May 4, 2000
 - Decision: Boundary review
 - Type: Release Packet
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, South Africa, Namibia, Botswana, Africa
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/119208
 - PDF links: [MDR PDF 1](https://clinton.presidentiallibraries.us/files/original/658d3ce0236437eab569f63b04278e1f.pdf); [MDR PDF 2](https://clinton.presidentiallibraries.us/files/original/eb8f2b1ca9bb04768340f55897d880a4.pdf); [MDR PDF 3](https://clinton.presidentiallibraries.us/files/original/a45536181776d20e1400df63854d4443.pdf); [MDR PDF 4](https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/658d3ce0236437eab569f63b04278e1f.pdf)
@@ -487,7 +487,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Oct 1, 2000
 - Decision: Include candidate
 - Type: Release Packet
-- Scope area: Angola, Mozambique, and Southern African Security
+- Countries: United States, Angola, South Africa, Liberia, Sierra Leone
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/118505
 - PDF links: [PDF](https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf)
 - First read: [1](https://clinton.presidentiallibraries.us/files/original/1e4efdd7fac280c9490efa4b4fb0f9cd.pdf#page=1)
@@ -504,7 +504,7 @@ Related work surfaces: [`reports/pdf-candidate-status.md`](pdf-candidate-status.
 - Date: Nov 12, 2000
 - Decision: Boundary review
 - Type: Release Packet
-- Scope area: Southern African Democracy, Health, and Economic Policy
+- Countries: United States, Namibia
 - Catalog item: https://clinton.presidentiallibraries.us/items/show/119208
 - PDF links: [Global AIDS Crisis PDF 4](https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf)
 - First read: [Open PDF](https://clinton.presidentiallibraries.us/files/original/3b88b5d2d8b557e67c3c5c09441aa900.pdf)

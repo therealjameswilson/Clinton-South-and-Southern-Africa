@@ -223,6 +223,7 @@
       <nav class="actions" aria-label="Docket navigation">
         <a class="button primary" href="../">Main site</a>
         <a class="button" href="../pdfs/">PDF desk</a>
+        <a class="button" href="../downloads/">PDF downloads</a>
         <a class="button" href="../reports/extraction-worksheet.md">Extraction worksheet</a>
         <a class="button" href="../reports/compiler-docket.md">Docket report</a>
         <button class="button" type="button" id="download-csv">Download CSV</button>
@@ -328,7 +329,7 @@
       }
 
       function buildCsv(rows) {
-        const header = ["queue", "id", "date", "decision", "type", "scope_area", "title", "action", "catalog_url", "pdf_urls", "source_note"];
+        const header = ["queue", "id", "date", "decision", "type", "title", "action", "catalog_url", "pdf_urls", "source_note"];
         return [header, ...rows]
           .map((row) => row.map(csv).join(","))
           .join("\n") + "\n";
@@ -361,11 +362,7 @@
             title.textContent = record.documentTitle || record.title;
             const badges = document.createElement("div");
             badges.className = "badges";
-            for (const value of [
-              record.selectionDecision,
-              record.type,
-              record.topic?.name ? `Scope: ${record.topic.name}` : ""
-            ].filter(Boolean)) {
+            for (const value of [record.selectionDecision, record.type].filter(Boolean)) {
               const badge = document.createElement("span");
               badge.textContent = value;
               badges.append(badge);
@@ -402,7 +399,6 @@
               record.date || record.sortDate || "",
               record.selectionDecision || "",
               record.type || "",
-              record.topic?.name || "",
               record.documentTitle || record.title || "",
               action(record),
               record.catalogUrl || "",

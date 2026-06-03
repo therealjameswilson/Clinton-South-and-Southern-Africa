@@ -218,7 +218,6 @@ function buildChronologyHtml(chronology, pdfStatuses, counts) {
         record.subjectLine,
         record.selectionDecision,
         record.type,
-        record.topic?.name,
         listValues(record.countries).join(" "),
         listValues(record.persons).join(" "),
         listValues(record.indexTerms).join(" "),
@@ -248,7 +247,6 @@ function buildChronologyHtml(chronology, pdfStatuses, counts) {
                 <span>${html(record.id)}</span>
                 <span>${html(record.selectionDecision || "Decision pending")}</span>
                 <span>${html(record.type || "Type pending")}</span>
-                ${record.topic?.name ? `<span>${html(record.topic.name)}</span>` : ""}
                 ${pdfStatus?.status ? `<span>${html(pdfStatus.status)}</span>` : ""}
               </div>
             </div>
@@ -614,6 +612,7 @@ function buildChronologyHtml(chronology, pdfStatuses, counts) {
       <nav aria-label="Chronology navigation">
         <a href="../">Home</a>
         <a href="../pdfs/">PDF Desk</a>
+        <a href="../downloads/">Downloads</a>
         <a href="../reports/declassified-chronology.md">Markdown</a>
         <a href="../data/declassified-chronology.csv">CSV</a>
       </nav>
@@ -656,9 +655,11 @@ function buildChronologyHtml(chronology, pdfStatuses, counts) {
       </section>
       <div class="utility-row" aria-label="Chronology downloads">
         <a class="button primary" href="../data/declassified-chronology.csv">Download chronology CSV</a>
+        <a class="button primary" href="../downloads/">Download source PDFs</a>
         <a class="button" href="../reports/declassified-chronology.md">Open Markdown report</a>
         <a class="button" href="../data/records.json">Structured records JSON</a>
         <a class="button" href="../reports/pdf-candidate-status.md">PDF status dashboard</a>
+        <a class="button" href="../scripts/download-source-pdfs.sh">Bulk shell script</a>
       </div>
       <p id="result-summary" class="result-summary">${counts.chronology} records shown.</p>
       <section class="chronology-list" aria-label="Declassified chronology records">
@@ -741,7 +742,6 @@ function build() {
       washington_time: record.washingtonTime || "",
       type: record.type || "",
       decision: record.selectionDecision || "",
-      scope_area: record.topic?.name || "",
       title: record.documentTitle || record.title || "",
       date_line: record.dateLine || "",
       subject: record.subjectLine || "",
@@ -772,7 +772,6 @@ function build() {
     "washington_time",
     "type",
     "decision",
-    "scope_area",
     "title",
     "date_line",
     "subject",
@@ -810,15 +809,16 @@ function build() {
     "",
     "## Chronology",
     "",
-    "| Date | Record | Decision | Type | Scope area | PDF / first read | Compiler action |",
-    "| --- | --- | --- | --- | --- | --- | --- |",
+    "| Date | Record | Decision | Type | PDF / first read | Compiler action |",
+    "| --- | --- | --- | --- | --- | --- |",
     ...chronology.map((record) => {
       const pdfStatus = pdfStatuses.get(record.id);
       return `| ${md(formatDate(record.date || record.sortDate || ""))} | [${md(record.documentTitle || record.title)}](${
         record.catalogUrl || "#"
-      })<br><code>${record.id}</code> | ${md(record.selectionDecision || "")} | ${md(record.type || "")} | ${md(
-        record.topic?.name || ""
-      )} | ${firstReadLabel(record, pdfStatus)} | ${md(chronologyAction(record, pdfStatus))} |`;
+      })<br><code>${record.id}</code> | ${md(record.selectionDecision || "")} | ${md(record.type || "")} | ${firstReadLabel(
+        record,
+        pdfStatus
+      )} | ${md(chronologyAction(record, pdfStatus))} |`;
     }),
     "",
     "## Record Details",
@@ -833,7 +833,7 @@ function build() {
         `- Date: ${formatDate(record.date || record.sortDate || "")}`,
         `- Decision: ${record.selectionDecision || "Pending"}`,
         `- Type: ${record.type || "Pending"}`,
-        `- Scope area: ${record.topic?.name || "Pending"}`,
+        `- Countries: ${listValues(record.countries).join(", ") || "Pending"}`,
         `- Catalog item: ${record.catalogUrl || "Pending"}`,
         `- PDF links: ${files.length ? files.map((file) => `[${file.label || "PDF"}](${file.url})`).join("; ") : "No direct PDF"}`,
         `- First read: ${firstReadLabel(record, pdfStatus)}`,

@@ -1,6 +1,6 @@
 # Clinton Library Research Plan
 
-This plan is scoped to the planned FRUS 1993-2000, Volume XXVII, South Africa; Southern Africa.
+This plan is scoped to the being-researched FRUS 1993-2000, Volume XXVII, South Africa; Southern Africa.
 
 ## Pull Order
 

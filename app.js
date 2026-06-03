@@ -291,7 +291,6 @@ function createMeta(record) {
   for (const value of [
     record.type,
     record.selectionDecision,
-    record.topic?.name ? `Scope: ${record.topic.name}` : "",
     countries,
     extent,
     sourceId,
@@ -335,7 +334,6 @@ function chronologyExportRows(records = chronologyRecords()) {
     record.washingtonTime || "",
     record.type || "",
     record.selectionDecision || "",
-    record.topic?.name || "",
     record.documentTitle || record.title || "",
     record.dateLine || "",
     record.subjectLine || "",
@@ -360,7 +358,6 @@ function buildChronologyCsv(records = chronologyRecords()) {
     "washington_time",
     "type",
     "decision",
-    "scope_area",
     "title",
     "date_line",
     "subject",
@@ -390,7 +387,7 @@ function chronologyWorksheetSection(record, index) {
     `- Record ID: \`${record.id}\``,
     `- Type: ${record.type || "Pending"}`,
     `- Decision: ${record.selectionDecision || "Pending"}`,
-    `- Scope area: ${record.topic?.name || "Pending"}`,
+    `- Countries: ${joinValues(record.countries) || "Pending"}`,
     `- Catalog item: ${record.catalogUrl || "Pending"}`,
     "- PDF links:",
     markdownList(pdfUrls),
@@ -493,7 +490,6 @@ function finalizationCsv(records = finalizationRecords()) {
     "date",
     "decision",
     "type",
-    "scope_area",
     "title",
     "finalization_items",
     "next_action",
@@ -507,7 +503,6 @@ function finalizationCsv(records = finalizationRecords()) {
     record.date || record.sortDate || "",
     record.selectionDecision || "",
     record.type || "",
-    record.topic?.name || "",
     record.documentTitle || record.title || "",
     finalizationIssues(record).join("; "),
     finalizationAction(record),
@@ -741,7 +736,7 @@ function createDocketItem(record) {
 
   const meta = document.createElement("div");
   meta.className = "record-meta";
-  for (const value of [record.selectionDecision, record.type, record.topic?.name ? `Scope: ${record.topic.name}` : ""]) {
+  for (const value of [record.selectionDecision, record.type]) {
     if (!value) continue;
     const badge = document.createElement("span");
     badge.textContent = value;
@@ -817,8 +812,7 @@ function createFinalizationItem(record) {
   for (const value of [
     `Priority ${finalizationPriority(record)}`,
     record.selectionDecision,
-    record.type,
-    record.topic?.name ? `Scope: ${record.topic.name}` : ""
+    record.type
   ].filter(Boolean)) {
     const badge = document.createElement("span");
     badge.textContent = value;

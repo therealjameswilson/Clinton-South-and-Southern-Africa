@@ -8,7 +8,7 @@ Official volume title:
 
 **Foreign Relations of the United States, 1993-2000, Volume XXVII, South Africa; Southern Africa**
 
-The Office of the Historian currently lists the volume as **Planned**, so this site treats records as compiler leads and working candidates rather than a final documentary chronology.
+The Office of the Historian currently lists the volume as **Being Researched**, so this site treats records as compiler leads and working candidates rather than a final documentary chronology.
 
 Public site:
 
@@ -20,6 +20,7 @@ Public site:
 - First-hour compiler workflow with live counts and direct actions
 - Static declassified chronology report and CSV with 29 records and 32 direct PDF links
 - Searchable chronology desk at `chronology/` with open/download PDF actions
+- Deduplicated PDF download manifest at `downloads/`, with CSV exports and a bulk shell script
 - Reading-room pull queue at `pulls/` with request actions, replacement searches, report, and CSV
 - Browser-generated chronology CSV and Markdown worksheet exports
 - PDF review desk with local extraction scratchpad and Markdown note exports
@@ -27,15 +28,16 @@ Public site:
 - Range-level PDF review queue with 166 consecutive page-role spans and suggested actions
 - Candidate extraction status dashboard with released/withheld page counts and next actions
 - Source-note finalization queue with CSV export
-- Searchable source records with type, scope area, and production-gap filters
+- Searchable source records with type, country/source metadata, and production-gap filters
 - FRUS-style source-note and declassification quality gates
-- Compiler gap analysis for planned-volume risks
+- Compiler gap analysis for being-researched volume risks
 - Clinton Library pull strategy and reading-room priorities
 - Primary source anchor list and ingest checklist
 - Seed data in `data/records.json` and direct-file fallback data in `data/records.js`
 - Reproducible declassified chronology generator in `scripts/build-declassified-chronology.mjs`
 - Reproducible pull-queue generator in `scripts/build-pull-queue.mjs`
 - Reproducible PDF page-map generator in `scripts/build-pdf-page-map.mjs`
+- Reproducible PDF download manifest generator in `scripts/build-pdf-download-manifest.mjs`
 
 ## Local Preview
 
@@ -64,6 +66,22 @@ Outputs:
 - `chronology/index.html`
 - `reports/declassified-chronology.md`
 - `data/declassified-chronology.csv`
+
+## PDF Download Manifest
+
+The PDF download manifest deduplicates direct PDF links from the chronology and emits one browser page, one unique-PDF CSV, one record-link CSV, and a shell script for bulk download.
+
+```bash
+node scripts/build-pdf-download-manifest.mjs
+```
+
+Outputs:
+
+- `downloads/index.html`
+- `reports/pdf-download-manifest.md`
+- `data/pdf-download-manifest.csv`
+- `data/pdf-record-links.csv`
+- `scripts/download-source-pdfs.sh`
 
 ## Reading-Room Pull Queue
 

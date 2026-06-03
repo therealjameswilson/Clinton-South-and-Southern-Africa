@@ -385,6 +385,7 @@
       </a>
       <nav class="actions" aria-label="PDF desk navigation">
         <a class="button primary" href="../docket/">Docket</a>
+        <a class="button" href="../downloads/">Downloads</a>
         <a class="button" href="../reports/pdf-candidate-status.md">Status</a>
         <a class="button" href="../reports/pdf-page-map.md">Page Map</a>
         <a class="button" href="../reports/pdf-range-review.md">Range Queue</a>
@@ -421,8 +422,8 @@
           <span>public PDF pages</span>
         </div>
         <div class="stat">
-          <strong id="topic-count">0</strong>
-          <span>scope areas represented</span>
+          <strong id="release-count">0</strong>
+          <span>release packets</span>
         </div>
       </section>
 
@@ -447,7 +448,7 @@
       const summary = document.querySelector("#summary");
       const candidateCount = document.querySelector("#candidate-count");
       const pageCount = document.querySelector("#page-count");
-      const topicCount = document.querySelector("#topic-count");
+      const releaseCount = document.querySelector("#release-count");
       const exportNotesButton = document.querySelector("#export-notes");
 
       let candidates = [];
@@ -656,7 +657,7 @@
           `# ${record.id} - ${record.documentTitle || record.title}`,
           "",
           `Date: ${record.date || record.sortDate || "Date pending"}`,
-          `Scope: ${record.topic?.name || "Scope area pending"}`,
+          `Countries: ${(record.countries || []).join(", ") || "Pending"}`,
           `Catalog item: ${record.catalogUrl || "Pending"}`,
           "PDF files:",
           pdfList(record) || "- Pending",
@@ -779,8 +780,7 @@
           for (const value of [
             record.id,
             formatDate(record.date),
-            `${pageTotal(record)} pages`,
-            record.topic?.name ? `Scope: ${record.topic.name}` : ""
+            `${pageTotal(record)} pages`
           ].filter(Boolean)) {
             const span = document.createElement("span");
             span.textContent = value;
@@ -952,12 +952,12 @@
           .sort(sortChronology);
 
         const totalPages = candidates.reduce((sum, record) => sum + pageTotal(record), 0);
-        const scopeAreas = new Set(candidates.map((record) => record.topic?.name).filter(Boolean));
+        const releasePackets = candidates.filter((record) => record.type === "Release Packet").length;
 
         candidateCount.textContent = candidates.length.toString();
         pageCount.textContent = totalPages.toString();
-        topicCount.textContent = scopeAreas.size.toString();
-        summary.textContent = `${candidates.length} direct PDF candidates, ${totalPages} public pages, ${scopeAreas.size} scope areas.`;
+        releaseCount.textContent = releasePackets.toString();
+        summary.textContent = `${candidates.length} direct PDF candidates, ${totalPages} public pages, ${releasePackets} release packets.`;
 
         if (!candidates.length) {
           listRoot.innerHTML = '<p class="empty">No include candidates with PDFs found.</p>';

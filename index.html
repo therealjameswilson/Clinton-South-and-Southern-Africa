@@ -120,6 +120,7 @@
         <a href="#finalization">Finalization</a>
         <a href="pulls/">Pull Queue</a>
         <a href="pdfs/">PDF Desk</a>
+        <a href="downloads/">Downloads</a>
         <a href="#volume">Volume</a>
         <a href="#gaps">Gaps</a>
         <a href="#library">Library</a>
@@ -160,7 +161,7 @@
               <span id="start-pdf-pages">0</span> public pages with local extraction
               scratchpads.
             </p>
-            <a href="pdfs/">Open PDF desk</a>
+            <a href="downloads/">Open download manifest</a>
           </article>
           <article class="start-card">
             <p class="start-step">03</p>
@@ -208,6 +209,9 @@
           <button id="download-chronology-worksheet" type="button" disabled>Download chronology worksheet</button>
           <a href="data/records.json" rel="noreferrer">Structured records</a>
           <a href="reports/pdf-candidate-status.md" rel="noreferrer">PDF status dashboard</a>
+          <a href="downloads/">PDF download manifest</a>
+          <a href="data/pdf-download-manifest.csv" rel="noreferrer">PDF manifest CSV</a>
+          <a href="scripts/download-source-pdfs.sh" rel="noreferrer">Bulk download script</a>
           <a href="reports/pdf-page-map.md" rel="noreferrer">PDF page map</a>
           <a href="reports/pdf-range-review.md" rel="noreferrer">Range review queue</a>
           <a href="data/pdf-candidate-status.csv" rel="noreferrer">Status CSV</a>
@@ -279,7 +283,7 @@
           <p class="kicker">FRUS 1993-2000, Volume XXVII</p>
           <h1 id="hero-title">South Africa; Southern Africa</h1>
           <p class="lede">
-            A public compiler workbench for the planned <em>Foreign Relations of
+            A public compiler workbench for the being-researched <em>Foreign Relations of
             the United States, 1993-2000, Volume XXVII, South Africa; Southern
             Africa</em>. The site keeps South Africa transition diplomacy, Angola
             peace implementation, Mozambique and landmine policy, Zimbabwe/SADC
@@ -288,6 +292,7 @@
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="chronology/">Read Chronology</a>
+            <a class="button secondary" href="downloads/">Download PDFs</a>
             <a class="button secondary" href="pdfs/">PDF Desk</a>
             <a class="button secondary" href="#workbench">Compiler Workbench</a>
             <a class="button secondary" href="#gaps">Gap Analysis</a>
@@ -309,7 +314,7 @@
             </div>
             <div>
               <dt>Current FRUS Status</dt>
-              <dd>Planned</dd>
+              <dd>Being Researched</dd>
             </div>
             <div>
               <dt>Arrangement</dt>
@@ -348,7 +353,7 @@
             <h3>South Africa; Southern Africa</h3>
             <p>
               The Office of the Historian lists this Clinton administration volume as
-              planned. This page therefore treats all entries as a working compiler
+              being researched. This page therefore treats all entries as a working compiler
               base: source leads, released public items, and candidate records that
               still need archivist-level verification before FRUS selection.
             </p>
@@ -364,7 +369,7 @@
             </div>
             <div>
               <dt>Status</dt>
-              <dd>Planned</dd>
+              <dd>Being Researched</dd>
             </div>
           </dl>
           <a href="https://history.state.gov/historicaldocuments/frus1993-00v27" rel="noreferrer">
@@ -619,7 +624,7 @@
           <article>
             <h3>Compiler Filters</h3>
             <p>
-              Search, record-type filters, scope metadata, and production-gap filters
+              Search, record-type filters, source metadata, and production-gap filters
               are built in so the list can grow into a full candidate base.
             </p>
           </article>
@@ -634,7 +639,6 @@
         <div class="browse-layout">
           <div class="facet-list" aria-label="Browse facets">
             <a href="#workbench">By production gap</a>
-            <a href="#records">By scope area</a>
             <a href="#records">By document type</a>
             <a href="#records">By leader contact</a>
             <a href="#records">By country</a>
@@ -647,7 +651,7 @@
           <div class="browse-note">
             <h3>Chronology first, source trail intact</h3>
             <p>
-              Records are sorted by date, with scope metadata preserved on each row.
+              Records are sorted by date, with country, source, and release metadata preserved on each row.
               Every entry keeps the source trail beside the public link so later
               FRUS review can retrace the research path.
             </p>
@@ -779,7 +783,7 @@
           </li>
           <li>
             <span class="step-number">05</span>
-            <span>Normalize dates, participants, countries, source-note fields, release status, and scope assignment.</span>
+            <span>Normalize dates, participants, countries, source-note fields, release status, and volume fit.</span>
           </li>
           <li>
             <span class="step-number">06</span>
@@ -787,7 +791,7 @@
           </li>
           <li>
             <span class="step-number">07</span>
-            <span>Publish verified new leads as the planned volume moves toward research and compilation.</span>
+            <span>Publish verified new leads as the volume moves through research and compilation.</span>
           </li>
         </ol>
       </section>

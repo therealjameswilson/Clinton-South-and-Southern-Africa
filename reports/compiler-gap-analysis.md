@@ -2,7 +2,7 @@
 
 Official target: <https://history.state.gov/historicaldocuments/frus1993-00v27>
 
-Volume XXVII is currently planned, so this assist page is a source-control surface rather than a finished documentary record. The public-source closure pass converted broad searches into document records, packet splits, and named reading-room blockers.
+Volume XXVII is currently being researched, so this assist page is a source-control surface rather than a finished documentary record. The public-source closure pass converted broad searches into document records, packet splits, and named reading-room blockers.
 
 ## Gap Closure Ledger
 

@@ -3,10 +3,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-002",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1993-05-03",
     "sortDate": "1993-05-03",
     "title": "Lake - Africa, Brookings - 5/3/93",
@@ -47,10 +43,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-003",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "1994-05-10",
     "sortDate": "1994-05-10",
     "title": "South Africa - Collection Finding Aid",
@@ -93,10 +85,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-004",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "1994-10-04",
     "sortDate": "1994-10-04",
     "title": "Audio Recording of President Clinton's Remarks Welcoming President Nelson Mandela of South Africa",
@@ -135,10 +123,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-005",
     "type": "Source Lead",
     "selectionDecision": "Include candidate",
-    "topic": {
-      "number": 2,
-      "name": "Angola, Mozambique, and Southern African Security"
-    },
     "date": "1994-11-07",
     "sortDate": "1994-11-07",
     "title": "[Soderberg Notes from Bosnia and Angola PC Meeting, November 7, 1994]",
@@ -184,10 +168,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-006",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 2,
-      "name": "Angola, Mozambique, and Southern African Security"
-    },
     "date": "1994-11-20",
     "sortDate": "1994-11-20",
     "title": "Angola - Collection Finding Aid",
@@ -229,10 +209,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-007",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 2,
-      "name": "Angola, Mozambique, and Southern African Security"
-    },
     "date": "1994-12-01",
     "sortDate": "1994-12-01",
     "title": "Mozambique - Background",
@@ -274,10 +250,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-010",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "1998-03-26",
     "sortDate": "1998-03-26",
     "title": "South Africa - Mandela Press Conference 3/26/98",
@@ -321,10 +293,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-011",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "1998-03-27",
     "sortDate": "1998-03-27",
     "title": "Audio Recording of President Clinton's News Conference with President Nelson Mandela of South Africa in Cape Town",
@@ -363,10 +331,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-012",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1998-04-13",
     "sortDate": "1998-04-13",
     "title": "Africa - SRB [(Samuel R. Berger's) Talking Points for Remarks on Africa, April 13, 1998]",
@@ -408,10 +372,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-013",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1998-12-01",
     "sortDate": "1998-12-01",
     "title": "Global AIDS Crisis - Collection Finding Aid",
@@ -452,10 +412,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-014",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1999-01-01",
     "sortDate": "1999-01-01",
     "title": "Arms Trafficking - Collection Finding Aid",
@@ -495,10 +451,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-015",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1999-06-01",
     "sortDate": "1999-06-01",
     "title": "FOIA 2006-0457-F - Zimbabwe",
@@ -541,10 +493,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-016",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "2000-01-01",
     "sortDate": "2000-01-01",
     "title": "South Africa [3]",
@@ -587,10 +535,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-017",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1993-06-16",
     "sortDate": "1993-06-16",
     "title": "Audio Recording of President Clinton's Remarks Following Discussions with President Sam Nujoma of Namibia",
@@ -630,10 +574,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-018",
     "type": "Release Packet",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "1993-08-25",
     "sortDate": "1993-08-25",
     "title": "Declassified Documents Concerning Amy Biehl",
@@ -684,10 +624,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-022",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1994-12-05",
     "sortDate": "1994-12-05",
     "title": "FOIA 2006-0457-F - Zimbabwe, Previously Restricted Document Release no. 5",
@@ -740,10 +676,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-023",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1995-05-16",
     "sortDate": "1995-05-16",
     "title": "Official Working Visit of President Mugabe of Zimbabwe, May 18, 1995",
@@ -808,10 +740,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-024",
     "type": "Release Packet",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1995-05-30",
     "sortDate": "1995-05-30",
     "title": "Draft letter from President Clinton to President Mugabe",
@@ -867,10 +795,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-025",
     "type": "Source Lead",
     "selectionDecision": "Boundary review",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1997-07-16",
     "sortDate": "1997-07-16",
     "title": "Update on African-African American Summit",
@@ -928,10 +852,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-027",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1995-05-18",
     "sortDate": "1995-05-18",
     "title": "Presidential Daily Diary hardcopy including May 18, 1995",
@@ -978,10 +898,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-028",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "1995-02-01",
     "sortDate": "1995-02-01",
     "title": "Thabo Mbeki's 1995 visit to the U.S. - Collection Finding Aid",
@@ -1021,10 +937,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-029",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "2000-05-01",
     "sortDate": "2000-05-01",
     "title": "Mbeki [of South Africa] - AIDS Controversy [1] [OA/ID 3646]",
@@ -1079,10 +991,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-030",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "2000-04-03",
     "sortDate": "2000-04-03",
     "title": "Mbeki [of South Africa] - AIDS Controversy [2] [OA/ID 3646]",
@@ -1134,10 +1042,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-031",
     "type": "Release Packet",
     "selectionDecision": "Boundary review",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "2000-05-04",
     "sortDate": "2000-05-04",
     "title": "Declassified Documents Concerning the Global AIDS Crisis",
@@ -1213,10 +1117,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-032",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "2000-05-22",
     "sortDate": "2000-05-22",
     "title": "Audio Recording of President Clinton's Remarks at the Welcoming Ceremony for President Thabo Mbeki of South Africa",
@@ -1256,10 +1156,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-033",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 1,
-      "name": "South Africa Transition and Bilateral Relations"
-    },
     "date": "2000-05-22",
     "sortDate": "2000-05-22",
     "title": "Audio Recording of President Clinton's Remarks at the State Dinner Honoring President Thabo Mbeki",
@@ -1299,10 +1195,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-034",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 2,
-      "name": "Angola, Mozambique, and Southern African Security"
-    },
     "date": "1994-12-01",
     "sortDate": "1994-12-01",
     "title": "Angola - Background",
@@ -1347,10 +1239,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-035",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 2,
-      "name": "Angola, Mozambique, and Southern African Security"
-    },
     "date": "1994-12-01",
     "sortDate": "1994-12-01",
     "title": "Southern Africa - Background",
@@ -1399,10 +1287,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-036",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 2,
-      "name": "Angola, Mozambique, and Southern African Security"
-    },
     "date": "1994-12-01",
     "sortDate": "1994-12-01",
     "title": "Landmines",
@@ -1448,10 +1332,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-037",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 2,
-      "name": "Angola, Mozambique, and Southern African Security"
-    },
     "date": "1997-09-16",
     "sortDate": "1997-09-16",
     "title": "Landmines Statement 9/16/97",
@@ -1496,10 +1376,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-038",
     "type": "Release Packet",
     "selectionDecision": "Include candidate",
-    "topic": {
-      "number": 2,
-      "name": "Angola, Mozambique, and Southern African Security"
-    },
     "date": "2000-10-01",
     "sortDate": "2000-10-01",
     "title": "Declassified Documents Regarding Victor Butt/Bout",
@@ -1556,10 +1432,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-039",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1993-06-16",
     "sortDate": "1993-06-16",
     "title": "Namibia",
@@ -1604,10 +1476,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-040",
     "type": "Release Packet",
     "selectionDecision": "Boundary review",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "2000-11-12",
     "sortDate": "2000-11-12",
     "title": "U.S.-Namibia Bilateral HIV/AIDS Agreement files",
@@ -1662,10 +1530,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-041",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1994-12-19",
     "sortDate": "1994-12-19",
     "title": "[Anthony] Lake - Zambia Speech, 12/19/94",
@@ -1709,10 +1573,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-042",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1994-12-19",
     "sortDate": "1994-12-19",
     "title": "Zambia - Background",
@@ -1757,10 +1617,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-044",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1998-03-29",
     "sortDate": "1998-03-29",
     "title": "Botswana - Masire Reception 3/29/98",
@@ -1805,10 +1661,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-045",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1998-03-29",
     "sortDate": "1998-03-29",
     "title": "Audio Recording of President Clinton's Remarks at a Reception in Gaborone, Botswana",
@@ -1848,10 +1700,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-046",
     "type": "Audio/Visual",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1998-03-31",
     "sortDate": "1998-03-31",
     "title": "Audio Recording of President Clinton's Remarks to African Environmentalists in Gaborone, Botswana",
@@ -1891,10 +1739,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-047",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "2000-01-01",
     "sortDate": "2000-01-01",
     "title": "Botswana",
@@ -1936,10 +1780,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-048",
     "type": "Source Lead",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "2000-01-01",
     "sortDate": "2000-01-01",
     "title": "Malawi",
@@ -1981,10 +1821,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-049",
     "type": "Finding Aid",
     "selectionDecision": "Source lead",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1995-01-01",
     "sortDate": "1995-01-01",
     "title": "Zimbabwe - Collection Finding Aid",
@@ -2024,10 +1860,6 @@ window.COMPILER_RECORDS = [
     "id": "clinton-v27-050",
     "type": "Public Statement",
     "selectionDecision": "Context candidate",
-    "topic": {
-      "number": 3,
-      "name": "Southern African Democracy, Health, and Economic Policy"
-    },
     "date": "1995-01-01",
     "sortDate": "1995-01-01",
     "title": "Zimbabwe - Background",

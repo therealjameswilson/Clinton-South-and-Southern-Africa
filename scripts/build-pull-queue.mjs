@@ -190,7 +190,6 @@ function buildRows(records) {
       display_date: formatDate(record.date || record.sortDate || ""),
       decision: record.selectionDecision || "",
       type: record.type || "",
-      scope_area: record.topic?.name || "",
       title: record.documentTitle || record.title || "",
       countries: listValues(record.countries).join("; "),
       source_identifier: sourceIdentifier(record),
@@ -281,7 +280,6 @@ function buildHtml(rows) {
                 <span>${html(row.id)}</span>
                 <span>${html(row.type)}</span>
                 <span>${html(row.decision)}</span>
-                ${row.scope_area ? `<span>${html(row.scope_area)}</span>` : ""}
               </div>
             </div>
             <dl>
@@ -504,7 +502,6 @@ function build() {
     "display_date",
     "decision",
     "type",
-    "scope_area",
     "title",
     "countries",
     "source_identifier",
