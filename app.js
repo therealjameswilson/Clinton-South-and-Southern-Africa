@@ -8,6 +8,11 @@ const finalizationSummary = document.querySelector("#finalization-summary");
 const chronologyCsvButton = document.querySelector("#download-chronology-csv");
 const chronologyWorksheetButton = document.querySelector("#download-chronology-worksheet");
 const finalizationCsvButton = document.querySelector("#download-finalization-csv");
+const decisionLogCsvButton = document.querySelector("#download-decision-log-csv");
+const decisionLogMarkdownButton = document.querySelector("#download-decision-log-md");
+const copyDecisionLogButton = document.querySelector("#copy-decision-log");
+const decisionLogSummary = document.querySelector("#decision-log-summary");
+const decisionLogStatus = document.querySelector("#decision-log-status");
 const startFinalizationCount = document.querySelector("#start-finalization-count");
 const startPdfCandidates = document.querySelector("#start-pdf-candidates");
 const startPdfPages = document.querySelector("#start-pdf-pages");
@@ -25,6 +30,9 @@ const issueButtons = [...document.querySelectorAll("[data-issue-filter]")];
 let allRecords = [];
 let activeFilter = "all";
 let activeIssueFilter = "all";
+const DECISION_STORAGE_KEY = "frus-v27-compiler-decisions-v1";
+const DECISION_OPTIONS = ["", "Include", "Context", "Cross-reference", "Exclude", "Defer / seek better source"];
+let compilerDecisions = loadCompilerDecisions();
 
 function formatDate(dateString) {
   if (!dateString) return "Date pending";
@@ -328,6 +336,74 @@ function downloadTextFile(filename, contents, type) {
   URL.revokeObjectURL(url);
 }
 
+function loadCompilerDecisions() {
+  try {
+    const stored = window.localStorage.getItem(DECISION_STORAGE_KEY);
+    const parsed = stored ? JSON.parse(stored) : {};
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch (error) {
+    return {};
+  }
+}
+
+function saveCompilerDecisions() {
+  try {
+    window.localStorage.setItem(DECISION_STORAGE_KEY, JSON.stringify(compilerDecisions));
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+function compilerDecision(recordId) {
+  return compilerDecisions[recordId] || {
+    disposition: "",
+    rationale: "",
+    evidenceReviewed: false,
+    sourceNoteCleared: false,
+    updatedAt: ""
+  };
+}
+
+function hasCompilerDecision(recordId) {
+  const decision = compilerDecision(recordId);
+  return Boolean(decision.disposition || decision.rationale || decision.evidenceReviewed || decision.sourceNoteCleared);
+}
+
+function updateCompilerDecision(recordId, patch, announce = true) {
+  const current = compilerDecision(recordId);
+  const next = {
+    ...current,
+    ...patch,
+    updatedAt: new Date().toISOString()
+  };
+  compilerDecisions[recordId] = next;
+  const saved = saveCompilerDecisions();
+  updateDecisionLogSummary(finalizationRecords());
+  if (decisionLogStatus && announce) {
+    decisionLogStatus.textContent = saved
+      ? `Saved ${recordId} in this browser.`
+      : "Browser storage is unavailable. Export the decision log before leaving this page.";
+  }
+  return next;
+}
+
+async function copyText(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const area = document.createElement("textarea");
+  area.value = text;
+  area.setAttribute("readonly", "");
+  area.style.position = "fixed";
+  area.style.left = "-9999px";
+  document.body.append(area);
+  area.select();
+  document.execCommand("copy");
+  area.remove();
+}
+
 function chronologyExportRows(records = chronologyRecords()) {
   return records.map((record, index) => [
     index + 1,
@@ -516,6 +592,97 @@ function finalizationCsv(records = finalizationRecords()) {
     createSourceNoteDraft(record)
   ]);
   return [header, ...rows].map((row) => row.map(csv).join(",")).join("\n") + "\n";
+}
+
+function decisionLogCsv(records = finalizationRecords()) {
+  const header = [
+    "priority",
+    "id",
+    "date",
+    "title",
+    "baseline_decision",
+    "compiler_disposition",
+    "evidence_reviewed",
+    "source_note_cleared",
+    "rationale_or_follow_up",
+    "updated_at",
+    "finalization_items",
+    "pdf_urls",
+    "catalog_url",
+    "source_note"
+  ];
+  const rows = records.map((record) => {
+    const decision = compilerDecision(record.id);
+    return [
+      finalizationPriority(record),
+      record.id,
+      record.date || record.sortDate || "",
+      record.documentTitle || record.title || "",
+      record.selectionDecision || "",
+      decision.disposition,
+      decision.evidenceReviewed ? "yes" : "no",
+      decision.sourceNoteCleared ? "yes" : "no",
+      decision.rationale,
+      decision.updatedAt,
+      finalizationIssues(record).join("; "),
+      recordPdfUrls(record).join(" "),
+      record.catalogUrl || "",
+      createSourceNoteDraft(record)
+    ];
+  });
+  return [header, ...rows].map((row) => row.map(csv).join(",")).join("\n") + "\n";
+}
+
+function decisionLogMarkdown(records = finalizationRecords()) {
+  const decided = records.filter((record) => compilerDecision(record.id).disposition).length;
+  const reviewed = records.filter((record) => compilerDecision(record.id).evidenceReviewed).length;
+  const sourceCleared = records.filter((record) => compilerDecision(record.id).sourceNoteCleared).length;
+  const sections = records.map((record, index) => {
+    const decision = compilerDecision(record.id);
+    return [
+      `## ${index + 1}. ${formatDate(record.date || record.sortDate)} - ${record.documentTitle || record.title}`,
+      "",
+      `- Record ID: \`${record.id}\``,
+      `- Queue priority: ${finalizationPriority(record)}`,
+      `- Baseline decision: ${record.selectionDecision || "Pending"}`,
+      `- Compiler disposition: ${decision.disposition || "Unresolved"}`,
+      `- Evidence reviewed: ${decision.evidenceReviewed ? "Yes" : "No"}`,
+      `- Source note cleared: ${decision.sourceNoteCleared ? "Yes" : "No"}`,
+      `- Rationale / follow-up: ${decision.rationale || "Pending"}`,
+      `- Updated: ${decision.updatedAt || "Not yet recorded"}`,
+      `- Finalization items: ${finalizationIssues(record).join("; ") || "None"}`,
+      `- Catalog item: ${record.catalogUrl || "Pending"}`,
+      "- PDF links:",
+      markdownList(recordPdfUrls(record)),
+      `- FRUS-style source note: ${createSourceNoteDraft(record)}`
+    ].join("\n");
+  });
+  return [
+    "# FRUS Volume XXVII Compiler Decision Log",
+    "",
+    "South Africa; Southern Africa, 1993-2000.",
+    "",
+    `Generated ${new Date().toISOString()} from the browser-local review log.`,
+    "",
+    `- Finalization records: ${records.length}`,
+    `- Dispositions recorded: ${decided}`,
+    `- Evidence reviewed: ${reviewed}`,
+    `- Source notes cleared: ${sourceCleared}`,
+    "",
+    "This is a compiler working record, not an automated selection recommendation.",
+    "",
+    sections.join("\n\n")
+  ].join("\n");
+}
+
+function updateDecisionLogSummary(records = finalizationRecords()) {
+  if (!decisionLogSummary) return;
+  const recorded = records.filter((record) => hasCompilerDecision(record.id)).length;
+  const decided = records.filter((record) => compilerDecision(record.id).disposition).length;
+  const reviewed = records.filter((record) => compilerDecision(record.id).evidenceReviewed).length;
+  const sourceCleared = records.filter((record) => compilerDecision(record.id).sourceNoteCleared).length;
+  const recordSummary = recorded === 1 ? "1 record has browser notes" : `${recorded} records have browser notes`;
+  decisionLogSummary.textContent = `${recordSummary}; ${decided} dispositions recorded, ${reviewed} evidence reviews completed, ${sourceCleared} source notes cleared.`;
 }
 
 function createRecordRow(record) {
@@ -800,9 +967,76 @@ function renderDocket(records) {
   }
 }
 
+function createDecisionEditor(record, item) {
+  const decision = compilerDecision(record.id);
+  const fieldset = document.createElement("fieldset");
+  fieldset.className = "decision-editor";
+
+  const legend = document.createElement("legend");
+  legend.textContent = "Compiler decision";
+
+  const dispositionLabel = document.createElement("label");
+  dispositionLabel.htmlFor = `decision-${record.id}`;
+  dispositionLabel.textContent = "Disposition";
+  const disposition = document.createElement("select");
+  disposition.id = `decision-${record.id}`;
+  for (const value of DECISION_OPTIONS) {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = value || "Unresolved";
+    option.selected = decision.disposition === value;
+    disposition.append(option);
+  }
+
+  const rationaleLabel = document.createElement("label");
+  rationaleLabel.htmlFor = `rationale-${record.id}`;
+  rationaleLabel.textContent = "Rationale / follow-up";
+  const rationale = document.createElement("textarea");
+  rationale.id = `rationale-${record.id}`;
+  rationale.rows = 3;
+  rationale.placeholder = "Record the selection rationale, unresolved question, or next source to check.";
+  rationale.value = decision.rationale || "";
+
+  const checks = document.createElement("div");
+  checks.className = "decision-checks";
+  const evidenceLabel = document.createElement("label");
+  const evidence = document.createElement("input");
+  evidence.type = "checkbox";
+  evidence.checked = Boolean(decision.evidenceReviewed);
+  evidenceLabel.append(evidence, document.createTextNode(" Evidence reviewed"));
+
+  const sourceLabel = document.createElement("label");
+  const source = document.createElement("input");
+  source.type = "checkbox";
+  source.checked = Boolean(decision.sourceNoteCleared);
+  sourceLabel.append(source, document.createTextNode(" Source note cleared"));
+  checks.append(evidenceLabel, sourceLabel);
+
+  const updated = createParagraph(
+    "decision-updated",
+    decision.updatedAt ? `Last saved ${new Date(decision.updatedAt).toLocaleString()}` : "Not yet saved"
+  );
+
+  function persist(patch, announce = true) {
+    const next = updateCompilerDecision(record.id, patch, announce);
+    updated.textContent = `Last saved ${new Date(next.updatedAt).toLocaleString()}`;
+    item.classList.toggle("decision-recorded", hasCompilerDecision(record.id));
+  }
+
+  disposition.addEventListener("change", () => persist({ disposition: disposition.value }));
+  rationale.addEventListener("input", () => persist({ rationale: rationale.value }, false));
+  rationale.addEventListener("change", () => persist({ rationale: rationale.value }));
+  evidence.addEventListener("change", () => persist({ evidenceReviewed: evidence.checked }));
+  source.addEventListener("change", () => persist({ sourceNoteCleared: source.checked }));
+
+  fieldset.append(legend, dispositionLabel, disposition, rationaleLabel, rationale, checks, updated);
+  return fieldset;
+}
+
 function createFinalizationItem(record) {
   const item = document.createElement("article");
   item.className = finalizationPriority(record) <= 2 ? "finalization-item high-priority" : "finalization-item";
+  item.classList.toggle("decision-recorded", hasCompilerDecision(record.id));
 
   const date = document.createElement("time");
   date.className = "docket-date";
@@ -844,6 +1078,7 @@ function createFinalizationItem(record) {
 
   item.append(date, heading, meta, issues, action);
   if (links.children.length) item.append(links);
+  item.append(createDecisionEditor(record, item));
   return item;
 }
 
@@ -866,6 +1101,7 @@ function renderFinalizationQueue(records) {
   }
 
   for (const record of queue) finalizationRoot.append(createFinalizationItem(record));
+  updateDecisionLogSummary(queue);
 }
 
 function renderEmptyState() {
@@ -988,11 +1224,39 @@ function enableChronologyExports() {
 
 function enableFinalizationExport() {
   const records = finalizationRecords();
-  if (!finalizationCsvButton) return;
-  finalizationCsvButton.disabled = !records.length;
-  finalizationCsvButton.addEventListener("click", () => {
-    downloadTextFile("frus-v27-source-note-finalization-queue.csv", finalizationCsv(), "text/csv;charset=utf-8");
-  });
+  if (finalizationCsvButton) {
+    finalizationCsvButton.disabled = !records.length;
+    finalizationCsvButton.addEventListener("click", () => {
+      downloadTextFile("frus-v27-source-note-finalization-queue.csv", finalizationCsv(), "text/csv;charset=utf-8");
+    });
+  }
+  if (decisionLogCsvButton) {
+    decisionLogCsvButton.disabled = !records.length;
+    decisionLogCsvButton.addEventListener("click", () => {
+      downloadTextFile("frus-v27-compiler-decision-log.csv", decisionLogCsv(), "text/csv;charset=utf-8");
+    });
+  }
+  if (decisionLogMarkdownButton) {
+    decisionLogMarkdownButton.disabled = !records.length;
+    decisionLogMarkdownButton.addEventListener("click", () => {
+      downloadTextFile("frus-v27-compiler-decision-packet.md", decisionLogMarkdown(), "text/markdown;charset=utf-8");
+    });
+  }
+  if (copyDecisionLogButton) {
+    copyDecisionLogButton.disabled = !records.length;
+    copyDecisionLogButton.addEventListener("click", async () => {
+      try {
+        await copyText(decisionLogMarkdown());
+        copyDecisionLogButton.textContent = "Copied decision packet";
+        if (decisionLogStatus) decisionLogStatus.textContent = "Decision packet copied to the clipboard.";
+        window.setTimeout(() => {
+          copyDecisionLogButton.textContent = "Copy decision packet";
+        }, 1800);
+      } catch (error) {
+        if (decisionLogStatus) decisionLogStatus.textContent = "Clipboard access failed. Download the decision packet instead.";
+      }
+    });
+  }
 }
 
 function filterRecords() {

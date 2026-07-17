@@ -28,6 +28,7 @@ Public site:
 - Range-level PDF review queue with 166 consecutive page-role spans and suggested actions
 - Candidate extraction status dashboard with released/withheld page counts and next actions
 - Source-note finalization queue with CSV export
+- Browser-local compiler decision log with include/context/exclude dispositions, review checks, rationale, and CSV/Markdown/clipboard exports
 - Searchable source records with type, country/source metadata, and production-gap filters
 - FRUS-style source-note and declassification quality gates
 - Compiler gap analysis for being-researched volume risks

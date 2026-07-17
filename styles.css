@@ -607,6 +607,10 @@ dd {
   border-left-color: var(--rust);
 }
 
+.finalization-item.decision-recorded {
+  box-shadow: inset 0 0 0 1px rgba(47, 106, 102, 0.2);
+}
+
 .finalization-item h3 {
   margin: 0;
   color: var(--navy);
@@ -636,6 +640,98 @@ dd {
   font-weight: 850;
   background: rgba(36, 52, 76, 0.08);
   border-radius: 999px;
+}
+
+.decision-log-summary {
+  margin: 8px 0 0;
+  color: var(--teal);
+  font-weight: 850;
+  line-height: 1.5;
+}
+
+.decision-log-status {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.decision-editor {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 8px 12px;
+  margin: 4px 0 0;
+  padding: 14px 0 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.decision-editor legend {
+  grid-column: 1 / -1;
+  padding: 0;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 800;
+}
+
+.decision-editor > label {
+  align-self: end;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.decision-editor select,
+.decision-editor textarea {
+  width: 100%;
+  color: var(--ink);
+  font: inherit;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.decision-editor select {
+  min-height: 42px;
+  padding: 0 10px;
+}
+
+.decision-editor textarea {
+  min-height: 88px;
+  padding: 10px;
+  line-height: 1.45;
+  resize: vertical;
+}
+
+.decision-checks {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.decision-checks label {
+  color: #37444f;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.decision-checks input {
+  width: 17px;
+  height: 17px;
+  margin: 0 4px 0 0;
+  vertical-align: -3px;
+  accent-color: var(--teal);
+}
+
+.decision-updated {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
 }
 
 .docket-date {
@@ -1106,6 +1202,7 @@ footer a {
   .risk-ledger,
   .library-grid,
   .docket-grid,
+  .finalization-grid,
   .workbench-layout,
   .feature-grid,
   .source-list,
@@ -1129,6 +1226,16 @@ footer a {
 
   .timeline li {
     grid-template-columns: 1fr;
+  }
+
+  .decision-editor {
+    grid-template-columns: 1fr;
+  }
+
+  .decision-editor > *,
+  .decision-checks,
+  .decision-updated {
+    grid-column: 1;
   }
 
   footer {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T02:23:45.940Z",
+  "generatedAt": "2026-07-17T13:01:10.842Z",
   "missionBoundary": "This audit checks whether public frusSourceNote provenance follows published FRUS first-footnote order. It does not certify final document-level source notes where page spans, markings, or withdrawal-sheet accounting remain unextracted.",
   "publishedFrusOrder": "Repository and collection/file locator first; original classification and handling status next; then distribution, drafting/clearance, place/time, read-status, attachments, annotations, excisions, and related-document evidence as verified from the record.",
   "officialStandardBasis": [

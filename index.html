@@ -8,7 +8,7 @@
       name="description"
       content="A public chronology of released and declassified records related to FRUS 1993-2000, Volume XXVII, South Africa; Southern Africa."
     />
-    <link rel="stylesheet" href="styles.css?v=2026-06-02d" />
+    <link rel="stylesheet" href="styles.css?v=2026-07-17" />
     <style id="compiler-network-style">
       .compiler-network {
         border-bottom: 1px solid rgba(31, 41, 51, 0.14);
@@ -117,7 +117,7 @@
         <a href="#chronology">Chronology</a>
         <a href="chronology/">Chronology Desk</a>
         <a href="#docket">Docket</a>
-        <a href="#finalization">Finalization</a>
+        <a href="#finalization">Decisions</a>
         <a href="pulls/">Pull Queue</a>
         <a href="pdfs/">PDF Desk</a>
         <a href="downloads/">Downloads</a>
@@ -256,19 +256,25 @@
 
       <section class="section finalization-section" id="finalization" aria-labelledby="finalization-title">
         <div class="section-heading">
-          <p class="kicker">Source-Note Clearance</p>
-          <h2 id="finalization-title">Finalization Queue</h2>
+          <p class="kicker">Human Review</p>
+          <h2 id="finalization-title">Finalization &amp; Decision Log</h2>
         </div>
         <p class="records-intro">
-          A compact queue for records that should not move toward FRUS selection until
-          page spans, markings, declassification accounting, source-note details, and
-          disposition calls are checked.
+          Record the compiler's disposition and rationale alongside the page spans,
+          markings, declassification accounting, and source-note checks. Entries stay
+          in this browser until exported; this page sends no review data anywhere.
         </p>
         <p id="finalization-summary" class="result-summary" aria-live="polite">
           Loading finalization queue...
         </p>
+        <p id="decision-log-summary" class="decision-log-summary" aria-live="polite">
+          Loading browser decision log...
+        </p>
         <div class="report-links finalization-links" aria-label="Finalization queue exports">
           <button id="download-finalization-csv" type="button" disabled>Download finalization CSV</button>
+          <button id="download-decision-log-csv" type="button" disabled>Download decision log CSV</button>
+          <button id="download-decision-log-md" type="button" disabled>Download decision packet</button>
+          <button id="copy-decision-log" type="button" disabled>Copy decision packet</button>
           <a href="pdfs/">Open PDF desk</a>
           <a href="reports/pdf-candidate-status.md" rel="noreferrer">PDF status dashboard</a>
           <a href="reports/pdf-page-map.md" rel="noreferrer">PDF page map</a>
@@ -277,6 +283,7 @@
           <a href="reports/source-note-provenance-audit.md" rel="noreferrer">Provenance audit</a>
           <a href="reports/frus-source-note-provenance-audit.json" rel="noreferrer">Audit JSON</a>
         </div>
+        <p id="decision-log-status" class="decision-log-status" aria-live="polite"></p>
         <div id="finalization-root" class="finalization-grid" aria-live="polite">
           <p class="loading">Loading finalization queue...</p>
         </div>
@@ -828,8 +835,8 @@
       <p>Published with GitHub Pages as a working companion archive.</p>
       <a href="https://github.com/therealjameswilson/Clinton-South-and-Southern-Africa">Repository</a>
     </footer>
-    <script src="data/records.js?v=2026-06-02"></script>
-    <script src="app.js?v=2026-06-02d"></script>
+    <script src="data/records.js?v=2026-07-17"></script>
+    <script src="app.js?v=2026-07-17"></script>
     <script id="compiler-network-script">
       (() => {
         const button = document.querySelector("[data-compiler-handoff]");
